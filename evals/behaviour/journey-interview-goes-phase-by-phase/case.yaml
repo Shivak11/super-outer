@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: journey-interview-goes-phase-by-phase
+context:
+  scaffold_script: fixture.sh

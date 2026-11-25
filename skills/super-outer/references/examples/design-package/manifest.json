@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "surface": "manuscript-editor",
+  "version": "1",
+  "intent": {
+    "path": "skills/super-outer/references/examples/design-package/intent.md",
+    "version": "1"
+  },
+  "frames": [
+    {
+      "file": "frames/editor-1280x800.png",
+      "state": "editor",
+      "width": 1280,
+      "height": 800,
+      "theme": "light",
+      "sha256": "56a8a991f45cc224c657ac6751a2615a580b7ec62e634d27a76f603b850ea50a"
+    },
+    {
+      "file": "frames/passage-sources-1280x800.png",
+      "state": "sources-open",
+      "width": 1280,
+      "height": 800,
+      "theme": "light",
+      "sha256": "db3d10973b0a20261efcc8c94f42df2aa5a00300c22bd3ecc5ab47d12976ebe9"
+    },
+    {
+      "file": "frames/passage-selected-390x844.png",
+      "state": "passage-selected",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "sha256": "6f5517d8e00271a8c3ba14a077cb33572ace82877b50899fd4dc626519befe45"
+    }
+  ],
+  "states_covered": [
+    "editor",
+    "passage-selected",
+    "sources-loading",
+    "sources-open",
+    "sources-empty",
+    "sources-error",
+    "suggestion",
+    "returned",
+    "narrow",
+    "dark-theme",
+    "reduced-motion"
+  ],
+  "decisions": [
+    {
+      "id": "d1",
+      "statement": "The manuscript receives the most visual attention in every state.",
+      "provenance": "owner",
+      "date": "2026-10-07",
+      "decider": "owner"
+    },
+    {
+      "id": "d2",
+      "statement": "Passage actions appear beside the selection, never in the header.",
+      "provenance": "owner",
+      "date": "2026-10-07",
+      "decider": "owner"
+    },
+    {
+      "id": "d3",
+      "statement": "Nothing changes the manuscript until the writer chooses, and every change can be undone.",
+      "provenance": "owner",
+      "date": "2026-10-07",
+      "decider": "owner"
+    },
+    {
+      "id": "d4",
+      "statement": "Research and generation continue while the writer is away, and their results are shown beside the passage on return.",
+      "provenance": "owner",
+      "date": "2026-10-07",
+      "decider": "owner"
+    },
+    {
+      "id": "d5",
+      "statement": "The header holds one primary action and one overflow menu.",
+      "provenance": "designer",
+      "date": "2026-10-07",
+      "decider": "design-prototyper"
+    },
+    {
+      "id": "d6",
+      "statement": "On desktop, opening sources moves the manuscript left so that the panel never covers the text.",
+      "provenance": "designer",
+      "date": "2026-10-07",
+      "decider": "design-prototyper"
+    },
+    {
+      "id": "d7",
+      "statement": "On narrow screens, passage actions dock to the bottom edge and sources open in a sheet below the passage.",
+      "provenance": "designer",
+      "date": "2026-10-07",
+      "decider": "design-prototyper"
+    },
+    {
+      "id": "d8",
+      "statement": "Share is the most frequent document-level action, so it is the header's primary action.",
+      "provenance": "assumption",
+      "date": "2026-10-07",
+      "decider": "design-prototyper"
+    },
+    {
+      "id": "d9",
+      "statement": "Field notes and interviews are searched by default, and the writer turns on board records when needed.",
+      "provenance": "assumption",
+      "date": "2026-10-07",
+      "decider": "design-prototyper"
+    }
+  ],
+  "simulated": [
+    {
+      "what": "Source search",
+      "how": "Five fixed excerpts in the prototype script, shown after a 900 millisecond timer. No search service is called."
+    },
+    {
+      "what": "Suggested revisions",
+      "how": "A fixed table of shorter wordings applied in the browser after a 1200 millisecond timer. No model is called."
+    },
+    {
+      "what": "Saving",
+      "how": "The save status changes on a timer. The manuscript exists only in page memory and is lost on reload."
+    },
+    {
+      "what": "Sharing",
+      "how": "Share shows a message that sharing is simulated. No link is created."
+    },
+    {
+      "what": "Leaving and returning",
+      "how": "The returned state is set from the prototype controls. Nothing runs while the page is closed."
+    }
+  ],
+  "components": [
+    { "name": "Document header", "status": "new", "source": "prototype.html" },
+    { "name": "Manuscript surface", "status": "new", "source": "prototype.html" },
+    { "name": "Passage toolbar", "status": "new", "source": "prototype.html" },
+    { "name": "Passage panel", "status": "new", "source": "prototype.html" },
+    { "name": "Paragraph handle and menu", "status": "new", "source": "prototype.html" },
+    { "name": "Overflow menu", "status": "new", "source": "prototype.html" },
+    { "name": "Skeleton lines", "status": "new", "source": "prototype.html" }
+  ],
+  "tokens": {
+    "source": "prototype.html, neutral token set in :root",
+    "names": [
+      "--bg",
+      "--surface",
+      "--surface-sunk",
+      "--text",
+      "--text-muted",
+      "--line",
+      "--accent",
+      "--accent-hover",
+      "--accent-text",
+      "--passage",
+      "--skeleton",
+      "--skeleton-shine",
+      "--danger",
+      "--focus",
+      "--shadow",
+      "--radius",
+      "--font-ui",
+      "--font-text",
+      "--column",
+      "--panel",
+      "--gap",
+      "--header-h"
+    ]
+  },
+  "prototype": {
+    "kind": "standalone",
+    "location": "prototype.html",
+    "branch": null
+  },
+  "supersedes": null
+}

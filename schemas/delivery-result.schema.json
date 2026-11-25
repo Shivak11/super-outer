@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shivak11/Super-outer/schemas/delivery-result.schema.json",
+  "title": "Super-outer delivery result",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "task_id",
+    "head",
+    "depth",
+    "status",
+    "layers",
+    "failures"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "task_id": { "type": "string", "minLength": 1 },
+    "head": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "depth": { "enum": ["QUICK", "FOCUSED", "FULL", "CRITICAL"] },
+    "status": { "enum": ["PASS", "FAIL", "BLOCKED"] },
+    "layers": {
+      "type": "object",
+      "required": [
+        "source",
+        "ci",
+        "package",
+        "installation",
+        "host_discovery",
+        "hook_runtime",
+        "journey",
+        "migration",
+        "rollback"
+      ],
+      "properties": {
+        "source": { "$ref": "#/$defs/layer" },
+        "ci": { "$ref": "#/$defs/layer" },
+        "package": { "$ref": "#/$defs/layer" },
+        "installation": { "$ref": "#/$defs/layer" },
+        "host_discovery": { "$ref": "#/$defs/layer" },
+        "hook_runtime": { "$ref": "#/$defs/layer" },
+        "journey": { "$ref": "#/$defs/layer" },
+        "migration": { "$ref": "#/$defs/layer" },
+        "rollback": { "$ref": "#/$defs/layer" }
+      },
+      "additionalProperties": false
+    },
+    "failures": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "layer": {
+      "type": "object",
+      "required": ["status", "evidence_sha256", "limitation"],
+      "properties": {
+        "status": { "enum": ["PASS", "FAIL", "NOT RUN", "NOT APPLICABLE"] },
+        "evidence_sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "limitation": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    }
+  }
+}

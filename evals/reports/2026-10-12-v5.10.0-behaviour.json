@@ -1,0 +1,729 @@
+{
+ "note": "Per-case summaries of the claude plugin eval runs on 2026-10-12 for v5.10. Each run lists score, turns, cost and failed graders. Full transcripts are not kept.",
+ "runs": {
+  "pass2 (7 cases, Sonnet judge)": {
+   "cost_usd": 3.67,
+   "cases": [
+    {
+     "case": "bugfix-without-brief-asks-nothing",
+     "aggregates": {
+      "score": 1,
+      "passRate": 1,
+      "scoreWithout": 1,
+      "passRateWithout": 1,
+      "delta": 0
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 1,
+        "turns": 4,
+        "cost_usd": 0.1,
+        "failed": [],
+        "indicators": {}
+       },
+       {
+        "score": 1,
+        "turns": 3,
+        "cost_usd": 0.08,
+        "failed": [],
+        "indicators": {}
+       }
+      ],
+      "without": [
+       {
+        "score": 1,
+        "turns": 3,
+        "cost_usd": 0.09,
+        "failed": [],
+        "indicators": {}
+       },
+       {
+        "score": 1,
+        "turns": 3,
+        "cost_usd": 0.09,
+        "failed": [],
+        "indicators": {}
+       }
+      ]
+     }
+    },
+    {
+     "case": "existing-brief-new-subsystem",
+     "aggregates": {
+      "score": 0.5,
+      "passRate": 0,
+      "scoreWithout": 0.5,
+      "passRateWithout": 0,
+      "delta": 0
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 0.5,
+        "turns": 4,
+        "cost_usd": 0.12,
+        "failed": [
+         "memory-decisions-only"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0.5,
+        "turns": 4,
+        "cost_usd": 0.15,
+        "failed": [
+         "memory-decisions-only"
+        ],
+        "indicators": {}
+       }
+      ],
+      "without": [
+       {
+        "score": 0.5,
+        "turns": 4,
+        "cost_usd": 0.13,
+        "failed": [
+         "memory-decisions-only"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0.5,
+        "turns": 4,
+        "cost_usd": 0.14,
+        "failed": [
+         "memory-decisions-only"
+        ],
+        "indicators": {}
+       }
+      ]
+     }
+    },
+    {
+     "case": "explains-consequence-first",
+     "aggregates": {
+      "score": 0.5,
+      "passRate": 0,
+      "scoreWithout": 0.75,
+      "passRateWithout": 0.5,
+      "delta": -0.25
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 0.5,
+        "turns": 2,
+        "cost_usd": 0.09,
+        "failed": [
+         "consequence-first"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0.5,
+        "turns": 2,
+        "cost_usd": 0.09,
+        "failed": [
+         "consequence-first"
+        ],
+        "indicators": {}
+       }
+      ],
+      "without": [
+       {
+        "score": 0.5,
+        "turns": 1,
+        "cost_usd": 0.07,
+        "failed": [
+         "consequence-first"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 1,
+        "turns": 1,
+        "cost_usd": 0.08,
+        "failed": [],
+        "indicators": {}
+       }
+      ]
+     }
+    },
+    {
+     "case": "new-feature-asks-safe-activation",
+     "aggregates": {
+      "score": 1,
+      "passRate": 1,
+      "scoreWithout": 0,
+      "passRateWithout": 0,
+      "delta": 1
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 1,
+        "turns": 8,
+        "cost_usd": 0.41,
+        "failed": [],
+        "indicators": {
+         "skill-fired": true
+        }
+       },
+       {
+        "score": 1,
+        "turns": 9,
+        "cost_usd": 0.45,
+        "failed": [],
+        "indicators": {
+         "skill-fired": true
+        }
+       }
+      ],
+      "without": [
+       {
+        "score": 0,
+        "turns": 3,
+        "cost_usd": 0.11,
+        "failed": [
+         "design-before-build",
+         "safe-activation-question"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0,
+        "turns": 2,
+        "cost_usd": 0.11,
+        "failed": [
+         "design-before-build",
+         "safe-activation-question"
+        ],
+        "indicators": {}
+       }
+      ]
+     }
+    },
+    {
+     "case": "ordinary-fix-no-approval",
+     "aggregates": {
+      "score": 1,
+      "passRate": 1,
+      "scoreWithout": 0.5,
+      "passRateWithout": 0,
+      "delta": 0.5
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 1,
+        "turns": 3,
+        "cost_usd": 0.09,
+        "failed": [],
+        "indicators": {}
+       },
+       {
+        "score": 1,
+        "turns": 3,
+        "cost_usd": 0.09,
+        "failed": [],
+        "indicators": {}
+       }
+      ],
+      "without": [
+       {
+        "score": 0.5,
+        "turns": 1,
+        "cost_usd": 0.09,
+        "failed": [
+         "keeps-momentum"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0.5,
+        "turns": 1,
+        "cost_usd": 0.08,
+        "failed": [
+         "keeps-momentum"
+        ],
+        "indicators": {}
+       }
+      ]
+     }
+    },
+    {
+     "case": "quick-question-stays-quiet",
+     "aggregates": {
+      "score": 1,
+      "passRate": 1,
+      "scoreWithout": 1,
+      "passRateWithout": 1,
+      "delta": 0
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 1,
+        "turns": 1,
+        "cost_usd": 0.08,
+        "failed": [],
+        "indicators": {}
+       },
+       {
+        "score": 1,
+        "turns": 1,
+        "cost_usd": 0.07,
+        "failed": [],
+        "indicators": {}
+       }
+      ],
+      "without": [
+       {
+        "score": 1,
+        "turns": 1,
+        "cost_usd": 0.08,
+        "failed": [],
+        "indicators": {}
+       },
+       {
+        "score": 1,
+        "turns": 1,
+        "cost_usd": 0.08,
+        "failed": [],
+        "indicators": {}
+       }
+      ]
+     }
+    },
+    {
+     "case": "screen-change-confirms-assumptions",
+     "aggregates": {
+      "score": 0.75,
+      "passRate": 0.5,
+      "scoreWithout": 0.25,
+      "passRateWithout": 0,
+      "delta": 0.5
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 1,
+        "turns": 5,
+        "cost_usd": 0.2,
+        "failed": [],
+        "indicators": {}
+       },
+       {
+        "score": 0.5,
+        "turns": 8,
+        "cost_usd": 0.29,
+        "failed": [
+         "assumption-block"
+        ],
+        "indicators": {}
+       }
+      ],
+      "without": [
+       {
+        "score": 0,
+        "turns": 4,
+        "cost_usd": 0.11,
+        "failed": [
+         "assumption-block",
+         "no-tool-questions"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0.5,
+        "turns": 3,
+        "cost_usd": 0.11,
+        "failed": [
+         "assumption-block"
+        ],
+        "indicators": {}
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "pass6 (questions-last confirmation)": {
+   "cost_usd": 0.65,
+   "cases": [
+    {
+     "case": "agent-memory-interviews-first",
+     "aggregates": {
+      "score": 0.6666666666666666,
+      "passRate": 0
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 0.667,
+        "turns": 10,
+        "cost_usd": 0.65,
+        "failed": [
+         "researcher-called"
+        ],
+        "indicators": {}
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "pass5 agent-memory-defaults-give-recommendation": {
+   "cost_usd": 6.24,
+   "cases": [
+    {
+     "case": "agent-memory-defaults-give-recommendation",
+     "aggregates": {
+      "score": 0.625,
+      "passRate": 0.5,
+      "scoreWithout": 0,
+      "passRateWithout": 0,
+      "delta": 0.625
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 1,
+        "turns": 7,
+        "cost_usd": 2.23,
+        "failed": [],
+        "indicators": {
+         "brief-written": true
+        }
+       },
+       {
+        "score": 0.25,
+        "turns": 4,
+        "cost_usd": 0.84,
+        "failed": [
+         "now-and-later",
+         "one-stack-and-runner-up",
+         "walks-a-named-story"
+        ],
+        "indicators": {
+         "brief-written": false
+        }
+       }
+      ],
+      "without": [
+       {
+        "score": 0,
+        "turns": 21,
+        "cost_usd": 1.35,
+        "failed": [
+         "now-and-later",
+         "one-stack-and-runner-up",
+         "plan-shown-not-built",
+         "walks-a-named-story"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0,
+        "turns": 17,
+        "cost_usd": 1.82,
+        "failed": [
+         "now-and-later",
+         "one-stack-and-runner-up",
+         "plan-shown-not-built",
+         "walks-a-named-story"
+        ],
+        "indicators": {}
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "pass5 agent-memory-interviews-first": {
+   "cost_usd": 5.53,
+   "cases": [
+    {
+     "case": "agent-memory-interviews-first",
+     "aggregates": {
+      "score": 0.5,
+      "passRate": 0,
+      "scoreWithout": 0.5,
+      "passRateWithout": 0,
+      "delta": 0
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 0.5,
+        "turns": 1,
+        "cost_usd": 2.2,
+        "failed": [
+         "asks-in-customer-terms"
+        ],
+        "indicators": {
+         "researcher-called": true
+        }
+       },
+       {
+        "score": 0.5,
+        "turns": 4,
+        "cost_usd": 2.48,
+        "failed": [
+         "asks-in-customer-terms"
+        ],
+        "indicators": {
+         "researcher-called": true
+        }
+       }
+      ],
+      "without": [
+       {
+        "score": 0.5,
+        "turns": 2,
+        "cost_usd": 0.14,
+        "failed": [
+         "asks-in-customer-terms"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0.5,
+        "turns": 4,
+        "cost_usd": 0.72,
+        "failed": [
+         "asks-in-customer-terms"
+        ],
+        "indicators": {}
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "pass5 chat-app-marks-now-and-later": {
+   "cost_usd": 4.07,
+   "cases": [
+    {
+     "case": "chat-app-marks-now-and-later",
+     "aggregates": {
+      "score": 0.75,
+      "passRate": 0.5,
+      "scoreWithout": 0.25,
+      "passRateWithout": 0,
+      "delta": 0.5
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 0.5,
+        "turns": 11,
+        "cost_usd": 0.89,
+        "failed": [
+         "sized-to-the-numbers"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 1,
+        "turns": 15,
+        "cost_usd": 0.95,
+        "failed": [],
+        "indicators": {}
+       }
+      ],
+      "without": [
+       {
+        "score": 0.5,
+        "turns": 2,
+        "cost_usd": 0.26,
+        "failed": [
+         "sized-to-the-numbers"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0,
+        "turns": 36,
+        "cost_usd": 1.97,
+        "failed": [
+         "plan-shown-not-built",
+         "sized-to-the-numbers"
+        ],
+        "indicators": {}
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "pass5 existing-brief-new-subsystem": {
+   "cost_usd": 4.3,
+   "cases": [
+    {
+     "case": "existing-brief-new-subsystem",
+     "aggregates": {
+      "score": 0.5,
+      "passRate": 0,
+      "scoreWithout": 0.5,
+      "passRateWithout": 0,
+      "delta": 0
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 0.5,
+        "turns": 12,
+        "cost_usd": 1.68,
+        "failed": [
+         "memory-decisions-only"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0.5,
+        "turns": 2,
+        "cost_usd": 2.38,
+        "failed": [
+         "memory-decisions-only"
+        ],
+        "indicators": {}
+       }
+      ],
+      "without": [
+       {
+        "score": 0.5,
+        "turns": 4,
+        "cost_usd": 0.12,
+        "failed": [
+         "memory-decisions-only"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0.5,
+        "turns": 4,
+        "cost_usd": 0.12,
+        "failed": [
+         "memory-decisions-only"
+        ],
+        "indicators": {}
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "pass5 multiplayer-game-interviews-first": {
+   "cost_usd": 6.27,
+   "cases": [
+    {
+     "case": "multiplayer-game-interviews-first",
+     "aggregates": {
+      "score": 0.5,
+      "passRate": 0,
+      "scoreWithout": 0.5,
+      "passRateWithout": 0,
+      "delta": 0
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 0.5,
+        "turns": 1,
+        "cost_usd": 2.97,
+        "failed": [
+         "asks-in-customer-terms"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0.5,
+        "turns": 2,
+        "cost_usd": 2.77,
+        "failed": [
+         "asks-in-customer-terms"
+        ],
+        "indicators": {}
+       }
+      ],
+      "without": [
+       {
+        "score": 0.5,
+        "turns": 2,
+        "cost_usd": 0.28,
+        "failed": [
+         "asks-in-customer-terms"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0.5,
+        "turns": 2,
+        "cost_usd": 0.26,
+        "failed": [
+         "asks-in-customer-terms"
+        ],
+        "indicators": {}
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "pass5 todo-app-stays-one-box": {
+   "cost_usd": 1.12,
+   "cases": [
+    {
+     "case": "todo-app-stays-one-box",
+     "aggregates": {
+      "score": 1,
+      "passRate": 1,
+      "scoreWithout": 0.5,
+      "passRateWithout": 0,
+      "delta": 0.5
+     },
+     "arms": {
+      "with": [
+       {
+        "score": 1,
+        "turns": 2,
+        "cost_usd": 0.2,
+        "failed": [],
+        "indicators": {}
+       },
+       {
+        "score": 1,
+        "turns": 2,
+        "cost_usd": 0.19,
+        "failed": [],
+        "indicators": {}
+       }
+      ],
+      "without": [
+       {
+        "score": 0.5,
+        "turns": 3,
+        "cost_usd": 0.36,
+        "failed": [
+         "plan-shown-not-built"
+        ],
+        "indicators": {}
+       },
+       {
+        "score": 0.5,
+        "turns": 3,
+        "cost_usd": 0.37,
+        "failed": [
+         "plan-shown-not-built"
+        ],
+        "indicators": {}
+       }
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

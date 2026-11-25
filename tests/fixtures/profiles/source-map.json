@@ -1,0 +1,12 @@
+{
+  "companyAlpha": {
+    "ui": "company-alpha/design.md",
+    "security": "company-alpha/security.md"
+  },
+  "companyBeta": {
+    "ui": "company-beta/design.md"
+  },
+  "repository": {
+    "backend": "repository/api.md"
+  }
+}

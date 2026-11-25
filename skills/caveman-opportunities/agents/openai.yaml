@@ -1,0 +1,6 @@
+interface:
+  display_name: "Find machine-only text"
+  short_description: "Finds agent and prompt-chain text no person reads and shows a shorter register for each, keeping exact facts"
+  default_prompt: "Use $caveman-opportunities to find text in this project that only agents or models read and show how much shorter each could be."
+policy:
+  allow_implicit_invocation: true

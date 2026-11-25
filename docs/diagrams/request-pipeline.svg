@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1440" width="1440" height="1440" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc" data-diagram="pipeline">
+<title id="title">How Super-outer handles one request</title>
+<desc id="desc">The prompt hook keeps only the words the owner typed and chooses a depth, a question allowance and the specialists, with an optional second reading from Jev. The coding agent, following the router skill, reads the project's rules, runs the chosen specialist reviews, turns their findings into plain decisions, maps the journey for new work, plans and builds it, walks the launch steps, and keeps each kind of proof separate. Before an extremely critical action, the owner types one approval phrase that the hook checks.</desc>
+<metadata id="diagram-facts">{"depths":["SMALL_SAFE","QUICK","FOCUSED","FULL","CRITICAL"],"questionAllowance":{"SMALL_SAFE":0,"QUICK":2,"FOCUSED":4,"FULL":7,"CRITICAL":7},"knownBuildAllowance":12,"jevCharacters":1500,"moduleCount":12,"approachDepths":["FOCUSED","FULL","CRITICAL"],"approachLines":["See","Stop","Shape","Tools"],"proofKinds":["source","CI","package","installation","user journey"],"approvalPhrase":"APPROVE SUPER-OUTER","approvalMinutes":15,"approvalUses":1}</metadata>
+<defs>
+<marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1971C2"/></marker>
+<marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8590C"/></marker>
+<marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0B8A5F"/></marker>
+<marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6741D9"/></marker>
+<marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0C8599"/></marker>
+<marker id="a-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#868E96"/></marker>
+<marker id="a-indigo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4263EB"/></marker>
+</defs>
+<rect width="1440" height="1440" fill="#FFFFFF"/>
+<text x="40" y="62" font-size="42" font-weight="800" fill="#13294B">How Super-outer handles one request</text>
+<text x="40" y="100" font-size="20" fill="#344054">From the words the owner types to plain decisions and checked work</text>
+<rect x="30" y="140" width="1380" height="290" rx="16" fill="#EDF2FF" stroke="#4263EB" stroke-width="2.5"/>
+<text x="50" y="174" font-size="25" font-weight="800" fill="#364FC7">When the prompt hook is active, before the agent reads the request</text>
+<rect x="50" y="196" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="64" y="226" font-size="21" font-weight="700" fill="#1864AB">Typed prompt</text>
+<text x="64" y="252" font-size="16" fill="#1971C2">From the owner</text>
+<text x="64" y="280" font-size="16" fill="#344054">Can arrive with text the</text>
+<text x="64" y="302" font-size="16" fill="#344054">host adds, such as</text>
+<text x="64" y="324" font-size="16" fill="#344054">reminders.</text>
+<rect x="410" y="196" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="424" y="226" font-size="21" font-weight="700" fill="#D9480F">Keep the typed words</text>
+<text x="424" y="252" font-size="16" fill="#E8590C">Script: prompt hook</text>
+<text x="424" y="280" font-size="16" fill="#344054">Sets aside reminders and</text>
+<text x="424" y="302" font-size="16" fill="#344054">other host text. Host text</text>
+<text x="424" y="324" font-size="16" fill="#344054">alone gets no route.</text>
+<rect x="770" y="196" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="784" y="226" font-size="21" font-weight="700" fill="#D9480F">Choose a depth</text>
+<text x="784" y="252" font-size="16" fill="#E8590C">Script: word lists</text>
+<text x="784" y="280" font-size="16" fill="#344054">Picks the depth, the</text>
+<text x="784" y="302" font-size="16" fill="#344054">question allowance and</text>
+<text x="784" y="324" font-size="16" fill="#344054">the specialists.</text>
+<rect x="1130" y="196" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="1144" y="226" font-size="21" font-weight="700" fill="#087F5B">Second reading</text>
+<text x="1144" y="252" font-size="16" fill="#0B8A5F">Model: Jev, when switched on</text>
+<text x="1144" y="280" font-size="16" fill="#344054">Can add care or the design</text>
+<text x="1144" y="302" font-size="16" fill="#344054">path, never lowers depth.</text>
+<text x="1144" y="324" font-size="16" fill="#344054">Skipped when Jev is off.</text>
+<text x="50" y="378" font-size="17" fill="#1F2937">Depths: SMALL_SAFE, QUICK, FOCUSED, FULL and CRITICAL. Questions allowed: none for SMALL_SAFE, 2 for QUICK, 4 for FOCUSED,</text>
+<text x="50" y="404" font-size="17" fill="#1F2937">7 for FULL and CRITICAL, and up to 12 when the request matches a known kind of build, such as sign-in.</text>
+<rect x="30" y="470" width="1380" height="630" rx="16" fill="#EDF2FF" stroke="#4263EB" stroke-width="2.5"/>
+<text x="50" y="504" font-size="25" font-weight="800" fill="#364FC7">Done by the coding agent, following the router skill</text>
+<rect x="1130" y="526" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#6741D9" stroke-width="2"/>
+<text x="1144" y="556" font-size="21" font-weight="700" fill="#5F3DC4">Route</text>
+<text x="1144" y="582" font-size="16" fill="#6741D9">Given to the agent</text>
+<text x="1144" y="610" font-size="16" fill="#344054">The depth, the allowance</text>
+<text x="1144" y="632" font-size="16" fill="#344054">and the chosen specialists.</text>
+<rect x="770" y="526" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="784" y="556" font-size="21" font-weight="700" fill="#087F5B">Read the rules first</text>
+<text x="784" y="582" font-size="16" fill="#0B8A5F">Model: the coding agent</text>
+<text x="784" y="610" font-size="16" fill="#344054">AGENTS.md, CLAUDE.md and</text>
+<text x="784" y="632" font-size="16" fill="#344054">the repository profile.</text>
+<rect x="410" y="526" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="424" y="556" font-size="21" font-weight="700" fill="#087F5B">Specialist review</text>
+<text x="424" y="582" font-size="16" fill="#0B8A5F">Model: the coding agent</text>
+<text x="424" y="610" font-size="16" fill="#344054">Reads only the chosen</text>
+<text x="424" y="632" font-size="16" fill="#344054">modules. Each gives</text>
+<text x="424" y="654" font-size="16" fill="#344054">findings, never questions.</text>
+<rect x="50" y="526" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="64" y="556" font-size="21" font-weight="700" fill="#087F5B">Plain decisions</text>
+<text x="64" y="582" font-size="16" fill="#0B8A5F">Model: the coding agent</text>
+<text x="64" y="610" font-size="16" fill="#344054">Says what could go wrong</text>
+<text x="64" y="632" font-size="16" fill="#344054">and who would feel it. Asks</text>
+<text x="64" y="654" font-size="16" fill="#344054">at most the allowance.</text>
+<rect x="50" y="736" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="64" y="766" font-size="21" font-weight="700" fill="#1864AB">Owner answers</text>
+<text x="64" y="792" font-size="16" fill="#1971C2">Product owner</text>
+<text x="64" y="820" font-size="16" fill="#344054">Each question comes with</text>
+<text x="64" y="842" font-size="16" fill="#344054">one recommendation.</text>
+<rect x="410" y="736" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="424" y="766" font-size="21" font-weight="700" fill="#087F5B">Plan the build</text>
+<text x="424" y="792" font-size="16" fill="#0B8A5F">Model: the coding agent</text>
+<text x="424" y="820" font-size="16" fill="#344054">For new work, map the journey.</text>
+<text x="424" y="842" font-size="16" fill="#344054">Set the scope and finish line.</text>
+<text x="424" y="864" font-size="16" fill="#344054">See, Stop, Shape and Tools.</text>
+<rect x="770" y="736" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="784" y="766" font-size="21" font-weight="700" fill="#087F5B">Build and check</text>
+<text x="784" y="792" font-size="16" fill="#0B8A5F">Model: the coding agent</text>
+<text x="784" y="820" font-size="16" fill="#344054">Check the old behavior.</text>
+<text x="784" y="842" font-size="16" fill="#344054">Walk the launch steps when</text>
+<text x="784" y="864" font-size="16" fill="#344054">the plan calls for a walk.</text>
+<rect x="1130" y="736" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="1144" y="766" font-size="21" font-weight="700" fill="#D9480F">Keep proof separate</text>
+<text x="1144" y="792" font-size="16" fill="#E8590C">Script: super-outer command</text>
+<text x="1144" y="820" font-size="16" fill="#344054">Source, CI, package,</text>
+<text x="1144" y="842" font-size="16" fill="#344054">installation and user</text>
+<text x="1144" y="864" font-size="16" fill="#344054">journey, each on its own.</text>
+<rect x="1130" y="946" width="260" height="120" rx="10" fill="#FFFFFF" stroke="#4263EB" stroke-width="2"/>
+<text x="1144" y="976" font-size="21" font-weight="700" fill="#364FC7">Report to the owner</text>
+<text x="1144" y="1002" font-size="16" fill="#344054">What is proved and what</text>
+<text x="1144" y="1024" font-size="16" fill="#344054">is still unproved.</text>
+<rect x="30" y="1150" width="1380" height="250" rx="16" fill="#E7F5FF" stroke="#1971C2" stroke-width="2.5"/>
+<text x="50" y="1184" font-size="25" font-weight="800" fill="#1864AB">Before an extremely critical action</text>
+<rect x="410" y="1206" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="424" y="1236" font-size="21" font-weight="700" fill="#087F5B">Confirm in plain words</text>
+<text x="424" y="1262" font-size="16" fill="#0B8A5F">Model: the coding agent</text>
+<text x="424" y="1290" font-size="16" fill="#344054">Names the change, where it</text>
+<text x="424" y="1312" font-size="16" fill="#344054">goes, what could break and</text>
+<text x="424" y="1334" font-size="16" fill="#344054">how to undo it.</text>
+<rect x="770" y="1206" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="784" y="1236" font-size="21" font-weight="700" fill="#1864AB">Type the phrase</text>
+<text x="784" y="1262" font-size="16" fill="#1971C2">Product owner</text>
+<text x="784" y="1290" font-size="16" fill="#344054">APPROVE SUPER-OUTER and</text>
+<text x="784" y="1312" font-size="16" fill="#344054">the short code shown.</text>
+<rect x="1130" y="1206" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="1144" y="1236" font-size="21" font-weight="700" fill="#D9480F">Check the phrase</text>
+<text x="1144" y="1262" font-size="16" fill="#E8590C">Script: prompt hook</text>
+<text x="1144" y="1290" font-size="16" fill="#344054">One use, within 15 minutes,</text>
+<text x="1144" y="1312" font-size="16" fill="#344054">for this exact action. Then</text>
+<text x="1144" y="1334" font-size="16" fill="#344054">the action goes ahead.</text>
+<path d="M310 271H406" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+<text x="360" y="263" font-size="14" font-weight="700" fill="#1971C2" text-anchor="middle">prompt</text>
+<path d="M670 271H766" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="720" y="263" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">words</text>
+<path d="M1030 271H1126" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="1080" y="263" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">route</text>
+<path d="M1260 346V522" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="1272" y="452" font-size="14" font-weight="700" fill="#0B8A5F">route</text>
+<path d="M1130 601H1034" fill="none" stroke="#6741D9" stroke-width="3" marker-end="url(#a-purple)"/>
+<text x="1080" y="593" font-size="14" font-weight="700" fill="#6741D9" text-anchor="middle">route</text>
+<path d="M770 601H674" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="720" y="593" font-size="14" font-weight="700" fill="#0B8A5F" text-anchor="middle">modules</text>
+<path d="M410 601H314" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="360" y="593" font-size="14" font-weight="700" fill="#0B8A5F" text-anchor="middle">findings</text>
+<path d="M180 676V732" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="192" y="710" font-size="14" font-weight="700" fill="#0B8A5F">questions</text>
+<path d="M310 811H406" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+<text x="360" y="803" font-size="14" font-weight="700" fill="#1971C2" text-anchor="middle">answers</text>
+<path d="M670 811H766" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="720" y="803" font-size="14" font-weight="700" fill="#0B8A5F" text-anchor="middle">plan</text>
+<path d="M1030 811H1126" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="1080" y="803" font-size="14" font-weight="700" fill="#0B8A5F" text-anchor="middle">results</text>
+<path d="M1260 886V942" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="1272" y="920" font-size="14" font-weight="700" fill="#E8590C">proof</text>
+<path d="M900 886V1125H620V1202" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="640" y="1117" font-size="14" font-weight="700" fill="#0B8A5F">an extremely critical action</text>
+<path d="M670 1281H766" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="720" y="1273" font-size="14" font-weight="700" fill="#0B8A5F" text-anchor="middle">summary</text>
+<path d="M1030 1281H1126" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+<text x="1080" y="1273" font-size="14" font-weight="700" fill="#1971C2" text-anchor="middle">phrase</text>
+</svg>

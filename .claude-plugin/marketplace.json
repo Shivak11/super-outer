@@ -1,0 +1,23 @@
+{
+  "name": "super-outer",
+  "owner": {
+    "name": "Shiva Kakkar"
+  },
+  "description": "Super-outer: plain-language engineering planning and checks for Claude Code and Codex.",
+  "plugins": [
+    {
+      "name": "super-outer",
+      "source": {
+        "source": "github",
+        "repo": "Shivak11/Super-outer"
+      },
+      "description": "A plain-English translation layer for balanced, evidence-backed engineering.",
+      "category": "Development",
+      "tags": [
+        "engineering-review",
+        "progressive-disclosure",
+        "delivery-verification"
+      ]
+    }
+  ]
+}

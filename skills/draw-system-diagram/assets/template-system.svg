@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1010" width="1440" height="1010" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Example Shop: system diagram</title>
+  <desc id="desc">A customer's request reaches the Example Shop API, which asks an AI model for the answer, reads and writes the database and file store, and hands long work to a job worker. Email receipts and web search are built or planned but not live.</desc>
+  <metadata id="diagram-facts">{"release":"4f2c9e1","model":"model-name","workerSlots":2,"webSearch":{"enabled":false},"emailSender":{"deployed":false}}</metadata>
+  <defs>
+    <marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1971C2"/></marker>
+    <marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8590C"/></marker>
+    <marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0B8A5F"/></marker>
+    <marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0C8599"/></marker>
+  </defs>
+
+  <rect width="1440" height="1010" fill="#FFFFFF"/>
+
+  <text x="40" y="62" font-size="42" font-weight="800" fill="#13294B">Example Shop</text>
+  <text x="40" y="98" font-size="20" fill="#344054">Live release 4f2c9e1, 3 March 2026; email receipts not yet live</text>
+
+  <rect x="1060" y="26" width="350" height="78" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="1078" y="40" width="42" height="20" rx="5" fill="#FFFFFF" stroke="#334155" stroke-width="2"/>
+  <text x="1132" y="56" font-size="17" fill="#1F2937">Live</text>
+  <rect x="1078" y="72" width="42" height="20" rx="5" fill="#FFFFFF" stroke="#334155" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="1132" y="88" font-size="17" fill="#1F2937">Built and switched off, or planned</text>
+
+  <!-- People -->
+  <rect x="30" y="130" width="230" height="290" rx="16" fill="#E7F5FF" stroke="#1971C2" stroke-width="2.5"/>
+  <text x="50" y="164" font-size="25" font-weight="800" fill="#1864AB">Customer</text>
+  <path d="M50 182h180a10 10 0 0 1 10 10v56a10 10 0 0 1-10 10H96l-20 16v-16H60a10 10 0 0 1-10-10v-56a10 10 0 0 1 10-10z" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+  <text x="66" y="212" font-size="18" fill="#1F2937">“Summarise my last</text>
+  <text x="66" y="236" font-size="18" fill="#1F2937">three orders”</text>
+  <rect x="50" y="300" width="190" height="100" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+  <text x="64" y="328" font-size="21" font-weight="700" fill="#1864AB">Web app</text>
+  <text x="64" y="354" font-size="16" fill="#344054">Sign-in and the</text>
+  <text x="64" y="376" font-size="16" fill="#344054">order page.</text>
+
+  <!-- The system -->
+  <rect x="330" y="130" width="640" height="460" rx="16" fill="#FFF4E6" stroke="#E8590C" stroke-width="2.5"/>
+  <text x="350" y="164" font-size="25" font-weight="800" fill="#D9480F">Example Shop server</text>
+  <rect x="350" y="182" width="290" height="190" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+  <text x="364" y="210" font-size="21" font-weight="700" fill="#D9480F">API</text>
+  <text x="364" y="236" font-size="16" fill="#344054">Checks who is asking,</text>
+  <text x="364" y="258" font-size="16" fill="#344054">reads their orders and</text>
+  <text x="364" y="280" font-size="16" fill="#344054">returns the answer.</text>
+  <rect x="350" y="430" width="290" height="120" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+  <text x="364" y="458" font-size="21" font-weight="700" fill="#D9480F">Job worker</text>
+  <text x="364" y="484" font-size="16" fill="#344054">Runs up to two long jobs</text>
+  <text x="364" y="506" font-size="16" fill="#344054">at once.</text>
+  <rect x="700" y="430" width="250" height="120" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="714" y="458" font-size="21" font-weight="700" fill="#D9480F">Email sender</text>
+  <text x="714" y="484" font-size="16" fill="#344054">Built. Off until the</text>
+  <text x="714" y="506" font-size="16" fill="#344054">owner turns it on.</text>
+
+  <!-- AI model -->
+  <rect x="1020" y="130" width="390" height="460" rx="16" fill="#EBFBEE" stroke="#0B8A5F" stroke-width="2.5"/>
+  <text x="1040" y="164" font-size="25" font-weight="800" fill="#087F5B">AI model</text>
+  <rect x="1040" y="182" width="350" height="140" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+  <text x="1054" y="210" font-size="21" font-weight="700" fill="#087F5B">Model API</text>
+  <text x="1054" y="236" font-size="16" fill="#344054">model-name writes each</text>
+  <text x="1054" y="258" font-size="16" fill="#344054">answer from the orders</text>
+  <text x="1054" y="280" font-size="16" fill="#344054">the API sends it.</text>
+  <rect x="1040" y="360" width="350" height="100" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="1054" y="388" font-size="21" font-weight="700" fill="#087F5B">Web search</text>
+  <text x="1054" y="414" font-size="16" fill="#344054">Planned for questions</text>
+  <text x="1054" y="436" font-size="16" fill="#344054">about delivery times.</text>
+
+  <!-- Arrows between the main row -->
+  <path d="M240 330H346" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+  <text x="276" y="322" font-size="14" font-weight="700" fill="#1971C2">asks</text>
+  <path d="M350 362H244" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+  <text x="272" y="354" font-size="14" font-weight="700" fill="#E8590C">replies</text>
+  <path d="M640 220H1036" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+  <text x="660" y="212" font-size="14" font-weight="700" fill="#E8590C">asks the model</text>
+  <path d="M1040 264H644" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+  <text x="660" y="256" font-size="14" font-weight="700" fill="#0B8A5F">answers</text>
+  <path d="M495 372V426" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+  <text x="507" y="404" font-size="14" font-weight="700" fill="#E8590C">queues long work</text>
+  <path d="M640 490H696" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+  <text x="648" y="482" font-size="14" font-weight="700" fill="#E8590C">sends</text>
+
+  <!-- Next phase -->
+  <rect x="30" y="640" width="230" height="190" rx="16" fill="#F8F9FA" stroke="#868E96" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <text x="50" y="674" font-size="25" font-weight="800" fill="#495057">Next phase</text>
+  <text x="50" y="704" font-size="16" fill="#344054">Email receipts</text>
+  <text x="50" y="728" font-size="16" fill="#344054">Saved searches</text>
+  <text x="50" y="752" font-size="16" fill="#344054">Team accounts</text>
+
+  <!-- Storage -->
+  <path d="M650 590V636" fill="none" stroke="#E8590C" stroke-width="3" marker-start="url(#a-orange)" marker-end="url(#a-orange)"/>
+  <text x="662" y="620" font-size="14" font-weight="700" fill="#E8590C">reads and writes</text>
+  <rect x="330" y="640" width="640" height="190" rx="16" fill="#F3F0FF" stroke="#6741D9" stroke-width="2.5"/>
+  <text x="350" y="674" font-size="25" font-weight="800" fill="#5F3DC4">Storage</text>
+  <path d="M350 712c0-12 22-20 50-20s50 8 50 20v64c0 12-22 20-50 20s-50-8-50-20z" fill="#FFFFFF" stroke="#6741D9" stroke-width="2.5"/>
+  <path d="M350 712c0 12 22 20 50 20s50-8 50-20" fill="none" stroke="#6741D9" stroke-width="2.5"/>
+  <text x="400" y="768" font-size="20" font-weight="800" fill="#5F3DC4" text-anchor="middle">DB</text>
+  <text x="470" y="730" font-size="16" fill="#344054">Customers, orders</text>
+  <text x="470" y="752" font-size="16" fill="#344054">and jobs.</text>
+  <path d="M650 712c0-12 22-20 50-20s50 8 50 20v64c0 12-22 20-50 20s-50-8-50-20z" fill="#FFFFFF" stroke="#6741D9" stroke-width="2.5"/>
+  <path d="M650 712c0 12 22 20 50 20s50-8 50-20" fill="none" stroke="#6741D9" stroke-width="2.5"/>
+  <text x="700" y="768" font-size="20" font-weight="800" fill="#5F3DC4" text-anchor="middle">Files</text>
+  <text x="770" y="730" font-size="16" fill="#344054">Receipts and</text>
+  <text x="770" y="752" font-size="16" fill="#344054">uploaded images.</text>
+
+  <!-- Release and checks -->
+  <path d="M1040 640V612H900V594" fill="none" stroke="#0C8599" stroke-width="3" marker-end="url(#a-teal)"/>
+  <text x="920" y="606" font-size="14" font-weight="700" fill="#0C8599">deploys</text>
+  <rect x="1020" y="640" width="390" height="190" rx="16" fill="#E3FAFC" stroke="#0C8599" stroke-width="2.5"/>
+  <text x="1040" y="674" font-size="25" font-weight="800" fill="#0B7285">Release and checks</text>
+  <text x="1040" y="706" font-size="17" font-weight="700" fill="#1F2937">Test suite on every change</text>
+  <text x="1040" y="728" font-size="16" fill="#344054">Includes this diagram's facts.</text>
+  <text x="1040" y="762" font-size="17" font-weight="700" fill="#1F2937">Deploy after review</text>
+  <text x="1040" y="784" font-size="16" fill="#344054">The owner approves each release.</text>
+
+  <!-- One request, start to finish -->
+  <rect x="30" y="870" width="1380" height="110" rx="16" fill="#EDF2FF" stroke="#4263EB" stroke-width="2.5"/>
+  <text x="50" y="904" font-size="21" font-weight="800" fill="#364FC7">One request, start to finish</text>
+  <text x="50" y="934" font-size="17" fill="#1F2937">1. “Summarise my last three orders” arrives at the API.   2. The API reads the three orders from the database.</text>
+  <text x="50" y="960" font-size="17" fill="#1F2937">3. The model writes the summary.   4. The web app shows it.   A request for every order since 2020 becomes a long job.</text>
+</svg>

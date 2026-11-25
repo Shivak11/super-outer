@@ -1,0 +1,59 @@
+{
+ "question_set": "5.8.0-r1",
+ "config": "plain",
+ "groups": {
+  "held-out H3": [
+   "H3"
+  ],
+  "held-out H": [
+   "H"
+  ],
+  "held-out H2": [
+   "H2"
+  ],
+  "the 5.7.0 verifier probes": [
+   "V1",
+   "V2"
+  ],
+  "the GhostWriter-class set": [
+   "G"
+  ],
+  "the fitted reviewer sets": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E1",
+   "E2",
+   "E3",
+   "E4",
+   "F"
+  ]
+ },
+ "design": {
+  "held-out H3": {
+   "right": 40,
+   "of": 40
+  },
+  "held-out H": {
+   "right": 40,
+   "of": 40
+  },
+  "held-out H2": {
+   "right": 38,
+   "of": 40
+  },
+  "the 5.7.0 verifier probes": {
+   "right": 122,
+   "of": 129
+  },
+  "the GhostWriter-class set": {
+   "right": 4,
+   "of": 5
+  },
+  "the fitted reviewer sets": {
+   "right": 210,
+   "of": 215
+  }
+ }
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": "3.0.0",
+  "checked": "2026-10-25",
+  "frameworks": {
+    "expo": {
+      "versionTable": "https://unpkg.com/expo@{version}/bundledNativeModules.json",
+      "upgradeOneAtATime": true,
+      "upgradeGuide": "https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/",
+      "check": "CI=1 npx expo install --check",
+      "source": "https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/ (\"We recommend upgrading SDK versions incrementally, one at a time.\")"
+    },
+    "@angular/core": {
+      "manages": [
+        "@angular/*"
+      ],
+      "source": "https://angular.dev/cli/update"
+    }
+  },
+  "publishers": {
+    "expo": "expo",
+    "expo-*": "expo",
+    "@expo/*": "expo",
+    "@supabase/*": "supabase",
+    "stripe": "stripe",
+    "@stripe/*": "stripe",
+    "wrangler": "cloudflare",
+    "@cloudflare/*": "cloudflare",
+    "next": "vercel",
+    "@vercel/*": "vercel",
+    "ai": "vercel",
+    "@sentry/*": "getsentry",
+    "react-native-purchases": "revenuecat",
+    "@revenuecat/*": "revenuecat",
+    "@octokit/*": "github",
+    "@neondatabase/*": "neondatabase",
+    "@notionhq/client": "makenotion",
+    "@linear/sdk": "linear",
+    "@upstash/*": "upstash",
+    "@liveblocks/*": "liveblocks",
+    "react-native-reanimated": "software-mansion",
+    "react-native-gesture-handler": "software-mansion"
+  },
+  "sharedHosts": [
+    "app.vercel",
+    "app.netlify",
+    "dev.pages",
+    "dev.workers",
+    "dev.fly",
+    "com.herokuapp",
+    "com.onrender",
+    "app.render",
+    "app.railway",
+    "app.web",
+    "com.firebaseapp",
+    "dev.deno",
+    "com.trycloudflare",
+    "dev.val",
+    "app.replit",
+    "dev.replit",
+    "com.glitch",
+    "site.netlify",
+    "app.lovable",
+    "app.bolt"
+  ],
+  "platformFiles": {
+    "wrangler.toml": "cloudflare",
+    "wrangler.json": "cloudflare",
+    "wrangler.jsonc": "cloudflare",
+    "eas.json": "expo",
+    "vercel.json": "vercel",
+    "supabase/config.toml": "supabase",
+    "fly.toml": "superfly",
+    "firebase.json": "firebase",
+    "netlify.toml": "netlify"
+  },
+  "note": "Trust upgrades only. A vendor missing here is still found; its MCP server shows as unconfirmed until the agent checks the vendor's own docs.",
+  "skillsCli": {
+    "version": "1.7.4",
+    "checked": "2026-10-25",
+    "install": "npx skills@{version} add {owner}/{repo} --skill {skill}",
+    "source": "https://unpkg.com/skills@1.7.4/README.md (installs into the project by default; -g makes it global)"
+  },
+  "mcpNames": {
+    "neondatabase": [
+      "neon"
+    ],
+    "makenotion": [
+      "notion"
+    ],
+    "github": [
+      "io.github.github"
+    ],
+    "getsentry": [
+      "getsentry"
+    ]
+  },
+  "domains": {
+    "supabase": [
+      "supabase.com"
+    ],
+    "stripe": [
+      "stripe.com"
+    ],
+    "cloudflare": [
+      "cloudflare.com"
+    ],
+    "vercel": [
+      "vercel.com"
+    ],
+    "neondatabase": [
+      "neon.com",
+      "neon.tech"
+    ],
+    "makenotion": [
+      "notion.com",
+      "notion.so"
+    ],
+    "linear": [
+      "linear.app"
+    ],
+    "getsentry": [
+      "sentry.io",
+      "sentry.dev"
+    ],
+    "github": [
+      "github.com"
+    ],
+    "upstash": [
+      "upstash.com"
+    ],
+    "expo": [
+      "expo.dev"
+    ],
+    "revenuecat": [
+      "revenuecat.com"
+    ],
+    "liveblocks": [
+      "liveblocks.io"
+    ]
+  }
+}

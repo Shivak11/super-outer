@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "super-outer",
+  "version": "6.6.0",
+  "description": "A plain-English translation layer for balanced, evidence-backed engineering review.",
+  "author": {
+    "name": "Dr. Shiva Kakkar",
+    "url": "https://www.shivakakkar.com/"
+  },
+  "homepage": "https://www.shivakakkar.com/",
+  "repository": "https://github.com/Shivak11/Super-outer",
+  "license": "MIT",
+  "keywords": [
+    "engineering-review",
+    "progressive-disclosure",
+    "delivery-verification",
+    "plain-english"
+  ],
+  "extensions": {
+    "com.anthropic.claude-code": {
+      "manifest": "./.claude-plugin/plugin.json",
+      "commands": "./commands",
+      "agents": "./agents",
+      "hooks": "./hooks/hooks.json"
+    },
+    "com.openai.codex": {
+      "manifest": "./.codex-plugin/plugin.json",
+      "agents": "./.codex/agents"
+    },
+    "com.cursor.cursor": {
+      "bridge": "./adapters/cursor/bridge.mjs"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc" data-diagram="pipeline">
+<title id="title">How Example Expenses checks a claim</title>
+<desc id="desc">Each night a script splits the finance policy into a rule list that every claim reuses. For each claim, a model reads every receipt on its own while a script looks up the employee's limits. A second model request compares the claim, all receipts and the rules together, and a script validates the answer. A claim that passes is sent for payment; an unsure or failed one goes to a finance reviewer.</desc>
+<metadata id="diagram-facts">{"model":"model-name","policySchedule":"nightly","receiptsReadSeparately":true,"comparisonSeesAllReceipts":true,"maxReceipts":5}</metadata>
+<defs>
+<marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1971C2"/></marker>
+<marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8590C"/></marker>
+<marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0B8A5F"/></marker>
+<marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6741D9"/></marker>
+</defs>
+<rect width="1440" height="900" fill="#FFFFFF"/>
+<text x="40" y="62" font-size="42" font-weight="800" fill="#13294B">How Example Expenses checks a claim</text>
+<text x="40" y="100" font-size="20" fill="#344054">From the finance policy and one submitted claim to a decision</text>
+
+<rect x="30" y="140" width="1380" height="220" rx="16" fill="#F3F0FF" stroke="#6741D9" stroke-width="2.5"/>
+<text x="50" y="178" font-size="25" font-weight="800" fill="#5F3DC4">Prepared once a night and reused for every claim</text>
+<rect x="50" y="200" width="340" height="130" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="66" y="232" font-size="21" font-weight="700" fill="#1864AB">Finance policy</text>
+<text x="66" y="258" font-size="16" fill="#1971C2">Written by the finance team</text>
+<text x="66" y="286" font-size="16" fill="#344054">The current expense policy,</text>
+<text x="66" y="308" font-size="16" fill="#344054">as one document.</text>
+<rect x="550" y="200" width="340" height="130" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="566" y="232" font-size="21" font-weight="700" fill="#D9480F">Split into rules</text>
+<text x="566" y="258" font-size="16" fill="#E8590C">Script</text>
+<text x="566" y="286" font-size="16" fill="#344054">Numbers each rule and</text>
+<text x="566" y="308" font-size="16" fill="#344054">records its spending limit.</text>
+<rect x="1050" y="200" width="340" height="130" rx="10" fill="#FFFFFF" stroke="#6741D9" stroke-width="2"/>
+<text x="1066" y="232" font-size="21" font-weight="700" fill="#5F3DC4">Rule list</text>
+<text x="1066" y="258" font-size="16" fill="#6741D9">Saved for the day's claims</text>
+<text x="1066" y="286" font-size="16" fill="#344054">One entry per rule, with</text>
+<text x="1066" y="308" font-size="16" fill="#344054">its limit and category.</text>
+<path d="M390 265H550" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+<text x="470" y="255" font-size="14" font-weight="700" fill="#1971C2" text-anchor="middle">policy text</text>
+<path d="M890 265H1050" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="970" y="255" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">rules</text>
+
+<rect x="30" y="420" width="1380" height="440" rx="16" fill="#EDF2FF" stroke="#4263EB" stroke-width="2.5"/>
+<text x="50" y="458" font-size="25" font-weight="800" fill="#364FC7">Done for each claim</text>
+<rect x="50" y="520" width="200" height="200" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="66" y="552" font-size="21" font-weight="700" fill="#1864AB">Claim</text>
+<text x="66" y="578" font-size="16" fill="#1971C2">Sent by an employee</text>
+<text x="66" y="606" font-size="16" fill="#344054">A form and 1 to 5</text>
+<text x="66" y="628" font-size="16" fill="#344054">receipt photos.</text>
+<rect x="340" y="485" width="250" height="130" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="356" y="517" font-size="21" font-weight="700" fill="#087F5B">Read each receipt</text>
+<text x="356" y="543" font-size="16" fill="#0B8A5F">Model: model-name</text>
+<text x="356" y="571" font-size="16" fill="#344054">One request per photo.</text>
+<text x="356" y="593" font-size="16" fill="#344054">Reads amount and date.</text>
+<rect x="340" y="645" width="250" height="130" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="356" y="677" font-size="21" font-weight="700" fill="#D9480F">Look up limits</text>
+<text x="356" y="703" font-size="16" fill="#E8590C">Script</text>
+<text x="356" y="731" font-size="16" fill="#344054">Finds the employee's</text>
+<text x="356" y="753" font-size="16" fill="#344054">grade and its limits.</text>
+<rect x="670" y="520" width="240" height="200" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="686" y="552" font-size="21" font-weight="700" fill="#087F5B">Compare together</text>
+<text x="686" y="578" font-size="16" fill="#0B8A5F">Model: model-name</text>
+<text x="686" y="606" font-size="16" fill="#344054">The claim, all receipts</text>
+<text x="686" y="628" font-size="16" fill="#344054">and the rules in one</text>
+<text x="686" y="650" font-size="16" fill="#344054">request. Lists each</text>
+<text x="686" y="672" font-size="16" fill="#344054">rule the claim breaks.</text>
+<rect x="990" y="520" width="190" height="200" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="1006" y="552" font-size="21" font-weight="700" fill="#D9480F">Validate</text>
+<text x="1006" y="578" font-size="16" fill="#E8590C">Script</text>
+<text x="1006" y="606" font-size="16" fill="#344054">Checks the answer's</text>
+<text x="1006" y="628" font-size="16" fill="#344054">fields and adds up</text>
+<text x="1006" y="650" font-size="16" fill="#344054">the totals again.</text>
+<rect x="1240" y="485" width="150" height="110" rx="10" fill="#FFFFFF" stroke="#4263EB" stroke-width="2"/>
+<text x="1256" y="517" font-size="21" font-weight="700" fill="#364FC7">Approved</text>
+<text x="1256" y="545" font-size="16" fill="#344054">Sent for</text>
+<text x="1256" y="567" font-size="16" fill="#344054">payment.</text>
+<rect x="1240" y="625" width="150" height="150" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="1256" y="657" font-size="21" font-weight="700" fill="#1864AB">Reviewer</text>
+<text x="1256" y="683" font-size="16" fill="#1971C2">Finance team</text>
+<text x="1256" y="711" font-size="16" fill="#344054">Decides when</text>
+<text x="1256" y="733" font-size="16" fill="#344054">the model is</text>
+<text x="1256" y="755" font-size="16" fill="#344054">unsure.</text>
+<path d="M250 560H340" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+<text x="295" y="550" font-size="14" font-weight="700" fill="#1971C2" text-anchor="middle">photos</text>
+<path d="M250 690H340" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+<text x="295" y="680" font-size="14" font-weight="700" fill="#1971C2" text-anchor="middle">staff ID</text>
+<path d="M590 550H670" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="630" y="540" font-size="14" font-weight="700" fill="#0B8A5F" text-anchor="middle">amounts</text>
+<path d="M590 700H670" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="630" y="690" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">limits</text>
+<path d="M910 620H990" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="950" y="610" font-size="14" font-weight="700" fill="#0B8A5F" text-anchor="middle">answer</text>
+<path d="M1180 560H1240" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="1210" y="550" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">passes</text>
+<path d="M1180 680H1240" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="1210" y="670" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">unsure</text>
+<path d="M1110 330V390H790V520" fill="none" stroke="#6741D9" stroke-width="3" marker-end="url(#a-purple)"/>
+<text x="950" y="382" font-size="14" font-weight="700" fill="#6741D9" text-anchor="middle">rule list</text>
+<text x="50" y="830" font-size="17" fill="#1F2937">Each receipt is read on its own. The comparison sees the claim, every receipt and the rules together.</text>
+</svg>

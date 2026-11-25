@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" data-diagram="code-flow" viewBox="0 0 1440 1442" width="1440" height="1442" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Example: one export request, start to finish</title>
+<desc id="desc">A swimlane data flow of a made-up export endpoint: the client asks, the API queues one job and replies, the worker runs three steps in order, then two side jobs run at the same time. The email step is planned.</desc>
+<metadata id="diagram-facts">{"example": true, "route": "POST /orders/{id}/export", "queue": "arq", "stepsInOrder": ["load", "render", "send"], "renderParallelism": 2, "jobTimeoutSeconds": 600, "sendEmail": {"deployed": false}}</metadata>
+<defs>
+<marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1971C2"/></marker>
+<marker id="a-blue-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1971C2"/></marker>
+<marker id="a-pink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#C2255C"/></marker>
+<marker id="a-pink-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#C2255C"/></marker>
+<marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8590C"/></marker>
+<marker id="a-orange-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8590C"/></marker>
+<marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0B8A5F"/></marker>
+<marker id="a-green-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0B8A5F"/></marker>
+<marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6741D9"/></marker>
+<marker id="a-purple-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6741D9"/></marker>
+<marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0C8599"/></marker>
+<marker id="a-teal-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0C8599"/></marker>
+<marker id="a-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#868E96"/></marker>
+<marker id="a-grey-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#868E96"/></marker>
+<marker id="a-indigo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4263EB"/></marker>
+<marker id="a-indigo-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4263EB"/></marker>
+</defs>
+<rect width="1440" height="1442" fill="#FFFFFF"/>
+<text x="40" y="62" font-size="42" font-weight="800" fill="#13294B">Example: one export request, start to finish</text>
+<text x="40" y="98" font-size="20" fill="#344054">Example Shop, made up. Replace every box with the real endpoint, keep the structure.</text>
+<rect x="1060" y="26" width="350" height="106" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<rect x="1078" y="40" width="42" height="20" rx="5" fill="#FFFFFF" stroke="#334155" stroke-width="2"/>
+<text x="1132" y="56" font-size="17" fill="#1F2937">Live</text>
+<rect x="1078" y="70" width="42" height="20" rx="5" fill="#FFFFFF" stroke="#334155" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="1132" y="86" font-size="17" fill="#1F2937">Planned, or staging only</text>
+<rect x="1078" y="100" width="42" height="20" rx="5" fill="#4263EB"/>
+<text x="1132" y="116" font-size="17" fill="#1F2937">Runs at the same time</text>
+<rect x="30" y="150" width="1380" height="104" rx="16" fill="#EDF2FF" stroke="#4263EB" stroke-width="2.5"/>
+<text x="50" y="184" font-size="25" font-weight="800" fill="#364FC7">How to read this</text>
+<text x="50" y="218" font-size="16" fill="#344054">Left to right: who does the work.</text>
+<text x="50" y="240" font-size="16" fill="#344054">Top to bottom: time passes.</text>
+<text x="500" y="218" font-size="16" fill="#344054">Arrow labels name the data that moves.</text>
+<text x="500" y="240" font-size="16" fill="#344054">Numbered steps: each waits for the one above.</text>
+<text x="950" y="218" font-size="16" fill="#344054">AT ONCE tag: work that runs in parallel.</text>
+<text x="950" y="240" font-size="16" fill="#344054">Dashed box: planned, not live yet.</text>
+<rect x="30" y="342" width="290" height="202" rx="16" fill="#E7F5FF" stroke="#1971C2" stroke-width="2.5"/>
+<rect x="410" y="342" width="620" height="202" rx="16" fill="#FFF4E6" stroke="#E8590C" stroke-width="2.5"/>
+<rect x="1120" y="342" width="290" height="202" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2.5"/>
+<rect x="30" y="680" width="290" height="446" rx="16" fill="#E7F5FF" stroke="#1971C2" stroke-width="2.5"/>
+<rect x="410" y="680" width="620" height="446" rx="16" fill="#FFF4E6" stroke="#E8590C" stroke-width="2.5"/>
+<rect x="1120" y="680" width="290" height="446" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2.5"/>
+<rect x="30" y="294" width="1380" height="36" rx="10" fill="#4263EB"/>
+<text x="50" y="319" font-size="18" font-weight="800" fill="#FFFFFF">A. Request: the client waits, so the API answers fast.</text>
+<rect x="45" y="396" width="260" height="104" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="59" y="424" font-size="21" font-weight="700" fill="#1864AB">Ask for an export</text>
+<text x="59" y="450" font-size="16" fill="#344054">Sends the order id and</text>
+<text x="59" y="472" font-size="16" fill="#344054">the format wanted.</text>
+<rect x="430" y="396" width="580" height="104" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="444" y="424" font-size="21" font-weight="700" fill="#D9480F">API: accept and queue</text>
+<text x="444" y="450" font-size="16" fill="#344054">Checks the person owns the order, inserts an export row, queues</text>
+<text x="444" y="472" font-size="16" fill="#344054">ONE job and replies 202 at once.</text>
+<text x="444" y="488" font-size="14" font-weight="700" fill="#E8590C">orders_controller.start_export</text>
+<rect x="1135" y="396" width="260" height="60" rx="10" fill="#FFFFFF" stroke="#6741D9" stroke-width="2"/>
+<text x="1149" y="424" font-size="21" font-weight="700" fill="#5F3DC4">Postgres</text>
+<text x="1149" y="450" font-size="16" fill="#344054">export row: queued</text>
+<rect x="1135" y="464" width="260" height="60" rx="10" fill="#FFFFFF" stroke="#6741D9" stroke-width="2"/>
+<text x="1149" y="492" font-size="21" font-weight="700" fill="#5F3DC4">Redis (arq)</text>
+<text x="1149" y="518" font-size="16" fill="#344054">export job queued</text>
+<path d="M305 430H430" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+<text x="326" y="420" font-size="14" font-weight="700" fill="#1971C2">request</text>
+<path d="M430 476H305" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="340" y="466" font-size="14" font-weight="700" fill="#E8590C">202</text>
+<path d="M1010 426H1135" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="1040" y="416" font-size="14" font-weight="700" fill="#E8590C">insert</text>
+<path d="M1010 492H1135" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="1040" y="482" font-size="14" font-weight="700" fill="#E8590C">enqueue</text>
+<rect x="30" y="568" width="1380" height="44" rx="10" fill="#FFFFFF" stroke="#4263EB" stroke-width="2.5"/>
+<text x="50" y="597" font-size="18" font-weight="800" fill="#364FC7">The client's request ends here. Everything below runs in the background.</text>
+<rect x="30" y="632" width="1380" height="36" rx="10" fill="#4263EB"/>
+<text x="50" y="657" font-size="18" font-weight="800" fill="#FFFFFF">B. Export job: three steps, one after another.</text>
+<rect x="430" y="734" width="580" height="104" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="444" y="762" font-size="21" font-weight="700" fill="#D9480F">1. Load the orders</text>
+<text x="444" y="788" font-size="16" fill="#344054">Reads the person's orders for the</text>
+<text x="444" y="810" font-size="16" fill="#344054">period asked for.</text>
+<text x="444" y="826" font-size="14" font-weight="700" fill="#E8590C">export_worker.load</text>
+<rect x="430" y="866" width="580" height="104" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="444" y="894" font-size="21" font-weight="700" fill="#D9480F">2. Render the file</text>
+<text x="444" y="920" font-size="16" fill="#344054">Builds the CSV and the PDF side by</text>
+<text x="444" y="942" font-size="16" fill="#344054">side, then uploads both.</text>
+<text x="444" y="958" font-size="14" font-weight="700" fill="#E8590C">export_worker.render</text>
+<rect x="922" y="874" width="76" height="24" rx="6" fill="#4263EB"/>
+<text x="960" y="891" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">AT ONCE</text>
+<rect x="430" y="998" width="580" height="104" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="444" y="1026" font-size="21" font-weight="700" fill="#D9480F">3. Send the email</text>
+<text x="444" y="1052" font-size="16" fill="#344054">Mails the download link. Planned: the</text>
+<text x="444" y="1074" font-size="16" fill="#344054">mail service is not live yet.</text>
+<text x="444" y="1090" font-size="14" font-weight="700" fill="#E8590C">export_worker.send</text>
+<rect x="1135" y="744" width="260" height="84" rx="10" fill="#FFFFFF" stroke="#6741D9" stroke-width="2"/>
+<text x="1149" y="772" font-size="21" font-weight="700" fill="#5F3DC4">Postgres</text>
+<text x="1149" y="798" font-size="16" fill="#344054">reads the orders</text>
+<text x="1149" y="820" font-size="16" fill="#344054">export row: running</text>
+<path d="M1135 786H1010" fill="none" stroke="#6741D9" stroke-width="3" marker-end="url(#a-purple)"/>
+<text x="1040" y="776" font-size="14" font-weight="700" fill="#6741D9">orders</text>
+<rect x="1135" y="876" width="260" height="84" rx="10" fill="#FFFFFF" stroke="#6741D9" stroke-width="2"/>
+<text x="1149" y="904" font-size="21" font-weight="700" fill="#5F3DC4">Storage</text>
+<text x="1149" y="930" font-size="16" fill="#344054">export.csv and</text>
+<text x="1149" y="952" font-size="16" fill="#344054">export.pdf</text>
+<path d="M1010 918H1135" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="1040" y="908" font-size="14" font-weight="700" fill="#E8590C">files</text>
+<rect x="1135" y="1008" width="260" height="84" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1149" y="1036" font-size="21" font-weight="700" fill="#087F5B">Mail service</text>
+<text x="1149" y="1062" font-size="16" fill="#344054">planned, not live</text>
+<path d="M1010 1050H1135" fill="none" stroke="#E8590C" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#a-orange)"/>
+<text x="1040" y="1040" font-size="14" font-weight="700" fill="#E8590C">link</text>
+<path d="M720 838V866" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange-s)"/>
+<text x="730" y="857" font-size="14" font-weight="700" fill="#E8590C">then</text>
+<path d="M720 970V998" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange-s)"/>
+<text x="730" y="989" font-size="14" font-weight="700" fill="#E8590C">then</text>
+<rect x="45" y="734" width="260" height="104" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="59" y="762" font-size="21" font-weight="700" fill="#1864AB">Client is free</text>
+<text x="59" y="788" font-size="16" fill="#344054">It polls the export row:</text>
+<text x="59" y="810" font-size="16" fill="#344054">queued, then running.</text>
+<rect x="45" y="998" width="260" height="104" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="59" y="1026" font-size="21" font-weight="700" fill="#1864AB">Download link</text>
+<text x="59" y="1052" font-size="16" fill="#344054">Appears when the file</text>
+<text x="59" y="1074" font-size="16" fill="#344054">is stored.</text>
+<text x="50" y="376" font-size="25" font-weight="800" fill="#1864AB">Client</text>
+<text x="430" y="376" font-size="25" font-weight="800" fill="#D9480F">Backend: API, then worker</text>
+<text x="1140" y="376" font-size="25" font-weight="800" fill="#5F3DC4">Stores and services</text>
+<text x="50" y="714" font-size="25" font-weight="800" fill="#1864AB">Client</text>
+<text x="430" y="714" font-size="25" font-weight="800" fill="#D9480F">Backend: API, then worker</text>
+<text x="1140" y="714" font-size="25" font-weight="800" fill="#5F3DC4">Stores and services</text>
+<path d="M720 1102V1186" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="730" y="1166" font-size="14" font-weight="700" fill="#E8590C">enqueue, no waiting</text>
+<rect x="30" y="1186" width="1380" height="226" rx="16" fill="#EDF2FF" stroke="#4263EB" stroke-width="2.5"/>
+<text x="50" y="1220" font-size="25" font-weight="800" fill="#364FC7">C. After the export: separate jobs, at the same time</text>
+<rect x="50" y="1236" width="430" height="160" rx="10" fill="#FFFFFF" stroke="#4263EB" stroke-width="2"/>
+<text x="64" y="1264" font-size="21" font-weight="700" fill="#364FC7">Notification job</text>
+<text x="64" y="1290" font-size="16" fill="#344054">Writes an in-app notice that the</text>
+<text x="64" y="1312" font-size="16" fill="#344054">export is ready.</text>
+<text x="64" y="1384" font-size="14" font-weight="700" fill="#4263EB">notify_worker.run</text>
+<rect x="392" y="1244" width="76" height="24" rx="6" fill="#4263EB"/>
+<text x="430" y="1261" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">AT ONCE</text>
+<rect x="510" y="1236" width="430" height="160" rx="10" fill="#FFFFFF" stroke="#4263EB" stroke-width="2"/>
+<text x="524" y="1264" font-size="21" font-weight="700" fill="#364FC7">Cleanup job</text>
+<text x="524" y="1290" font-size="16" fill="#344054">Deletes export files older than</text>
+<text x="524" y="1312" font-size="16" fill="#344054">seven days.</text>
+<text x="524" y="1384" font-size="14" font-weight="700" fill="#4263EB">cleanup_worker.run</text>
+<rect x="852" y="1244" width="76" height="24" rx="6" fill="#4263EB"/>
+<text x="890" y="1261" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">AT ONCE</text>
+</svg>

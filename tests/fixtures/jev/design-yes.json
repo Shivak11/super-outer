@@ -1,0 +1,180 @@
+{
+  "model": "typesafe/jev-1.13-20260917",
+  "answers": {
+    "surface_made": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "small_adjustment": {
+      "type": "noul",
+      "noul": 0.06
+    },
+    "screens_unchanged": {
+      "type": "noul",
+      "noul": 0.02
+    },
+    "developer_artefact": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "code_only": {
+      "type": "noul",
+      "noul": 0.02
+    },
+    "maintenance": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "protected": {
+      "type": "noul",
+      "noul": 0.04
+    },
+    "depth": {
+      "type": "choice",
+      "choice": "FOCUSED",
+      "confidence": 0.71,
+      "probabilities": {
+        "SMALL_SAFE": 0.01,
+        "QUICK": 0.17,
+        "FOCUSED": 0.71,
+        "FULL": 0.1,
+        "CRITICAL": 0.01
+      }
+    },
+    "library_admin_support_tools": {
+      "type": "noul",
+      "noul": 0.02
+    },
+    "library_authentication": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "library_cross_system_rollout": {
+      "type": "noul",
+      "noul": 0.04
+    },
+    "library_data_migration": {
+      "type": "noul",
+      "noul": 0.05
+    },
+    "library_data_rights": {
+      "type": "noul",
+      "noul": 0.02
+    },
+    "library_email_deliverability": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "library_help_and_release_notes": {
+      "type": "noul",
+      "noul": 0.04
+    },
+    "library_launch_surfaces": {
+      "type": "noul",
+      "noul": 0.05
+    },
+    "library_llm_feature": {
+      "type": "noul",
+      "noul": 0.02
+    },
+    "library_mobile_capture_upload": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "library_new_product_setup": {
+      "type": "noul",
+      "noul": 0.08
+    },
+    "library_notifications_messaging": {
+      "type": "noul",
+      "noul": 0.05
+    },
+    "library_payments_subscription": {
+      "type": "noul",
+      "noul": 0.02
+    },
+    "library_product_analytics": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "library_retirement": {
+      "type": "noul",
+      "noul": 0.04
+    },
+    "library_safe_activation": {
+      "type": "noul",
+      "noul": 0.05
+    },
+    "library_teams_and_roles": {
+      "type": "noul",
+      "noul": 0.02
+    },
+    "area_product_ui_ux_motion": {
+      "type": "noul",
+      "noul": 0.96
+    },
+    "area_frontend_client": {
+      "type": "noul",
+      "noul": 0.74
+    },
+    "area_backend_api": {
+      "type": "noul",
+      "noul": 0.04
+    },
+    "area_data_migrations": {
+      "type": "noul",
+      "noul": 0.06
+    },
+    "area_security_privacy_abuse": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "area_scale_performance_cost": {
+      "type": "noul",
+      "noul": 0.05
+    },
+    "area_reliability_recovery": {
+      "type": "noul",
+      "noul": 0.04
+    },
+    "area_architecture_maintainability": {
+      "type": "noul",
+      "noul": 0.06
+    },
+    "area_compatibility_integrations": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "area_observability_operations": {
+      "type": "noul",
+      "noul": 0.05
+    },
+    "area_ai_llm": {
+      "type": "noul",
+      "noul": 0.04
+    },
+    "area_delivery_release": {
+      "type": "noul",
+      "noul": 0.06
+    },
+    "domain_mcp_ai_connectors": {
+      "type": "noul",
+      "noul": 0.02
+    },
+    "domain_ai_coding_plugins": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "domain_scheduled_jobs": {
+      "type": "noul",
+      "noul": 0.02
+    },
+    "domain_habit_loops": {
+      "type": "noul",
+      "noul": 0.12
+    }
+  },
+  "usage": {
+    "input_tokens": 2600
+  }
+}

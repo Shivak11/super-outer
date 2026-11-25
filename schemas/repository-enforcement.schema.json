@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shivak11/Super-outer/schemas/repository-enforcement.schema.json",
+  "title": "Super-outer repository enforcement setting",
+  "type": "object",
+  "required": ["schema_version", "enabled", "base_ref", "mode", "command"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "enabled": { "const": true },
+    "base_ref": { "type": "string", "minLength": 1 },
+    "mode": { "const": "local-git-hook" },
+    "command": { "const": "super-outer repo verify --commit-gate" }
+  },
+  "additionalProperties": false
+}

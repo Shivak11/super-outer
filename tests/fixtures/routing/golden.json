@@ -1,0 +1,67 @@
+[
+  {
+    "name": "backend-only",
+    "description": "Change a backend API endpoint business rule",
+    "expectedMode": "QUICK",
+    "expectedModules": ["backend-api"]
+  },
+  {
+    "name": "motion-only",
+    "description": "Add a new animation with a Reduce Motion path",
+    "expectedMode": "FOCUSED",
+    "expectedModules": ["product-ui-ux-motion"]
+  },
+  {
+    "name": "full-stack",
+    "description": "Build a full-stack user-facing feature",
+    "expectedMode": "FULL",
+    "expectedModules": [
+      "backend-api",
+      "data-migrations",
+      "frontend-client",
+      "product-ui-ux-motion"
+    ]
+  },
+  {
+    "name": "high-volume-authenticated-service",
+    "description": "Launch a high-volume authenticated service",
+    "expectedMode": "CRITICAL",
+    "expectedModules": [
+      "backend-api",
+      "delivery-release",
+      "observability-operations",
+      "reliability-recovery",
+      "scale-performance-cost",
+      "security-privacy-abuse"
+    ]
+  },
+  {
+    "name": "migration",
+    "description": "Run a database schema migration",
+    "expectedMode": "FULL",
+    "expectedModules": [
+      "compatibility-integrations",
+      "data-migrations",
+      "delivery-release",
+      "reliability-recovery"
+    ]
+  },
+  {
+    "name": "ai-feature",
+    "description": "Add an AI coaching UI in the mobile client backed by an API that persists records",
+    "expectedMode": "FULL",
+    "expectedModules": [
+      "ai-llm",
+      "backend-api",
+      "data-migrations",
+      "frontend-client",
+      "product-ui-ux-motion"
+    ]
+  },
+  {
+    "name": "plain-new-screen",
+    "description": "Build a new writing editor where selecting a passage shows sources beside it",
+    "expectedMode": "FOCUSED",
+    "expectedModules": ["product-ui-ux-motion"]
+  }
+]

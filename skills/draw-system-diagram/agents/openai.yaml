@@ -1,0 +1,4 @@
+interface:
+  display_name: "Draw a system diagram"
+  short_description: "Light, colourful architecture, pipeline and code-flow diagrams, kept true to the code"
+  default_prompt: "Use $draw-system-diagram to draw how this product's parts connect, how its pipeline turns inputs into results, or how one endpoint works for a developer."

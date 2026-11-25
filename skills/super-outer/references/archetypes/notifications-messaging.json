@@ -1,0 +1,132 @@
+{
+  "id": "notifications-messaging",
+  "name": "Messages the product sends to people",
+  "matches": [
+    "notification",
+    "notify user",
+    "notify the user",
+    "notify people",
+    "notify them",
+    "push message",
+    "push alert",
+    "web push",
+    "push token",
+    "send a push",
+    "reminder email",
+    "reminder message",
+    "send a reminder",
+    "send reminder",
+    "daily reminder",
+    "weekly reminder",
+    "mailer",
+    "newsletter",
+    "send a nudge",
+    "send nudge",
+    "nudge email",
+    "nudge message",
+    "nudge users",
+    "nudge people",
+    "daily nudge",
+    "send an alert",
+    "send alert",
+    "email alert",
+    "alert email",
+    "sms alert",
+    "send an email",
+    "send email",
+    "weekly digest",
+    "daily digest",
+    "email digest",
+    "digest email",
+    "broadcast message",
+    "broadcast email",
+    "send a broadcast"
+  ],
+  "modules": [
+    "backend-api",
+    "security-privacy-abuse",
+    "reliability-recovery",
+    "compatibility-integrations",
+    "observability-operations"
+  ],
+  "failureModes": [
+    {
+      "id": "wrong-recipient",
+      "prompt": "Could a message ever reach the wrong person, carrying somebody else's content?",
+      "why": "a message is the one mistake the product cannot take back",
+      "options": [
+        { "label": "Recipient is resolved at send time and checked", "consequence": "slower send, no leak" },
+        { "label": "Trust the stored address", "consequence": "faster, and a stale record sends private content to a stranger" }
+      ],
+      "recommended": "Recipient is resolved at send time and checked",
+      "lookFor": ["recipient", "sendTo", "user_id", "device_token", "unsubscribe"],
+      "sequence": "now",
+      "provenBy": "a test that changes a person's address after queueing and asserts the message is not sent to the old one"
+    },
+    {
+      "id": "duplicate-send",
+      "prompt": "If sending is retried, could the same person receive the same message twice?",
+      "why": "a duplicate reminder reads as a broken product and a duplicate email reads as spam",
+      "options": [
+        { "label": "Each message sends at most once", "consequence": "needs a record per message, no duplicates" },
+        { "label": "Accept the occasional repeat", "consequence": "simpler, and retries become visible to people" }
+      ],
+      "recommended": "Each message sends at most once",
+      "lookFor": ["idempotency", "dedupe", "sent_at", "message_id", "unique"],
+      "sequence": "now",
+      "provenBy": "a test that retries a failed send and asserts exactly one message left the system"
+    },
+    {
+      "id": "consent",
+      "prompt": "Has this person agreed to receive this kind of message?",
+      "why": "permission cannot be obtained after the message has already gone out",
+      "options": [
+        { "label": "Checked against a stored preference every time", "consequence": "some people receive nothing, and that is correct" },
+        { "label": "Send unless they have complained", "consequence": "wider reach, and a real legal and trust exposure" }
+      ],
+      "recommended": "Checked against a stored preference every time",
+      "lookFor": ["opt_in", "optOut", "unsubscribe", "preferences", "consent"],
+      "sequence": "now",
+      "provenBy": "a test that asserts no message is produced for a person who has opted out"
+    },
+    {
+      "id": "timing",
+      "prompt": "May this message arrive in the middle of somebody's night?",
+      "why": "people are in different places, and the send time is usually the server's, not theirs",
+      "options": [
+        { "label": "Send inside their waking hours", "consequence": "needs their timezone, arrives welcome" },
+        { "label": "Send when it is ready", "consequence": "simpler, and some people are woken up" }
+      ],
+      "recommended": "Send inside their waking hours",
+      "lookFor": ["timezone", "quiet hours", "schedule", "local time", "cron"],
+      "sequence": "decide",
+      "provenBy": "a test asserting a send scheduled outside waking hours is deferred, not delivered"
+    },
+    {
+      "id": "failure-visibility",
+      "prompt": "If messages silently stop going out, how would we find out?",
+      "why": "nothing complains when a message is never sent, so this failure hides for weeks",
+      "options": [
+        { "label": "An alert when the sent count drops", "consequence": "found within a day" },
+        { "label": "Notice when somebody reports it", "consequence": "nothing to build, and weeks of silence" }
+      ],
+      "recommended": "An alert when the sent count drops",
+      "lookFor": ["alert", "monitor", "metric", "sentry", "dashboard"],
+      "sequence": "decide",
+      "provenBy": "the sent count visible on a dashboard with a threshold that would fire on zero"
+    },
+    {
+      "id": "how-often",
+      "prompt": "What is the most a single person may receive in a week?",
+      "why": "each message is reasonable alone; the total is what makes people turn them off",
+      "options": [
+        { "label": "A stated weekly cap", "consequence": "protects the channel, some messages are dropped" },
+        { "label": "No cap for now", "consequence": "nothing to build, and the channel degrades quietly" }
+      ],
+      "recommended": "A stated weekly cap",
+      "lookFor": ["rate limit", "throttle", "frequency", "cap", "last_sent"],
+      "sequence": "defer",
+      "provenBy": "a test asserting the cap holds when more messages than the limit are queued"
+    }
+  ]
+}

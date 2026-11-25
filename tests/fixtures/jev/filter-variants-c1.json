@@ -1,0 +1,485 @@
+{
+ "note": "Set C1 for Super-outer 5.8.1, frozen before the filter changed. Credential variants quoted in the independent verifier's report on 3cb90ab and its earlier recheck at a339eea, and ordinary requests. expect follows docs/plans/super-outer-v5.8.1-credential-filter.md.",
+ "cases": [
+  {
+   "text": "pass hunter2",
+   "expect": "withheld",
+   "source": "recheck a339eea"
+  },
+  {
+   "text": "otp 482913",
+   "expect": "withheld",
+   "source": "recheck a339eea"
+  },
+  {
+   "text": "pin 4821",
+   "expect": "withheld",
+   "source": "recheck a339eea"
+  },
+  {
+   "text": "my pin 4821, add a pin screen",
+   "expect": "withheld",
+   "source": "recheck a339eea"
+  },
+  {
+   "text": "passcode 9911",
+   "expect": "withheld",
+   "source": "recheck a339eea"
+  },
+  {
+   "text": "password letmein",
+   "expect": "withheld",
+   "source": "recheck a339eea"
+  },
+  {
+   "text": "login: admin / letmein",
+   "expect": "withheld",
+   "source": "recheck a339eea"
+  },
+  {
+   "text": "username admin password admin",
+   "expect": "withheld",
+   "source": "recheck a339eea"
+  },
+  {
+   "text": "DB_PASS=hunter2",
+   "expect": "withheld",
+   "source": "F1 names"
+  },
+  {
+   "text": "SMTP_PASS=letmein",
+   "expect": "withheld",
+   "source": "F1 names"
+  },
+  {
+   "text": "MYSQL_PW=hunter2",
+   "expect": "withheld",
+   "source": "F1 names"
+  },
+  {
+   "text": "DB_PASSWORD=admin",
+   "expect": "withheld",
+   "source": "F1 names"
+  },
+  {
+   "text": "PGPASSWORD=admin",
+   "expect": "withheld",
+   "source": "F1 names"
+  },
+  {
+   "text": "dbPassword: 'admin'",
+   "expect": "withheld",
+   "source": "F1 names"
+  },
+  {
+   "text": "db_pass hunter2",
+   "expect": "withheld",
+   "source": "F1 names"
+  },
+  {
+   "text": "DB_HOST=db.internal\nDB_USER=admin\nDB_PASS=hunter2",
+   "expect": "withheld",
+   "source": "F1 names"
+  },
+  {
+   "text": "PGPASSWORD=admin psql -h staging, then build the reports dashboard",
+   "expect": "withheld",
+   "source": "F1 names"
+  },
+  {
+   "text": "pass   hunter2",
+   "expect": "withheld",
+   "source": "F2 pass"
+  },
+  {
+   "text": "pass 'hunter2'",
+   "expect": "withheld",
+   "source": "F2 pass"
+  },
+  {
+   "text": "pass \"hunter2\"",
+   "expect": "withheld",
+   "source": "F2 pass"
+  },
+  {
+   "text": "pass - hunter2",
+   "expect": "withheld",
+   "source": "F2 pass"
+  },
+  {
+   "text": "wifi pass is hunter22",
+   "expect": "withheld",
+   "source": "F2 pass"
+  },
+  {
+   "text": "pass letmein",
+   "expect": "withheld",
+   "source": "F2 pass"
+  },
+  {
+   "text": "user admin pass admin",
+   "expect": "withheld",
+   "source": "F2 pass"
+  },
+  {
+   "text": "username admin pass admin",
+   "expect": "withheld",
+   "source": "F2 pass"
+  },
+  {
+   "text": "pin was 4821",
+   "expect": "withheld",
+   "source": "F2 pin"
+  },
+  {
+   "text": "pin number 4821",
+   "expect": "withheld",
+   "source": "F2 pin"
+  },
+  {
+   "text": "pin code 4821",
+   "expect": "withheld",
+   "source": "F2 pin"
+  },
+  {
+   "text": "pin no 4821",
+   "expect": "withheld",
+   "source": "F2 pin"
+  },
+  {
+   "text": "pin '4821'",
+   "expect": "withheld",
+   "source": "F2 pin"
+  },
+  {
+   "text": "pin - 4821",
+   "expect": "withheld",
+   "source": "F2 pin"
+  },
+  {
+   "text": "pin(4821)",
+   "expect": "withheld",
+   "source": "F2 pin"
+  },
+  {
+   "text": "my pin's 4821",
+   "expect": "withheld",
+   "source": "F2 pin"
+  },
+  {
+   "text": "pin 48 21",
+   "expect": "withheld",
+   "source": "F2 pin"
+  },
+  {
+   "text": "the pin for the staging box is 4821",
+   "expect": "withheld",
+   "source": "F2 pin"
+  },
+  {
+   "text": "pass code 9911",
+   "expect": "withheld",
+   "source": "F2 passcode and password"
+  },
+  {
+   "text": "pass-code 9911",
+   "expect": "withheld",
+   "source": "F2 passcode and password"
+  },
+  {
+   "text": "pass-word letmein",
+   "expect": "withheld",
+   "source": "F2 passcode and password"
+  },
+  {
+   "text": "pass_word letmein",
+   "expect": "withheld",
+   "source": "F2 passcode and password"
+  },
+  {
+   "text": "pass word: letmein",
+   "expect": "withheld",
+   "source": "F2 passcode and password"
+  },
+  {
+   "text": "login admin / letmein",
+   "expect": "withheld",
+   "source": "F2 login"
+  },
+  {
+   "text": "login admin/letmein",
+   "expect": "withheld",
+   "source": "F2 login"
+  },
+  {
+   "text": "login: admin letmein",
+   "expect": "withheld",
+   "source": "F2 login"
+  },
+  {
+   "text": "login with admin / letmein",
+   "expect": "withheld",
+   "source": "F2 login"
+  },
+  {
+   "text": "the staging login is admin / letmein",
+   "expect": "withheld",
+   "source": "F2 login"
+  },
+  {
+   "text": "sign in: admin / letmein",
+   "expect": "withheld",
+   "source": "F2 login"
+  },
+  {
+   "text": "connect the app to the staging database, user admin pass admin, and build the new admin dashboard screen",
+   "expect": "withheld",
+   "source": "F2 judge"
+  },
+  {
+   "text": "my bank pin was 4821, build a pin entry screen for the payments app",
+   "expect": "withheld",
+   "source": "F2 judge"
+  },
+  {
+   "text": "pass letmein for the staging admin, redesign the dashboard",
+   "expect": "withheld",
+   "source": "F2 judge"
+  },
+  {
+   "text": "2fa 482913",
+   "expect": "withheld",
+   "source": "F3 one-time codes"
+  },
+  {
+   "text": "2FA: 482913",
+   "expect": "withheld",
+   "source": "F3 one-time codes"
+  },
+  {
+   "text": "mfa code 482913",
+   "expect": "withheld",
+   "source": "F3 one-time codes"
+  },
+  {
+   "text": "sms code 482913",
+   "expect": "withheld",
+   "source": "F3 one-time codes"
+  },
+  {
+   "text": "auth code 482913",
+   "expect": "withheld",
+   "source": "F3 one-time codes"
+  },
+  {
+   "text": "security code 482913",
+   "expect": "withheld",
+   "source": "F3 one-time codes"
+  },
+  {
+   "text": "my code was 482913",
+   "expect": "withheld",
+   "source": "F3 one-time codes"
+  },
+  {
+   "text": "onetime code 482913",
+   "expect": "withheld",
+   "source": "F3 one-time codes"
+  },
+  {
+   "text": "my openai key is abcdefgh",
+   "expect": "withheld",
+   "source": "F4 keys"
+  },
+  {
+   "text": "ssh key abcdefgh",
+   "expect": "withheld",
+   "source": "F4 keys"
+  },
+  {
+   "text": "the stripe key is abcdefghij",
+   "expect": "withheld",
+   "source": "F4 keys"
+  },
+  {
+   "text": "pass\u034fword letmein",
+   "expect": "withheld",
+   "source": "F6 marks and look-alikes"
+  },
+  {
+   "text": "pass\ufe0fword letmein",
+   "expect": "withheld",
+   "source": "F6 marks and look-alikes"
+  },
+  {
+   "text": "pass\u034fcode 9911",
+   "expect": "withheld",
+   "source": "F6 marks and look-alikes"
+  },
+  {
+   "text": "\uff50\uff41\uff53\uff53\uff57\uff4f\uff52\uff44 letmein",
+   "expect": "withheld",
+   "source": "F6 marks and look-alikes"
+  },
+  {
+   "text": "p\u0430ssword letmein",
+   "expect": "withheld",
+   "source": "F6 marks and look-alikes"
+  },
+  {
+   "text": "pin \uff14\uff18\uff12\uff11",
+   "expect": "withheld",
+   "source": "F6 marks and look-alikes"
+  },
+  {
+   "text": "4111\u00a01111\u00a01111\u00a01111",
+   "expect": "withheld",
+   "source": "F6 card numbers"
+  },
+  {
+   "text": "4111.1111.1111.1111",
+   "expect": "withheld",
+   "source": "F6 card numbers"
+  },
+  {
+   "text": "4111  1111  1111  1111",
+   "expect": "withheld",
+   "source": "F6 card numbers"
+  },
+  {
+   "text": "pasword: letmein",
+   "expect": "withheld",
+   "source": "F6 listed spellings"
+  },
+  {
+   "text": "passwrd letmein",
+   "expect": "withheld",
+   "source": "F6 listed spellings"
+  },
+  {
+   "text": "pswd letmein",
+   "expect": "withheld",
+   "source": "F6 listed spellings"
+  },
+  {
+   "text": "p/w letmein",
+   "expect": "withheld",
+   "source": "F6 listed spellings"
+  },
+  {
+   "text": "passw0rd letmein",
+   "expect": "withheld",
+   "source": "F6 listed spellings"
+  },
+  {
+   "text": "p@ssword letmein",
+   "expect": "withheld",
+   "source": "F6 listed spellings"
+  },
+  {
+   "text": "mot de passe letmein",
+   "expect": "withheld",
+   "source": "F6 listed spellings"
+  },
+  {
+   "text": "contrase\u00f1a letmein",
+   "expect": "withheld",
+   "source": "F6 listed spellings"
+  },
+  {
+   "text": "the tests pass now, add a settings tab",
+   "expect": "withheld",
+   "source": "contract cost"
+  },
+  {
+   "text": "pin the chat to the top of the list",
+   "expect": "withheld",
+   "source": "contract cost"
+  },
+  {
+   "text": "admin/letmein",
+   "expect": "gap",
+   "source": "accepted gap"
+  },
+  {
+   "text": "admin:letmein",
+   "expect": "gap",
+   "source": "accepted gap"
+  },
+  {
+   "text": "pazzword letmein",
+   "expect": "gap",
+   "source": "accepted gap"
+  },
+  {
+   "text": "Kennwort letmein",
+   "expect": "gap",
+   "source": "accepted gap"
+  },
+  {
+   "text": "the error code is 404, fix the empty state",
+   "expect": "sent",
+   "source": "ordinary"
+  },
+  {
+   "text": "add a login page with Google",
+   "expect": "sent",
+   "source": "ordinary"
+  },
+  {
+   "text": "log in as a test user and check the empty state",
+   "expect": "sent",
+   "source": "ordinary"
+  },
+  {
+   "text": "Build a new sign in screen",
+   "expect": "sent",
+   "source": "ordinary"
+  },
+  {
+   "text": "Create a login page",
+   "expect": "sent",
+   "source": "ordinary"
+  },
+  {
+   "text": "replace the current login screen with a phone number login screen",
+   "expect": "sent",
+   "source": "ordinary"
+  },
+  {
+   "text": "build a new settings page where people edit their profile",
+   "expect": "sent",
+   "source": "ordinary"
+  },
+  {
+   "text": "design the empty state screen for first-time users",
+   "expect": "sent",
+   "source": "ordinary"
+  },
+  {
+   "text": "fix the deploy so the build passes",
+   "expect": "sent",
+   "source": "ordinary"
+  },
+  {
+   "text": "show the token count for each prompt",
+   "expect": "sent",
+   "source": "ordinary"
+  },
+  {
+   "text": "seed the database with demo users",
+   "expect": "sent",
+   "source": "ordinary"
+  },
+  {
+   "text": "add a sign-up page with Google and Apple",
+   "expect": "sent",
+   "source": "ordinary"
+  },
+  {
+   "text": "Build a new settings screen and add a toggle for weekly summaries",
+   "expect": "sent",
+   "source": "ordinary"
+  }
+ ]
+}

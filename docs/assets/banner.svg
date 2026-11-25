@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc"><title id="title">Super-outer: Outcome, Unacceptable, Trade-offs, Evidence, Recovery</title><desc id="desc">Banner. Super-outer, plain-English engineering for builders who do not write code. OUTER stands for Outcome, Unacceptable, Trade-offs, Evidence and Recovery. Works with Claude Code and Codex.</desc>
+<defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#142643" stop-opacity="0.35"/><stop offset="1" stop-color="#142643" stop-opacity="1"/></linearGradient></defs>
+<rect x="0.0" y="0.0" width="1280.0" height="420.0" rx="22" fill="#142643"/>
+<line x1="0" y1="0" x2="0" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="40" y1="0" x2="40" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="80" y1="0" x2="80" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="120" y1="0" x2="120" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="160" y1="0" x2="160" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="200" y1="0" x2="200" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="240" y1="0" x2="240" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="280" y1="0" x2="280" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="320" y1="0" x2="320" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="360" y1="0" x2="360" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="400" y1="0" x2="400" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="440" y1="0" x2="440" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="480" y1="0" x2="480" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="520" y1="0" x2="520" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="560" y1="0" x2="560" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="600" y1="0" x2="600" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="640" y1="0" x2="640" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="680" y1="0" x2="680" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="720" y1="0" x2="720" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="760" y1="0" x2="760" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="800" y1="0" x2="800" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="840" y1="0" x2="840" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="880" y1="0" x2="880" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="920" y1="0" x2="920" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="960" y1="0" x2="960" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="1000" y1="0" x2="1000" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="1040" y1="0" x2="1040" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="1080" y1="0" x2="1080" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="1120" y1="0" x2="1120" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="1160" y1="0" x2="1160" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="1200" y1="0" x2="1200" y2="420" stroke="#1b3157" stroke-width="1"/>
+<line x1="1240" y1="0" x2="1240" y2="420" stroke="#1b3157" stroke-width="1"/>
+<rect x="0.0" y="0.0" width="1280.0" height="420.0" rx="22" fill="url(#fade)"/>
+<text x="64.0" y="62.0" font-size="14" font-weight="800" fill="#ade0fc" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start" letter-spacing="1.6">SUPER-OUTER   /   FOR CLAUDE CODE AND CODEX   /   MIT</text>
+<text x="60.0" y="140.0" font-size="76" font-weight="800" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start" letter-spacing="-1">Super-outer</text>
+<text x="64.0" y="190.0" font-size="28" font-weight="600" fill="#dbe7ff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Plain-English engineering for builders who do not write code.</text>
+<rect x="62.0" y="236.0" width="220.0" height="136.0" rx="14" fill="#1d3459" stroke="#3d5f95" stroke-width="1.5"/>
+<text x="82.0" y="294.0" font-size="48" font-weight="800" fill="#ade0fc" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">O</text>
+<text x="82.0" y="330.0" font-size="22" font-weight="750" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Outcome</text>
+<text x="82.0" y="356.0" font-size="14" font-weight="500" fill="#b9c9e6" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">What must be true</text>
+<rect x="296.0" y="236.0" width="220.0" height="136.0" rx="14" fill="#1d3459" stroke="#3d5f95" stroke-width="1.5"/>
+<text x="316.0" y="294.0" font-size="48" font-weight="800" fill="#ade0fc" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">U</text>
+<text x="316.0" y="330.0" font-size="22" font-weight="750" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Unacceptable</text>
+<text x="316.0" y="356.0" font-size="14" font-weight="500" fill="#b9c9e6" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">What must never happen</text>
+<rect x="530.0" y="236.0" width="220.0" height="136.0" rx="14" fill="#1d3459" stroke="#3d5f95" stroke-width="1.5"/>
+<text x="550.0" y="294.0" font-size="48" font-weight="800" fill="#ade0fc" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">T</text>
+<text x="550.0" y="330.0" font-size="22" font-weight="750" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Trade-offs</text>
+<text x="550.0" y="356.0" font-size="14" font-weight="500" fill="#b9c9e6" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">What you choose between</text>
+<rect x="764.0" y="236.0" width="220.0" height="136.0" rx="14" fill="#1d3459" stroke="#3d5f95" stroke-width="1.5"/>
+<text x="784.0" y="294.0" font-size="48" font-weight="800" fill="#ade0fc" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">E</text>
+<text x="784.0" y="330.0" font-size="22" font-weight="750" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Evidence</text>
+<text x="784.0" y="356.0" font-size="14" font-weight="500" fill="#b9c9e6" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">What proves it works</text>
+<rect x="998.0" y="236.0" width="220.0" height="136.0" rx="14" fill="#1d3459" stroke="#3d5f95" stroke-width="1.5"/>
+<text x="1018.0" y="294.0" font-size="48" font-weight="800" fill="#ade0fc" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">R</text>
+<text x="1018.0" y="330.0" font-size="22" font-weight="750" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Recovery</text>
+<text x="1018.0" y="356.0" font-size="14" font-weight="500" fill="#b9c9e6" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">How to undo it</text>
+</svg>

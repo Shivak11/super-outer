@@ -1,0 +1,267 @@
+{
+  "skill_name": "edge-cases",
+  "evals": [
+    {
+      "id": 1,
+      "name": "double-charge",
+      "expect": "find",
+      "prompt": "Can you check the new Pro checkout for what could break before we launch?",
+      "expected_output": "Reports that a double tap or a network retry charges the student twice, because neither the button nor the charge call uses a request key, citing pay-submit.ts. Ranks it first for harm (money). Also notes the charge has no error handling for a declined card.",
+      "files": [
+        "evals/files/pay-submit.ts"
+      ],
+      "assertions": [
+        "The same payment taken twice (idempotency) is among the top three findings, citing pay-submit.ts with a line number.",
+        "It names the test: send the same request twice and expect one charge.",
+        "It notes what happens when the charge fails or is declined.",
+        "No file is edited."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "upload-halfway-and-size",
+      "expect": "find",
+      "prompt": "what are the edge cases in the recording upload?",
+      "expected_output": "Finds no size limit on the recording, no handling when the app closes or the network drops mid-upload, and an orphan file when the second call fails after the first succeeds.",
+      "files": [
+        "evals/files/upload-recording.ts"
+      ],
+      "assertions": [
+        "It reports an unbounded file size as a finding because nothing sets a limit.",
+        "It reports the upload stopping halfway and names what is left behind, such as a file in storage with no record.",
+        "It mentions offline or slow network on the phone.",
+        "Each finding cites upload-recording.ts."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "empty-list",
+      "expect": "find",
+      "prompt": "Review RecordingsList before I ship it",
+      "expected_output": "Finds that a new student with no recordings crashes the screen, because recordings[0] is read without a guard.",
+      "files": [
+        "evals/files/RecordingsList.tsx"
+      ],
+      "assertions": [
+        "The first finding is the empty list (nothing there), citing the recordings[0] line.",
+        "It says what the student sees: a crash or a blank screen.",
+        "It names the test: render with an empty list."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "error-path-model-call",
+      "expect": "find",
+      "prompt": "/edge-cases summarise.ts",
+      "expected_output": "Finds no timeout or error handling on the model call, and JSON.parse of the reply with no check, so a slow provider or a reply in another shape breaks the summary.",
+      "files": [
+        "evals/files/summarise.ts"
+      ],
+      "assertions": [
+        "It reports the missing timeout and error handling on the model call (error handling).",
+        "It reports JSON.parse on an unchecked model reply (wrong kind of input).",
+        "It names a test that drives a failed or malformed reply."
+      ]
+    },
+    {
+      "id": 5,
+      "name": "other-users-note",
+      "expect": "find",
+      "prompt": "check notes-route.ts for edge cases",
+      "expected_output": "Finds that any signed-in user can read another user's note by changing the id, because the query does not check the owner. Ranks it high for privacy.",
+      "files": [
+        "evals/files/notes-route.ts"
+      ],
+      "assertions": [
+        "The top finding is reading another user's note (authorisation), citing the query line.",
+        "It names a test that requests another user's note id and expects a refusal.",
+        "It also notes the missing-note case returning undefined."
+      ]
+    },
+    {
+      "id": 6,
+      "name": "streak-across-months",
+      "expect": "find",
+      "prompt": "Is the streak logic safe?",
+      "expected_output": "Finds that getDate() uses the day of the month in local time, so streaks break across month ends and time zones.",
+      "files": [
+        "evals/files/streak.ts"
+      ],
+      "assertions": [
+        "It reports the month-end break and the time-zone dependence (time and place).",
+        "It names a test with recordings on 31 October and 1 November."
+      ]
+    },
+    {
+      "id": 7,
+      "name": "webhook-twice",
+      "expect": "find",
+      "prompt": "We just added billing webhooks. Anything risky?",
+      "expected_output": "Finds that a redelivered webhook inserts a second subscription and grants 100 credits again.",
+      "files": [
+        "evals/files/billing-webhook.ts"
+      ],
+      "assertions": [
+        "The webhook delivered twice (idempotency) is among the top three findings, citing the insert and the credits update.",
+        "It recommends an event id check or a unique constraint and a test that delivers the same event twice."
+      ]
+    },
+    {
+      "id": 8,
+      "name": "missing-production-setting",
+      "expect": "find",
+      "prompt": "what could break when this goes to production?",
+      "expected_output": "Finds that missing keys are read without a check and that API_BASE silently falls back to localhost in production.",
+      "files": [
+        "evals/files/config.ts"
+      ],
+      "assertions": [
+        "It reports the silent localhost fallback (the release itself) as high because nobody would notice.",
+        "It recommends checking required settings at start-up."
+      ]
+    },
+    {
+      "id": 9,
+      "name": "main-path-untested",
+      "expect": "find",
+      "prompt": "edge cases for the share card please",
+      "expected_output": "Reports that no test exercises the share text at all, and that a score of exactly 70 reads as okay; few conditions apply.",
+      "files": [
+        "evals/files/share-card.ts"
+      ],
+      "assertions": [
+        "It reports the untested main path as its own finding.",
+        "It lists most families as not applicable, each with a one-line reason.",
+        "It reports fewer than 10 findings."
+      ]
+    },
+    {
+      "id": 10,
+      "name": "already-covered",
+      "expect": "find",
+      "prompt": "Check pay-submit-safe.ts for edge cases",
+      "expected_output": "Reports that pay-submit-safe-check.ts does not prove a single charge: it checks that the same key was sent and never counts charges, so a single charge depends on the server. Keeps the case as handled but untested, and also raises the unchecked error status.",
+      "files": [
+        "evals/files/pay-submit-safe.ts",
+        "evals/files/pay-submit-safe-check.ts"
+      ],
+      "assertions": [
+        "Says the test does not prove one charge, because it checks the key and never counts charges.",
+        "Does not count the double charge as handled and tested.",
+        "Any remaining finding cites evidence."
+      ]
+    },
+    {
+      "id": 11,
+      "name": "copy-change",
+      "expect": "quiet",
+      "prompt": "Change the Save button label to 'Save recording'",
+      "expected_output": "The skill does not run; this is a wording change.",
+      "files": [],
+      "assertions": [
+        "The skill is not invoked."
+      ]
+    },
+    {
+      "id": 12,
+      "name": "colour-tweak",
+      "expect": "quiet",
+      "prompt": "make the header teal instead of navy",
+      "expected_output": "The skill does not run; this is a visual change.",
+      "files": [],
+      "assertions": [
+        "The skill is not invoked."
+      ]
+    },
+    {
+      "id": 13,
+      "name": "readme-edit",
+      "expect": "quiet",
+      "prompt": "Fix the typo in README line 12",
+      "expected_output": "The skill does not run.",
+      "files": [],
+      "assertions": [
+        "The skill is not invoked."
+      ]
+    },
+    {
+      "id": 14,
+      "name": "concept-question",
+      "expect": "quiet",
+      "prompt": "what does idempotency mean?",
+      "expected_output": "Answers the question directly without running the skill.",
+      "files": [],
+      "assertions": [
+        "The skill is not invoked.",
+        "No code is searched."
+      ]
+    },
+    {
+      "id": 15,
+      "name": "full-security-audit",
+      "expect": "quiet",
+      "prompt": "Run a full security audit of the backend before the investor demo",
+      "expected_output": "Does not run as a substitute for a security review; points to the security review.",
+      "files": [],
+      "assertions": [
+        "The skill is not used as the whole answer.",
+        "It does not claim the audit is complete."
+      ]
+    },
+    {
+      "id": 16,
+      "name": "load-test",
+      "expect": "quiet",
+      "prompt": "How many requests per second can our API handle?",
+      "expected_output": "Does not run; this is a load test question.",
+      "files": [],
+      "assertions": [
+        "The skill is not invoked."
+      ]
+    },
+    {
+      "id": 17,
+      "name": "rename-refactor",
+      "expect": "quiet",
+      "prompt": "rename getUserData to fetchProfile everywhere",
+      "expected_output": "The skill does not run; this is a mechanical rename.",
+      "files": [],
+      "assertions": [
+        "The skill is not invoked."
+      ]
+    },
+    {
+      "id": 18,
+      "name": "commit-message",
+      "expect": "quiet",
+      "prompt": "write a commit message for these changes",
+      "expected_output": "The skill does not run.",
+      "files": [],
+      "assertions": [
+        "The skill is not invoked."
+      ]
+    },
+    {
+      "id": 19,
+      "name": "fibonacci",
+      "expect": "quiet",
+      "prompt": "write a fibonacci function in python",
+      "expected_output": "The skill does not run.",
+      "files": [],
+      "assertions": [
+        "The skill is not invoked."
+      ]
+    },
+    {
+      "id": 20,
+      "name": "ordinary-code-small-safe",
+      "expect": "quiet",
+      "prompt": "bump the axios version in package.json",
+      "expected_output": "The skill does not run for a routine dependency bump with no behaviour change described.",
+      "files": [],
+      "assertions": [
+        "The skill is not invoked."
+      ]
+    }
+  ]
+}

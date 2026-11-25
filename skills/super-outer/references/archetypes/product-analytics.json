@@ -1,0 +1,182 @@
+{
+  "id": "product-analytics",
+  "name": "Measuring what people do in the product",
+  "matches": [
+    "product analytics",
+    "analytics event",
+    "analytics tracking",
+    "analytics instrumentation",
+    "track event",
+    "tracking event",
+    "event tracking",
+    "tracking plan",
+    "posthog event",
+    "event in posthog",
+    "events to posthog",
+    "add posthog",
+    "set up posthog",
+    "posthog tracking",
+    "posthog analytics",
+    "mixpanel event",
+    "add mixpanel",
+    "mixpanel tracking",
+    "amplitude event",
+    "amplitude tracking",
+    "add google analytics",
+    "google analytics event",
+    "google analytics tag",
+    "ga4 event",
+    "add ga4",
+    "firebase analytics",
+    "usage analytics",
+    "conversion funnel",
+    "signup funnel",
+    "sign up funnel",
+    "onboarding funnel",
+    "activation funnel",
+    "funnel event",
+    "funnel tracking",
+    "retention metric",
+    "north star metric",
+    "activation metric",
+    "daily active users",
+    "weekly active users",
+    "monthly active users",
+    "track how many people",
+    "track how many users"
+  ],
+  "modules": [
+    "observability-operations",
+    "security-privacy-abuse",
+    "frontend-client",
+    "backend-api"
+  ],
+  "failureModes": [
+    {
+      "id": "no-private-content",
+      "prompt": "Should analytics events be allowed to include what people wrote, said or uploaded?",
+      "why": "anything sent to an analytics service is copied to another company, and it is hard to find and delete there later",
+      "options": [
+        {
+          "label": "Never, only counts and categories",
+          "consequence": "less detail to explore, and private words never leave the product"
+        },
+        {
+          "label": "Include content when it helps analysis",
+          "consequence": "richer analysis, and private words are stored by another company"
+        }
+      ],
+      "recommended": "Never, only counts and categories",
+      "lookFor": [
+        "sanitize_properties",
+        "property_denylist",
+        "property_blacklist",
+        "scrubProperties",
+        "mask_all_text"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that records each event the app sends and asserts no event property holds free text, audio or file contents"
+    },
+    {
+      "id": "tracking-consent",
+      "prompt": "Should tracking wait until people agree to it, in the places where the law requires that?",
+      "why": "consent cannot be collected afterwards for activity already recorded, and EU rules require it before non-essential tracking on a person's device",
+      "options": [
+        {
+          "label": "Ask first where the law requires it",
+          "consequence": "fewer people counted in those places, and no tracking without permission"
+        },
+        {
+          "label": "Track everyone from the first screen",
+          "consequence": "complete numbers, and a breach of consent rules in places such as the EU"
+        }
+      ],
+      "recommended": "Ask first where the law requires it",
+      "lookFor": [
+        "opt_out_capturing",
+        "has_opted_out_capturing",
+        "analyticsConsent",
+        "analytics_consent",
+        "ATTrackingManager",
+        "requestTrackingPermission"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that starts the product without consent and asserts no tracking request leaves the device until consent is given"
+    },
+    {
+      "id": "one-main-number",
+      "prompt": "Should we agree on one main number for success before adding any tracking?",
+      "why": "activity that was never recorded cannot be recovered, so the question has to come before the tracking",
+      "options": [
+        {
+          "label": "One agreed number first",
+          "consequence": "tracking is built around it, and other numbers stay secondary"
+        },
+        {
+          "label": "Track everything, decide later",
+          "consequence": "nothing to agree now, and the events needed later may be missing"
+        }
+      ],
+      "recommended": "One agreed number first",
+      "lookFor": [
+        "tracking-plan",
+        "tracking_plan",
+        "north_star_metric",
+        "northStarMetric",
+        "primary_metric"
+      ],
+      "sequence": "decide",
+      "provenBy": "the chosen number written in the repository with its definition, and a query that computes it from recorded events"
+    },
+    {
+      "id": "one-event-list",
+      "prompt": "Should the app and the server use the same list of event names?",
+      "why": "when each side names events its own way, one action is counted under two names and the totals do not match",
+      "options": [
+        {
+          "label": "One shared list of event names",
+          "consequence": "every new event needs an entry first, and both sides count the same way"
+        },
+        {
+          "label": "Each side names its own events",
+          "consequence": "faster to add events, and the same action appears under different names"
+        }
+      ],
+      "recommended": "One shared list of event names",
+      "lookFor": [
+        "AnalyticsEvent",
+        "ANALYTICS_EVENTS",
+        "tracking-plan",
+        "trackingPlan",
+        "analytics-events"
+      ],
+      "sequence": "decide",
+      "provenBy": "a check on every push that each event name sent by the app or the server appears in the shared list"
+    },
+    {
+      "id": "retry-double-count",
+      "prompt": "If the app resends an event after a network failure, should it be counted once?",
+      "why": "phones resend events after a dropped connection, and without a check busy days look busier than they were",
+      "options": [
+        {
+          "label": "Count it once",
+          "consequence": "each event needs its own id, and the numbers stay accurate"
+        },
+        {
+          "label": "Count every arrival",
+          "consequence": "simplest, and repeated events make the totals too high"
+        }
+      ],
+      "recommended": "Count it once",
+      "lookFor": [
+        "$insert_id",
+        "event_uuid",
+        "eventUuid",
+        "dedupeEvent",
+        "analytics_dedupe"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that sends the same event twice with one id and asserts the analytics total rises by one"
+    }
+  ]
+}

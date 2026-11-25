@@ -1,0 +1,40 @@
+{
+  "name": "super-outer",
+  "version": "6.6.0",
+  "private": true,
+  "description": "Plain-English engineering planning and checks for Claude Code, Codex and Cursor",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "super-outer": "./bin/super-outer.mjs"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs install",
+    "setup:verify": "node scripts/setup.mjs verify",
+    "setup:rollback": "node scripts/setup.mjs rollback",
+    "test": "node --test tests/*.test.mjs",
+    "test:integration": "node --test tests/integration.test.mjs",
+    "install:cursor": "node scripts/install-cursor.mjs",
+    "check": "node scripts/check-source.mjs",
+    "validate": "node scripts/validate-manifests.mjs",
+    "build": "node scripts/build-package.mjs",
+    "verify": "node scripts/verify-all.mjs",
+    "sync:digest": "node scripts/sync-digest.mjs",
+    "eval:check": "node evals/check.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "engineering-review",
+    "claude-code",
+    "codex",
+    "cursor",
+    "agent-skill",
+    "progressive-disclosure"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shivak11/Super-outer.git"
+  }
+}

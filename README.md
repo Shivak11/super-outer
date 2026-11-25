@@ -1,80 +1,220 @@
-# Super-Outer
+<p align="center">
+  <img src="docs/assets/banner.png" alt="Super-outer. Outcome, Unacceptable, Trade-offs, Evidence, Recovery. Plain-English engineering for builders who do not write code." width="100%">
+</p>
 
-Super-Outer is an MIT-licensed starter skill for non-technical people who want to build creatively with Claude Code or Codex. Tell your agent what someone should be able to do. It reads your project, recommends a change, and gives you something you can try for yourself.
+<p align="center">MIT licence · Claude Code, Codex and Cursor</p>
 
-## Try it on one form
+Version: `6.6.0`. Platform support is macOS and Linux. Windows is unsupported.
 
-**1. In your terminal**, from the project where you want to use the skill, run the Vercel skills installer. It requires [Node.js](https://nodejs.org/) 22.20 or later.
+> **About this text.** This README follows the writing rules of ASD-STE100
+> Simplified Technical English. Sentences are short and use the active voice.
+> Each instruction is one sentence. One term has one meaning.
+
+## What Super-outer is
+
+Super-outer is a plugin for coding agents. It plans and checks engineering work
+for people who do not write code.
+
+You tell the agent what the product must do. Super-outer reads your project
+first. It decides how deep the work is. It selects the engineering specialists
+that the work needs. It asks you only the questions that are yours to answer.
+It requires evidence before the agent says "done". It asks you to type an
+approval phrase only before an action that is very hard to undo.
+
+**Who it is for:** product owners, founders, designers, teachers and other
+builders who direct Claude Code or Codex but do not read code.
+
+## OUTER
+
+Super-outer asks five things about every material change.
+
+| Letter | Word | The question |
+|---|---|---|
+| **O** | **Outcome** | What must be true for the people who use the product? |
+| **U** | **Unacceptable** | What must never happen, for example lost data or a double charge? |
+| **T** | **Trade-offs** | What do you give up for each choice, in cost, speed or risk? |
+| **E** | **Evidence** | What proof shows that the change works, and where did someone see it work? |
+| **R** | **Recovery** | How do we undo the change if it goes wrong? |
+
+## How a request flows
+
+![Dynamic view: the eleven steps after the request "Add Google sign-in to my app"](docs/architecture/views/04-dynamic-one-request.png)
+
+1. **Routing by depth.** A hook reads each request before the agent acts. It
+   gives the request one of five depths: `SMALL_SAFE`, `QUICK`, `FOCUSED`,
+   `FULL` or `CRITICAL`.
+2. **Specialists.** The router selects only the specialists that the work
+   touches. There are twelve: product UI, frontend, backend, data, security,
+   scale and cost, reliability, architecture, integrations, operations, AI and
+   delivery.
+3. **Question allowance.** Each depth has a limit. A small safe edit gets no
+   questions. A `QUICK` task gets one or two. A `FOCUSED` task gets up to four.
+   A `FULL` task gets up to seven. A `CRITICAL` task gets one consolidated
+   interview. Each question comes with a recommended answer.
+4. **Evidence.** Super-outer keeps each kind of proof separate. A test that
+   someone wrote is not a test that someone ran. A passing local check is not
+   a working live product. The final report tells you what was seen working and
+   what nobody has run yet.
+5. **Approval phrase.** Ordinary work never waits for you. Edits, tests,
+   commits and pull requests continue. Before a very hard-to-undo action, such
+   as a production release or a data deletion, the agent shows the exact change.
+   Then it asks you to type `APPROVE SUPER-OUTER <token>`. The phrase works once,
+   for 15 minutes.
+
+![Components on the routing path: host-block filter, work under way, router, optional Jev reading, allowance and specialists, route context](docs/architecture/views/03-components-routing.png)
+
+## Install
+
+You need [Node.js](https://nodejs.org/) 22 or newer, Git, and Claude Code or
+Codex.
+
+### Claude Code and Codex (recommended)
+
+This route installs Super-outer for each host that it finds on your computer.
+
+1. Clone the repository and open its folder:
 
 ```sh
-npx skills add Shivak11/super-outer --skill super-outer
+git clone https://github.com/Shivak11/Super-outer.git
+cd Super-outer
 ```
 
-**2. In Claude Code or Codex**, open that project and paste this request.
-
-> Use super-outer. In my local demo, keep my name and email in the registration form if I reload. Start with a plan only.
-
-**3. Read the reply.** Look for the form the agent found, which fields it would save, and what you would see after reloading. At this point you should still have your original files. When the plan fits, say **“Make that change in the local demo and run the checks.”**
-
-**[Open the visual walkthrough](docs/walkthrough.html)** · On GitHub, choose **Download raw file**, then open `walkthrough.html` in your browser. The whole guide works offline in that one file.
-
-If the installer fails or your agent cannot find the skill, check that you chose the host and project you are using. With a copy of this repository open, you can also ask the agent to read [the skill instructions](skills/super-outer/SKILL.md) and walk through the example there. If it cannot read your form, ask it to identify what it could see and which parts of its plan are assumptions.
-
-## Who sits down next?
-
-On your own computer, a draft saves retyping. On a shared one, the same feature could put your email in front of the next visitor.
-
-![Decision map. A personal demo can use a browser-only draft. A shared computer adds a decision for the owner about expiry and a check after the chosen period.](docs/draft-decision.png)
-
-*Follow the upper path for the original demo. Take the lower path when someone else will use the same browser.* [Full-size diagram](docs/draft-decision.svg)
-
-- **One visitor.** The agent can choose a reversible default. Keep name and email in this browser, leave passwords out of the draft, and clear it after a successful submission.
-- **Shared computer.** You decide how long someone’s details may remain. The agent should ask one question and give a pick. A short expiry preserves a brief interruption and costs a little implementation work. Someone else could still sit down before it expires. If visitors switch seats immediately, consider skipping saved drafts on that machine. Ask for a check of the option you choose.
-
-## How much care does the change need?
-
-The agent looks at your project rules, then the nearby code and tests, then what it can safely observe. It sizes the work by who could be affected if it goes wrong and how hard it would be to undo. All three levels can apply to the same form.
-
-| Level | Your request | What to look for |
-| --- | --- | --- |
-| **Tiny** | “The button says Submt. Fix the spelling.” | Correct the label, look for the same typo elsewhere, run the cheapest relevant check. A few lines of feedback suffice. |
-| **Local** | “Remember my draft in this demo.” | A short plan for one screen. Walk through typing, reloading, submitting and recovering from trouble. Check what the visitor sees. |
-| **Wide** | “Change how we delete everyone’s saved registration details.” | A plan naming the people and data affected, what could go wrong, and how recovery would work. The agent asks you to confirm the scope before acting. |
-
-If the agent has missed who else uses the form, say **“Treat this as wide. Show me who is affected and how we could back out.”**
-
-## What would count as evidence?
-
-Use a made-up name and email in the local demo. These are the expected results to compare with what your agent actually observes.
-
-| Try this | Look for this |
-| --- | --- |
-| Enter a name, email and dummy password. Reload with browser autofill off. | The name and email return. The password field is empty. Ask the agent to check the saved draft also omits the password. |
-| Make a demo submission fail. Reload and retry. | The ordinary fields survive the failed attempt so you can correct the entry. |
-| Complete a successful submission. Reopen or reload the form. | The next registration starts empty. |
-| Have the agent simulate blocked browser storage. Fill in the form and submit. | You can still complete the form. Reloading need not bring the draft back. |
-| If you chose expiry, leave an unfinished draft and return after the agreed time. | The next visitor sees empty fields. |
-
-A useful handoff names the changed file, the action tried, the result seen and what remains untested. If all you get is “tests passed,” ask **“Which fields came back after reload? Which stayed empty? Show me the result.”** If a check failed or could not run, keep that outcome open. A local browser result leaves other devices, accessibility, the real server and release status open until someone checks them.
-
-## Who has permission?
-
-**You set the scope.** “Plan only” ends with advice. To stop work, say **“Pause here. Show me what you changed.”** If you want to back out, review the edits, then ask the agent to undo only its form change and rerun the original check. Keep unrelated work intact.
-
-**The skill guides the agent.** The installer adds [SKILL.md](skills/super-outer/SKILL.md) and two short references covering [user journeys](skills/super-outer/references/journey-walkthrough.md) and [evidence](skills/super-outer/references/evidence-and-release.md). The skill consists of text. It has no hooks, credentials, background service, telemetry or permission controls. The host still uses its usual model service and permitted tools.
-
-**Claude Code or Codex controls tool access.** If the host asks to use a tool, review the action there. If you deny it, the agent should stop that action, respect the denial and say which check it could not make. Skill guidance depends on the model following it. Your host settings, review and backups still matter. [See how the parts connect](docs/architecture.md)
-
-## What has been evaluated?
-
-From a copy of this repository with Node.js available, run the grader’s offline self-test. The grader is separate from the installed skill.
+2. Run the setup:
 
 ```sh
-node evals/check.mjs --self-test
+npm run setup
 ```
 
-Expected output: `Self-test passed for 6 fixtures, including negative controls. No model called.`
+3. Restart Claude Code and Codex after the setup finishes.
+4. Run `npm run setup:verify` to see what is switched on.
+5. Run `npm run setup:rollback` to restore every file that the setup changed.
 
-The initial tools-disabled Claude Code spot checks passed 6 of 6 structural checks for draft reload, 5 of 6 for the typo and 5 of 6 for a denied read. Both partial results misplaced an evidence-limit tag. Codex CLI did not start in that evaluation, so it has no model result. These results describe three responses. They leave everyday reliability and the effect of adding the skill unmeasured. [Initial evaluation receipt](docs/evaluation-receipt.md) · [Run the cases and review the responses](docs/evals.md)
+The setup also installs the optional learning skills for both hosts. To
+install only the main plugin, run `npm run setup -- --components none`.
 
-Contributions that improve the wording, examples or synthetic cases are welcome. [MIT license](LICENSE)
+### Claude Code only, from the plugin marketplace
+
+Type these two commands in Claude Code:
+
+```text
+/plugin marketplace add Shivak11/Super-outer
+/plugin install super-outer@super-outer
+```
+
+Then restart Claude Code. This route installs the plugin, its hook and its
+skills. It does not change `~/.claude/CLAUDE.md`.
+
+### Cursor
+
+Run `npm run install:cursor` in the cloned folder. Then restart Cursor.
+
+## First use
+
+1. Open a project in Claude Code or Codex.
+2. Type a request in your own words. For example: `Add Google sign-in to my app`.
+3. Read the first reply. It names what the agent found in your project. It
+   asks a small number of product questions, each with a recommendation.
+4. Answer the questions, or reply `ok` to accept the recommendations.
+5. Let the agent build and test the change.
+6. Read the final report. It lists what was proven and what is still open.
+
+You do not have to call Super-outer by name. The hook brings it in when the
+work needs it. To call it directly, type `/super-outer:super-outer <request>` in
+Claude Code or `$super-outer <request>` in Codex.
+
+If you call the work a prototype, Super-outer keeps it light. It asks one
+question at most and uses made-up data in a scratch folder.
+
+## Companion skills
+
+Four read-only skills ship with Super-outer. They change nothing until you
+approve an item.
+
+| Skill | What it does |
+|---|---|
+| `draw-system-diagram` | Draws architecture, pipeline and code-flow diagrams, and keeps them true to the code. |
+| `edge-cases` | Lists the common ways a change can break, ranked by how often each breaks real software. |
+| `jev-opportunities` | Finds AI calls that only pick from fixed answers and can run cheaper. |
+| `caveman-opportunities` | Finds text that only machines read and can be shorter. |
+
+## What it never asks you
+
+- It never asks you to choose a library, a framework or an algorithm.
+- It never asks a question that your project files already answer.
+- It never asks again for a rule that you stated once in the project.
+- It never asks for approval of edits, tests, commits or pull requests.
+- It never asks you to paste a password or a key into the chat.
+- It never shows you specialist names, scores, hashes or branch mechanics,
+  unless you ask for the technical detail.
+
+## Results
+
+![Recorded eval scores with and without Super-outer for twelve behaviour cases](docs/assets/eval-results.png)
+
+| Run | Cases | Mean score with Super-outer | Mean score without |
+|---|---|---|---|
+| Version 5.10.0, 12 October 2026 | 7 behaviour cases | 0.82 | 0.57 |
+| Version 6.6.0, 18 November 2026 | 5 journey-map cases | 0.79 | 0.55 |
+
+On 12 October 2026, the routing model chose the design path correctly for 118
+of 120 held-out requests. The method notes, all scores and the raw result files
+are in [evals/reports/](evals/reports/README.md). Run `npm run eval:check` to
+check the eval suite offline.
+
+## How it differs from developer workflows
+
+Many agent workflows are written for developers. They expect the user to read
+code, choose tools and judge test output. Super-outer expects the owner to
+judge outcomes, risk and recovery, and it keeps the engineering detail in its
+own records.
+
+## Architecture
+
+The five C5 views show the system at release 6.6.0. Each view has an SVG
+source and a PNG copy.
+
+| View | Shows |
+|---|---|
+| [1. System context](docs/architecture/views/01-system-context.png) | Who and what Super-outer works with |
+| [2. Containers](docs/architecture/views/02-containers.png) | The parts that run, and where they live |
+| [3. Components](docs/architecture/views/03-components-routing.png) | How one typed request gets its route |
+| [4. Dynamic view](docs/architecture/views/04-dynamic-one-request.png) | The steps of one request |
+| [5. Evidence and status](docs/architecture/views/05-evidence-status.png) | How proof stays apart, and what this release has proven |
+
+![System context: the product owner, the coding host, Super-outer, the working repository, public registries, the optional Jev model and GitHub CI](docs/architecture/views/01-system-context.png)
+
+Read [docs/architecture/index.md](docs/architecture/index.md) for the views and
+the decisions. Read [docs/reference.md](docs/reference.md) for every command.
+
+## What stays on your computer
+
+Your code, your file contents and your private package names stay on your
+computer. The tool check sends only public package and vendor names to public
+registries such as npm and skills.sh.
+
+Jev is an optional routing model. It is off by default. It starts only when you
+put your own OpenRouter key in `~/.config/super-outer/jev.env`. Then it receives
+only the typed words of each request. [docs/installation.md](docs/installation.md)
+gives the steps.
+
+## Licence
+
+Super-outer is released under the [MIT licence](LICENSE). Third-party material
+and its licences are listed in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+
+## Report a problem
+
+1. Open an issue at
+   [github.com/Shivak11/Super-outer/issues](https://github.com/Shivak11/Super-outer/issues).
+2. Write what you typed, what you expected, and what happened.
+3. Add the output of `npm run setup:verify`.
+4. Remove keys, passwords and private data before you send the issue.
+
+## More detail
+
+- [Installation and recovery](docs/installation.md)
+- [Reference](docs/reference.md)
+- [Proof boundaries](docs/evidence-boundaries.md)
+- [Recorded eval results](evals/reports/README.md)
+- [What changed in each version](CHANGELOG.md)
+- Predecessor: [OUTER engineering loop](https://github.com/Shivak11/outer-engineering-loop)

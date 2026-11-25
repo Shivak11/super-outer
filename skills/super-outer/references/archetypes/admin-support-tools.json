@@ -1,0 +1,198 @@
+{
+  "id": "admin-support-tools",
+  "name": "Tools the team uses to support customers",
+  "matches": [
+    "admin panel",
+    "admin dashboard",
+    "admin page",
+    "admin screen",
+    "admin portal",
+    "admin tool",
+    "admin area",
+    "admin section",
+    "admin app",
+    "admin interface",
+    "back office",
+    "backoffice",
+    "customer support tool",
+    "support dashboard",
+    "support console",
+    "view as a customer",
+    "view as customer",
+    "view as a user",
+    "view as user",
+    "impersonate a user",
+    "impersonate user",
+    "impersonate a customer",
+    "impersonate customer",
+    "user impersonation",
+    "customer impersonation",
+    "look up a customer",
+    "customer lookup",
+    "staff dashboard",
+    "staff tool",
+    "moderation queue",
+    "moderation tool",
+    "moderation dashboard",
+    "ban a user",
+    "suspend a user"
+  ],
+  "modules": [
+    "security-privacy-abuse",
+    "backend-api",
+    "observability-operations",
+    "frontend-client"
+  ],
+  "failureModes": [
+    {
+      "id": "staff-action-record",
+      "prompt": "Should every change a staff member makes to a customer's account be recorded with who made it?",
+      "why": "without a record, a mistaken or improper change by staff cannot be traced, explained or reversed",
+      "options": [
+        {
+          "label": "Record who did what, and when",
+          "consequence": "a little storage, and every staff change can be explained later"
+        },
+        {
+          "label": "Keep no record",
+          "consequence": "less to build, and a wrong change cannot be traced to anyone"
+        }
+      ],
+      "recommended": "Record who did what, and when",
+      "lookFor": [
+        "audit_log",
+        "auditLog",
+        "admin_actions",
+        "activity_log",
+        "AuditTrail"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that performs a staff action and asserts a record names the staff member, the customer, the change and the time"
+    },
+    {
+      "id": "staff-only-access",
+      "prompt": "Should the admin pages check for a staff sign-in on every request, or rely on the address staying private?",
+      "why": "a hidden address can appear in shared links, screenshots or search results, and then anyone who finds it can act as staff",
+      "options": [
+        {
+          "label": "Check staff sign-in every time",
+          "consequence": "a little more work, and a known address shows nothing to outsiders"
+        },
+        {
+          "label": "Rely on the address staying private",
+          "consequence": "quicker to build, and anyone who finds the address can act as staff"
+        }
+      ],
+      "recommended": "Check staff sign-in every time",
+      "lookFor": [
+        "requireAdmin",
+        "isAdmin",
+        "is_admin",
+        "isStaff",
+        "is_staff",
+        "adminGuard"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that requests each admin page without a staff sign-in and asserts the server refuses it"
+    },
+    {
+      "id": "same-business-rules",
+      "prompt": "When staff change a customer's account, should the same rules apply as when the customer does it?",
+      "why": "editing the database directly skips the product's own checks, such as limits, billing and messages to the customer",
+      "options": [
+        {
+          "label": "Same rules, through the same server code",
+          "consequence": "slower to add admin actions, and staff cannot create states the product was not built for"
+        },
+        {
+          "label": "Staff edit the database directly",
+          "consequence": "fastest for staff, and one edit can break an account in ways nobody planned for"
+        }
+      ],
+      "recommended": "Same rules, through the same server code",
+      "lookFor": [
+        "adminApi",
+        "admin_api",
+        "/api/admin",
+        "admin.service",
+        "adminActions"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that makes one change through the admin tool and asserts the same limits, billing updates and customer messages as the customer's own path"
+    },
+    {
+      "id": "view-as-customer-reason",
+      "prompt": "When staff view the product as a customer, should they give a reason that is recorded?",
+      "why": "viewing as a customer shows their private data, and a recorded reason lets every viewing be checked later",
+      "options": [
+        {
+          "label": "Require a reason and record it",
+          "consequence": "one more step for staff, and each viewing can be accounted for"
+        },
+        {
+          "label": "Let staff view freely",
+          "consequence": "quicker support, and private data can be browsed with no trace"
+        }
+      ],
+      "recommended": "Require a reason and record it",
+      "lookFor": [
+        "impersonation_reason",
+        "impersonationReason",
+        "impersonated_by",
+        "impersonator_id",
+        "view_as_reason"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that starts viewing as a customer without a reason and asserts it is refused, and that a viewing with a reason is recorded"
+    },
+    {
+      "id": "view-only-while-viewing",
+      "prompt": "While viewing as a customer, should staff be able to make changes or only look?",
+      "why": "changes made while viewing as a customer look as if the customer made them unless they are marked",
+      "options": [
+        {
+          "label": "Only look",
+          "consequence": "safer, and staff ask the customer to make changes themselves"
+        },
+        {
+          "label": "Make changes, marked as staff",
+          "consequence": "faster support, and every change needs a staff mark in the record"
+        }
+      ],
+      "recommended": "Only look",
+      "lookFor": [
+        "impersonation_read_only",
+        "readOnlyImpersonation",
+        "impersonator_id",
+        "impersonated_by"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that tries to change data while viewing as a customer and asserts the chosen behaviour, refused or recorded as staff"
+    },
+    {
+      "id": "least-access-for-support",
+      "prompt": "Should support staff see only the customer details their task needs?",
+      "why": "if every support login can read everything, a stolen login can then expose the private data of every customer",
+      "options": [
+        {
+          "label": "Only what each task needs",
+          "consequence": "more roles to set up, and a stolen staff login exposes less"
+        },
+        {
+          "label": "Everything about every customer",
+          "consequence": "simpler, and every support login can read all private data"
+        }
+      ],
+      "recommended": "Only what each task needs",
+      "lookFor": [
+        "support_role",
+        "supportRole",
+        "role_permissions",
+        "rolePermissions",
+        "@casl/ability"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that signs in with the support role and asserts fields outside its tasks, such as payment details, are not returned"
+    }
+  ]
+}

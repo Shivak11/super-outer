@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "execution_contract": {
+    "runner": "src/router.mjs#routeTask",
+    "required_selected_cases": ["positive", "failure", "recovery"],
+    "required_rejected_cases": ["negative"],
+    "boundary_selection": {
+      "product-ui-ux-motion": true,
+      "frontend-client": true,
+      "backend-api": true,
+      "data-migrations": true,
+      "security-privacy-abuse": true,
+      "scale-performance-cost": true,
+      "reliability-recovery": false,
+      "architecture-maintainability": true,
+      "compatibility-integrations": true,
+      "observability-operations": false,
+      "ai-llm": true,
+      "delivery-release": true
+    }
+  },
+  "module_evaluations": [
+    {
+      "module": "product-ui-ux-motion",
+      "entry": "skills/super-outer/modules/product-ui-ux-motion.md",
+      "playbooks": ["company-native-system", "journeys-and-motion", "accessibility-and-recovery"],
+      "cases": {
+        "positive": {"prompt": "Add a new navigation gesture and transition to the saved-item journey.", "expect": ["selected", "loads journeys-and-motion", "inspects local design and motion sources"]},
+        "negative": {"prompt": "Fix a server timeout with no client-visible change.", "expect": ["not selected", "does not import visual taste"]},
+        "boundary": {"prompt": "Correct one existing color token without changing motion.", "expect": ["loads company-native-system only", "does not load journeys-and-motion"]},
+        "failure": {"prompt": "The new screen looks polished but loses the reverse path and ignores Reduce Motion.", "expect": ["reports journey and accessibility failure", "does not accept screenshot-only proof"]},
+        "recovery": {"prompt": "The transition fails after interruption.", "expect": ["restore reachable prior route", "verify forward reverse interrupted and reduced-motion paths"]}
+      }
+    },
+    {
+      "module": "frontend-client",
+      "entry": "skills/super-outer/modules/frontend-client.md",
+      "playbooks": ["state-and-rendering", "networking-and-lifecycle", "performance-and-platform"],
+      "cases": {
+        "positive": {"prompt": "Make a client write work offline and resume after backgrounding.", "expect": ["selected", "loads networking-and-lifecycle", "traces state ownership"]},
+        "negative": {"prompt": "Add a database index without changing any client contract.", "expect": ["not selected", "does not manufacture client work"]},
+        "boundary": {"prompt": "Change a static label only.", "expect": ["does not load networking", "does not load performance"]},
+        "failure": {"prompt": "A late response overwrites newer account state after reconnect.", "expect": ["reports stale owner failure", "tests account switch and reordered replies"]},
+        "recovery": {"prompt": "Optimistic state becomes invalid after cancellation.", "expect": ["fence stale work", "restore valid state and safe retry"]}
+      }
+    },
+    {
+      "module": "backend-api",
+      "entry": "skills/super-outer/modules/backend-api.md",
+      "playbooks": ["contracts-and-authorization", "concurrency-and-idempotency", "dependency-failures"],
+      "cases": {
+        "positive": {"prompt": "Add an authenticated endpoint that starts background work.", "expect": ["selected", "loads contract and concurrency guidance", "applies authorization invariants"]},
+        "negative": {"prompt": "Adjust a motion duration without service changes.", "expect": ["not selected", "does not ask backend questions"]},
+        "boundary": {"prompt": "Only fix a dependency timeout.", "expect": ["loads dependency-failures", "does not load data migration guidance"]},
+        "failure": {"prompt": "The same request arrives twice while the provider returns late.", "expect": ["tests replay and late result", "prevents duplicate effects"]},
+        "recovery": {"prompt": "One step succeeds before the external call fails.", "expect": ["bound retries", "reconcile or compensate verified partial work"]}
+      }
+    },
+    {
+      "module": "data-migrations",
+      "entry": "skills/super-outer/modules/data-migrations.md",
+      "playbooks": ["invariants-and-migrations", "backfills-and-mixed-versions", "rollback-and-repair"],
+      "cases": {
+        "positive": {"prompt": "Backfill a required field while old and new versions coexist.", "expect": ["selected", "loads all applicable data playbooks", "states invariants first"]},
+        "negative": {"prompt": "Change stateless API error copy.", "expect": ["not selected", "does not propose migration work"]},
+        "boundary": {"prompt": "Optimize a read query with no data-shape change.", "expect": ["checks lock and resource impact", "does not assume destructive rollback"]},
+        "failure": {"prompt": "Restart a backfill while an old writer removes the new value.", "expect": ["detects mixed-version loss", "tests resumability and validation counts"]},
+        "recovery": {"prompt": "A transformation corrupts part of the dataset.", "expect": ["pause at checkpoint", "restore or repair from authoritative source and verify invariants"]}
+      }
+    },
+    {
+      "module": "security-privacy-abuse",
+      "entry": "skills/super-outer/modules/security-privacy-abuse.md",
+      "playbooks": ["trust-boundaries", "authorization-and-privacy", "abuse-supply-chain-response"],
+      "cases": {
+        "positive": {"prompt": "Add an authenticated multi-tenant endpoint for private records.", "expect": ["selected", "critical review", "tests resource-level authorization"]},
+        "negative": {"prompt": "Rename a private local test fixture with no dependency change.", "expect": ["not selected", "does not perform ceremonial threat modeling"]},
+        "boundary": {"prompt": "Expose a public read endpoint without accounts.", "expect": ["selected", "loads exposure and abuse review"]},
+        "failure": {"prompt": "A user substitutes another tenant id and response logs include the record.", "expect": ["reports cross-tenant and privacy failure", "tests direct protected boundary"]},
+        "recovery": {"prompt": "A dependency token is exposed.", "expect": ["contain and narrow access", "rotate only affected credential with separate authority"]}
+      }
+    },
+    {
+      "module": "scale-performance-cost",
+      "entry": "skills/super-outer/modules/scale-performance-cost.md",
+      "playbooks": ["capacity-and-latency", "amplification-and-backpressure", "cost-and-degradation"],
+      "cases": {
+        "positive": {"prompt": "Support a high-volume endpoint that fans out to metered jobs.", "expect": ["selected", "counts one-in one-out effects", "loads capacity amplification and cost"]},
+        "negative": {"prompt": "Correct a local color token.", "expect": ["not selected", "does not optimize without a threshold"]},
+        "boundary": {"prompt": "One low-volume model call is expensive.", "expect": ["loads cost-and-degradation", "loads capacity only with concurrency evidence"]},
+        "failure": {"prompt": "Slow consumers trigger retries and unbounded queue growth.", "expect": ["detects retry amplification", "tests saturation fairness and stop limits"]},
+        "recovery": {"prompt": "Provider quota is exhausted.", "expect": ["shed bounded non-core work", "reconcile delayed jobs and verify return below stop threshold"]}
+      }
+    },
+    {
+      "module": "reliability-recovery",
+      "entry": "skills/super-outer/modules/reliability-recovery.md",
+      "playbooks": ["timeouts-and-retries", "degradation-and-restart", "rollout-and-recovery"],
+      "cases": {
+        "positive": {"prompt": "Release a multi-stage external job that resumes after restart.", "expect": ["selected", "loads timeout restart and rollout guidance", "requires stop signal"]},
+        "negative": {"prompt": "Correct static documentation.", "expect": ["not selected", "does not invent availability risk"]},
+        "boundary": {"prompt": "Change a synchronous local calculation.", "expect": ["not selected unless persistent shared state can corrupt", "keeps boundary explicit"]},
+        "failure": {"prompt": "A process dies after provider success but before checkpointing.", "expect": ["tests late duplicate outcome", "reports false-success or stranded-work risk"]},
+        "recovery": {"prompt": "A staged release crosses its stop threshold.", "expect": ["freeze promotion and disable path", "classify inflight work and verify rollback"]}
+      }
+    },
+    {
+      "module": "architecture-maintainability",
+      "entry": "skills/super-outer/modules/architecture-maintainability.md",
+      "playbooks": ["boundaries-and-dependencies", "abstractions-and-ownership", "change-cost-and-operability"],
+      "cases": {
+        "positive": {"prompt": "Refactor a shared cross-service contract used by three consumers.", "expect": ["selected", "maps all consumers", "reviews boundaries ownership and operability"]},
+        "negative": {"prompt": "Fix one isolated validation condition.", "expect": ["not selected", "does not redesign the system"]},
+        "boundary": {"prompt": "A helper may have a second real consumer.", "expect": ["reviews abstraction only with evidenced common responsibility", "rejects hypothetical abstraction"]},
+        "failure": {"prompt": "A wrapper leaks provider types and creates split state ownership.", "expect": ["reports boundary and ownership failure", "tests substitution and cleanup"]},
+        "recovery": {"prompt": "The refactor makes diagnosis harder.", "expect": ["restore prior contract edge", "isolate new path behind a narrow adapter"]}
+      }
+    },
+    {
+      "module": "compatibility-integrations",
+      "entry": "skills/super-outer/modules/compatibility-integrations.md",
+      "playbooks": ["versions-and-contracts", "coexistence-and-migration", "isolation-and-fallback"],
+      "cases": {
+        "positive": {"prompt": "Upgrade a load-bearing SDK major version while old clients remain.", "expect": ["selected", "loads version coexistence and fallback", "checks official installed behavior"]},
+        "negative": {"prompt": "Refactor internal text formatting only.", "expect": ["not selected", "does not research unrelated integrations"]},
+        "boundary": {"prompt": "Apply a patch upgrade with no behavior change.", "expect": ["loads deep review only if load-bearing evidence changes", "version alone is insufficient"]},
+        "failure": {"prompt": "Primary partly succeeds and fallback repeats the event.", "expect": ["detects duplicate external effect", "tests provider recovery and switch-back"]},
+        "recovery": {"prompt": "New clients break against the provider.", "expect": ["restore prior adapter or version", "prove old and new coexistence before advancing"]}
+      }
+    },
+    {
+      "module": "observability-operations",
+      "entry": "skills/super-outer/modules/observability-operations.md",
+      "playbooks": ["signals-and-correlation", "privacy-and-alerting", "diagnosis-and-runbooks"],
+      "cases": {
+        "positive": {"prompt": "Operate a multi-stage background job whose failures are hard to trace.", "expect": ["selected", "maps correlation and product-harm signals", "defines alert owner"]},
+        "negative": {"prompt": "Change a deterministic local formatter.", "expect": ["not selected", "does not add telemetry without an operational decision"]},
+        "boundary": {"prompt": "Fix one service error with already sufficient evidence.", "expect": ["not selected or narrow signal check", "does not add dashboards ceremonially"]},
+        "failure": {"prompt": "Logs contain transcripts and the alert has no action owner.", "expect": ["reports privacy and operability failure", "tests normal warning stop behavior"]},
+        "recovery": {"prompt": "Correlation breaks during retries.", "expect": ["stop unsafe emission", "repair privacy-safe links and update runbook"]}
+      }
+    },
+    {
+      "module": "ai-llm",
+      "entry": "skills/super-outer/modules/ai-llm.md",
+      "playbooks": ["data-and-prompt-injection", "evaluation-and-variability", "cost-provider-human-control"],
+      "cases": {
+        "positive": {"prompt": "Add a retrieval agent that can send external messages.", "expect": ["selected", "loads all applicable AI playbooks", "validates tool authority outside model text"]},
+        "negative": {"prompt": "Change deterministic API validation without a model.", "expect": ["not selected", "does not label ordinary code as AI"]},
+        "boundary": {"prompt": "Generate a draft with no external action.", "expect": ["loads data and evaluation", "loads tool-control only if authority changes"]},
+        "failure": {"prompt": "Retrieved content asks the agent to leak private context and loop tools.", "expect": ["detects indirect injection and authority failure", "tests budgets refusal and cross-user retrieval"]},
+        "recovery": {"prompt": "Provider drift breaks structured output.", "expect": ["disable model or restore evaluated version", "quarantine output and rerun frozen evaluation set"]}
+      }
+    },
+    {
+      "module": "delivery-release",
+      "entry": "skills/super-outer/modules/delivery-release.md",
+      "playbooks": ["git-topology-and-ci", "package-install-runtime", "rollout-rollback-proof"],
+      "cases": {
+        "positive": {"prompt": "Package, install in isolated homes, and release the exact reviewed head.", "expect": ["selected", "loads topology package and rollout", "separates all proof layers"]},
+        "negative": {"prompt": "Perform a read-only local explanation with no delivery claim.", "expect": ["not selected", "does not call source inspection a release"]},
+        "boundary": {"prompt": "Commit a source change but stop before package or install.", "expect": ["loads topology only", "marks package install runtime not applicable"]},
+        "failure": {"prompt": "CI is green on an older SHA and the package installs but the host does not discover it.", "expect": ["stops on exact-head and discovery gaps", "does not infer runtime proof"]},
+        "recovery": {"prompt": "Promotion is interrupted after v4 files copy but before enforcement switches.", "expect": ["restore exact snapshot and v3 owner", "verify settings files discovery hooks and rollback separately"]}
+      }
+    }
+  ]
+}

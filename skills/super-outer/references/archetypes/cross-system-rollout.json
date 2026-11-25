@@ -1,0 +1,136 @@
+{
+  "id": "cross-system-rollout",
+  "name": "A change the app and the server must make together",
+  "matches": [
+    "onboarding flow",
+    "onboarding journey",
+    "onboarding screen",
+    "onboarding experience",
+    "new onboarding",
+    "redesign onboarding",
+    "rebuild onboarding",
+    "revamp onboarding",
+    "overhaul onboarding",
+    "redesign the journey",
+    "rebuild the journey",
+    "journey redesign",
+    "whole journey",
+    "entire journey",
+    "rebuild the app",
+    "rebuild the flow",
+    "rebuild the feature",
+    "rebuild the experience",
+    "revamp the app",
+    "revamp the flow",
+    "revamp the feature",
+    "revamp the experience",
+    "overhaul the app",
+    "overhaul the flow",
+    "overhaul the feature",
+    "overhaul the experience",
+    "complete rebuild",
+    "full rebuild",
+    "complete overhaul",
+    "full overhaul",
+    "end to end flow",
+    "end to end redesign",
+    "end to end rebuild",
+    "end to end journey",
+    "end to end experience",
+    "app and server",
+    "app and backend",
+    "client and server",
+    "frontend and backend",
+    "across the product",
+    "whole flow",
+    "redesign the flow"
+  ],
+  "modules": [
+    "product-ui-ux-motion",
+    "frontend-client",
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "observability-operations"
+  ],
+  "failureModes": [
+    {
+      "id": "release-order",
+      "prompt": "Which side goes live first, the app or the server?",
+      "why": "the app reaches phones days after the server changes, so one of them is alone for a while",
+      "options": [
+        { "label": "Server first, accepting both shapes", "consequence": "old app keeps working throughout" },
+        { "label": "Together on the day", "consequence": "simpler to reason about, and impossible to guarantee" }
+      ],
+      "recommended": "Server first, accepting both shapes",
+      "lookFor": ["api version", "backwards compatible", "minimum version", "feature flag"],
+      "sequence": "now",
+      "provenBy": "the previous app build exercised against the new server before the app is submitted"
+    },
+    {
+      "id": "switch-off",
+      "prompt": "Can we return everybody to the current experience without shipping a new release?",
+      "why": "an app release takes days to reach people, so a bad change without a switch stays live",
+      "options": [
+        { "label": "A switch we control from the server", "consequence": "instant recovery, one more thing to maintain" },
+        { "label": "Fix forward with a new release", "consequence": "less to build, days of exposure if it goes wrong" }
+      ],
+      "recommended": "A switch we control from the server",
+      "lookFor": ["feature flag", "remote config", "killSwitch", "rollout", "toggle"],
+      "sequence": "now",
+      "provenBy": "a recorded run turning the switch off and confirming the old experience returns without a release"
+    },
+    {
+      "id": "people-midway",
+      "prompt": "What happens to somebody who is halfway through the old journey when the new one goes live?",
+      "why": "a part-finished journey is the case nobody tests and everybody hits",
+      "options": [
+        { "label": "Finish them on the old path", "consequence": "both paths run for a while, nobody is stranded" },
+        { "label": "Move them to the new path", "consequence": "one path to maintain, some people lose their progress" }
+      ],
+      "recommended": "Finish them on the old path",
+      "lookFor": ["resume", "progress", "step", "in_progress", "draft"],
+      "sequence": "now",
+      "provenBy": "a test that starts the old journey, switches the flag, and asserts the person can still finish"
+    },
+    {
+      "id": "saved-results",
+      "prompt": "Should results produced by the new version be kept apart from the current ones?",
+      "why": "mixing them makes it impossible to tell later which version produced what",
+      "options": [
+        { "label": "Mark which version produced each record", "consequence": "a column now, clean comparison later" },
+        { "label": "Store them together", "consequence": "simpler, and the two can never be separated again" }
+      ],
+      "recommended": "Mark which version produced each record",
+      "lookFor": ["variant", "experiment", "version", "cohort", "source"],
+      "sequence": "now",
+      "provenBy": "a query separating records by producing version after both have run"
+    },
+    {
+      "id": "who-tests-first",
+      "prompt": "Who should see the new experience before everybody does?",
+      "why": "the point of a staged switch is learning something before the whole audience arrives",
+      "options": [
+        { "label": "A named internal group", "consequence": "safest, slowest to gather real signal" },
+        { "label": "A small share of real users", "consequence": "real signal quickly, real people affected" }
+      ],
+      "recommended": "A named internal group",
+      "lookFor": ["allowlist", "internal", "beta", "cohort", "percentage"],
+      "sequence": "decide",
+      "provenBy": "a recorded check that a person outside the group receives the current experience"
+    },
+    {
+      "id": "knowing-it-worked",
+      "prompt": "What single number tells us the new version is better, not just different?",
+      "why": "without one agreed signal the switch stays on because nobody can argue it off",
+      "options": [
+        { "label": "One agreed number before launch", "consequence": "a clear decision either way" },
+        { "label": "Judge it once it is live", "consequence": "no work now, and the argument never resolves" }
+      ],
+      "recommended": "One agreed number before launch",
+      "lookFor": ["analytics", "track(", "posthog", "amplitude", "funnel"],
+      "sequence": "decide",
+      "provenBy": "the measurement visible for both versions in the analytics tool before the switch is turned on"
+    }
+  ]
+}

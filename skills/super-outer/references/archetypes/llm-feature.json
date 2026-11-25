@@ -1,0 +1,151 @@
+{
+  "id": "llm-feature",
+  "name": "AI or model-backed feature",
+  "matches": [
+    "llm",
+    "rag",
+    "transcription",
+    "system prompt",
+    "prompt template",
+    "prompt injection",
+    "prompt caching",
+    "llm prompt",
+    "model prompt",
+    "prompt the model",
+    "ai feature",
+    "ai assistant",
+    "assistant that",
+    "voice assistant",
+    "chat assistant",
+    "virtual assistant",
+    "in-app assistant",
+    "chatbot",
+    "ai agent",
+    "llm agent",
+    "build an agent",
+    "agentic",
+    "that summarise",
+    "that summarize",
+    "automatically summarise",
+    "automatically summarize",
+    "auto summarise",
+    "auto summarize",
+    "summarise their",
+    "summarize their",
+    "ai summary",
+    "vector embedding",
+    "embedding model",
+    "text embedding",
+    "generate embedding",
+    "store embedding",
+    "speech to text",
+    "transcribe recording",
+    "transcribe audio",
+    "automatically transcribe",
+    "auto transcribe"
+  ],
+  "modules": [
+    "ai-llm",
+    "backend-api",
+    "scale-performance-cost",
+    "reliability-recovery"
+  ],
+  "failureModes": [
+    {
+      "id": "wrong-output",
+      "prompt": "When the model is confidently wrong, what should the person see?",
+      "why": "the failure looks identical to success, so nothing catches it by itself",
+      "options": [
+        {
+          "label": "Show it with a way to correct it",
+          "consequence": "honest, needs a correction path"
+        },
+        {
+          "label": "Show it plainly",
+          "consequence": "cleanest, and wrong answers read as fact"
+        }
+      ],
+      "recommended": "Show it with a way to correct it",
+      "lookFor": [
+        "feedback",
+        "report",
+        "regenerate",
+        "confidence"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that forces a wrong model answer and asserts the correction path is present"
+    },
+    {
+      "id": "provider-down",
+      "prompt": "If the provider is slow or unavailable, should we wait, use something simpler, or say it is unavailable?",
+      "why": "this dependency fails more often than the rest of the app",
+      "options": [
+        {
+          "label": "Say it is unavailable",
+          "consequence": "honest and cheap to build"
+        },
+        {
+          "label": "Fall back to something simpler",
+          "consequence": "keeps the feature alive, two behaviours to maintain"
+        }
+      ],
+      "recommended": "Say it is unavailable",
+      "lookFor": [
+        "fallback",
+        "timeout",
+        "circuit",
+        "retry"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that times out the provider and asserts the chosen behaviour (unavailable message, or fallback)"
+    },
+    {
+      "id": "cost-ceiling",
+      "prompt": "Is there a point where this becomes too expensive to keep serving one person?",
+      "why": "cost scales with use here, unlike the rest of the product",
+      "options": [
+        {
+          "label": "Cap it per person",
+          "consequence": "predictable spend, heavy users hit a wall"
+        },
+        {
+          "label": "No cap for now",
+          "consequence": "nothing interrupts anyone, spend is open-ended"
+        }
+      ],
+      "recommended": "Cap it per person",
+      "lookFor": [
+        "quota",
+        "rateLimit",
+        "usage",
+        "tokenBudget"
+      ],
+      "sequence": "defer",
+      "provenBy": "a test that exceeds the per-person cap and asserts requests are limited as decided"
+    },
+    {
+      "id": "user-content-privacy",
+      "prompt": "May what people write or say be sent to an outside provider?",
+      "why": "it decides what we can promise about private content",
+      "options": [
+        {
+          "label": "Yes, and say so plainly",
+          "consequence": "full capability, needs a clear statement"
+        },
+        {
+          "label": "Only with permission",
+          "consequence": "safer promise, fewer people get the feature"
+        }
+      ],
+      "recommended": "Yes, and say so plainly",
+      "lookFor": [
+        "privacy",
+        "consent",
+        "dataRetention",
+        "optIn"
+      ],
+      "sequence": "now",
+      "provenBy": "a check that the disclosure is shown before any content leaves the device, and a test that opting out keeps content local"
+    }
+  ]
+}

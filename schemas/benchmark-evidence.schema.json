@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shivak11/Super-outer/schemas/benchmark-evidence.schema.json",
+  "title": "Super-outer benchmark evidence",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "classification",
+    "source",
+    "inspected_at",
+    "applicability",
+    "tradeoff",
+    "recommendation",
+    "limitation",
+    "query_privacy",
+    "confidence"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "classification": {
+      "enum": [
+        "binding_or_normative",
+        "explicit_contract",
+        "official_platform",
+        "evidence_backed_practice",
+        "observed_local_precedent",
+        "external_style_gap_fill",
+        "none_found",
+        "not_applicable"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspected_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "applicability": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tradeoff": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recommendation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "deviation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "limitation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "query_privacy": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "NOT APPLICABLE"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Find common edge cases"
+  short_description: "Ranks the common ways a change can break, checks the code and tests for each, and names the test that proves it handled"
+  default_prompt: "Use $edge-cases to find the common ways this change could break and which tests would prove each one handled."
+policy:
+  allow_implicit_invocation: true

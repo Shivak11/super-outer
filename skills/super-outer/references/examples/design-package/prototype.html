@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manuscript editor prototype</title>
+<link rel="icon" href="data:,">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #fbfaf8;
+  --surface: #ffffff;
+  --surface-sunk: #f2f0eb;
+  --text: #1f1e1c;
+  --text-muted: #5c5a55;
+  --line: #e2dfd8;
+  --accent: #2c4a6b;
+  --accent-hover: #233c57;
+  --accent-text: #ffffff;
+  --passage: #fae6a8;
+  --skeleton: #ebe8e2;
+  --skeleton-shine: #f6f4f0;
+  --danger: #9b2c22;
+  --focus: #2c6fb0;
+  --proto-bg: #1d1d1d;
+  --proto-text: #f4f4f4;
+  --shadow: 0 1px 2px rgba(20, 18, 14, 0.06), 0 6px 20px rgba(20, 18, 14, 0.09);
+  --radius: 8px;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-text: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  --column: 660px;
+  --panel: 400px;
+  --gap: 48px;
+  --header-h: 56px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161615;
+    --surface: #201f1d;
+    --surface-sunk: #2a2926;
+    --text: #ecebe7;
+    --text-muted: #a8a59e;
+    --line: #3a3833;
+    --accent: #9cc0e6;
+    --accent-hover: #b6d1ee;
+    --accent-text: #0f1a26;
+    --passage: #5a4815;
+    --skeleton: #2b2a27;
+    --skeleton-shine: #36352f;
+    --danger: #f0a39a;
+    --focus: #9cc0e6;
+    --proto-bg: #ececec;
+    --proto-text: #161616;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.45;
+}
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* Header: one primary action and one overflow menu */
+.app-header {
+  position: sticky; top: 0; z-index: 20;
+  height: var(--header-h);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 0 20px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.doc { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+.doc-name { margin: 0; font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.save-status { font-size: 13px; color: var(--text-muted); white-space: nowrap; }
+.header-actions { position: relative; display: flex; align-items: center; gap: 6px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 34px; padding: 0 14px;
+  border: 1px solid var(--line); border-radius: 6px;
+  background: var(--surface); cursor: pointer;
+}
+.btn:hover { background: var(--surface-sunk); }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); font-weight: 600; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-icon { width: 34px; padding: 0; border-color: transparent; background: transparent; color: var(--text-muted); }
+.btn-quiet { border-color: transparent; background: transparent; color: var(--accent); font-weight: 600; padding: 0 8px; }
+.btn-quiet:hover { background: var(--surface-sunk); }
+.btn-small { min-height: 30px; padding: 0 10px; font-size: 14px; }
+.menu {
+  position: absolute; z-index: 30; min-width: 200px; padding: 6px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+#more-menu { top: calc(100% + 6px); right: 0; }
+.menu [role="menuitem"] {
+  display: block; width: 100%; padding: 8px 10px; text-align: left;
+  border: 0; border-radius: 4px; background: transparent; cursor: pointer;
+}
+.menu [role="menuitem"]:hover, .menu [role="menuitem"]:focus { background: var(--surface-sunk); }
+.toast {
+  position: fixed; top: calc(var(--header-h) + 12px); left: 50%; z-index: 35;
+  transform: translateX(-50%); max-width: min(480px, calc(100vw - 32px));
+  padding: 8px 14px; border-radius: 6px;
+  background: var(--text); color: var(--bg); font-size: 14px;
+}
+
+/* The manuscript is the largest and most legible element in every state */
+.workspace { position: relative; padding: 48px 24px 120px; }
+.manuscript {
+  max-width: var(--column);
+  margin-left: max(0px, calc((100% - var(--column)) / 2));
+  font-family: var(--font-text); font-size: 19px; line-height: 1.65;
+  caret-color: var(--accent);
+  outline: none;
+}
+.manuscript h1 { margin: 0 0 28px; font-size: 34px; line-height: 1.2; font-weight: 600; }
+.manuscript h2 { margin: 36px 0 10px; font-size: 23px; line-height: 1.3; font-weight: 600; }
+.manuscript p { margin: 0 0 18px; }
+.manuscript blockquote {
+  margin: 0 0 18px; padding-left: 16px;
+  border-left: 3px solid var(--line); color: var(--text-muted);
+}
+::highlight(passage) { background-color: var(--passage); color: var(--text); }
+@media (min-width: 761px) {
+  body.panel-open .manuscript {
+    max-width: min(var(--column), calc(100vw - var(--panel) - var(--gap) - 64px));
+    margin-left: max(8px, calc((100vw - var(--column) - var(--panel) - var(--gap)) / 2 - 24px));
+  }
+}
+
+/* Paragraph controls stay compact: one handle in the left margin */
+.para-handle {
+  position: absolute; z-index: 11; width: 28px; height: 28px;
+  display: grid; place-items: center;
+  border: 0; border-radius: 6px; background: transparent;
+  color: var(--text-muted); cursor: pointer;
+}
+.para-handle:hover { background: var(--surface-sunk); }
+
+/* Passage actions appear beside the selection */
+.passage-toolbar, .return-marker {
+  position: absolute; z-index: 12;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 10px; box-shadow: var(--shadow);
+}
+.passage-toolbar { width: 264px; padding: 8px; }
+.ask-row { display: flex; gap: 6px; }
+.ask-row input {
+  flex: 1; min-width: 0; height: 34px; padding: 0 10px;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--bg);
+}
+.toolbar-row { display: flex; align-items: center; margin-top: 6px; }
+.return-marker { padding: 6px 12px; font-size: 14px; font-weight: 600; color: var(--accent); cursor: pointer; }
+
+/* Evidence opens beside the relevant text */
+.passage-panel {
+  position: fixed; z-index: 15;
+  top: calc(var(--header-h) + 16px); bottom: 16px;
+  right: max(16px, calc((100vw - var(--column) - var(--panel) - var(--gap)) / 2));
+  width: var(--panel);
+  display: flex; flex-direction: column;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 10px; box-shadow: var(--shadow); overflow: hidden;
+}
+.panel-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 10px 6px 18px; }
+.panel-head h2 { margin: 0; font-size: 14px; font-weight: 600; }
+.panel-body { flex: 1; overflow-y: auto; padding: 0 18px 18px; }
+.panel-quote {
+  margin: 0 0 12px; padding: 10px 12px; border-radius: 6px;
+  background: var(--surface-sunk);
+  font-family: var(--font-text); font-size: 15px; line-height: 1.5;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.panel-section { margin-top: 18px; }
+.section-title { margin: 0 0 8px; font-size: 13px; font-weight: 600; color: var(--text-muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+.chip {
+  min-height: 28px; padding: 0 10px; border-radius: 14px;
+  border: 1px solid var(--line); background: transparent;
+  font-size: 13px; cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--surface-sunk); border-color: var(--text-muted); font-weight: 600; }
+.result { padding: 12px 0; border-top: 1px solid var(--line); }
+.result:first-child { border-top: 0; }
+.result-where { margin-bottom: 4px; font-size: 12px; color: var(--text-muted); }
+.result-text { margin: 0 0 6px; font-family: var(--font-text); font-size: 15px; line-height: 1.5; }
+.note { margin: 8px 0; font-size: 14px; color: var(--text-muted); }
+.note.error { color: var(--danger); }
+.proposed {
+  margin: 8px 0; padding: 10px 12px; border-radius: 6px;
+  border: 1px solid var(--line);
+  font-family: var(--font-text); font-size: 15px; line-height: 1.5;
+}
+.actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.skeleton { padding: 8px 0; }
+.skeleton-line { height: 12px; margin: 9px 0; border-radius: 4px; background: var(--skeleton); }
+.skeleton-line.short { width: 55%; }
+.skeleton-line.mid { width: 80%; }
+@media (prefers-reduced-motion: no-preference) {
+  .manuscript { transition: margin-left 200ms ease, max-width 200ms ease; }
+  .skeleton-line {
+    background: linear-gradient(90deg, var(--skeleton) 0%, var(--skeleton-shine) 50%, var(--skeleton) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s linear infinite;
+  }
+  @keyframes shimmer { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+}
+
+dialog {
+  max-width: 440px; padding: 20px 22px;
+  border: 1px solid var(--line); border-radius: 10px;
+  background: var(--surface); color: var(--text); box-shadow: var(--shadow);
+}
+dialog h2 { margin: 0 0 10px; font-size: 16px; }
+dialog ul { margin: 0 0 14px; padding-left: 18px; }
+dialog li { margin: 6px 0; }
+
+/* Prototype controls: visibly separate from the design under review */
+.proto-bar {
+  position: fixed; left: 16px; bottom: 16px; z-index: 40;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+  max-width: calc(100vw - 32px); padding: 8px 14px; border-radius: 18px;
+  background: var(--proto-bg); color: var(--proto-text);
+  font-size: 12px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+.proto-bar select, .proto-bar button {
+  font-size: 12px; padding: 2px 6px; border-radius: 6px;
+  border: 1px solid currentColor; background: transparent; color: inherit;
+}
+
+/* Narrow layouts */
+@media (max-width: 760px) {
+  .app-header { padding: 0 12px; gap: 8px; }
+  .workspace { padding: 28px 20px 150px; }
+  .manuscript { margin-left: 0; font-size: 18px; }
+  .manuscript h1 { font-size: 27px; }
+  .manuscript h2 { font-size: 21px; }
+  .para-handle { display: none !important; }
+  .passage-toolbar, .return-marker {
+    position: fixed; left: 0; right: 0; bottom: 0; top: auto !important;
+    width: auto; border-bottom: 0; border-radius: 14px 14px 0 0;
+  }
+  .passage-toolbar { padding: 10px 12px 14px; }
+  .return-marker { padding: 14px 12px; text-align: center; }
+  .passage-panel {
+    top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 62vh;
+    border-radius: 14px 14px 0 0; border-bottom: 0;
+  }
+  body.panel-open .workspace { padding-bottom: 66vh; }
+  .proto-bar { position: static; margin: 0 20px 24px; border-radius: 12px; }
+}
+</style>
+</head>
+<body>
+<header class="app-header">
+  <div class="doc">
+    <p class="doc-name">Harbour report</p>
+    <span class="save-status" id="save-status">Saved</span>
+  </div>
+  <div class="header-actions">
+    <button class="btn btn-primary" id="share" type="button">Share</button>
+    <button class="btn btn-icon" id="more" type="button" aria-label="More" aria-haspopup="menu" aria-expanded="false" aria-controls="more-menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="3.5" cy="9" r="1.6" fill="currentColor"/><circle cx="9" cy="9" r="1.6" fill="currentColor"/><circle cx="14.5" cy="9" r="1.6" fill="currentColor"/></svg>
+    </button>
+    <div class="menu" id="more-menu" role="menu" aria-label="More" hidden>
+      <button type="button" role="menuitem" data-action="word-count">Word count</button>
+      <button type="button" role="menuitem" data-action="shortcuts">Keyboard shortcuts</button>
+    </div>
+  </div>
+</header>
+
+<main class="workspace" id="workspace">
+  <article class="manuscript" id="manuscript" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" aria-label="Manuscript">
+    <h1 id="title">The Harbour at Low Water</h1>
+    <p id="p1">Every morning before six, the first boats leave the inner harbour while the water is still deep enough to clear the sandbar. Their departure times come from the tide table pinned inside the harbour office.</p>
+    <p id="p2">Over the last ten years the sandbar has moved roughly forty metres east. Boats that once left at any state of the tide now wait for the water to rise, and in order to reach the morning market some crews now leave in the dark.</p>
+    <p id="p3">This report follows that change through two seasons of field notes, eleven interviews with people who work on the water, and the harbour board's own records.</p>
+    <h2 id="h-records">What the records show</h2>
+    <p id="p4">The board's dredging log shows that the channel was last cleared in full nine years ago. Since then it has been partly cleared twice, each time after a boat ran aground at the harbour mouth.</p>
+    <p id="p5">Each partial clearing removed sand from the deepest part of the channel only. Within a year, the survey soundings were back to where they had been before the work began.</p>
+    <h2 id="h-crews">What crews told us</h2>
+    <p id="p6">Most of the people we interviewed described the change in hours. A skipper who has fished from the harbour for thirty years said that the tide now decides his whole day, including when he sleeps.</p>
+    <p id="p7">Several crews have started to share a single early boat and split the catch, which means that fewer boats leave the harbour on a typical morning.</p>
+    <p id="p8">The net menders and the ice plant now work to the same tide, so delays at the harbour mouth reach people who never go out on the water.</p>
+  </article>
+
+  <div class="passage-toolbar" id="passage-toolbar" role="toolbar" aria-label="Passage actions" hidden>
+    <form class="ask-row" id="ask-form">
+      <label class="visually-hidden" for="ask-input">What should change in this passage?</label>
+      <input id="ask-input" type="text" autocomplete="off" placeholder="What should change?">
+      <button class="btn btn-primary btn-small" type="submit">Ask</button>
+    </form>
+    <div class="toolbar-row">
+      <button class="btn btn-quiet btn-small" id="open-sources" type="button">Sources</button>
+    </div>
+  </div>
+
+  <button class="para-handle" id="para-handle" type="button" aria-label="Paragraph options" aria-haspopup="menu" aria-expanded="false" aria-controls="para-menu" hidden>
+    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="4.5" cy="3" r="1.3" fill="currentColor"/><circle cx="9.5" cy="3" r="1.3" fill="currentColor"/><circle cx="4.5" cy="7" r="1.3" fill="currentColor"/><circle cx="9.5" cy="7" r="1.3" fill="currentColor"/><circle cx="4.5" cy="11" r="1.3" fill="currentColor"/><circle cx="9.5" cy="11" r="1.3" fill="currentColor"/></svg>
+  </button>
+  <div class="menu" id="para-menu" role="menu" aria-label="Paragraph options" hidden>
+    <button type="button" role="menuitem" data-action="move-up">Move up</button>
+    <button type="button" role="menuitem" data-action="move-down">Move down</button>
+  </div>
+
+  <button class="return-marker" id="return-marker" type="button" aria-label="Open the suggestion for this passage" hidden>Suggestion ready</button>
+</main>
+
+<aside class="passage-panel" id="passage-panel" tabindex="-1" aria-labelledby="panel-title" hidden>
+  <div class="panel-head">
+    <h2 id="panel-title">Selected passage</h2>
+    <button class="btn btn-icon" id="close-panel" type="button" aria-label="Close panel">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="panel-body">
+    <p class="panel-quote" id="panel-quote"></p>
+    <form class="ask-row" id="panel-ask-form">
+      <label class="visually-hidden" for="panel-ask-input">What should change in this passage?</label>
+      <input id="panel-ask-input" type="text" autocomplete="off" placeholder="What should change?">
+      <button class="btn btn-small" type="submit">Ask</button>
+    </form>
+    <section class="panel-section" id="suggestion" tabindex="-1" aria-labelledby="suggestion-title" hidden>
+      <h3 class="section-title" id="suggestion-title">Suggestion</h3>
+      <div id="suggestion-body" aria-live="polite"></div>
+    </section>
+    <section class="panel-section" aria-labelledby="sources-title">
+      <h3 class="section-title" id="sources-title">From your sources</h3>
+      <div class="chips" id="chips" role="group" aria-label="Sources to search"></div>
+      <div id="results" aria-live="polite" aria-busy="false"></div>
+    </section>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" hidden></div>
+<div class="visually-hidden" id="announcer" aria-live="polite"></div>
+
+<dialog id="shortcuts" aria-labelledby="shortcuts-title">
+  <h2 id="shortcuts-title">Keyboard shortcuts</h2>
+  <ul>
+    <li>Shift with the arrow keys selects a passage and shows its actions.</li>
+    <li>Tab moves from the manuscript to the passage actions.</li>
+    <li>Enter in the request field asks for a suggestion.</li>
+    <li>Escape closes the open menu, then the panel, then the passage actions.</li>
+  </ul>
+  <form method="dialog"><button class="btn" type="submit">Close</button></form>
+</dialog>
+
+<div class="proto-bar" id="proto-bar" role="region" aria-label="Prototype controls">
+  <span>Prototype. Sources, suggestions, sharing and saving are simulated.</span>
+  <label>State
+    <select id="proto-state">
+      <option value="">Choose</option>
+      <option value="editor">Editor</option>
+      <option value="passage-selected">Passage selected</option>
+      <option value="sources-open">Sources open</option>
+      <option value="sources-loading">Sources loading</option>
+      <option value="sources-empty">No sources chosen</option>
+      <option value="sources-error">Source error</option>
+      <option value="suggestion">Suggestion</option>
+      <option value="returned">Returned after leaving</option>
+    </select>
+  </label>
+  <button type="button" id="proto-hide">Hide controls</button>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var SOURCES = [
+    { id: "notes", label: "Field notes" },
+    { id: "interviews", label: "Interviews" },
+    { id: "board", label: "Board records" }
+  ];
+  var EXCERPTS = [
+    { source: "notes", where: "Field notes, 14 March", text: "Four boats waited at the mouth for forty minutes before the water was deep enough. Two turned back." },
+    { source: "interviews", where: "Interview 6, net mender", text: "We used to go out on any tide. Now the whole day is arranged around the water, and the market opens before we are back." },
+    { source: "notes", where: "Field notes, 2 May", text: "The sandbar is visible from the east pier at low water. The old marker post stands in about a metre of sand." },
+    { source: "board", where: "Harbour board minutes, June", text: "The board deferred full dredging of the channel to the next financial year because of the cost of hiring a dredger." },
+    { source: "interviews", where: "Interview 2, skipper", text: "Ten years ago I could leave at four or at seven. Now the tide decides, and some weeks that means leaving at three." }
+  ];
+  // Simulated revision: a fixed table of shorter wordings. No model is called.
+  var SHORTER = [
+    ["Every morning before six, ", "Before six each morning, "],
+    ["while the water is still deep enough to clear the sandbar", "while the water still clears the sandbar"],
+    ["Their departure times come from", "They leave by"],
+    ["roughly forty", "about forty"],
+    ["at any state of the tide", "on any tide"],
+    ["in order to reach", "to reach"],
+    ["some crews now leave", "some crews leave"],
+    ["was last cleared in full", "was last fully cleared"],
+    ["Since then it has been partly cleared twice, each time", "It has since been partly cleared twice, both times"],
+    ["Within a year, the survey soundings were back to where they had been before the work began.", "Within a year the soundings had returned to their earlier depths."],
+    ["Most of the people we interviewed", "Most interviewees"],
+    ["have started to share", "now share"],
+    ["which means that fewer boats", "so fewer boats"]
+  ];
+  var SAMPLE = { block: "p2", text: "Boats that once left at any state of the tide now wait for the water to rise" };
+
+  function $(selector) { return document.querySelector(selector); }
+  var workspace = $("#workspace");
+  var manuscript = $("#manuscript");
+  var toolbar = $("#passage-toolbar");
+  var askForm = $("#ask-form");
+  var askInput = $("#ask-input");
+  var panel = $("#passage-panel");
+  var panelQuote = $("#panel-quote");
+  var panelAskForm = $("#panel-ask-form");
+  var panelAskInput = $("#panel-ask-input");
+  var suggestionSection = $("#suggestion");
+  var suggestionBody = $("#suggestion-body");
+  var chipsBox = $("#chips");
+  var results = $("#results");
+  var handle = $("#para-handle");
+  var paraMenu = $("#para-menu");
+  var moreButton = $("#more");
+  var moreMenu = $("#more-menu");
+  var returnMarker = $("#return-marker");
+  var saveStatus = $("#save-status");
+  var toast = $("#toast");
+  var announcer = $("#announcer");
+  var narrow = window.matchMedia("(max-width: 760px)");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  var state = {
+    range: null,
+    chosen: { notes: true, interviews: true, board: false },
+    sourceError: false,
+    holdLoading: false,
+    suggestion: null,
+    openMenu: null,
+    handleBlock: null,
+    timers: []
+  };
+
+  function later(fn, ms) { state.timers.push(window.setTimeout(fn, ms)); }
+  function clearTimers() { state.timers.forEach(window.clearTimeout); state.timers = []; }
+  function announce(text) { announcer.textContent = ""; window.setTimeout(function () { announcer.textContent = text; }, 30); }
+  function showToast(text) {
+    toast.textContent = text;
+    toast.hidden = false;
+    window.clearTimeout(showToast.timer);
+    showToast.timer = window.setTimeout(function () { toast.hidden = true; }, 3200);
+  }
+  function el(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text;
+    return node;
+  }
+  function button(label, className, onClick) {
+    var node = el("button", className, label);
+    node.type = "button";
+    node.addEventListener("click", onClick);
+    return node;
+  }
+  function markEdited() {
+    saveStatus.textContent = "Saving";
+    window.clearTimeout(markEdited.timer);
+    markEdited.timer = window.setTimeout(function () { saveStatus.textContent = "Saved"; }, 700);
+  }
+
+  // Passage tracking and highlight
+  function rangeInManuscript() {
+    var selection = document.getSelection();
+    if (!selection || selection.rangeCount === 0) return null;
+    var range = selection.getRangeAt(0);
+    return manuscript.contains(range.commonAncestorContainer) ? range : null;
+  }
+  function setPassage(range) {
+    state.range = range;
+    if (window.CSS && CSS.highlights && window.Highlight) CSS.highlights.set("passage", new Highlight(range));
+  }
+  function clearPassage() {
+    state.range = null;
+    if (window.CSS && CSS.highlights) CSS.highlights.delete("passage");
+  }
+  function blockFor(node) {
+    while (node && node !== manuscript) {
+      if (node.nodeType === 1 && node.parentNode === manuscript) return node;
+      node = node.parentNode;
+    }
+    return null;
+  }
+  function selectText(id, text) {
+    var block = document.getElementById(id);
+    var walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      var index = node.data.indexOf(text);
+      if (index >= 0) {
+        var range = document.createRange();
+        range.setStart(node, index);
+        range.setEnd(node, index + text.length);
+        manuscript.focus();
+        var selection = document.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        setPassage(range.cloneRange());
+        return range;
+      }
+    }
+    return null;
+  }
+
+  // Positions inside the workspace, beside the manuscript
+  function offsetTop(rect) { return rect.top - workspace.getBoundingClientRect().top; }
+  function placeBeside(node, rect) {
+    if (narrow.matches) { node.style.left = ""; node.style.top = ""; return; }
+    var ws = workspace.getBoundingClientRect();
+    var column = manuscript.getBoundingClientRect();
+    var width = node.offsetWidth;
+    if (column.right + 20 + width <= window.innerWidth - 12) {
+      node.style.left = (column.right + 20 - ws.left) + "px";
+      node.style.top = (offsetTop(rect) - 6) + "px";
+    } else {
+      node.style.left = Math.max(8, Math.min(rect.left - ws.left, ws.width - width - 8)) + "px";
+      node.style.top = (offsetTop(rect) - node.offsetHeight - 10) + "px";
+    }
+  }
+  function firstRect(range) {
+    var rects = range.getClientRects();
+    return rects.length ? rects[0] : range.getBoundingClientRect();
+  }
+
+  // Selection toolbar
+  function showToolbar() {
+    returnMarker.hidden = true;
+    toolbar.hidden = false;
+    placeBeside(toolbar, firstRect(state.range));
+  }
+  function hideToolbar() { toolbar.hidden = true; }
+
+  // Paragraph handle and menu
+  function placeHandle(block) {
+    if (!block || narrow.matches || block.id === "title") { handle.hidden = true; return; }
+    state.handleBlock = block;
+    var ws = workspace.getBoundingClientRect();
+    var column = manuscript.getBoundingClientRect();
+    handle.style.left = (column.left - ws.left - 40) + "px";
+    handle.style.top = (block.getBoundingClientRect().top - ws.top + 3) + "px";
+    handle.hidden = false;
+  }
+  function moveBlock(direction) {
+    var block = state.handleBlock;
+    if (!block) return;
+    var sibling = direction < 0 ? block.previousElementSibling : block.nextElementSibling;
+    if (!sibling || sibling.id === "title") { announce("This paragraph cannot move further."); return; }
+    if (direction < 0) sibling.before(block); else sibling.after(block);
+    markEdited();
+    placeHandle(block);
+    announce(direction < 0 ? "Paragraph moved up." : "Paragraph moved down.");
+  }
+
+  // Menus
+  function menuItems(menu) { return Array.prototype.slice.call(menu.querySelectorAll("[role='menuitem']")); }
+  function openMenu(trigger, menu) {
+    closeMenu(false);
+    if (menu === paraMenu) {
+      menu.style.left = trigger.style.left;
+      menu.style.top = (parseFloat(trigger.style.top) + 32) + "px";
+    }
+    menu.hidden = false;
+    trigger.setAttribute("aria-expanded", "true");
+    state.openMenu = { trigger: trigger, menu: menu };
+    menuItems(menu)[0].focus();
+  }
+  function closeMenu(returnFocus) {
+    if (!state.openMenu) return;
+    var open = state.openMenu;
+    open.menu.hidden = true;
+    open.trigger.setAttribute("aria-expanded", "false");
+    state.openMenu = null;
+    if (returnFocus) open.trigger.focus();
+  }
+  function menuKeys(event) {
+    var items = menuItems(event.currentTarget);
+    var index = items.indexOf(document.activeElement);
+    if (event.key === "ArrowDown") { event.preventDefault(); items[(index + 1) % items.length].focus(); }
+    else if (event.key === "ArrowUp") { event.preventDefault(); items[(index - 1 + items.length) % items.length].focus(); }
+    else if (event.key === "Home") { event.preventDefault(); items[0].focus(); }
+    else if (event.key === "End") { event.preventDefault(); items[items.length - 1].focus(); }
+    else if (event.key === "Tab") { closeMenu(false); }
+  }
+
+  // Passage panel
+  function panelOpen() { return !panel.hidden; }
+  function openPanel(focusTarget) {
+    if (!state.range) return;
+    hideToolbar();
+    returnMarker.hidden = true;
+    panel.hidden = false;
+    document.body.classList.add("panel-open");
+    panelQuote.textContent = state.range.toString();
+    if (narrow.matches) {
+      var top = firstRect(state.range).top;
+      window.scrollBy({ top: top - 80, behavior: reduceMotion.matches ? "auto" : "smooth" });
+    }
+    loadSources();
+    (focusTarget || panel).focus();
+  }
+  function closePanel() {
+    clearTimers();
+    panel.hidden = true;
+    document.body.classList.remove("panel-open");
+    state.suggestion = null;
+    suggestionSection.hidden = true;
+    if (state.range) {
+      manuscript.focus();
+      var selection = document.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(state.range);
+    }
+  }
+
+  // Sources
+  function renderChips() {
+    chipsBox.textContent = "";
+    SOURCES.forEach(function (source) {
+      var chip = button(source.label, "chip", function () {
+        state.chosen[source.id] = !state.chosen[source.id];
+        chip.setAttribute("aria-pressed", String(state.chosen[source.id]));
+        loadSources();
+      });
+      chip.setAttribute("aria-pressed", String(!!state.chosen[source.id]));
+      chipsBox.appendChild(chip);
+    });
+  }
+  function skeleton(lines) {
+    var box = el("div", "skeleton");
+    box.setAttribute("aria-hidden", "true");
+    for (var i = 0; i < lines; i += 1) {
+      box.appendChild(el("div", "skeleton-line"));
+      box.appendChild(el("div", "skeleton-line mid"));
+      box.appendChild(el("div", "skeleton-line short"));
+    }
+    return box;
+  }
+  function loadSources() {
+    results.setAttribute("aria-busy", "true");
+    results.textContent = "";
+    results.appendChild(skeleton(3));
+    if (!state.holdLoading) later(renderSources, 900);
+  }
+  function renderSources() {
+    results.setAttribute("aria-busy", "false");
+    results.textContent = "";
+    if (state.sourceError) {
+      results.appendChild(el("p", "note error", "Your sources could not be searched. Nothing in the manuscript has changed."));
+      results.appendChild(button("Try again", "btn btn-small", function () { state.sourceError = false; loadSources(); }));
+      return;
+    }
+    var chosen = SOURCES.filter(function (source) { return state.chosen[source.id]; });
+    if (!chosen.length) { results.appendChild(el("p", "note", "Choose at least one source to search.")); return; }
+    var items = EXCERPTS.filter(function (item) { return state.chosen[item.source]; });
+    items.forEach(function (item) {
+      var row = el("div", "result");
+      row.appendChild(el("div", "result-where", item.where));
+      row.appendChild(el("p", "result-text", item.text));
+      row.appendChild(button("Insert quote", "btn btn-quiet btn-small", function () { insertQuote(item, row); }));
+      results.appendChild(row);
+    });
+    announce(items.length + " passages found in your sources.");
+  }
+  function insertQuote(item, row) {
+    var block = blockFor(state.range.endContainer);
+    if (!block) return;
+    var quote = el("blockquote", null, item.text + " (" + item.where + ")");
+    block.after(quote);
+    markEdited();
+    var done = el("p", "note", "Quote inserted below the paragraph. ");
+    done.appendChild(button("Undo", "btn btn-quiet btn-small", function () {
+      quote.remove();
+      markEdited();
+      done.textContent = "Quote removed.";
+    }));
+    row.appendChild(done);
+  }
+
+  // Suggestions
+  function shorter(text) {
+    return SHORTER.reduce(function (result, pair) { return result.split(pair[0]).join(pair[1]); }, text);
+  }
+  function ask(instruction) {
+    if (!state.range) return;
+    if (!instruction) { announce("Type what should change, then press Enter."); return; }
+    var original = state.range.toString();
+    state.suggestion = { instruction: instruction, original: original, proposed: null };
+    if (!panelOpen()) openPanel(suggestionSection);
+    suggestionSection.hidden = false;
+    suggestionBody.textContent = "";
+    suggestionBody.appendChild(el("p", "note", "You asked: " + instruction));
+    suggestionBody.appendChild(skeleton(1));
+    suggestionSection.focus();
+    if (!state.holdLoading) later(function () { state.suggestion.proposed = shorter(original); renderSuggestion(); }, 1200);
+  }
+  function renderSuggestion() {
+    var suggestion = state.suggestion;
+    suggestionSection.hidden = false;
+    suggestionBody.textContent = "";
+    suggestionBody.appendChild(el("p", "note", "You asked: " + suggestion.instruction));
+    if (suggestion.proposed === suggestion.original) {
+      suggestionBody.appendChild(el("p", "note", "No shorter version was found for this passage. Ask for a different change."));
+      return;
+    }
+    suggestionBody.appendChild(el("p", "proposed", suggestion.proposed));
+    var actions = el("div", "actions");
+    actions.appendChild(button("Replace passage", "btn btn-primary btn-small", function () { replacePassage(suggestion); }));
+    actions.appendChild(button("Keep original", "btn btn-small", function () {
+      state.suggestion = null;
+      suggestionSection.hidden = true;
+      announce("Suggestion dismissed.");
+    }));
+    suggestionBody.appendChild(actions);
+  }
+  function replacePassage(suggestion) {
+    var range = state.range;
+    var original = range.cloneContents();
+    range.deleteContents();
+    var node = document.createTextNode(suggestion.proposed);
+    range.insertNode(node);
+    var replaced = document.createRange();
+    replaced.selectNodeContents(node);
+    setPassage(replaced);
+    panelQuote.textContent = suggestion.proposed;
+    markEdited();
+    suggestionBody.textContent = "";
+    var done = el("p", "note", "Passage replaced. ");
+    done.appendChild(button("Undo", "btn btn-quiet btn-small", function () {
+      var nodes = Array.prototype.slice.call(original.childNodes);
+      replaced.deleteContents();
+      replaced.insertNode(original);
+      var restored = document.createRange();
+      restored.setStartBefore(nodes[0]);
+      restored.setEndAfter(nodes[nodes.length - 1]);
+      setPassage(restored);
+      panelQuote.textContent = restored.toString();
+      markEdited();
+      done.textContent = "The original passage is back.";
+    }));
+    suggestionBody.appendChild(done);
+    state.suggestion = null;
+  }
+
+  // Events
+  document.addEventListener("selectionchange", function () {
+    var range = rangeInManuscript();
+    if (!range) return;
+    placeHandle(blockFor(range.startContainer));
+    if (!range.collapsed && range.toString().trim()) {
+      setPassage(range.cloneRange());
+      if (panelOpen()) {
+        panelQuote.textContent = state.range.toString();
+        window.clearTimeout(state.retarget);
+        state.retarget = window.setTimeout(loadSources, 400);
+      } else {
+        showToolbar();
+      }
+    } else if (document.activeElement === manuscript && !panelOpen()) {
+      hideToolbar();
+      clearPassage();
+    }
+  });
+  manuscript.addEventListener("mouseover", function (event) { placeHandle(blockFor(event.target)); });
+  manuscript.addEventListener("input", markEdited);
+  askForm.addEventListener("submit", function (event) { event.preventDefault(); ask(askInput.value.trim()); askInput.value = ""; });
+  panelAskForm.addEventListener("submit", function (event) { event.preventDefault(); ask(panelAskInput.value.trim()); panelAskInput.value = ""; });
+  $("#open-sources").addEventListener("click", function () { openPanel(); });
+  $("#close-panel").addEventListener("click", closePanel);
+  returnMarker.addEventListener("click", function () {
+    openPanel();
+    if (state.suggestion) renderSuggestion();
+  });
+  moreButton.addEventListener("click", function () {
+    if (state.openMenu && state.openMenu.menu === moreMenu) closeMenu(true); else openMenu(moreButton, moreMenu);
+  });
+  handle.addEventListener("click", function () {
+    if (state.openMenu && state.openMenu.menu === paraMenu) closeMenu(true); else openMenu(handle, paraMenu);
+  });
+  moreMenu.addEventListener("keydown", menuKeys);
+  paraMenu.addEventListener("keydown", menuKeys);
+  moreMenu.addEventListener("click", function (event) {
+    var action = event.target.getAttribute("data-action");
+    if (!action) return;
+    closeMenu(true);
+    if (action === "word-count") {
+      var words = manuscript.innerText.trim().split(/\s+/).length;
+      showToast("This manuscript has " + words + " words.");
+    } else if (action === "shortcuts") {
+      $("#shortcuts").showModal();
+    }
+  });
+  paraMenu.addEventListener("click", function (event) {
+    var action = event.target.getAttribute("data-action");
+    if (!action) return;
+    closeMenu(true);
+    moveBlock(action === "move-up" ? -1 : 1);
+  });
+  $("#share").addEventListener("click", function () {
+    showToast("Sharing is simulated in this prototype. No link was created.");
+  });
+  document.addEventListener("click", function (event) {
+    if (state.openMenu && !state.openMenu.menu.contains(event.target) && !state.openMenu.trigger.contains(event.target)) closeMenu(false);
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key !== "Escape" || $("#shortcuts").open) return;
+    if (state.openMenu) { event.preventDefault(); closeMenu(true); return; }
+    if (panelOpen()) { event.preventDefault(); closePanel(); return; }
+    if (!toolbar.hidden && state.range) {
+      event.preventDefault();
+      var end = state.range;
+      hideToolbar();
+      manuscript.focus();
+      document.getSelection().collapse(end.endContainer, end.endOffset);
+      clearPassage();
+    }
+  });
+  window.addEventListener("resize", function () {
+    if (!toolbar.hidden && state.range) placeBeside(toolbar, firstRect(state.range));
+    if (!returnMarker.hidden && state.range) placeBeside(returnMarker, firstRect(state.range));
+    if (!handle.hidden) placeHandle(state.handleBlock);
+  });
+  manuscript.addEventListener("transitionend", function () {
+    if (!handle.hidden) placeHandle(state.handleBlock);
+    if (!toolbar.hidden && state.range) placeBeside(toolbar, firstRect(state.range));
+    if (!returnMarker.hidden && state.range) placeBeside(returnMarker, firstRect(state.range));
+  });
+
+  // Prototype controls: jump to a state for review
+  function reset() {
+    clearTimers();
+    closeMenu(false);
+    if (panelOpen()) closePanel();
+    hideToolbar();
+    returnMarker.hidden = true;
+    state.sourceError = false;
+    state.holdLoading = false;
+    state.suggestion = null;
+    state.chosen = { notes: true, interviews: true, board: false };
+    renderChips();
+    document.getSelection().removeAllRanges();
+    clearPassage();
+  }
+  function applyState(name) {
+    reset();
+    if (name === "editor") {
+      var first = document.getElementById("p2").firstChild;
+      manuscript.focus();
+      document.getSelection().collapse(first, 0);
+      return;
+    }
+    if (!name) return;
+    selectText(SAMPLE.block, SAMPLE.text);
+    showToolbar();
+    if (name === "passage-selected") return;
+    if (name === "sources-loading") state.holdLoading = true;
+    if (name === "sources-error") state.sourceError = true;
+    if (name === "sources-empty") state.chosen = { notes: false, interviews: false, board: false };
+    renderChips();
+    if (name === "suggestion") { ask("Make this shorter"); return; }
+    if (name === "returned") {
+      state.suggestion = { instruction: "Make this shorter", original: state.range.toString(), proposed: shorter(state.range.toString()) };
+      hideToolbar();
+      document.getSelection().removeAllRanges();
+      manuscript.blur();
+      returnMarker.hidden = false;
+      placeBeside(returnMarker, firstRect(state.range));
+      return;
+    }
+    openPanel();
+  }
+  $("#proto-state").addEventListener("change", function (event) { applyState(event.target.value); });
+  $("#proto-hide").addEventListener("click", function () { $("#proto-bar").hidden = true; });
+
+  var params = new URLSearchParams(window.location.search);
+  if (params.get("controls") === "0") $("#proto-bar").hidden = true;
+  renderChips();
+  if (params.get("state")) applyState(params.get("state"));
+}());
+</script>
+</body>
+</html>

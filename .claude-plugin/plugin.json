@@ -1,0 +1,16 @@
+{
+  "name": "super-outer",
+  "version": "6.6.0",
+  "description": "A plain-English translation layer for balanced, evidence-backed engineering",
+  "author": {
+    "name": "Dr. Shiva Kakkar",
+    "url": "https://www.shivakakkar.com/"
+  },
+  "homepage": "https://www.shivakakkar.com/",
+  "repository": "https://github.com/Shivak11/Super-outer",
+  "keywords": [
+    "engineering-review",
+    "progressive-disclosure",
+    "delivery-verification"
+  ]
+}

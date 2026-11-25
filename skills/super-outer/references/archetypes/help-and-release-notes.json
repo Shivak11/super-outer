@@ -1,0 +1,166 @@
+{
+  "id": "help-and-release-notes",
+  "name": "Telling people how the product works and what changed",
+  "matches": [
+    "help centre",
+    "help center",
+    "help article",
+    "in app help",
+    "help section",
+    "help screen",
+    "write a user guide",
+    "write the user guide",
+    "support article",
+    "faq page",
+    "faq section",
+    "release notes for users",
+    "release notes for customers",
+    "user facing release notes",
+    "release notes in the app",
+    "in app release notes",
+    "what's new screen",
+    "what's new page",
+    "what's new modal",
+    "what's new popup",
+    "what's new sheet",
+    "what's new section",
+    "what's new dialog",
+    "in app changelog",
+    "product changelog",
+    "public changelog",
+    "changelog page",
+    "customer changelog",
+    "product updates page"
+  ],
+  "modules": [
+    "product-ui-ux-motion",
+    "frontend-client",
+    "delivery-release"
+  ],
+  "failureModes": [
+    {
+      "id": "announce-only-live",
+      "prompt": "Should release notes mention a feature only once it is switched on for the people reading them?",
+      "why": "a feature can ship switched off, and announcing it then sends people looking for something they cannot see",
+      "options": [
+        {
+          "label": "Only once it is on for them",
+          "consequence": "notes are published a little later, and nobody looks for a missing feature"
+        },
+        {
+          "label": "When the code is released",
+          "consequence": "simpler timing, and people read about features that are still switched off"
+        }
+      ],
+      "recommended": "Only once it is on for them",
+      "lookFor": [
+        "whatsNew",
+        "whats_new",
+        "releaseNotes",
+        "release_notes",
+        "changelog.json"
+      ],
+      "sequence": "decide",
+      "provenBy": "a check before each release that every feature named in the notes is switched on for the people receiving them"
+    },
+    {
+      "id": "help-with-behaviour",
+      "prompt": "Should help text change in the same release as the behaviour it describes?",
+      "why": "help that describes an old screen sends people to buttons that no longer exist, and they contact support instead",
+      "options": [
+        {
+          "label": "Same release, checked before shipping",
+          "consequence": "one more item on each release, and help never describes an old screen"
+        },
+        {
+          "label": "Update help afterwards",
+          "consequence": "faster releases, and help is wrong until someone updates it"
+        }
+      ],
+      "recommended": "Same release, checked before shipping",
+      "lookFor": [
+        "help-center",
+        "help_center",
+        "helpcenter",
+        "helpArticles",
+        "help/articles"
+      ],
+      "sequence": "decide",
+      "provenBy": "a release checklist item, or a test, that fails when a changed screen has help text that was not reviewed in the same release"
+    },
+    {
+      "id": "help-where-needed",
+      "prompt": "Should help appear on the screens where people most often need it, or in one separate help section?",
+      "why": "people who must leave their task to look for help can abandon it, and help beside the task is read at the moment it is needed",
+      "options": [
+        {
+          "label": "Beside the step where it is needed",
+          "consequence": "needs knowing where people stop, and help is shown at the right moment"
+        },
+        {
+          "label": "One separate help section",
+          "consequence": "simpler to build, and people must leave their task to find it"
+        }
+      ],
+      "recommended": "Beside the step where it is needed",
+      "lookFor": [
+        "HelpButton",
+        "helpLink",
+        "help_url",
+        "helpUrl",
+        "contextualHelp"
+      ],
+      "sequence": "decide",
+      "provenBy": "a walk through the main journey that confirms each step named as hard has help on the same screen"
+    },
+    {
+      "id": "whats-new-audience",
+      "prompt": "Should new users see what's-new notes about changes made before they joined?",
+      "why": "notes about changes they never saw can confuse new people, who have no earlier version to compare with",
+      "options": [
+        {
+          "label": "Only people who used the earlier version",
+          "consequence": "needs the last version each person saw, and new people see only current help"
+        },
+        {
+          "label": "Everyone, once per release",
+          "consequence": "simpler, and new people read about changes that mean nothing to them"
+        }
+      ],
+      "recommended": "Only people who used the earlier version",
+      "lookFor": [
+        "lastSeenVersion",
+        "last_seen_version",
+        "whatsNewSeen",
+        "seenReleaseNotes",
+        "lastVersionSeen"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that signs in a new account and an account from the previous version and asserts only the second sees the notes, once"
+    },
+    {
+      "id": "fresh-screenshots",
+      "prompt": "When a screen changes, should the pictures of it in help be retaken in the same release?",
+      "why": "pictures of old screens make help harder to follow, and refreshing them is work that can be added later",
+      "options": [
+        {
+          "label": "Retake them in the same release",
+          "consequence": "slower releases, and pictures always match the product"
+        },
+        {
+          "label": "Refresh them on a schedule",
+          "consequence": "less work per release, and some pictures show old screens for a while"
+        }
+      ],
+      "recommended": "Refresh them on a schedule",
+      "lookFor": [
+        "toHaveScreenshot",
+        "help/images",
+        "help/screenshots",
+        "docs/screenshots"
+      ],
+      "sequence": "defer",
+      "provenBy": "a dated list of help screenshots compared with the screens they show at each scheduled refresh"
+    }
+  ]
+}

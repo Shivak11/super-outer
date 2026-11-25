@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="882" viewBox="0 0 1200 882" role="img" aria-labelledby="title desc"><title id="title">Recorded eval results</title><desc id="desc">Per-case scores with and without Super-outer. Version 5.10.0 on 12 October 2026: mean 0.82 with, 0.57 without. Version 6.6.0 on 18 November 2026: mean 0.79 with, 0.55 without.</desc>
+<rect x="0.0" y="0.0" width="1200.0" height="882.0" rx="22" fill="#f5f7fb"/>
+<rect x="0.0" y="0.0" width="1200.0" height="104.0" rx="18" fill="#142643"/>
+<rect x="0.0" y="84.0" width="1200.0" height="20.0" rx="0" fill="#142643"/>
+<text x="32.0" y="38.0" font-size="13" font-weight="800" fill="#ade0fc" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start" letter-spacing="1.2">SUPER-OUTER   /   RECORDED EVAL RESULTS</text>
+<text x="32.0" y="80.0" font-size="30" font-weight="750" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Scores with and without Super-outer</text>
+<rect x="40.0" y="124.0" width="14.0" height="14.0" rx="3" fill="#2355af"/>
+<text x="62.0" y="136.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">With Super-outer</text>
+<rect x="210.0" y="124.0" width="14.0" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="232.0" y="136.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Without (no plugin)</text>
+<text x="1160.0" y="136.0" font-size="12" font-weight="500" fill="#5b6778" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end">Mean of two runs per arm. Score 0 to 1.</text>
+<text x="40.0" y="180.0" font-size="12" font-weight="800" fill="#2355af" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start" letter-spacing="0.6">V5.10.0 · 12 OCT 2026   /   mean 0.82 with, 0.57 without</text>
+<text x="40.0" y="216.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">bugfix-without-brief-asks-nothing</text>
+<rect x="520.0" y="198.0" width="560.0" height="34.0" rx="4" fill="#eef1f6"/>
+<line x1="660.0" y1="198" x2="660.0" y2="232" stroke="#d6dce6" stroke-width="1"/>
+<line x1="800.0" y1="198" x2="800.0" y2="232" stroke="#d6dce6" stroke-width="1"/>
+<line x1="940.0" y1="198" x2="940.0" y2="232" stroke="#d6dce6" stroke-width="1"/>
+<rect x="520.0" y="200.0" width="560.0" height="14.0" rx="3" fill="#2355af"/>
+<text x="1074.0" y="212.0" font-size="11" font-weight="700" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end">1.00</text>
+<rect x="520.0" y="216.0" width="560.0" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="1074.0" y="228.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end">1.00</text>
+<text x="40.0" y="262.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">existing-brief-new-subsystem</text>
+<rect x="520.0" y="244.0" width="560.0" height="34.0" rx="4" fill="#eef1f6"/>
+<line x1="660.0" y1="244" x2="660.0" y2="278" stroke="#d6dce6" stroke-width="1"/>
+<line x1="800.0" y1="244" x2="800.0" y2="278" stroke="#d6dce6" stroke-width="1"/>
+<line x1="940.0" y1="244" x2="940.0" y2="278" stroke="#d6dce6" stroke-width="1"/>
+<rect x="520.0" y="246.0" width="280.0" height="14.0" rx="3" fill="#2355af"/>
+<text x="808.0" y="258.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.50</text>
+<rect x="520.0" y="262.0" width="280.0" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="808.0" y="274.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.50</text>
+<text x="40.0" y="308.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">explains-consequence-first</text>
+<rect x="520.0" y="290.0" width="560.0" height="34.0" rx="4" fill="#eef1f6"/>
+<line x1="660.0" y1="290" x2="660.0" y2="324" stroke="#d6dce6" stroke-width="1"/>
+<line x1="800.0" y1="290" x2="800.0" y2="324" stroke="#d6dce6" stroke-width="1"/>
+<line x1="940.0" y1="290" x2="940.0" y2="324" stroke="#d6dce6" stroke-width="1"/>
+<rect x="520.0" y="292.0" width="280.0" height="14.0" rx="3" fill="#2355af"/>
+<text x="808.0" y="304.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.50</text>
+<rect x="520.0" y="308.0" width="420.0" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="948.0" y="320.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.75</text>
+<text x="40.0" y="354.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">new-feature-asks-safe-activation</text>
+<rect x="520.0" y="336.0" width="560.0" height="34.0" rx="4" fill="#eef1f6"/>
+<line x1="660.0" y1="336" x2="660.0" y2="370" stroke="#d6dce6" stroke-width="1"/>
+<line x1="800.0" y1="336" x2="800.0" y2="370" stroke="#d6dce6" stroke-width="1"/>
+<line x1="940.0" y1="336" x2="940.0" y2="370" stroke="#d6dce6" stroke-width="1"/>
+<rect x="520.0" y="338.0" width="560.0" height="14.0" rx="3" fill="#2355af"/>
+<text x="1074.0" y="350.0" font-size="11" font-weight="700" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end">1.00</text>
+<rect x="520.0" y="354.0" width="2.0" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="528.0" y="366.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.00</text>
+<text x="40.0" y="400.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">ordinary-fix-no-approval</text>
+<rect x="520.0" y="382.0" width="560.0" height="34.0" rx="4" fill="#eef1f6"/>
+<line x1="660.0" y1="382" x2="660.0" y2="416" stroke="#d6dce6" stroke-width="1"/>
+<line x1="800.0" y1="382" x2="800.0" y2="416" stroke="#d6dce6" stroke-width="1"/>
+<line x1="940.0" y1="382" x2="940.0" y2="416" stroke="#d6dce6" stroke-width="1"/>
+<rect x="520.0" y="384.0" width="560.0" height="14.0" rx="3" fill="#2355af"/>
+<text x="1074.0" y="396.0" font-size="11" font-weight="700" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end">1.00</text>
+<rect x="520.0" y="400.0" width="280.0" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="808.0" y="412.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.50</text>
+<text x="40.0" y="446.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">quick-question-stays-quiet</text>
+<rect x="520.0" y="428.0" width="560.0" height="34.0" rx="4" fill="#eef1f6"/>
+<line x1="660.0" y1="428" x2="660.0" y2="462" stroke="#d6dce6" stroke-width="1"/>
+<line x1="800.0" y1="428" x2="800.0" y2="462" stroke="#d6dce6" stroke-width="1"/>
+<line x1="940.0" y1="428" x2="940.0" y2="462" stroke="#d6dce6" stroke-width="1"/>
+<rect x="520.0" y="430.0" width="560.0" height="14.0" rx="3" fill="#2355af"/>
+<text x="1074.0" y="442.0" font-size="11" font-weight="700" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end">1.00</text>
+<rect x="520.0" y="446.0" width="560.0" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="1074.0" y="458.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end">1.00</text>
+<text x="40.0" y="492.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">screen-change-confirms-assumptions</text>
+<rect x="520.0" y="474.0" width="560.0" height="34.0" rx="4" fill="#eef1f6"/>
+<line x1="660.0" y1="474" x2="660.0" y2="508" stroke="#d6dce6" stroke-width="1"/>
+<line x1="800.0" y1="474" x2="800.0" y2="508" stroke="#d6dce6" stroke-width="1"/>
+<line x1="940.0" y1="474" x2="940.0" y2="508" stroke="#d6dce6" stroke-width="1"/>
+<rect x="520.0" y="476.0" width="420.0" height="14.0" rx="3" fill="#2355af"/>
+<text x="948.0" y="488.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.75</text>
+<rect x="520.0" y="492.0" width="140.0" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="668.0" y="504.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.25</text>
+<text x="40.0" y="542.0" font-size="12" font-weight="800" fill="#2355af" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start" letter-spacing="0.6">V6.6.0 · 18 NOV 2026   /   mean 0.79 with, 0.55 without</text>
+<text x="40.0" y="578.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">journey-interview-goes-phase-by-phase</text>
+<rect x="520.0" y="560.0" width="560.0" height="34.0" rx="4" fill="#eef1f6"/>
+<line x1="660.0" y1="560" x2="660.0" y2="594" stroke="#d6dce6" stroke-width="1"/>
+<line x1="800.0" y1="560" x2="800.0" y2="594" stroke="#d6dce6" stroke-width="1"/>
+<line x1="940.0" y1="560" x2="940.0" y2="594" stroke="#d6dce6" stroke-width="1"/>
+<rect x="520.0" y="562.0" width="336.0" height="14.0" rx="3" fill="#2355af"/>
+<text x="864.0" y="574.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.60</text>
+<rect x="520.0" y="578.0" width="336.0" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="864.0" y="590.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.60</text>
+<text x="40.0" y="624.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">new-device-mid-build-updates-the-map</text>
+<rect x="520.0" y="606.0" width="560.0" height="34.0" rx="4" fill="#eef1f6"/>
+<line x1="660.0" y1="606" x2="660.0" y2="640" stroke="#d6dce6" stroke-width="1"/>
+<line x1="800.0" y1="606" x2="800.0" y2="640" stroke="#d6dce6" stroke-width="1"/>
+<line x1="940.0" y1="606" x2="940.0" y2="640" stroke="#d6dce6" stroke-width="1"/>
+<rect x="520.0" y="608.0" width="560.0" height="14.0" rx="3" fill="#2355af"/>
+<text x="1074.0" y="620.0" font-size="11" font-weight="700" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end">1.00</text>
+<rect x="520.0" y="624.0" width="560.0" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="1074.0" y="636.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end">1.00</text>
+<text x="40.0" y="670.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">new-product-maps-every-phase</text>
+<rect x="520.0" y="652.0" width="560.0" height="34.0" rx="4" fill="#eef1f6"/>
+<line x1="660.0" y1="652" x2="660.0" y2="686" stroke="#d6dce6" stroke-width="1"/>
+<line x1="800.0" y1="652" x2="800.0" y2="686" stroke="#d6dce6" stroke-width="1"/>
+<line x1="940.0" y1="652" x2="940.0" y2="686" stroke="#d6dce6" stroke-width="1"/>
+<rect x="520.0" y="654.0" width="373.3" height="14.0" rx="3" fill="#2355af"/>
+<text x="901.3" y="666.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.67</text>
+<rect x="520.0" y="670.0" width="233.3" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="761.3" y="682.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.42</text>
+<text x="40.0" y="716.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">plain-request-opens-sign-in-and-deletion</text>
+<rect x="520.0" y="698.0" width="560.0" height="34.0" rx="4" fill="#eef1f6"/>
+<line x1="660.0" y1="698" x2="660.0" y2="732" stroke="#d6dce6" stroke-width="1"/>
+<line x1="800.0" y1="698" x2="800.0" y2="732" stroke="#d6dce6" stroke-width="1"/>
+<line x1="940.0" y1="698" x2="940.0" y2="732" stroke="#d6dce6" stroke-width="1"/>
+<rect x="520.0" y="700.0" width="373.3" height="14.0" rx="3" fill="#2355af"/>
+<text x="901.3" y="712.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.67</text>
+<rect x="520.0" y="716.0" width="2.0" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="528.0" y="728.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.00</text>
+<text x="40.0" y="762.0" font-size="13" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">second-person-gets-a-journey</text>
+<rect x="520.0" y="744.0" width="560.0" height="34.0" rx="4" fill="#eef1f6"/>
+<line x1="660.0" y1="744" x2="660.0" y2="778" stroke="#d6dce6" stroke-width="1"/>
+<line x1="800.0" y1="744" x2="800.0" y2="778" stroke="#d6dce6" stroke-width="1"/>
+<line x1="940.0" y1="744" x2="940.0" y2="778" stroke="#d6dce6" stroke-width="1"/>
+<rect x="520.0" y="746.0" width="560.0" height="14.0" rx="3" fill="#2355af"/>
+<text x="1074.0" y="758.0" font-size="11" font-weight="700" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end">1.00</text>
+<rect x="520.0" y="762.0" width="420.0" height="14.0" rx="3" fill="#b7c0cd"/>
+<text x="948.0" y="774.0" font-size="11" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">0.75</text>
+<text x="520.0" y="800.0" font-size="11" font-weight="600" fill="#5b6778" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">0</text>
+<text x="800.0" y="800.0" font-size="11" font-weight="600" fill="#5b6778" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">0.5</text>
+<text x="1080.0" y="800.0" font-size="11" font-weight="600" fill="#5b6778" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">1</text>
+<text x="32.0" y="862.0" font-size="12" font-weight="500" fill="#5b6778" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Source: evals/reports/2026-10-12-v5.10.0-behaviour.json (pass 2) and 2026-11-18-v6.6.0-journey-map.json (first run).</text>
+</svg>

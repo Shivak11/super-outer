@@ -1,0 +1,7181 @@
+{
+ "version": "5.7.0",
+ "commit": "1c073d9",
+ "routes": {
+  "Build a new writing editor": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Create an admin panel": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Add a dashboard that shows weekly recordings": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Redesign the settings screen": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Redesign the onboarding flow": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "cross-system-rollout"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a new inbox for support messages": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Overhaul the checkout page": {
+   "mode": "CRITICAL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Make a new settings page": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Design a new home screen": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a landing page": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Revamp the dashboard": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Replace the old editor with a new one": {
+   "mode": "FULL",
+   "shape": "replacement",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a settings view": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Let's do a redesign of the home page": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Rebuild the home page in React": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client",
+    "product-ui-ux-motion"
+   ]
+  },
+  "I want a page where users can see their past recordings": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Can you put together a profile screen for users?": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Make a screen where students can see their scores": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build me an app that lets students record mock interviews": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build a website for my bakery": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Create a mobile app for recording voice notes": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "mobile-capture-upload"
+   ],
+   "selected_modules": [
+    "data-migrations",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Add a form for users to submit feedback": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Build a modal for confirming deletes": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Add a sidebar with links to every project": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Build a signup form": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Create a login page": {
+   "mode": "CRITICAL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "authentication"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build the onboarding": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Redesign the UI": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Redesign the app": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Redesign the homepage": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a new homepage": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Create a landing site for the course": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Design the checkout": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Make the editor look like Google Docs": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Build a writing editor where selecting a passage shows its sources": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Create a dashboards area for admins": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a new reports dashboard and an API for it": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add a settings screen and a backend endpoint to save preferences": {
+   "mode": "FULL",
+   "shape": "coordinated_cross_system_change",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build an admin panel to manage users": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Create a page": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "I need a screen for uploading recordings": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a kanban board for tasks": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Build a calendar for booking sessions": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Build a chat interface for the tutor": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Create a profile page for each student": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "rebuild the bundle": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Rebuild the bundle": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "fix lint and rebuild": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add padding to the dashboard": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rename the helper": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "architecture-maintainability"
+   ]
+  },
+  "rebuild the search index": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rebuild the docker image": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rebuild and rerun the tests": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rebuild the project": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "please rebuild": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rebuild the app": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "cross-system-rollout"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "rebuild the dist folder": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "npm run build and rebuild the bundle": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rebuild the page after the data loads": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rebuild the docs page": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rebuild the static page": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rebuild the screen reader labels": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "make the dashboard rebuild its view when filters change": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rebuild the view when the filter changes": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "re-render the dashboard": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client"
+   ]
+  },
+  "add padding to the settings screen": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "add a border to the editor panel": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add margin on the dashboard cards": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "change the button colour on the dashboard": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "fix the alignment in the editor": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "bump the font size on the inbox": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a tooltip to the dashboard": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a loading spinner to the page": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a dark mode toggle to the settings page": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a column to the dashboard table": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "add a filter to the inbox": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a new button to the dashboard": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a new tab to the settings panel": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "update the copy on the landing page": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "fix the typo on the pricing page": {
+   "mode": "SMALL_SAFE",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 0,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "build the app and run the tests": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "run the build and fix the errors": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rename the dashboard component": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client"
+   ]
+  },
+  "move the editor into its own file": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "extract the panel into a component": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client"
+   ]
+  },
+  "format the code": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "update the readme": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "clean up the dashboard code": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "refactor the dashboard": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "architecture-maintainability"
+   ]
+  },
+  "refactor the editor to use hooks": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "architecture-maintainability"
+   ]
+  },
+  "rebuild node_modules": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rebuild the lockfile": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rebuild the cache": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "the build is broken, rebuild it": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Can you rebuild the frontend bundle?": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client"
+   ]
+  },
+  "rebuild the css": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Build a new admin dashboard without any UI changes": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build a new admin dashboard with no UI changes": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build a new admin dashboard, but don't change the UI": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build a new reports page, backend only": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Build the new reports page API only, no frontend work": {
+   "mode": "FULL",
+   "shape": "coordinated_cross_system_change",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Redesign the dashboard without changing the UI": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Redesign the dashboard data layer without touching the UI": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Rebuild the dashboard backend; the screen stays the same": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Add a dashboard endpoint without UI changes": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Create a new editor service with no UI": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Build a new inbox API, no visual changes": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Build a new inbox without any visual changes": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Rework the settings page backend without any client-visible change": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Replace the editor's storage layer; no UI work": {
+   "mode": "FULL",
+   "shape": "replacement",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Overhaul the onboarding flow logic but leave the screens unchanged": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "cross-system-rollout"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations"
+   ]
+  },
+  "Build a headless dashboard API": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Add a dashboard that shows weekly recordings. No client-visible changes.": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "retire this feature flag": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "sunset the feature flag for dark mode": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "discontinue this feature flag": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "retire this feature toggle": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add the new crate to the workspace members": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "list the workspace members in Cargo.toml": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add the package to the pnpm shared workspace": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "open the shared workspace in VS Code": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "track event listeners that leak memory": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "we need to track event loop lag": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "limit uploads to 10 per user per day": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rate limit to 100 requests per user per day": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "cap exports at 5 per user per week": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "instrument the app with OpenTelemetry traces": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "build an app for the simulator": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "build an app for testing on the simulator": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "build an app for release": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "build an app that we can run in CI": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "build an app bundle for the store": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "the landing page test is flaky": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "fix the pricing page layout on mobile": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces",
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "fix the bug on the admin page": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "the admin dashboard test is flaky": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "fix the crash on the help screen": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "help-and-release-notes"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion"
+   ]
+  },
+  "the launch page flickers on startup": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "fix the launch page splash animation": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "handle the deletion request in the queue worker": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-rights"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "scale-performance-cost",
+    "security-privacy-abuse"
+   ]
+  },
+  "add a data deletion job for old logs": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-rights"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "security-privacy-abuse"
+   ]
+  },
+  "add the gdpr link in the footer": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-rights"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "security-privacy-abuse"
+   ]
+  },
+  "bump the dkim library": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "email-deliverability"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "remove the app from the store tests": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "retirement"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "the transactional email test is failing": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "email-deliverability"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "fix the unsubscribe link styling": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "email-deliverability"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "add an spf record lookup to the dns tool": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "email-deliverability"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "our privacy policy link is broken": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "fix the changelog page build": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "update the product changelog": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "help-and-release-notes"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion"
+   ]
+  },
+  "the store listing endpoint returns 500": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations",
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "the moderation queue worker is stuck": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "scale-performance-cost",
+    "security-privacy-abuse"
+   ]
+  },
+  "fix the spam folder detection test": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "email-deliverability"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "roles and permissions test fixture is broken": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "teams-and-roles"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations",
+    "delivery-release",
+    "frontend-client",
+    "security-privacy-abuse"
+   ]
+  },
+  "the member roles enum is missing a value": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "teams-and-roles"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations",
+    "delivery-release",
+    "frontend-client",
+    "security-privacy-abuse"
+   ]
+  },
+  "shut down my app server": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "shutting down my app gracefully on SIGTERM": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "close down our app connections on exit": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "wind down our app workers before deploy": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "shut down our app process when tests finish": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "handle shutting down our app in the signal handler": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "remove the app from the app store connect build list": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "the user impersonation test fails": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "add a back office link": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "build a saas from scratch for practice": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "greenfield refactor of the parser": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "architecture-maintainability"
+   ]
+  },
+  "Build a new onboarding screen and add tests for it": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "cross-system-rollout"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add a dashboard that shows weekly recordings and update the docs": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Create a new settings page and rename the old one": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a new editor and write tests for it": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a new inbox and fix the typo in the header": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add a new checkout page, then update the readme": {
+   "mode": "CRITICAL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "update the docs to describe the redesign": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "fix the typo in the redesign notes": {
+   "mode": "SMALL_SAFE",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 0,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "fix the typo in the overhaul section of the readme": {
+   "mode": "SMALL_SAFE",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 0,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "update the changelog for the move from webpack to vite": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rename the config keys after we migrate from v1": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "fix the formatting in the full redesign doc": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rename the rework branch": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "add tests for the revamp of the parser": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "update the readme to mention the switch from npm to pnpm": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "write tests for the complete rewrite of the parser": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "comment out the upload retry": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "reliability-recovery"
+   ]
+  },
+  "format the upload helper": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "architecture-maintainability"
+   ]
+  },
+  "add a comment to the upload retry logic": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "reliability-recovery"
+   ]
+  },
+  "reformat the recording upload screen code": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "add a Django view for the export endpoint": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "create a view in postgres for the leaderboard": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a new Flask view that returns JSON": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "build a Grafana dashboard for API latency": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api",
+    "scale-performance-cost"
+   ]
+  },
+  "add a Datadog dashboard for the queue": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "scale-performance-cost"
+   ]
+  },
+  "add a panel to the Grafana dashboard for error rates": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "implement the inbox pattern for the outbox worker": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "set up a new code editor config": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a new view model for the recordings list": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "ai-llm"
+   ]
+  },
+  "create a new SwiftUI view for the settings": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "add a dashboard endpoint that returns weekly totals": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "build a dashboard API": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "build the docs panel plugin": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a new tool to the MCP server": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "build a CLI tool to export recordings": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a tool definition for search": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a new linting tool": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Redesign the onboarding screens": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "cross-system-rollout"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build the settings pages": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build new dashboards for each team": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Redesign the editors": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Rebuild the admin panels": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Redesign the home screen": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Redesign the homescreen": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a new web page": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a new webpage": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Redesign the signup page": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Redesign the sign-up page": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Redesign the signup-page": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a new sign in screen": {
+   "mode": "CRITICAL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "authentication"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Redesign the paywall": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Redesign the navbar": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "I want to build an app that helps tutors schedule classes": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build me an app for tracking my running club's races": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Help me choose a tech stack for a new booking product": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Start a new app for a bakery that takes online orders": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build an MVP of a habit tracker": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "I have an idea for an app that matches tutors with students": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build a SaaS from scratch for small clinics": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "build the app and run it on the simulator": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "start a new branch for the fix": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "create a new app password for gmail": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "authentication"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "security-privacy-abuse"
+   ]
+  },
+  "what stack trace did it print": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "write the helper again from scratch": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "architecture-maintainability"
+   ]
+  },
+  "the app crashed on start": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "build a new app version for TestFlight": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Add product analytics so we can see which features people use": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "product-analytics"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Set up PostHog events for sign up and the first recording": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "product-analytics"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Track how many people finish onboarding each week": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "product-analytics"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Create a tracking plan for the new checkout": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "payments-subscription",
+    "product-analytics"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build a signup funnel so we can see where people stop": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "product-analytics"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Show daily active users and weekly active users on a chart": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "product-analytics"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "track down the bug in the upload helper": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "architecture-maintainability"
+   ]
+  },
+  "keep track of the open pull requests": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "fix the spacing on the analytics page": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "check posthog for the crash": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "the amplitude of the waveform is too low": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "set up a remote tracking branch": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "log into posthog and read the dashboard": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "measure how many tokens the prompt uses": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "ai-llm"
+   ]
+  },
+  "Build an admin panel to look up customers and reset their limits": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Add an admin dashboard for the support team": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Let support staff view as a customer to see what went wrong": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build a back office for approving refunds": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "payments-subscription",
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Add a moderation queue for reported posts": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "scale-performance-cost",
+    "security-privacy-abuse"
+   ]
+  },
+  "Let staff impersonate a user to reproduce a bug": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "the admin role in this repo cannot push": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "open the supabase dashboard": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "log in as a test user and check the empty state": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "authentication"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "security-privacy-abuse"
+   ]
+  },
+  "ask the workspace admin to approve the connector": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "the mcp client supports tool filtering": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client"
+   ]
+  },
+  "support dark mode in the settings screen": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "this is an internal tool, so keep it simple": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Let people delete their account from settings": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-rights"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Add an export my data button to the profile screen": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-rights"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Handle account deletion requests": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-rights"
+   ],
+   "selected_modules": [
+    "data-migrations",
+    "delivery-release",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Make the app GDPR compliant": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-rights"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Let users download their data as a zip file": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-rights"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "security-privacy-abuse"
+   ]
+  },
+  "We need to comply with the DPDP Act for users in India": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-rights"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "security-privacy-abuse"
+   ]
+  },
+  "delete the test account I made": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "export the chart as png": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "delete the old branches from remote": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "download the data from the dashboard": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "the delete request returns 404": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "export the slides to pdf": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "remove the data attribute from the div": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Build a landing page with a waitlist": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Create a pricing page that shows the three plans": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "launch-surfaces",
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Write the App Store listing and screenshots": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "data-migrations",
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Add a privacy policy page and a terms of service page to the website": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Fill in the privacy nutrition labels for the iOS release": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "security-privacy-abuse"
+   ]
+  },
+  "Get ready for Product Hunt with a coming soon page": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "launch the simulator": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "launch a parallel agent to review the diff": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "ai-llm"
+   ]
+  },
+  "read the vendor's privacy policy before we sign up": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "security-privacy-abuse"
+   ]
+  },
+  "update the app store connect api key": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations"
+   ]
+  },
+  "in terms of service quality the new host is better": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "in terms of use cases, this covers most of them": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "check the store for updates": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "Build a help centre with articles for common questions": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "help-and-release-notes"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add a what's new screen after each update": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "help-and-release-notes"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Write release notes for users about the new editor": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "help-and-release-notes"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add in-app help on the recording screen": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "help-and-release-notes",
+    "mobile-capture-upload"
+   ],
+   "selected_modules": [
+    "data-migrations",
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Create a public changelog page on the website": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "help-and-release-notes"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add an FAQ page for new users": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "help-and-release-notes"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion"
+   ]
+  },
+  "update the changelog": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "write the release notes for the next version": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "open the plugin help page": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "print the help text for the cli": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "what's new in react 19": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client"
+   ]
+  },
+  "check the user guide for the bitwarden cli": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "think about how to guide new users through setup": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "decide what new screens onboarding needs": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Our emails are going to spam, fix it": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "email-deliverability"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Set up DKIM and DMARC for our sending domain": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "email-deliverability"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Add an unsubscribe link to every marketing email": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "email-deliverability"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Handle bounced emails from the email provider": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "email-deliverability"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "Separate transactional email from the newsletter": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "email-deliverability",
+    "notifications-messaging"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Password reset emails end up in spam": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "authentication",
+    "email-deliverability"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "security-privacy-abuse"
+   ]
+  },
+  "resend the PR link": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "the bounce animation on the button is too strong": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "unsubscribe from the store listener in the effect": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "test email validation on the sign up form": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "send me an email when the build finishes": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "the domain model needs a new field": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "ai-llm"
+   ]
+  },
+  "stop sending me so many notifications": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "notifications-messaging"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Let users invite teammates to their workspace": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "teams-and-roles"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations",
+    "frontend-client",
+    "security-privacy-abuse"
+   ]
+  },
+  "Add roles and permissions for owners, admins and members": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "teams-and-roles"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations",
+    "delivery-release",
+    "frontend-client",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build team workspaces so companies can share recordings": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "teams-and-roles"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations",
+    "frontend-client",
+    "security-privacy-abuse"
+   ]
+  },
+  "Make the app multi-tenant for schools": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "teams-and-roles"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations",
+    "frontend-client",
+    "security-privacy-abuse"
+   ]
+  },
+  "Let an owner transfer ownership of the workspace": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "teams-and-roles"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations",
+    "frontend-client",
+    "security-privacy-abuse"
+   ]
+  },
+  "Add seat based billing for teams": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "payments-subscription",
+    "teams-and-roles"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations",
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "invite Rohan to the GitHub repo": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "send me the meeting invite link": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "accept the Slack workspace invite": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "we are a small team": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "use multiple agent teams if needed": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "ai-llm"
+   ]
+  },
+  "put this in the user role of the prompt": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "ai-llm",
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "transfer ownership of the repo to the organisation": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "remove a member from the union type": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "We are going to sunset the feature next month": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "retirement"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "Shut down our app at the end of the year": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "retirement"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "Retire this feature and tell people in advance": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "retirement"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "Remove the app from the App Store and the Play Store": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "retirement"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "Plan for shutting down our product in March": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "retirement"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "Discontinue our app and refund annual subscribers": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "payments-subscription",
+    "retirement"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "shut down the dev server": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "the app shut down when I tapped record": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "sunset colours on the hero gradient": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "remove the app from the simulator": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "download the app from the store": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "retire the old feature flag": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "deprecate the app router config": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "the case describes how they shut down the business unit": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "can we have a page where teachers see all their students' recordings": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "make one screen for the weekly report, students should see it on sunday": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "the home screen is boring, redo it properly": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "I need an onboarding for new users, 3 steps max": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a profile section where people can edit their photo and bio": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "build a leaderboard page for the cohort": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "create an app for my coaching institute where students upload answers": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "we need a proper settings area, right now everything is in one long list": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rework the recording screen so the record button is the main thing": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "mobile-capture-upload"
+   ],
+   "selected_modules": [
+    "data-migrations",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "give the dashboard a fresh look, it's too cluttered": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "build a page to compare two recordings side by side": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "make a website for the workshop with registration": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "replace the old player screen with a new one that shows the transcript": {
+   "mode": "FULL",
+   "shape": "replacement",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "design a feed of recent recordings for the home tab": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "set up a simple landing page to collect emails": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "the recording screen crashes on android 14, fix it": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "mobile-capture-upload"
+   ],
+   "selected_modules": [
+    "data-migrations",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "move the save button 8px to the left": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "change the primary colour to teal everywhere": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add an index on recordings.user_id": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "write a cron job that emails the weekly report": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "build a script to backfill transcripts": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-migration"
+   ],
+   "selected_modules": [
+    "compatibility-integrations",
+    "data-migrations",
+    "delivery-release",
+    "reliability-recovery"
+   ]
+  },
+  "make the leaderboard query faster": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add retry to the upload worker": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api",
+    "reliability-recovery"
+   ]
+  },
+  "set up github actions to run tests on every PR": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "bump react native to 0.76": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client"
+   ]
+  },
+  "the dashboard shows the wrong count, fix the query": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add sentry to the backend": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "create a supabase function that returns the leaderboard": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rename RecordingCard to RecordingTile": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add unit tests for the scoring module": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "deploy the new version to production": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "build the ios app and upload it to testflight": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client"
+   ]
+  },
+  "add an admin endpoint to reset a user's quota, no ui needed": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api",
+    "scale-performance-cost"
+   ]
+  },
+  "redesign the database schema for recordings": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-migration"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations",
+    "delivery-release",
+    "reliability-recovery"
+   ]
+  },
+  "rewrite the upload service in go": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "make the api return 404 instead of 500 for missing recordings": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "add a log line when the upload fails": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "translate the onboarding strings to hindi": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add a feature flag for the new player": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "make a new branch for the redesign work": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "students should be able to see their progress over the month on a nice page": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "build a page where admins can approve new teachers": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "let's make the recording flow feel calmer, it's too busy right now": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "mobile-capture-upload"
+   ],
+   "selected_modules": [
+    "data-migrations",
+    "frontend-client",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "I want a screen that shows today's streak and a big record button": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "create a small web app for my friends to split bills": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "can you redo the pricing page so the yearly plan stands out": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces",
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "add a tab where users can browse past interview questions": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "make a share card screen so people can post their score": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "turn the settings into separate pages for account, notifications and privacy": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "notifications-messaging"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "design the empty state screen for first-time users": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "replace the current login screen with a phone number login screen": {
+   "mode": "CRITICAL",
+   "shape": "replacement",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "authentication"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "build an inbox where coaches can reply to student questions": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "rebuild the onboarding from scratch with fewer steps": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "a new page to manage subscriptions, users should be able to cancel there": {
+   "mode": "CRITICAL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "build me a website for my photography business": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "the share card has the wrong font size on ios": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client"
+   ]
+  },
+  "add a 'copied' toast when the link is copied": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "increase the record button size by 10%": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "add pagination to the recordings api": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "store the streak count in the users table": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "send a push notification at 8pm if they haven't recorded": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "notifications-messaging"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "make the streak calculation use IST instead of UTC": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add rate limiting to the login endpoint": {
+   "mode": "CRITICAL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "authentication"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "write a migration to add a timezone column": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-migration"
+   ],
+   "selected_modules": [
+    "compatibility-integrations",
+    "data-migrations",
+    "delivery-release",
+    "reliability-recovery"
+   ]
+  },
+  "set up a staging environment on vercel": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "upgrade expo to sdk 54": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "compatibility-integrations"
+   ]
+  },
+  "the build fails on android, fix gradle": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client"
+   ]
+  },
+  "add a playwright test for the onboarding flow": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "document the scoring algorithm in the readme": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "rename the streaks table to daily_streaks": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "log the openai latency for every transcript call": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "scale-performance-cost"
+   ]
+  },
+  "create a grafana panel for upload failures": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "build a cli to export all recordings for a user": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "move the auth helpers into their own module": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "the onboarding test flakes on CI, fix it": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "redesign the caching layer so transcripts load faster": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add an internal api for the admin team to fetch user stats": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "run the build and deploy to production": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "regenerate the supabase types": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "fix the typo in the onboarding screen title": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "I'd like a screen where parents can see their child's attendance": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Can we have a page that lists every recording I made this month?": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Redesign the checkout so it fits on one phone screen": {
+   "mode": "CRITICAL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Create a settings page and add unit tests for it": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add a weekly summary screen; also update the README": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a new reports dashboard for teachers, and fix the typo in the footer": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "We need a landing page for the new course": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Replace the old sign-up form with a two-step flow": {
+   "mode": "FULL",
+   "shape": "replacement",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a calendar view where tutors can see their week": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Design a new home screen for the app": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Revamp the profile page": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Put together a simple dashboard for the sales team": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a new chat inbox for customer messages and add integration tests": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "compatibility-integrations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Ship a new onboarding experience for first-time users": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "cross-system-rollout"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Introduce a new search page with filters": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build me a website to sell my paintings": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "new-product-setup"
+   ],
+   "selected_modules": [
+    "architecture-maintainability",
+    "data-migrations",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "I want an app where my students can submit homework": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Swap the carousel for a simple grid on the home page": {
+   "mode": "FULL",
+   "shape": "replacement",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Customers keep asking for an order history screen, can we do that?": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "My students should be able to see their marks on their phone": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Let teachers create quizzes from a new page in the app": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Fix the typo on the home page and build a new contact page": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Rename the old page to Legacy and create a brand new pricing page": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "launch-surfaces",
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Update the docs, then redesign the settings screen": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Clean up the lint warnings and add a new stats dashboard for coaches": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Write unit tests for the editor, and then add a sources panel next to it": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Please add a new onboarding flow plus a regression test": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "cross-system-rollout"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Rebuild the signup page so it works on small phones": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Implement the inbox page for support agents": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a portal where clients can download their invoices": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build the admin console for support staff": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Make a tool for teachers to grade answers faster": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Launch a waitlist page before the product is ready": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Move from Stripe Checkout to our own payment page": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Turn the long settings form into a step-by-step wizard": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "We should probably have some kind of page where people can see what changed": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Add a modal that asks people to rate the app after their fifth recording": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Build a new leaderboard that students see after each quiz": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Give support a screen to look up a customer and resend their receipt": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Fix the alignment of the save button on the settings screen": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add a test for the settings screen": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Rename the profile screen to account screen": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build the iOS app and upload it to TestFlight": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client"
+   ]
+  },
+  "Add an endpoint that returns the leaderboard as JSON": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Add a new API endpoint that serves the content feed": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Create a Django view that exports CSV": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Add a Metabase dashboard for weekly revenue": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Rebuild the Tailwind styles": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Why does the dashboard take ten seconds to load?": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Update the copy on the pricing page": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces",
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Don't touch the UI, just add a new endpoint for exports": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Build a new notifications service, with no screens": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "notifications-messaging"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "observability-operations",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Create the database views for the reports page": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Please don't redesign anything, just fix the crash on the profile screen": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "No new screens, just make the existing upload faster": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Instead of a new page, put the stats in a tooltip": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Without changing any screens, add an endpoint that returns streaks": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Keep the UI exactly as it is and overhaul the sync logic": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Build a new export service and leave the UI alone": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Add a new endpoint for the mobile app; the UI is unchanged": {
+   "mode": "FULL",
+   "shape": "coordinated_cross_system_change",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client"
+   ]
+  },
+  "Build a new reports API, no UI": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Build a new reports API with zero UI changes": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Redesign the database schema for recordings": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "data-migration"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations",
+    "delivery-release",
+    "reliability-recovery"
+   ]
+  },
+  "Rework the API so the mobile app loads faster": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api",
+    "frontend-client"
+   ]
+  },
+  "Add tests for the new pricing page": {
+   "mode": "FOCUSED",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Add a new GitHub Actions pipeline for the e2e tests": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Create a new Grafana panel for queue depth": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "scale-performance-cost"
+   ]
+  },
+  "Build the editor extension for VS Code": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Add a new Prisma model and a REST endpoint for comments": {
+   "mode": "FULL",
+   "shape": "coordinated_cross_system_change",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "ai-llm",
+    "backend-api"
+   ]
+  },
+  "Rebuild the docs site": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Fix the launch screen so it doesn't flash white": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add a screen reader label to the record button": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Implement pagination in the recordings API": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "The checkout page is broken on Safari, please fix it": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Add a new endpoint to copy a recording into another folder": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add retry logic to the upload screen": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion",
+    "reliability-recovery"
+   ]
+  },
+  "Investigate why the new editor is slow on long documents": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "The new dashboard crashes when there is no data": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Can you review the new pricing page before I ship it?": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "launch-surfaces",
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Add analytics events to the existing onboarding screens": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "cross-system-rollout",
+    "product-analytics"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Translate the app into Hindi": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Remove the old onboarding screens": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "cross-system-rollout"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add a CHANGELOG entry for the new editor": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Bump the version and publish the new dashboard to staging": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "invite the bot to the Slack channel": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "remove the unused roles from the IAM policy": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "set up the dev environment on my new laptop": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "export the logs to a file so I can grep them": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "the email from GitHub went to spam": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "write the help text for the CLI flags": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "launch the dev server on port 3000": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "shut down the staging database for the weekend": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "give the deploy key write access to the repo": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "delete the node_modules folder and reinstall": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "add me as an owner on the npm package": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "set up a new Python virtual environment": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "turn off the cron job for the night": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "send the invoice email to the accountant": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "make the README's getting started section clearer": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "measure how long the test suite takes": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "who has admin access to the Vercel project?": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "archive the old Jira tickets": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Let workspace owners remove a member and reassign their recordings": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Add a button that lets people download everything we store about them": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "Our password reset emails are landing in Gmail's promotions tab": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "authentication",
+    "email-deliverability"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "security-privacy-abuse"
+   ]
+  },
+  "Write a what's-new note inside the app for the editor release": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "We are closing the product next quarter; tell users and let them export first": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Count how many people record a second time within a week": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "Make an App Store page with screenshots for launch": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "data-migrations",
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Start a brand new project for a recipe-sharing app": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Build a search and filter page and add tests for it": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Create a sign in and sign up screen and write tests": {
+   "mode": "CRITICAL",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "authentication"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Build a profile and settings page, plus unit tests": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a new screen where users can rename their recordings": {
+   "mode": "FOCUSED",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add a typo-tolerant search page for the course catalogue": {
+   "mode": "SMALL_SAFE",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 0,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Add tests for the uploader, and a new history screen": {
+   "mode": "FOCUSED",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Rename the tabs and replace the old editor with a block editor": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Rebuild the projects page so it shows recent activity first": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Rebuild the app's settings screen": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "cross-system-rollout"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Rebuild the mobile app's home screen": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Rebuild the assets page where designers upload their files": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add a Grafana alert and build a new customer dashboard": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "observability-operations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a new customer dashboard like the one in Grafana": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build a dashboard for customers that looks like Mixpanel's": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Add a PostHog-style analytics dashboard for our customers": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "I'd like a new page where tutors can see their payouts": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "We'd love a dashboard for coaches": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Could we get a screen that lists all the overdue homework?": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Rebuild the onboarding screens and the signup flow": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "authentication",
+    "cross-system-rollout"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Rebuild the dashboard UI in Svelte": {
+   "mode": "FULL",
+   "shape": "major_overhaul",
+   "activation": true,
+   "question_budget": 7,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build the admin views for moderators": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Rebuild the onboarding screens when the user changes language": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "cross-system-rollout"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Build the export API; UI changes are out of scope": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Build a new dashboard, but not the UI yet, just the data layer": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Write tests and docs for the new settings page": {
+   "mode": "FOCUSED",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Build the export API. Don't change the UI.": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Build the export API (no UI work)": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "Roll out the new onboarding flow to beta users": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "cross-system-rollout"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "compatibility-integrations",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Release the new settings screen to staging": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release",
+    "product-ui-ux-motion"
+   ]
+  },
+  "Test the new upload screen with internal testers first": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Ship the new checkout page behind a flag": {
+   "mode": "CRITICAL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "Turn on the new recording flow for 10 percent of users": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "mobile-capture-upload"
+   ],
+   "selected_modules": [
+    "data-migrations",
+    "frontend-client",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Launch the new pricing page next week": {
+   "mode": "FULL",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 12,
+   "design_line": true,
+   "archetypes": [
+    "launch-surfaces",
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "Enable the new editor for internal testers": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "Put the new home screen in front of beta users": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "Gradually release the new feed to everyone": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "The new search flow should go to staging first": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "build a ChatGPT extension that helps me write LinkedIn posts": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "make a ghostwriter plugin for chatgpt": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "create a mac app for journaling": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "build a chrome extension that rewrites my emails": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "I want a macOS menu bar app that records voice notes": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "mobile-capture-upload"
+   ],
+   "selected_modules": [
+    "data-migrations",
+    "frontend-client",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "build a chrome extension so students can highlight any line on an artcle and send it to their rehearsal notes": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "the safari extension is just one ugly popup rn and nobody gets what to do, redo the whole thing": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "chrome extension for teachers - when they open a students google doc, side panel shows that students last 5 recordings": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "i want a chatgpt app where students paste their syllabus and get a week by week plan they can tick off": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "claude app for my writing students, they drop in a draft and get a panel of their overused words to click thru": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "make rehearsal work inside chatgpt - student asks about their last 3 recordings and sees a card with the clips and a play button": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "small mac menu bar app that shows how many days in a row ive written, click it and a blank page opens": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "windows app for the exam centre staff to start and stop each students recording from one screen": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "mac app for the teleprompter pls, script on the left, speed slider, big start button": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "planner inside claude for the mba batch, their deadlines on a board they can drag around without leaving the chat": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "home feels too crowded, make a calmer version and show it only to my 20 testers first": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "coaches need somewhere to see whos gone quiet this week and since when": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "landing page for the gita course - 3 week outline, who its for, and a join the waitlist box": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces"
+   ],
+   "selected_modules": [
+    "delivery-release",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "security-privacy-abuse"
+   ]
+  },
+  "admin page where i can search any student by phone and see their recordings, plan and last login": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "admin-support-tools",
+    "authentication"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "delivery-release",
+    "frontend-client",
+    "observability-operations",
+    "security-privacy-abuse"
+   ]
+  },
+  "pricing screen with monthly vs yearly and a 7 day trial, razorpay for india": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "teachers keep asking for one place to set up there class, add students from a sheet, and choose which other teachers can see the recordings": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "the weekly look back is so boring for students, rethink it around their own most repeated topics and total minutes talked": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "students cant tell which day their batch records, add a timetable page they can check": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations",
+    "product-ui-ux-motion"
+   ]
+  },
+  "posting tool needs a way for me to see the weeks linkedin posts day by day and drag them around": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "after a recording ends, students should get a new step where claude plays back the main things they said, in their own words": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "claude code hook that runs ruff on every python file i touch": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "make a claude code skill that checks every new screen against our design tokens before i commit": {
+   "mode": "FOCUSED",
+   "shape": "new_feature",
+   "activation": true,
+   "question_budget": 4,
+   "design_line": true,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "/ship command for claude code - run tests, bump version, tag the release, push": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "delivery-release"
+   ]
+  },
+  "hook up an mcp server so claude code can query our supabase while i debug, read only": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "wrap the gradebook api as a chatgpt connector so teachers can ask for marks in chat, just the tools, plain text answers are fine": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "eslint plugin that flags any hardcoded hex colour in the components folder": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "chrome extension zip is over the web store limit, trim the bundle": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "data-migrations"
+   ]
+  },
+  "nudge the safari extension popup up a bit, bottom gets cut off on the 13 inch macbook": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "people keep saying the mac app logs them out every time they close the lid and reopen it, pls fix": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "theres a thin white streak across the top of the home screen on iphone 15": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "product-ui-ux-motion"
+   ]
+  },
+  "send students a push at 8pm if they havent recorded anything that day": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "linkedin posting worker fires at 9 utc, move it to 9:15 ist and skip sundays": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "backend-api"
+   ]
+  },
+  "teacher site tab says anaytics, fix the typo": {
+   "mode": "SMALL_SAFE",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 0,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "push teacher site live": {
+   "mode": "QUICK",
+   "shape": null,
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": []
+  },
+  "write tests for the upload retry when the network drops halfway": {
+   "mode": "QUICK",
+   "shape": "maintenance",
+   "activation": false,
+   "question_budget": 2,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "reliability-recovery"
+   ]
+  },
+  "the post endpoint the app uses for recording uploads throws 500 on files over 50mb": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "mobile-capture-upload"
+   ],
+   "selected_modules": [
+    "backend-api",
+    "data-migrations",
+    "frontend-client",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  },
+  "launch the ios build in the simulator, want to check the new streak animation": {
+   "mode": "FOCUSED",
+   "shape": null,
+   "activation": false,
+   "question_budget": 4,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "frontend-client",
+    "product-ui-ux-motion"
+   ]
+  },
+  "add a manage subscription link in settings, it can just open the play store page": {
+   "mode": "CRITICAL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "launch-surfaces",
+    "payments-subscription"
+   ],
+   "selected_modules": [
+    "data-migrations",
+    "delivery-release",
+    "security-privacy-abuse"
+   ]
+  },
+  "grafana dashboard for upload failure metrics and queue lag so i catch spikes early": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 7,
+   "design_line": false,
+   "archetypes": [],
+   "selected_modules": [
+    "observability-operations",
+    "reliability-recovery",
+    "scale-performance-cost"
+   ]
+  },
+  "split the 900 line recording screen file into smaller components, nothing should look different": {
+   "mode": "FULL",
+   "shape": null,
+   "activation": false,
+   "question_budget": 12,
+   "design_line": false,
+   "archetypes": [
+    "mobile-capture-upload"
+   ],
+   "selected_modules": [
+    "data-migrations",
+    "frontend-client",
+    "product-ui-ux-motion",
+    "reliability-recovery",
+    "security-privacy-abuse"
+   ]
+  }
+ }
+}

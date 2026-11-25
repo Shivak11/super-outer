@@ -1,0 +1,111 @@
+{
+  "skill_name": "draw-system-diagram",
+  "evals": [
+    {
+      "id": 1,
+      "name": "first-diagram-for-a-repository",
+      "prompt": "Draw an architecture diagram for this repo so I can explain it to my co-founder.",
+      "expected_output": "Reads the code and deployment config, draws docs/architecture/system-diagram.svg in the house style with one traced real request, adds a facts block and a test in the repository's runner, runs the checker until it passes, renders the PNG, looks at it, and adds the diagram note, the agent rule and the README link.",
+      "files": [],
+      "assertions": [
+        "The agent draws an architecture diagram, sets no pipeline kind on it, and names the choice in the report.",
+        "Every box names a part that exists in the source or the deployment config, or is drawn dashed as planned.",
+        "A switch that the deployment config turns off is drawn dashed, even when the code's default is on.",
+        "The SVG has a facts block, and a new test compares it with the source and was seen to fail once with a wrong value.",
+        "check-diagram.mjs passes on the final SVG.",
+        "A PNG at twice the size exists and the agent opened it before committing.",
+        "The report shows the PNG and says which parts are dashed and why."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "change-makes-diagram-untrue",
+      "prompt": "Switch the web search feature on in production config and change the router model to the bigger one.",
+      "expected_output": "Makes the config and code change, and in the same commit redraws the existing system diagram: web search becomes a solid border, the router model text changes, the facts block is updated, the diagram test passes, and the PNG is rendered again and looked at.",
+      "files": [],
+      "assertions": [
+        "The diagram changes in the same commit as the switch and the model change.",
+        "The facts block is updated to the new values after the picture is redrawn, and the test passes.",
+        "The PNG is rendered again from the new SVG."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "mermaid-left-in-place",
+      "prompt": "Add a system diagram in your colourful style. The README already has a Mermaid map that our docs job keeps updated.",
+      "expected_output": "Adds the SVG diagram beside the existing Mermaid map and leaves the Mermaid map and its documentation job unchanged.",
+      "files": [],
+      "assertions": [
+        "The Mermaid map in the README is unchanged.",
+        "The new SVG is linked from the README or the architecture index.",
+        "The report says the Mermaid map stays because the repository's own process maintains it."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "pipeline-only",
+      "prompt": "Draw how our AI pipeline works, from the uploaded photo to the answer, so the sales team can follow it.",
+      "expected_output": "Follows one input through the code, draws a pipeline diagram from assets/template-pipeline.svg with data-diagram=\"pipeline\", names who performs each stage, labels every arrow with the data it carries, bands the stages by whether they are prepared once or done for each request as the code does it, and leaves out hosting, release, the legend and a traced request. Adds a facts block and test, passes the checker, renders the PNG and looks at it.",
+      "files": [],
+      "assertions": [
+        "The SVG sets data-diagram=\"pipeline\" and has no Live legend, hosting group, release group or traced request strip.",
+        "Every stage names its performer: a script, a model by its name in the source, a person or a service.",
+        "Every arrow is labelled with the data it carries.",
+        "The band titles say whether each stage runs once and is reused or runs for each request, and that matches the code, not a design note.",
+        "Steps that read inputs together and steps that read them one at a time are described as such, matching the code.",
+        "No text presents the model's confidence as accuracy or says more inputs bring higher confidence.",
+        "check-diagram.mjs passes and the PNG was opened before committing."
+      ]
+    },
+    {
+      "id": 5,
+      "name": "both-diagrams",
+      "prompt": "Give me both: the system architecture and a separate diagram of the processing flow.",
+      "expected_output": "Draws system-diagram.svg as an architecture diagram and a separate pipeline diagram, with the same names and colours for the parts both show and the same values in both facts blocks, runs the checker on both with --one-system, renders both PNGs and shows both.",
+      "files": [],
+      "assertions": [
+        "Two SVG files exist: one architecture diagram and one with data-diagram=\"pipeline\".",
+        "A part that appears in both has the same name and colour in both.",
+        "check-diagram.mjs --one-system passes on the two files together.",
+        "Both PNGs are rendered and shown in the report."
+      ]
+    },
+    {
+      "id": 6,
+      "name": "code-flow-for-an-endpoint",
+      "prompt": "Make a diagram so a teammate who does not know this pipeline can see how POST /api/orders/{id}/export works: what runs in parallel, what runs in sequence, and where to look in the code.",
+      "expected_output": "Chooses the code-flow kind, finds what the live client calls before reading server routes, snapshots the live and staging refs without touching the checkout, records file::function per step, classifies each step as in order or at the same time from the code, generates the SVG from a script that imports diagram_kit.py, writes a verification script, runs the checker and looks at every slice, and reports verified versus unverified.",
+      "files": [],
+      "assertions": [
+        "The SVG has data-diagram=\"code-flow\" and is generated by a script that imports diagram_kit.py.",
+        "The picture has a boundary bar where the caller stops waiting and every step box carries a file::function code pointer.",
+        "AT ONCE appears only where the code has a gather, a semaphore with more than one slot, or separately queued jobs.",
+        "A verification script ran and the report gives its check count and what was not verified.",
+        "check-diagram.mjs passes and the PNG or its slices were viewed."
+      ]
+    },
+    {
+      "id": 7,
+      "name": "code-flow-wrong-path-is-caught",
+      "prompt": "Draw how the upload route works. The server has both /chunk and /upload/part routes.",
+      "expected_output": "Chooses code-flow, checks which routes the shipped client calls and when, treats the one the client uses as the main path, draws the other as a small labelled older lane, and says which evidence decided it.",
+      "files": [],
+      "assertions": [
+        "The main path matches the client calls, not the order of the server routes.",
+        "The legacy or fallback lane is drawn small and labelled with when it is used.",
+        "The report says the client was read first."
+      ]
+    },
+    {
+      "id": 8,
+      "name": "product-picture-is-not-code-flow",
+      "prompt": "Draw a picture of how our whole product fits together for the board.",
+      "expected_output": "Draws an architecture diagram, not a code-flow diagram, because the readers will not open the code, and names the choice in the report.",
+      "files": [],
+      "assertions": [
+        "The SVG is an architecture diagram with no data-diagram attribute.",
+        "The report says why the code-flow kind was not used."
+      ]
+    }
+  ]
+}

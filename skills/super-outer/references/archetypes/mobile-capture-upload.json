@@ -1,0 +1,233 @@
+{
+  "id": "mobile-capture-upload",
+  "name": "Mobile capture with background upload",
+  "matches": [
+    "voice note",
+    "voice notes",
+    "voice recording",
+    "voice recorder",
+    "voice memo",
+    "voice message",
+    "voice capture",
+    "voice input",
+    "record voice",
+    "record their voice",
+    "record audio",
+    "record video",
+    "audio recording",
+    "video recording",
+    "recording pipeline",
+    "recording screen",
+    "recording feature",
+    "recording flow",
+    "recording upload",
+    "upload recording",
+    "start recording",
+    "stop recording",
+    "while recording",
+    "during recording",
+    "mid recording",
+    "recorder",
+    "microphone",
+    "mic permission",
+    "mic access",
+    "audio upload",
+    "upload audio",
+    "audio capture",
+    "capture audio",
+    "transcription",
+    "transcribe recording",
+    "transcribe audio",
+    "camera permission",
+    "camera access",
+    "camera capture",
+    "camera roll",
+    "open the camera",
+    "use the camera",
+    "video upload",
+    "chunked upload",
+    "media upload"
+  ],
+  "modules": [
+    "frontend-client",
+    "reliability-recovery",
+    "data-migrations",
+    "security-privacy-abuse"
+  ],
+  "failureModes": [
+    {
+      "id": "network-transition",
+      "prompt": "If the network drops or changes while someone is recording, should the upload pick itself up again or should we tell them it failed?",
+      "why": "it decides whether a long recording can quietly disappear in transit",
+      "options": [
+        {
+          "label": "Resume by itself",
+          "consequence": "nothing is lost, but a stuck upload can hide for a while"
+        },
+        {
+          "label": "Fail visibly",
+          "consequence": "the person knows immediately, and has to act"
+        }
+      ],
+      "recommended": "Resume by itself",
+      "lookFor": [
+        "resumable",
+        "netinfo",
+        "connectivity",
+        "reconnect",
+        "retryUpload",
+        "backgroundUpload"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that severs the network mid-upload and asserts the recording still arrives or a visible failure is shown"
+    },
+    {
+      "id": "backgrounded",
+      "prompt": "If someone leaves the app mid-recording, should recording continue or stop cleanly?",
+      "why": "phones suspend apps aggressively, and a half-saved recording is worse than none",
+      "options": [
+        {
+          "label": "Keep recording",
+          "consequence": "needs background permission and more battery"
+        },
+        {
+          "label": "Stop and save what exists",
+          "consequence": "simpler and predictable, but the tail is lost"
+        }
+      ],
+      "recommended": "Stop and save what exists",
+      "lookFor": [
+        "AppState",
+        "background",
+        "backgroundTask",
+        "onPause",
+        "lifecycle"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that backgrounds the app mid-recording and asserts the chosen behaviour (continue, or stop with a saved partial)"
+    },
+    {
+      "id": "permission-loss",
+      "prompt": "If microphone access is refused or revoked, what should the person see?",
+      "why": "a silent failure here looks like the feature is broken",
+      "options": [
+        {
+          "label": "Explain and offer settings",
+          "consequence": "more screens to design, far less confusion"
+        },
+        {
+          "label": "Disable the control quietly",
+          "consequence": "less work, and people report it as a bug"
+        }
+      ],
+      "recommended": "Explain and offer settings",
+      "lookFor": [
+        "permission",
+        "requestPermission",
+        "PERMISSIONS",
+        "micPermission"
+      ],
+      "sequence": "defer",
+      "provenBy": "a test that denies the microphone permission and asserts the explanatory state renders"
+    },
+    {
+      "id": "local-durability",
+      "prompt": "Must a finished recording survive until the server confirms it, even if the app is killed?",
+      "why": "it decides whether we keep a copy on the phone and for how long",
+      "options": [
+        {
+          "label": "Keep it until confirmed",
+          "consequence": "uses phone storage, nothing is lost"
+        },
+        {
+          "label": "Best effort",
+          "consequence": "simpler, and a rare recording is gone for good"
+        }
+      ],
+      "recommended": "Keep it until confirmed",
+      "lookFor": [
+        "pendingUpload",
+        "queue",
+        "persist",
+        "AsyncStorage",
+        "MMKV",
+        "sqlite"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that kills the app after recording and asserts the recording is still uploaded on next launch"
+    },
+    {
+      "id": "duplicate-chunks",
+      "prompt": "If a piece is sent twice after a retry, should the server keep one copy or both?",
+      "why": "retries are normal, and a doubled recording is a visible defect",
+      "options": [
+        {
+          "label": "Keep one copy",
+          "consequence": "needs a stable id per piece"
+        },
+        {
+          "label": "Keep both",
+          "consequence": "simplest, and people see duplicates"
+        }
+      ],
+      "recommended": "Keep one copy",
+      "lookFor": [
+        "chunkId",
+        "uploadId",
+        "dedupe",
+        "upsert",
+        "onConflict"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that sends the same chunk twice and asserts the stored recording contains it once"
+    },
+    {
+      "id": "expired-credential",
+      "prompt": "If the sign-in expires during a long upload, should we renew it silently or stop and ask?",
+      "why": "long recordings routinely outlive a short-lived session",
+      "options": [
+        {
+          "label": "Renew silently",
+          "consequence": "seamless, needs refresh handling on the upload path"
+        },
+        {
+          "label": "Stop and ask",
+          "consequence": "simpler, and interrupts someone mid-thought"
+        }
+      ],
+      "recommended": "Renew silently",
+      "lookFor": [
+        "refreshSession",
+        "onAuthStateChange",
+        "refreshToken",
+        "getSession"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that expires the session mid-upload and asserts the upload completes after silent renewal"
+    },
+    {
+      "id": "storage-pressure",
+      "prompt": "If the phone runs out of space during a long recording, should we stop early or lower the quality?",
+      "why": "it decides what someone loses when the device is full",
+      "options": [
+        {
+          "label": "Stop early and keep what exists",
+          "consequence": "predictable, the recording is short"
+        },
+        {
+          "label": "Lower the quality and continue",
+          "consequence": "the whole session survives, quieter and rougher"
+        }
+      ],
+      "recommended": "Stop early and keep what exists",
+      "lookFor": [
+        "freeDiskStorage",
+        "storageLimit",
+        "quota",
+        "bitrate"
+      ],
+      "sequence": "defer",
+      "provenBy": "a test that simulates a full disk and asserts the chosen behaviour (stop early, or degrade quality)"
+    }
+  ]
+}

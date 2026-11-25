@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1540" width="1440" height="1540" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc" data-diagram="pipeline">
+<title id="title">How the tool check finds tools for a project</title>
+<desc id="desc">The tool check reads the project's package lists on the computer and sends out public package names and versions, vendor names and generic need words, never code. It looks them up on npm or PyPI and Expo's version table on unpkg, searches skills.sh by the project's vendors and needs, confirms each skill on GitHub, reads its safety scans and scans its text, and finds the vendors' MCP servers in the MCP Registry. The agent judges fit and writes at most four rows for the owner, and the owner's answer is recorded.</desc>
+<metadata id="diagram-facts">{"registries":["npm","PyPI","skills.sh","the MCP Registry","GitHub","unpkg"],"lookups":{"package.json":"npm","requirements.txt":"PyPI","pyproject.toml":"PyPI"},"privateKinds":["private","local","workspace","git"],"versionTableHost":"unpkg.com","limits":{"maxRequests":500,"deadlineSeconds":90,"timeoutSeconds":10,"maxQueries":10,"keepPerQuery":3,"mcpPerPublisher":3},"maxNeeds":4,"failedScan":"hold","warnedScan":"shown with a note","textFlags":["hidden or direction-changing characters","downloads and runs a script"],"maxRows":4,"answers":["accepted","declined","later"],"laterDays":14,"recordPath":".engineering/super-outer/tool-check.json"}</metadata>
+<defs>
+<marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1971C2"/></marker>
+<marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8590C"/></marker>
+<marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0B8A5F"/></marker>
+<marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6741D9"/></marker>
+<marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0C8599"/></marker>
+<marker id="a-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#868E96"/></marker>
+<marker id="a-indigo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4263EB"/></marker>
+</defs>
+<rect width="1440" height="1540" fill="#FFFFFF"/>
+<text x="40" y="62" font-size="42" font-weight="800" fill="#13294B">How the tool check finds tools for a project</text>
+<text x="40" y="100" font-size="20" fill="#344054">From the project's package lists to the Tools block the owner answers</text>
+<rect x="30" y="140" width="1380" height="220" rx="16" fill="#EDF2FF" stroke="#4263EB" stroke-width="2.5"/>
+<text x="50" y="174" font-size="25" font-weight="800" fill="#364FC7">Read on this computer when the agent runs the tool check</text>
+<rect x="50" y="196" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="64" y="226" font-size="21" font-weight="700" fill="#1864AB">Package lists</text>
+<text x="64" y="252" font-size="16" fill="#1971C2">In the owner's project</text>
+<text x="64" y="280" font-size="16" fill="#344054">package.json,</text>
+<text x="64" y="302" font-size="16" fill="#344054">requirements.txt and</text>
+<text x="64" y="324" font-size="16" fill="#344054">pyproject.toml, with locks.</text>
+<rect x="370" y="196" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="384" y="226" font-size="21" font-weight="700" fill="#D9480F">Read the packages</text>
+<text x="384" y="252" font-size="16" fill="#E8590C">Script</text>
+<text x="384" y="280" font-size="16" fill="#344054">Private, local, workspace</text>
+<text x="384" y="302" font-size="16" fill="#344054">and git packages stay on</text>
+<text x="384" y="324" font-size="16" fill="#344054">this computer.</text>
+<rect x="690" y="196" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#6741D9" stroke-width="2"/>
+<text x="704" y="226" font-size="21" font-weight="700" fill="#5F3DC4">Public packages</text>
+<text x="704" y="252" font-size="16" fill="#6741D9">Names that go out</text>
+<text x="704" y="280" font-size="16" fill="#344054">With vendor names and need</text>
+<text x="704" y="302" font-size="16" fill="#344054">words. Never code or the</text>
+<text x="704" y="324" font-size="16" fill="#344054">product idea.</text>
+<rect x="30" y="410" width="1380" height="806" rx="16" fill="#EDF2FF" stroke="#4263EB" stroke-width="2.5"/>
+<text x="50" y="444" font-size="25" font-weight="800" fill="#364FC7">Looked up on public registries, read-only</text>
+<text x="50" y="500" font-size="17" fill="#1F2937">Up to 500 requests in 90 seconds,</text>
+<text x="50" y="526" font-size="17" fill="#1F2937">with 10 seconds for each request.</text>
+<text x="50" y="552" font-size="17" fill="#1F2937">Anything not checked is reported</text>
+<text x="50" y="578" font-size="17" fill="#1F2937">as not checked.</text>
+<rect x="690" y="466" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#0C8599" stroke-width="2"/>
+<text x="704" y="496" font-size="21" font-weight="700" fill="#0B7285">Check versions</text>
+<text x="704" y="522" font-size="16" fill="#0C8599">npm or PyPI</text>
+<text x="704" y="550" font-size="16" fill="#344054">Latest version, deprecated</text>
+<text x="704" y="572" font-size="16" fill="#344054">or yanked, and who</text>
+<text x="704" y="594" font-size="16" fill="#344054">publishes it.</text>
+<rect x="1010" y="466" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#0C8599" stroke-width="2"/>
+<text x="1024" y="496" font-size="21" font-weight="700" fill="#0B7285">Framework table</text>
+<text x="1024" y="522" font-size="16" fill="#0C8599">unpkg</text>
+<text x="1024" y="550" font-size="16" fill="#344054">Expo's own list of package</text>
+<text x="1024" y="572" font-size="16" fill="#344054">versions for the pinned</text>
+<text x="1024" y="594" font-size="16" fill="#344054">SDK.</text>
+<rect x="50" y="676" width="230" height="360" rx="10" fill="#FFFFFF" stroke="#6741D9" stroke-width="2"/>
+<text x="64" y="706" font-size="21" font-weight="700" fill="#5F3DC4">Vendors and needs</text>
+<text x="64" y="732" font-size="16" fill="#6741D9">From the project and agent</text>
+<text x="64" y="760" font-size="16" fill="#344054">Vendors the project</text>
+<text x="64" y="782" font-size="16" fill="#344054">confirms, plus up to four</text>
+<text x="64" y="804" font-size="16" fill="#344054">needs in plain words.</text>
+<rect x="370" y="676" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#0C8599" stroke-width="2"/>
+<text x="384" y="706" font-size="21" font-weight="700" fill="#0B7285">Search skills</text>
+<text x="384" y="732" font-size="16" fill="#0C8599">skills.sh</text>
+<text x="384" y="760" font-size="16" fill="#344054">By vendor and by need,</text>
+<text x="384" y="782" font-size="16" fill="#344054">up to 10 searches.</text>
+<rect x="690" y="676" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#0C8599" stroke-width="2"/>
+<text x="704" y="706" font-size="21" font-weight="700" fill="#0B7285">Confirm it exists</text>
+<text x="704" y="732" font-size="16" fill="#0C8599">GitHub</text>
+<text x="704" y="760" font-size="16" fill="#344054">The skill must still be</text>
+<text x="704" y="782" font-size="16" fill="#344054">in its repository.</text>
+<rect x="1010" y="676" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#0C8599" stroke-width="2"/>
+<text x="1024" y="706" font-size="21" font-weight="700" fill="#0B7285">Read safety scans</text>
+<text x="1024" y="732" font-size="16" fill="#0C8599">skills.sh</text>
+<text x="1024" y="760" font-size="16" fill="#344054">A failed scan holds it.</text>
+<text x="1024" y="782" font-size="16" fill="#344054">A warning shows it with</text>
+<text x="1024" y="804" font-size="16" fill="#344054">a note.</text>
+<rect x="370" y="886" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#0C8599" stroke-width="2"/>
+<text x="384" y="916" font-size="21" font-weight="700" fill="#0B7285">Find MCP servers</text>
+<text x="384" y="942" font-size="16" fill="#0C8599">the MCP Registry</text>
+<text x="384" y="970" font-size="16" fill="#344054">Searched by each</text>
+<text x="384" y="992" font-size="16" fill="#344054">vendor's name.</text>
+<rect x="1010" y="886" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="1024" y="916" font-size="21" font-weight="700" fill="#D9480F">Scan the text</text>
+<text x="1024" y="942" font-size="16" fill="#E8590C">Script</text>
+<text x="1024" y="970" font-size="16" fill="#344054">Hidden characters or a</text>
+<text x="1024" y="992" font-size="16" fill="#344054">download-and-run</text>
+<text x="1024" y="1014" font-size="16" fill="#344054">command keep it out.</text>
+<rect x="50" y="1086" width="1340" height="100" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="64" y="1116" font-size="21" font-weight="700" fill="#D9480F">Print the summary</text>
+<text x="64" y="1142" font-size="16" fill="#E8590C">Script, saved to tool-check.json with --write</text>
+<text x="64" y="1170" font-size="16" fill="#344054">Version findings, then at most 3 skills per search and 3 MCP servers per vendor.</text>
+<rect x="30" y="1266" width="1380" height="236" rx="16" fill="#EDF2FF" stroke="#4263EB" stroke-width="2.5"/>
+<text x="50" y="1300" font-size="25" font-weight="800" fill="#364FC7">Done by the agent, then waits for the owner</text>
+<rect x="1010" y="1322" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="1024" y="1352" font-size="21" font-weight="700" fill="#087F5B">Judge fit</text>
+<text x="1024" y="1378" font-size="16" fill="#0B8A5F">Model: the coding agent</text>
+<text x="1024" y="1406" font-size="16" fill="#344054">Reads each candidate and</text>
+<text x="1024" y="1428" font-size="16" fill="#344054">drops any for an older</text>
+<text x="1024" y="1450" font-size="16" fill="#344054">version or another host.</text>
+<rect x="690" y="1322" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="704" y="1352" font-size="21" font-weight="700" fill="#1864AB">Tools block</text>
+<text x="704" y="1378" font-size="16" fill="#1971C2">Shown to the owner</text>
+<text x="704" y="1406" font-size="16" fill="#344054">At most four rows,</text>
+<text x="704" y="1428" font-size="16" fill="#344054">upgrades first.</text>
+<rect x="370" y="1322" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="384" y="1352" font-size="21" font-weight="700" fill="#1864AB">Owner answers</text>
+<text x="384" y="1378" font-size="16" fill="#1971C2">Product owner</text>
+<text x="384" y="1406" font-size="16" fill="#344054">Yes, no or later,</text>
+<text x="384" y="1428" font-size="16" fill="#344054">for each row.</text>
+<rect x="50" y="1322" width="230" height="150" rx="10" fill="#FFFFFF" stroke="#6741D9" stroke-width="2"/>
+<text x="64" y="1352" font-size="21" font-weight="700" fill="#5F3DC4">Answer recorded</text>
+<text x="64" y="1378" font-size="16" fill="#6741D9">In tool-check.json</text>
+<text x="64" y="1406" font-size="16" fill="#344054">No stays no. Later</text>
+<text x="64" y="1428" font-size="16" fill="#344054">comes back after</text>
+<text x="64" y="1450" font-size="16" fill="#344054">14 days.</text>
+<path d="M280 271H366" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+<text x="319" y="263" font-size="14" font-weight="700" fill="#1971C2" text-anchor="middle">packages</text>
+<path d="M600 271H686" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="643" y="263" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">names</text>
+<path d="M805 346V462" fill="none" stroke="#6741D9" stroke-width="3" marker-end="url(#a-purple)"/>
+<text x="817" y="392" font-size="14" font-weight="700" fill="#6741D9">names, versions</text>
+<path d="M920 541H1006" fill="none" stroke="#0C8599" stroke-width="3" marker-end="url(#a-teal)"/>
+<text x="963" y="533" font-size="14" font-weight="700" fill="#0C8599" text-anchor="middle">versions</text>
+<path d="M805 616V646H165V672" fill="none" stroke="#0C8599" stroke-width="3" marker-end="url(#a-teal)"/>
+<text x="420" y="638" font-size="14" font-weight="700" fill="#0C8599">publishers</text>
+<path d="M1240 541H1320V1082" fill="none" stroke="#0C8599" stroke-width="3" marker-end="url(#a-teal)"/>
+<text x="1332" y="820" font-size="14" font-weight="700" fill="#0C8599">findings</text>
+<path d="M280 751H366" fill="none" stroke="#6741D9" stroke-width="3" marker-end="url(#a-purple)"/>
+<text x="323" y="743" font-size="14" font-weight="700" fill="#6741D9" text-anchor="middle">terms</text>
+<path d="M600 751H686" fill="none" stroke="#0C8599" stroke-width="3" marker-end="url(#a-teal)"/>
+<text x="639" y="743" font-size="14" font-weight="700" fill="#0C8599" text-anchor="middle">matches</text>
+<path d="M920 751H1006" fill="none" stroke="#0C8599" stroke-width="3" marker-end="url(#a-teal)"/>
+<text x="963" y="743" font-size="14" font-weight="700" fill="#0C8599" text-anchor="middle">skills</text>
+<path d="M1125 826V882" fill="none" stroke="#0C8599" stroke-width="3" marker-end="url(#a-teal)"/>
+<text x="1137" y="858" font-size="14" font-weight="700" fill="#0C8599">skills</text>
+<path d="M280 961H366" fill="none" stroke="#6741D9" stroke-width="3" marker-end="url(#a-purple)"/>
+<text x="323" y="953" font-size="14" font-weight="700" fill="#6741D9" text-anchor="middle">names</text>
+<path d="M1125 1036V1082" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="1137" y="1064" font-size="14" font-weight="700" fill="#E8590C">kept skills</text>
+<path d="M485 1036V1082" fill="none" stroke="#0C8599" stroke-width="3" marker-end="url(#a-teal)"/>
+<text x="497" y="1064" font-size="14" font-weight="700" fill="#0C8599">servers</text>
+<path d="M1125 1186V1318" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="1137" y="1240" font-size="14" font-weight="700" fill="#E8590C">summary</text>
+<path d="M1010 1397H924" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="969" y="1389" font-size="14" font-weight="700" fill="#0B8A5F" text-anchor="middle">choices</text>
+<path d="M690 1397H604" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+<text x="645" y="1389" font-size="14" font-weight="700" fill="#1971C2" text-anchor="middle">rows</text>
+<path d="M370 1397H284" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+<text x="329" y="1389" font-size="14" font-weight="700" fill="#1971C2" text-anchor="middle">answers</text>
+</svg>

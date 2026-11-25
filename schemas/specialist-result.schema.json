@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shivak11/Super-outer/schemas/specialist-result.schema.json",
+  "title": "Super-outer specialist result",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "module",
+    "applicable",
+    "trigger_evidence",
+    "risk",
+    "user_consequence",
+    "decisions",
+    "benchmark_evidence",
+    "existing_evidence",
+    "unknowns",
+    "proposed_questions",
+    "verification",
+    "recovery"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "module": {
+      "$ref": "#/$defs/module"
+    },
+    "applicable": {
+      "type": "boolean"
+    },
+    "trigger_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk": {
+      "enum": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "user_consequence": {
+      "type": "string"
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/decision"
+      }
+    },
+    "benchmark_evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/benchmark"
+      }
+    },
+    "existing_evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/existing_evidence"
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "proposed_questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    },
+    "verification": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recovery": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "module": {
+      "enum": [
+        "product-ui-ux-motion",
+        "frontend-client",
+        "backend-api",
+        "data-migrations",
+        "security-privacy-abuse",
+        "scale-performance-cost",
+        "reliability-recovery",
+        "architecture-maintainability",
+        "compatibility-integrations",
+        "observability-operations",
+        "ai-llm",
+        "delivery-release"
+      ]
+    },
+    "benchmark": {
+      "type": "object",
+      "required": [
+        "classification",
+        "source",
+        "inspected_at",
+        "applicability",
+        "limitation",
+        "confidence",
+        "query_privacy"
+      ],
+      "properties": {
+        "classification": {
+          "enum": [
+            "binding_or_normative",
+            "explicit_contract",
+            "official_platform",
+            "evidence_backed_practice",
+            "observed_local_precedent",
+            "external_style_gap_fill",
+            "none_found",
+            "not_applicable"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inspected_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "applicability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitation": {
+          "type": ["string", "null"]
+        },
+        "confidence": {
+          "enum": ["high", "medium", "low"]
+        },
+        "query_privacy": {
+          "enum": ["PASS", "FAIL", "NOT APPLICABLE"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "existing_evidence": {
+      "type": "object",
+      "required": ["status", "source", "fact"],
+      "properties": {
+        "status": {
+          "enum": ["EXPLICIT", "OBSERVED", "UNKNOWN"]
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fact": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "decision": {
+      "type": "object",
+      "required": [
+        "kind",
+        "statement"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "invariant",
+            "evidence_tradeoff",
+            "interpretive"
+          ]
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recommendation": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "why",
+        "question",
+        "options",
+        "recommended"
+      ],
+      "properties": {
+        "why": {
+          "type": "string"
+        },
+        "question": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "items": {
+            "type": "string"
+          }
+        },
+        "recommended": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "id": "authentication",
+  "name": "Sign-in and account access",
+  "matches": [
+    "login",
+    "log in",
+    "sign in",
+    "signin",
+    "sign up flow",
+    "signup flow",
+    "sign up screen",
+    "signup screen",
+    "sign up with",
+    "signup with",
+    "user sign up",
+    "user signup",
+    "account sign up",
+    "account signup",
+    "create an account",
+    "account creation",
+    "authentication",
+    "password",
+    "passkey",
+    "otp",
+    "magic link"
+  ],
+  "modules": [
+    "security-privacy-abuse",
+    "backend-api",
+    "frontend-client"
+  ],
+  "failureModes": [
+    {
+      "id": "session-lifetime",
+      "prompt": "How long should someone stay signed in before we ask again?",
+      "why": "it trades convenience against how long a stolen phone stays useful",
+      "options": [
+        {
+          "label": "Until they sign out",
+          "consequence": "easiest to live with, worst if a device is lost"
+        },
+        {
+          "label": "Expire after a set time",
+          "consequence": "safer, and people re-enter details periodically"
+        }
+      ],
+      "recommended": "Expire after a set time",
+      "lookFor": [
+        "sessionTimeout",
+        "expiresIn",
+        "refreshToken",
+        "onAuthStateChange"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that advances past the chosen lifetime and asserts the session ends as decided"
+    },
+    {
+      "id": "failed-attempts",
+      "prompt": "After repeated failed sign-ins, should we slow the account down or let attempts continue?",
+      "why": "without a limit, an account can be guessed at indefinitely",
+      "options": [
+        {
+          "label": "Slow it down",
+          "consequence": "blocks guessing, can lock out a real person"
+        },
+        {
+          "label": "Let attempts continue",
+          "consequence": "never blocks anyone, leaves guessing open"
+        }
+      ],
+      "recommended": "Slow it down",
+      "lookFor": [
+        "rateLimit",
+        "throttle",
+        "lockout",
+        "attempts"
+      ],
+      "sequence": "defer",
+      "provenBy": "a test that submits repeated wrong credentials and asserts the slowdown engages"
+    },
+    {
+      "id": "account-recovery",
+      "prompt": "If someone loses access, how should they prove the account is theirs?",
+      "why": "recovery is the usual way accounts are taken over",
+      "options": [
+        {
+          "label": "Email or phone confirmation",
+          "consequence": "familiar, only as strong as that inbox"
+        },
+        {
+          "label": "Support review",
+          "consequence": "stronger, slow and needs people"
+        }
+      ],
+      "recommended": "Email or phone confirmation",
+      "lookFor": [
+        "resetPassword",
+        "recovery",
+        "verifyOtp",
+        "forgot"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that completes recovery through the chosen channel and asserts a stranger cannot"
+    },
+    {
+      "id": "signed-out-state",
+      "prompt": "When a session ends unexpectedly, what should someone see?",
+      "why": "an unexplained bounce to sign-in reads as data loss",
+      "options": [
+        {
+          "label": "Explain and return them where they were",
+          "consequence": "more state to keep, far less alarming"
+        },
+        {
+          "label": "Send them to sign-in",
+          "consequence": "simplest, feels like losing your place"
+        }
+      ],
+      "recommended": "Explain and return them where they were",
+      "lookFor": [
+        "onAuthStateChange",
+        "SIGNED_OUT",
+        "redirectTo",
+        "deepLink"
+      ],
+      "sequence": "defer",
+      "provenBy": "a test that invalidates the session mid-flow and asserts the person is returned where they were"
+    }
+  ]
+}

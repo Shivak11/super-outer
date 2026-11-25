@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shivak11/Super-outer/schemas/rollback-result.schema.json",
+  "title": "Super-outer rollback result",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "rolled_back",
+    "idempotent",
+    "transaction_id",
+    "restored_targets",
+    "v3_restored",
+    "v4_active",
+    "reason",
+    "migration_record"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "status": { "enum": ["ROLLED_BACK", "ALREADY_ROLLED_BACK", "NO_ACTIVE_TRANSACTION"] },
+    "rolled_back": { "type": "boolean" },
+    "idempotent": { "type": "boolean" },
+    "transaction_id": { "type": ["string", "null"] },
+    "restored_targets": { "type": "integer", "minimum": 0 },
+    "v3_restored": { "type": ["boolean", "null"] },
+    "v4_active": { "type": ["boolean", "null"] },
+    "reason": { "type": ["string", "null"] },
+    "migration_record": { "type": ["object", "null"] }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,302 @@
+{
+ "run": "2026-10-12, typesafe/jev-1.13-20260917, question set 5.8.0-r1, one call per sentence, 2.5 s limit",
+ "measured": {
+  "words": {
+   "caught": 10,
+   "wrongly_flagged": 0
+  },
+  "jev": {
+   "caught": 17,
+   "wrongly_flagged": 0
+  },
+  "combined": {
+   "caught": 19,
+   "wrongly_flagged": 0
+  },
+  "jev_calls_answered": 39,
+  "median_ms": 517
+ },
+ "results": {
+  "Build a chat app with realtime messaging for 50k users": {
+   "jev_new_work": false,
+   "jev_status": "timeout",
+   "depth": null,
+   "depth_confidence": null,
+   "small_adjustment": null
+  },
+  "Add memory to my agent so it remembers what each user told it last week": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.65,
+   "small_adjustment": 0.24
+  },
+  "I want my tutoring bot to remember each student's weak topics across sessions": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.86,
+   "small_adjustment": 0.12
+  },
+  "Build a leaderboard that updates instantly as players score": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.91,
+   "small_adjustment": 0.07
+  },
+  "Make a multiplayer drawing game for classrooms": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 1,
+   "small_adjustment": 0.02
+  },
+  "Create a booking system for my salon with reminders": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 1,
+   "small_adjustment": 0.03
+  },
+  "Build a traffic simulation for our city planning class": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.99,
+   "small_adjustment": 0.03
+  },
+  "Add a recommendations section that learns what each reader likes": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.99,
+   "small_adjustment": 0.08
+  },
+  "We need a way for teachers to grade 300 recordings a day": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.97,
+   "small_adjustment": 0.09
+  },
+  "Turn our evaluation scripts into a harness that runs every night against each model": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.55,
+   "small_adjustment": 0.09
+  },
+  "Add live location tracking for delivery riders": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.97,
+   "small_adjustment": 0.09
+  },
+  "Let users upload videos and share them with their batch": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.99,
+   "small_adjustment": 0.09
+  },
+  "Start a marketplace where home cooks sell tiffins to office workers": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.97,
+   "small_adjustment": 0.02
+  },
+  "Add an AI assistant that answers questions from our help articles": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.96,
+   "small_adjustment": 0.08
+  },
+  "Build an internal dashboard for the sales team to track leads": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.99,
+   "small_adjustment": 0.03
+  },
+  "Redesign the onboarding so new users record their first answer in under a minute": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "FOCUSED",
+   "depth_confidence": 0.33,
+   "small_adjustment": 0.13
+  },
+  "Add team workspaces so a coach can manage 40 students": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.97,
+   "small_adjustment": 0.09
+  },
+  "Build a long-running agent that watches our competitors' pricing every day": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.92,
+   "small_adjustment": 0.03
+  },
+  "Add a feed where students see each other's best answers": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.95,
+   "small_adjustment": 0.1
+  },
+  "Create a WhatsApp bot that sends each learner a daily question": {
+   "jev_new_work": true,
+   "jev_status": "used",
+   "depth": "FULL",
+   "depth_confidence": 0.91,
+   "small_adjustment": 0.04
+  },
+  "Fix the crash when the upload fails on a slow network": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.56,
+   "small_adjustment": 0.85
+  },
+  "The chat bubble colour is wrong": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.68,
+   "small_adjustment": 0.94
+  },
+  "Change the button text from Submit to Save": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "SMALL_SAFE",
+   "depth_confidence": 0.9,
+   "small_adjustment": 0.96
+  },
+  "Rename the helper in the upload module": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.6,
+   "small_adjustment": 0.85
+  },
+  "Add tests for the payment webhook handler": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.68,
+   "small_adjustment": 0.16
+  },
+  "Update the README with the new setup steps": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "SMALL_SAFE",
+   "depth_confidence": 1,
+   "small_adjustment": 0.53
+  },
+  "The leaderboard shows yesterday's scores until I refresh": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.68,
+   "small_adjustment": 0.71
+  },
+  "Make the settings page load faster": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.5,
+   "small_adjustment": 0.81
+  },
+  "Bump the React Native version to the latest patch": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.45,
+   "small_adjustment": 0.81
+  },
+  "Fix the typo in the onboarding email": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "SMALL_SAFE",
+   "depth_confidence": 1,
+   "small_adjustment": 0.97
+  },
+  "Move the API keys into environment variables": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "CRITICAL",
+   "depth_confidence": 0.97,
+   "small_adjustment": 0.47
+  },
+  "The agent forgets the user's name halfway through a conversation": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "FOCUSED",
+   "depth_confidence": 0.34,
+   "small_adjustment": 0.33
+  },
+  "Increase the font size on the recording screen": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.87,
+   "small_adjustment": 0.93
+  },
+  "Delete the unused analytics events": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.81,
+   "small_adjustment": 0.74
+  },
+  "Sort the orders list by newest first": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.99,
+   "small_adjustment": 0.82
+  },
+  "The multiplayer lobby sometimes shows the wrong player count": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.86,
+   "small_adjustment": 0.83
+  },
+  "Fix the date format on invoices to show DD/MM/YYYY": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.61,
+   "small_adjustment": 0.94
+  },
+  "Speed up the build on CI": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "CRITICAL",
+   "depth_confidence": 0.35,
+   "small_adjustment": 0.69
+  },
+  "Add a loading spinner to the submit button": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "QUICK",
+   "depth_confidence": 0.91,
+   "small_adjustment": 0.81
+  },
+  "Retry the email send if the provider times out": {
+   "jev_new_work": false,
+   "jev_status": "used",
+   "depth": "FOCUSED",
+   "depth_confidence": 0.45,
+   "small_adjustment": 0.66
+  }
+ },
+ "remeasured": "2026-10-12, after the independent verifier's fix: the words count only a kind of system under a build verb and never in a request worded as a fix, so 'The multiplayer lobby sometimes shows the wrong player count' is no longer flagged. Jev's recorded readings are unchanged; the words were re-run on the same frozen set. The first measurement was words 9 caught and 1 flagged, combined 19 caught and 1 flagged. A third change the same day (live wording such as 'updates instantly') made the words also find 'Build a leaderboard that updates instantly as players score': words 10 caught, 0 flagged; combined still 19 caught, 0 flagged."
+}

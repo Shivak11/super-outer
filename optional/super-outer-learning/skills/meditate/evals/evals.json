@@ -1,0 +1,41 @@
+{
+  "skill_name": "meditate",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Meditate on this completed session and create the usual study.\n\nThe project already uses React. I asked for a page showing six personal reading-list cards. Each card had a title, progress bar and a Continue button. The first implementation copied the same markup into six places. I asked to change the button label once and keep it consistent everywhere. The AI extracted one shared ReadingCard component and used it for all six books. I then said the page was too cramped on my phone. The AI changed the layout to one column on a narrow screen and three on a wide screen. I checked both widths and accepted them. I understand what a button and a web page are; I have not learned React implementation. No other project or learning record is supplied.",
+      "expected_output": "A study that opens with a short summary and a diagram of the reading-list page (the page, the shared card, the six books' details and the rule that sets the number of columns from the screen width), places both corrections on the parts they changed, asks two or three prediction questions with closed answers, keeps two short topics that each name a part of the diagram, and ends with one vocabulary page whose terms label parts of the diagram. No React syntax syllabus, invented cause or private context.",
+      "files": [],
+      "expectations": [
+        "The study opens with a one or two sentence summary followed by 'How the thing works', a diagram whose boxes and arrows all come from the supplied events, with each box named in plain words and its technical name once in brackets.",
+        "Both corrections appear as numbered markers on the parts they changed, the shared card and the column rule, with what happened as a result.",
+        "'Where one change would have the largest effect' asks two or three questions about real dependencies, limits or ordering rules in this page, with each answer closed in a details element on screen and printed below its question.",
+        "The reflection preserves supplied events and distinguishes next-time suggestions and predictions from what happened.",
+        "Each topic is short and names the part of the diagram it explains.",
+        "One final vocabulary section follows the topics, uses the agreed plain heading, and each term labels a box or arrow on the diagram with a sentence saying where.",
+        "Selected terms help direct outcomes; meanings and example instructions are understandable without implementation knowledge, and the vocabulary does not repeat demonstrated knowledge.",
+        "Page 1 holds the summary and diagram, each later section and topic stays within one readable A4 page, and the vocabulary takes at most one final page.",
+        "The standalone study is readable at 390px, in a dark theme and offline without JavaScript; diagram labels stay at least 18px at 390px.",
+        "Delivery claims no save beyond the study files and writes nothing else."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Meditate on this completed session and create the usual study.\n\nI was making a short narrated audio note for myself. I said the music made my words hard to hear. The AI reduced the volume of the entire music track, which also made the gaps between sentences too quiet. I clarified that the music should become quieter while I speak and return between spoken passages. The revised audio did that and I accepted it after listening. I already know what a fade-in and fade-out do and use those words correctly. The session does not establish which editing app was used. No other project or learning record is supplied.",
+      "expected_output": "A literal audio study that opens with a diagram of the narration track, the music track, the volume rule that lowers the music while the narration plays (ducking) and the finished mix, places the correction on the volume rule, asks prediction questions such as what would happen if the music returned more slowly after each sentence, and ends with a concise vocabulary page whose terms, such as ducking, label parts of the diagram. No programming terminology, assumed editor or repeated fade lesson.",
+      "files": [],
+      "expectations": [
+        "The study opens with a one or two sentence summary followed by 'How the thing works', a diagram whose boxes and arrows all come from the supplied events and which assumes no editing app.",
+        "The correction appears as a numbered marker on the volume rule, with the first attempt, the clarification and the accepted result.",
+        "'Where one change would have the largest effect' asks two or three questions about real dependencies, limits or timing rules in the mix, with each answer closed in a details element on screen and printed below its question.",
+        "The reflection preserves supplied events and distinguishes next-time suggestions and predictions from what happened.",
+        "Each topic is short and names the part of the diagram it explains.",
+        "One final vocabulary section follows the topics, uses the agreed plain heading, and each term labels a box or arrow on the diagram with a sentence saying where.",
+        "Selected terms help direct outcomes; meanings and example instructions are understandable without implementation knowledge, and the vocabulary does not repeat demonstrated knowledge such as fades.",
+        "Page 1 holds the summary and diagram, each later section and topic stays within one readable A4 page, and the vocabulary takes at most one final page.",
+        "The standalone study is readable at 390px, in a dark theme and offline without JavaScript; diagram labels stay at least 18px at 390px.",
+        "Delivery claims no save beyond the study files and writes nothing else."
+      ]
+    }
+  ]
+}

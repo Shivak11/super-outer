@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shivak11/Super-outer/schemas/route-decision.schema.json",
+  "title": "Super-outer route decision",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "task_id",
+    "material",
+    "mode",
+    "question_budget",
+    "selected_modules",
+    "scores"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "material": {
+      "type": "boolean"
+    },
+    "mode": {
+      "enum": [
+        "SMALL_SAFE",
+        "QUICK",
+        "FOCUSED",
+        "FULL",
+        "CRITICAL"
+      ]
+    },
+    "question_budget": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 12
+    },
+    "change_shape": {
+      "type": "object",
+      "required": ["shape", "activation", "depth_floor", "reasons"],
+      "additionalProperties": false,
+      "properties": {
+        "shape": {
+          "enum": ["new_feature", "major_overhaul", "replacement", "coordinated_cross_system_change", "maintenance", null]
+        },
+        "activation": { "type": "boolean" },
+        "depth_floor": { "enum": ["QUICK", "FOCUSED", "FULL", "CRITICAL", null] },
+        "reasons": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "archetypes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "matchedOn"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "matchedOn": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "selected_modules": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/module"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "score",
+          "reasons"
+        ],
+        "properties": {
+          "score": {
+            "type": "number",
+            "minimum": 0
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "signals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "module": {
+      "enum": [
+        "product-ui-ux-motion",
+        "frontend-client",
+        "backend-api",
+        "data-migrations",
+        "security-privacy-abuse",
+        "scale-performance-cost",
+        "reliability-recovery",
+        "architecture-maintainability",
+        "compatibility-integrations",
+        "observability-operations",
+        "ai-llm",
+        "delivery-release"
+      ]
+    }
+  }
+}

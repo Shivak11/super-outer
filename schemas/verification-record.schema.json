@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shivak11/Super-outer/schemas/verification-record.schema.json",
+  "title": "Super-outer verification record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "task_id",
+    "head",
+    "status",
+    "checks",
+    "independent_verdict",
+    "residual_risks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "head": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "status": {
+      "enum": [
+        "VERIFYING",
+        "PROVED",
+        "BLOCKED",
+        "ROLLED_BACK"
+      ]
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "scope",
+          "status"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "scope": {
+            "enum": [
+              "source",
+              "ci",
+              "package",
+              "installation",
+              "host-discovery",
+              "hook-runtime",
+              "journey",
+              "migration"
+            ]
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "NOT RUN",
+              "NOT APPLICABLE"
+            ]
+          },
+          "artifact_sha256": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "producer_authenticated": {
+            "type": "boolean"
+          },
+          "verified_by": {
+            "type": ["string", "null"]
+          },
+          "limitation": {
+            "type": ["string", "null"]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "independent_verdict": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNPROVED",
+        "NOT RUN"
+      ]
+    },
+    "residual_risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

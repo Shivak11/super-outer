@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shivak11/Super-outer/schemas/migration-record.schema.json",
+  "title": "Super-outer migration and rollback record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "v3_detected",
+    "v3_snapshot",
+    "outer_21_detected",
+    "outer_21_snapshot",
+    "legacy_versions_deactivated",
+    "legacy_versions_retained",
+    "v4_isolated_verified",
+    "v4_installed",
+    "promoted",
+    "active_enforcement_owner",
+    "rollback_snapshot",
+    "status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "v3_detected": {
+      "type": "boolean"
+    },
+    "v3_snapshot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "outer_21_detected": {
+      "type": "boolean"
+    },
+    "outer_21_snapshot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "legacy_versions_deactivated": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "outer-2.1",
+          "outer-v3"
+        ]
+      }
+    },
+    "legacy_versions_retained": {
+      "type": "boolean"
+    },
+    "v4_isolated_verified": {
+      "type": "boolean"
+    },
+    "v4_installed": {
+      "type": "boolean"
+    },
+    "promoted": {
+      "type": "boolean"
+    },
+    "active_enforcement_owner": {
+      "enum": [
+        "outer-v3",
+        "super-outer-v4",
+        "none"
+      ]
+    },
+    "rollback_snapshot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "NOT STARTED",
+        "ISOLATED",
+        "INSTALLED",
+        "PROMOTED",
+        "ROLLED BACK",
+        "BLOCKED"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,76 @@
+{
+  "description": "Shared Super-outer assessment, flow-first safety, and delivery hooks for Claude Code and Codex.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/super-outer-hook.mjs\" UserPromptSubmit",
+            "timeout": 10,
+            "statusMessage": "Reading the engineering context\u2026"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/super-outer-hook.mjs\" PreToolUse",
+            "timeout": 5,
+            "statusMessage": "Checking for an extreme safety boundary\u2026"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/super-outer-hook.mjs\" Stop",
+            "timeout": 15,
+            "statusMessage": "Checking delivery evidence\u2026"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/super-outer-hook.mjs\" SessionStart",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolBatch": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/super-outer-hook.mjs\" PostToolBatch",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/super-outer-hook.mjs\" PostToolUse",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "super-outer",
+  "version": "6.6.0",
+  "description": "A plain-English translation layer for balanced, evidence-backed engineering",
+  "author": {
+    "name": "Dr. Shiva Kakkar",
+    "url": "https://www.shivakakkar.com/"
+  },
+  "repository": "https://github.com/Shivak11/Super-outer",
+  "keywords": [
+    "engineering-review",
+    "progressive-disclosure",
+    "delivery-verification"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Super-outer",
+    "shortDescription": "Turns product intent into verified engineering.",
+    "longDescription": "Translates a product owner's intent into balanced engineering work across UI/UX, frontend, backend, data, security, scale, reliability, architecture, integrations, operations, AI, and delivery. It learns each repository's own system, recommends technical choices itself, and asks only consequential questions in ordinary English.",
+    "developerName": "Dr. Shiva Kakkar",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://www.shivakakkar.com/",
+    "defaultPrompt": "Use Super-outer to translate this product intent into balanced engineering work. Explain choices and proof in ordinary English."
+  }
+}

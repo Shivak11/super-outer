@@ -1,0 +1,4 @@
+interface:
+  display_name: "Super-outer"
+  short_description: "Balanced engineering review, only when needed"
+  default_prompt: "Use $super-outer to assess this material engineering task before making changes."

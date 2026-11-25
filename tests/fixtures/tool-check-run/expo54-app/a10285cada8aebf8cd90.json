@@ -1,0 +1,1 @@
+{"url":"https://api.github.com/repos/pmndrs/claude-code-plugin/git/trees/HEAD?recursive=1","status":200,"body":"{\"truncated\":false,\"skills\":{\"skills/docs\":1,\"skills/examples\":1}}"}

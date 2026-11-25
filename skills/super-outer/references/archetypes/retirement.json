@@ -1,0 +1,203 @@
+{
+  "id": "retirement",
+  "name": "Switching off a feature or the whole product",
+  "matches": [
+    "sunset the feature",
+    "sunset this feature",
+    "sunset our app",
+    "sunset our product",
+    "sunset my app",
+    "sunsetting the feature",
+    "sunsetting our app",
+    "sunsetting our product",
+    "retire this feature",
+    "retire our app",
+    "retire our product",
+    "retire my app",
+    "shut down our app",
+    "shut down our product",
+    "shut down our company",
+    "shut down our business",
+    "shut down my app",
+    "shutting down our product",
+    "shutting down our company",
+    "close down our app",
+    "close down our product",
+    "discontinue our app",
+    "discontinue our product",
+    "discontinue this feature",
+    "discontinuing our app",
+    "discontinuing our product",
+    "wind down our app",
+    "wind down our product",
+    "winding down our product",
+    "winding down our company",
+    "remove the app from the store",
+    "remove the app from the app store",
+    "remove the app from the play store",
+    "pull the app from the store",
+    "pull the app from the app store",
+    "pull the app from the play store",
+    "take the app off the store",
+    "take the app off the app store",
+    "take the app off the play store",
+    "unpublish the app",
+    "delist the app"
+  ],
+  "modules": [
+    "delivery-release",
+    "data-migrations",
+    "security-privacy-abuse",
+    "compatibility-integrations",
+    "backend-api"
+  ],
+  "failureModes": [
+    {
+      "id": "download-window",
+      "prompt": "Before it is switched off, should people get a stated period to download everything they made?",
+      "why": "after the switch-off, anything people did not download is lost permanently, and they need a date to plan around",
+      "options": [
+        {
+          "label": "A stated period, such as 30 days",
+          "consequence": "people can move their work, and the switch-off date is fixed in advance"
+        },
+        {
+          "label": "Switch off on the announced day",
+          "consequence": "quicker, and people lose whatever they had not saved elsewhere"
+        }
+      ],
+      "recommended": "A stated period, such as 30 days",
+      "lookFor": [
+        "exportUserData",
+        "export_user_data",
+        "dataExportRequest",
+        "shutdown_date",
+        "sunset_date"
+      ],
+      "sequence": "now",
+      "provenBy": "a dated notice sent to every active account, and a test that a full download works for an account until the last day"
+    },
+    {
+      "id": "stop-charges-and-refund",
+      "prompt": "When charges stop at switch-off, should customers be refunded for time they already paid for?",
+      "why": "subscriptions keep renewing until cancelled in the billing system or app store, and people who paid in advance lose that money without a refund",
+      "options": [
+        {
+          "label": "Refund unused time",
+          "consequence": "costs some revenue, and nobody pays for something that no longer exists"
+        },
+        {
+          "label": "No refunds, charges stop only",
+          "consequence": "keeps revenue, and people who paid in advance lose money"
+        }
+      ],
+      "recommended": "Refund unused time",
+      "lookFor": [
+        "cancelAllSubscriptions",
+        "cancel_all_subscriptions",
+        "shutdown_refund",
+        "bulk_refund"
+      ],
+      "sequence": "now",
+      "provenBy": "a billing report after switch-off showing no active renewals, and a refund recorded for each customer with unused paid time"
+    },
+    {
+      "id": "notice-for-integrations",
+      "prompt": "Should outside developers and connected services get a dated notice before their access stops?",
+      "why": "systems built by others stop working when an interface they call disappears, and nobody can prepare for a change that was never announced",
+      "options": [
+        {
+          "label": "A dated notice, with warnings in responses",
+          "consequence": "a little work now, and connected systems have time to change"
+        },
+        {
+          "label": "Switch off without notice",
+          "consequence": "nothing to do now, and other people's systems stop working on the day"
+        }
+      ],
+      "recommended": "A dated notice, with warnings in responses",
+      "lookFor": [
+        "sunset_at",
+        "sunsetAt",
+        "deprecation_date",
+        "deprecationDate",
+        "api_sunset"
+      ],
+      "sequence": "decide",
+      "provenBy": "a recorded notice sent to every API key holder, and a test that responses carry a Sunset header with the switch-off date"
+    },
+    {
+      "id": "close-accounts-and-keys",
+      "prompt": "After switch-off, should every server, key and outside account be closed from a written list?",
+      "why": "a forgotten key still works for whoever holds it, and idle servers and accounts keep charging until someone closes them",
+      "options": [
+        {
+          "label": "Close everything from a written list",
+          "consequence": "a day of careful work, and nothing keeps charging or stays open to misuse"
+        },
+        {
+          "label": "Switch off the main servers only",
+          "consequence": "quicker, and forgotten keys and accounts keep costing money or get misused"
+        }
+      ],
+      "recommended": "Close everything from a written list",
+      "lookFor": [
+        "shutdown-checklist",
+        "shutdown_checklist",
+        "decommission-checklist",
+        "terraform destroy"
+      ],
+      "sequence": "decide",
+      "provenBy": "the written list with each server, key and outside account marked closed or revoked, and a check that the old keys are refused"
+    },
+    {
+      "id": "keep-the-domain",
+      "prompt": "After switch-off, should the domain stay registered, showing a notice to anyone who follows an old link?",
+      "why": "old links and email addresses still lead to the domain, and anyone who buys a lapsed domain receives that traffic and mail",
+      "options": [
+        {
+          "label": "Keep the domain, show a closure notice",
+          "consequence": "a small yearly fee, and nobody else can receive mail sent to old addresses"
+        },
+        {
+          "label": "Let the domain lapse",
+          "consequence": "no further cost, and anyone can buy it and receive mail meant for us"
+        }
+      ],
+      "recommended": "Keep the domain, show a closure notice",
+      "lookFor": [
+        "closure notice",
+        "shutdown notice",
+        "sunset notice",
+        "service-ended"
+      ],
+      "sequence": "decide",
+      "provenBy": "a check that the domain renewal is paid for a stated number of years, that old links show the closure notice, and that store listings are removed"
+    },
+    {
+      "id": "data-deletion-date",
+      "prompt": "After switch-off, when should the data people left behind be deleted?",
+      "why": "the DPDP Act of 2023 in India and the GDPR in the EU require a business to erase personal data once its purpose has ended",
+      "options": [
+        {
+          "label": "On a stated date after switch-off",
+          "consequence": "people know the deadline, and nothing is kept longer than promised"
+        },
+        {
+          "label": "Keep it with no end date",
+          "consequence": "nothing to schedule, and old personal data remains a breach and legal risk"
+        }
+      ],
+      "recommended": "On a stated date after switch-off",
+      "lookFor": [
+        "retention_policy",
+        "data_retention",
+        "purge_after",
+        "deleteAfter",
+        "retentionDays"
+      ],
+      "sequence": "decide",
+      "provenBy": "a scheduled deletion job with the stated date, and a check after that date that no personal records or backups remain"
+    }
+  ]
+}

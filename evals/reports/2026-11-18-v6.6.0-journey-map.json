@@ -1,0 +1,437 @@
+{
+  "date": "2026-11-18",
+  "note": "Behaviour cases tagged journey-map, run with and without Super-outer by claude plugin eval, two runs per arm, the routing model switched off (SUPER_OUTER_JEV=off) as for every check. The first run used the skill text before the review fixes; the re-runs used the text after round 1 and the reworded SKILL.md sentence.",
+  "runs": [
+    {
+      "label": "first run, five of six cases loaded",
+      "cost_usd": 11.78,
+      "duration_minutes": 13.0,
+      "claude_version": "2.1.325",
+      "cases": [
+        {
+          "name": "journey-interview-goes-phase-by-phase",
+          "aggregates": {
+            "score": 0.6,
+            "passRate": 0,
+            "scoreWithout": 0.6,
+            "passRateWithout": 0,
+            "delta": 0
+          },
+          "arms": {
+            "with": [
+              {
+                "score": 0.6,
+                "turns": 8,
+                "failed": [
+                  "asks-in-journey-order",
+                  "asks-what-she-can-do-and-see"
+                ],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 0.6,
+                "turns": 7,
+                "failed": [
+                  "asks-in-journey-order",
+                  "asks-what-she-can-do-and-see"
+                ],
+                "plugin_indicator_failed": []
+              }
+            ],
+            "without": [
+              {
+                "score": 0.6,
+                "turns": 4,
+                "failed": [
+                  "asks-in-journey-order",
+                  "asks-what-she-can-do-and-see"
+                ],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 0.6,
+                "turns": 4,
+                "failed": [
+                  "asks-in-journey-order",
+                  "asks-what-she-can-do-and-see"
+                ],
+                "plugin_indicator_failed": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "new-device-mid-build-updates-the-map",
+          "aggregates": {
+            "score": 1,
+            "passRate": 1,
+            "scoreWithout": 1,
+            "passRateWithout": 1,
+            "delta": 0
+          },
+          "arms": {
+            "with": [
+              {
+                "score": 1,
+                "turns": 8,
+                "failed": [],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 1,
+                "turns": 9,
+                "failed": [],
+                "plugin_indicator_failed": []
+              }
+            ],
+            "without": [
+              {
+                "score": 1,
+                "turns": 8,
+                "failed": [],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 1,
+                "turns": 5,
+                "failed": [],
+                "plugin_indicator_failed": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "new-product-maps-every-phase",
+          "aggregates": {
+            "score": 0.6666666666666666,
+            "passRate": 0,
+            "scoreWithout": 0.41666666666666663,
+            "passRateWithout": 0,
+            "delta": 0.25
+          },
+          "arms": {
+            "with": [
+              {
+                "score": 0.67,
+                "turns": 7,
+                "failed": [
+                  "launch-list-and-dependencies",
+                  "map-covers-the-journey"
+                ],
+                "plugin_indicator_failed": [
+                  "brief-written"
+                ]
+              },
+              {
+                "score": 0.67,
+                "turns": 5,
+                "failed": [
+                  "launch-list-and-dependencies",
+                  "map-covers-the-journey"
+                ],
+                "plugin_indicator_failed": [
+                  "brief-written"
+                ]
+              }
+            ],
+            "without": [
+              {
+                "score": 0.33,
+                "turns": 2,
+                "failed": [
+                  "experience-columns-filled",
+                  "launch-list-and-dependencies",
+                  "map-covers-the-journey",
+                  "runner-and-misuse-included"
+                ],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 0.5,
+                "turns": 2,
+                "failed": [
+                  "experience-columns-filled",
+                  "launch-list-and-dependencies",
+                  "map-covers-the-journey"
+                ],
+                "plugin_indicator_failed": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "plain-request-opens-sign-in-and-deletion",
+          "aggregates": {
+            "score": 0.6666666666666666,
+            "passRate": 0.5,
+            "scoreWithout": 0,
+            "passRateWithout": 0,
+            "delta": 0.6666666666666666
+          },
+          "arms": {
+            "with": [
+              {
+                "score": 0.33,
+                "turns": 11,
+                "failed": [
+                  "covers-deletion",
+                  "covers-sign-in"
+                ],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 1,
+                "turns": 12,
+                "failed": [],
+                "plugin_indicator_failed": []
+              }
+            ],
+            "without": [
+              {
+                "score": 0,
+                "turns": 23,
+                "failed": [
+                  "covers-deletion",
+                  "covers-sign-in",
+                  "plan-shown-not-built"
+                ],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 0,
+                "turns": 18,
+                "failed": [
+                  "covers-deletion",
+                  "covers-sign-in",
+                  "plan-shown-not-built"
+                ],
+                "plugin_indicator_failed": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "second-person-gets-a-journey",
+          "aggregates": {
+            "score": 1,
+            "passRate": 1,
+            "scoreWithout": 0.75,
+            "passRateWithout": 0,
+            "delta": 0.25
+          },
+          "arms": {
+            "with": [
+              {
+                "score": 1,
+                "turns": 11,
+                "failed": [],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 1,
+                "turns": 11,
+                "failed": [],
+                "plugin_indicator_failed": []
+              }
+            ],
+            "without": [
+              {
+                "score": 0.75,
+                "turns": 14,
+                "failed": [
+                  "plan-shown-not-built"
+                ],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 0.75,
+                "turns": 12,
+                "failed": [
+                  "plan-shown-not-built"
+                ],
+                "plugin_indicator_failed": []
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "re-run: journey-interview-goes-phase-by-phase",
+      "cost_usd": 1.83,
+      "duration_minutes": 1.4,
+      "claude_version": "2.1.325",
+      "cases": [
+        {
+          "name": "journey-interview-goes-phase-by-phase",
+          "aggregates": {
+            "score": 0.9,
+            "passRate": 0.5,
+            "scoreWithout": 0.6,
+            "passRateWithout": 0,
+            "delta": 0.30000000000000004
+          },
+          "arms": {
+            "with": [
+              {
+                "score": 0.8,
+                "turns": 10,
+                "failed": [
+                  "asks-in-journey-order"
+                ],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 1,
+                "turns": 8,
+                "failed": [],
+                "plugin_indicator_failed": []
+              }
+            ],
+            "without": [
+              {
+                "score": 0.6,
+                "turns": 6,
+                "failed": [
+                  "asks-in-journey-order",
+                  "asks-what-she-can-do-and-see"
+                ],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 0.6,
+                "turns": 5,
+                "failed": [
+                  "asks-in-journey-order",
+                  "asks-what-she-can-do-and-see"
+                ],
+                "plugin_indicator_failed": []
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "re-run: new-product-maps-every-phase",
+      "cost_usd": 0.99,
+      "duration_minutes": 1.5,
+      "claude_version": "2.1.325",
+      "cases": [
+        {
+          "name": "new-product-maps-every-phase",
+          "aggregates": {
+            "score": 0.5833333333333333,
+            "passRate": 0,
+            "scoreWithout": 0.75,
+            "passRateWithout": 0,
+            "delta": -0.16666666666666674
+          },
+          "arms": {
+            "with": [
+              {
+                "score": 0.67,
+                "turns": 5,
+                "failed": [
+                  "launch-list-and-dependencies",
+                  "map-covers-the-journey"
+                ],
+                "plugin_indicator_failed": [
+                  "brief-written"
+                ]
+              },
+              {
+                "score": 0.5,
+                "turns": 5,
+                "failed": [
+                  "experience-columns-filled",
+                  "launch-list-and-dependencies",
+                  "map-covers-the-journey"
+                ],
+                "plugin_indicator_failed": [
+                  "brief-written"
+                ]
+              }
+            ],
+            "without": [
+              {
+                "score": 0.83,
+                "turns": 2,
+                "failed": [
+                  "map-covers-the-journey"
+                ],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 0.67,
+                "turns": 2,
+                "failed": [
+                  "experience-columns-filled",
+                  "map-covers-the-journey"
+                ],
+                "plugin_indicator_failed": []
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "re-run: todo-app-map-stays-short",
+      "cost_usd": 0.87,
+      "duration_minutes": 1.0,
+      "claude_version": "2.1.325",
+      "cases": [
+        {
+          "name": "todo-app-map-stays-short",
+          "aggregates": {
+            "score": 0.5,
+            "passRate": 0,
+            "scoreWithout": 0.5,
+            "passRateWithout": 0,
+            "delta": 0
+          },
+          "arms": {
+            "with": [
+              {
+                "score": 0.5,
+                "turns": 5,
+                "failed": [
+                  "plan-shown-not-built"
+                ],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 0.5,
+                "turns": 3,
+                "failed": [
+                  "plan-shown-not-built"
+                ],
+                "plugin_indicator_failed": []
+              }
+            ],
+            "without": [
+              {
+                "score": 0.5,
+                "turns": 3,
+                "failed": [
+                  "plan-shown-not-built"
+                ],
+                "plugin_indicator_failed": []
+              },
+              {
+                "score": 0.5,
+                "turns": 2,
+                "failed": [
+                  "plan-shown-not-built"
+                ],
+                "plugin_indicator_failed": []
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "total_cost_usd": 15.47
+}

@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shivak11/Super-outer/schemas/approval-envelope.schema.json",
+  "title": "Super-outer hash-only approval envelope",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "token_digest",
+    "client_hash",
+    "user_hash",
+    "session_hash",
+    "repository_hash",
+    "branch_hash",
+    "task_hash",
+    "actions_hash",
+    "paths_hash",
+    "destinations_hash",
+    "environment_hash",
+    "scope_digest",
+    "created_at",
+    "expires_at",
+    "turn_index",
+    "used"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "token_digest": {
+      "$ref": "#/$defs/digest"
+    },
+    "client_hash": {
+      "$ref": "#/$defs/digest"
+    },
+    "user_hash": {
+      "$ref": "#/$defs/digest"
+    },
+    "session_hash": {
+      "$ref": "#/$defs/digest"
+    },
+    "repository_hash": {
+      "$ref": "#/$defs/digest"
+    },
+    "branch_hash": {
+      "$ref": "#/$defs/digest"
+    },
+    "task_hash": {
+      "$ref": "#/$defs/digest"
+    },
+    "actions_hash": {
+      "$ref": "#/$defs/digest"
+    },
+    "paths_hash": {
+      "$ref": "#/$defs/digest"
+    },
+    "destinations_hash": {
+      "$ref": "#/$defs/digest"
+    },
+    "environment_hash": {
+      "$ref": "#/$defs/digest"
+    },
+    "scope_digest": {
+      "$ref": "#/$defs/digest"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "turn_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "used": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

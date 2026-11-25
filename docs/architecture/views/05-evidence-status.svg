@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="940" viewBox="0 0 1200 940" role="img" aria-labelledby="title desc"><title id="title">C5 view 5: evidence and status layer</title><desc id="desc">Top: the kinds of proof Super-outer keeps apart, each in its own medium, with owner acceptance separate. Bottom: the status of this public release on 25 November 2026, each line labelled validated locally, recorded result, or not yet run.</desc>
+<defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#4d6487"/></marker></defs>
+<rect x="0.0" y="0.0" width="1200.0" height="940.0" rx="22" fill="#f5f7fb"/>
+<rect x="0.0" y="0.0" width="1200.0" height="104.0" rx="18" fill="#142643"/>
+<rect x="0.0" y="84.0" width="1200.0" height="20.0" rx="0" fill="#142643"/>
+<text x="32.0" y="38.0" font-size="13" font-weight="800" fill="#ade0fc" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start" letter-spacing="1.2">SUPER-OUTER 6.6.0   /   C5 VIEW 5 OF 5   /   EVIDENCE AND STATUS</text>
+<text x="32.0" y="80.0" font-size="30" font-weight="750" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Proof stays in its own lane</text>
+<text x="40.0" y="140.0" font-size="12" font-weight="800" fill="#2355af" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start" letter-spacing="1">HOW SUPER-OUTER KEEPS PROOF APART</text>
+<rect x="40.0" y="156.0" width="118.0" height="58.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<text x="99.0" y="190.0" font-size="13" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Source checks</text>
+<rect x="166.0" y="156.0" width="118.0" height="58.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<text x="225.0" y="190.0" font-size="13" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">CI run</text>
+<rect x="292.0" y="156.0" width="118.0" height="58.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<text x="351.0" y="190.0" font-size="13" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Package</text>
+<rect x="418.0" y="156.0" width="118.0" height="58.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<text x="477.0" y="190.0" font-size="13" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Installation</text>
+<rect x="544.0" y="156.0" width="118.0" height="58.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<text x="603.0" y="190.0" font-size="13" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Host discovery</text>
+<rect x="670.0" y="156.0" width="118.0" height="58.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<text x="729.0" y="190.0" font-size="13" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Hook execution</text>
+<rect x="796.0" y="156.0" width="118.0" height="58.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<text x="855.0" y="190.0" font-size="13" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">User journey</text>
+<rect x="922.0" y="156.0" width="118.0" height="58.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<text x="981.0" y="190.0" font-size="13" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Migration</text>
+<rect x="1048.0" y="156.0" width="118.0" height="58.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<text x="1107.0" y="190.0" font-size="13" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Release</text>
+<text x="40.0" y="240.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">One kind of proof never stands in for another. A written test is not a run test. A passing local check is not a live journey.</text>
+<rect x="40.0" y="262.0" width="540.0" height="110.0" rx="12" fill="#e7efff" stroke="#87a7e9" stroke-width="1.7"/>
+<text x="56.0" y="286.0" font-size="11" font-weight="750" fill="#2355af" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start" letter-spacing="0.8">COMPLETION  /  src/completion.mjs</text>
+<text x="56.0" y="310.0" font-size="16" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Done means every claim has proof</text>
+<text x="56.0" y="333.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Each claim needs a recorded result in its own medium. Missing proof stays</text>
+<text x="56.0" y="351.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">visible as open.</text>
+<rect x="620.0" y="262.0" width="540.0" height="110.0" rx="12" fill="#eeebff" stroke="#a99ae0" stroke-width="1.7"/>
+<text x="636.0" y="286.0" font-size="11" font-weight="750" fill="#56429a" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start" letter-spacing="0.8">OWNER ACCEPTANCE</text>
+<text x="636.0" y="310.0" font-size="16" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">A separate receipt</text>
+<text x="636.0" y="333.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">The owner&#x27;s own words after seeing the built version. It is never inferred</text>
+<text x="636.0" y="351.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">from a test.</text>
+<text x="40.0" y="414.0" font-size="12" font-weight="800" fill="#2355af" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start" letter-spacing="1">STATUS OF THIS PUBLIC RELEASE  /  25 NOVEMBER 2026</text>
+<rect x="40.0" y="430.0" width="1120.0" height="50.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<rect x="52.0" y="442.0" width="188.0" height="26.0" rx="13" fill="#e6f4ec"/>
+<text x="146.0" y="460.0" font-size="11" font-weight="800" fill="#176647" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle" letter-spacing="0.6">VALIDATED LOCALLY</text>
+<text x="260.0" y="461.0" font-size="14" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Test suite from a clean clone</text>
+<text x="590.0" y="461.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">1,300 tests: 1,296 pass, 0 fail, 4 skipped (npm test).</text>
+<rect x="40.0" y="488.0" width="1120.0" height="50.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<rect x="52.0" y="500.0" width="188.0" height="26.0" rx="13" fill="#e6f4ec"/>
+<text x="146.0" y="518.0" font-size="11" font-weight="800" fill="#176647" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle" letter-spacing="0.6">VALIDATED LOCALLY</text>
+<text x="260.0" y="519.0" font-size="14" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Source, schemas, package, staging</text>
+<text x="590.0" y="519.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">npm run verify passed: 82 test files, repeatable package build.</text>
+<rect x="40.0" y="546.0" width="1120.0" height="50.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<rect x="52.0" y="558.0" width="188.0" height="26.0" rx="13" fill="#e6f4ec"/>
+<text x="146.0" y="576.0" font-size="11" font-weight="800" fill="#176647" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle" letter-spacing="0.6">VALIDATED LOCALLY</text>
+<text x="260.0" y="577.0" font-size="14" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Install for Claude Code and Codex</text>
+<text x="590.0" y="577.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">npm run setup in an isolated home; both hosts list the plugin.</text>
+<rect x="40.0" y="604.0" width="1120.0" height="50.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<rect x="52.0" y="616.0" width="188.0" height="26.0" rx="13" fill="#e6f4ec"/>
+<text x="146.0" y="634.0" font-size="11" font-weight="800" fill="#176647" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle" letter-spacing="0.6">VALIDATED LOCALLY</text>
+<text x="260.0" y="635.0" font-size="14" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Installed hook runs</text>
+<text x="590.0" y="635.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">The installed hook routed a sign-in request as CRITICAL.</text>
+<rect x="40.0" y="662.0" width="1120.0" height="50.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<rect x="52.0" y="674.0" width="188.0" height="26.0" rx="13" fill="#e6f4ec"/>
+<text x="146.0" y="692.0" font-size="11" font-weight="800" fill="#176647" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle" letter-spacing="0.6">VALIDATED LOCALLY</text>
+<text x="260.0" y="693.0" font-size="14" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Offline eval check</text>
+<text x="590.0" y="693.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">44 cases, 86 graders, 68 skill evals load (npm run eval:check).</text>
+<rect x="40.0" y="720.0" width="1120.0" height="50.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<rect x="52.0" y="732.0" width="188.0" height="26.0" rx="13" fill="#eeebff"/>
+<text x="146.0" y="750.0" font-size="11" font-weight="800" fill="#56429a" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle" letter-spacing="0.6">RECORDED RESULT</text>
+<text x="260.0" y="751.0" font-size="14" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Behaviour evals with and without</text>
+<text x="590.0" y="751.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">12 Oct 2026 (5.10.0) and 18 Nov 2026 (6.6.0), in evals/reports/.</text>
+<rect x="40.0" y="778.0" width="1120.0" height="50.0" rx="10" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<rect x="52.0" y="790.0" width="188.0" height="26.0" rx="13" fill="#eef1f6"/>
+<text x="146.0" y="808.0" font-size="11" font-weight="800" fill="#5b6778" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle" letter-spacing="0.6">NOT YET RUN</text>
+<text x="260.0" y="809.0" font-size="14" font-weight="700" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Live session and public CI</text>
+<text x="590.0" y="809.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">A signed-in host session and the first GitHub Actions run.</text>
+<text x="40.0" y="860.0" font-size="13" font-weight="500" fill="#243451" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Labels follow docs/architecture/CONVENTION.md. A recorded result names its date and version. Nothing here claims a live deployment.</text>
+<text x="32.0" y="920.0" font-size="12" font-weight="500" fill="#5b6778" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Release 6.6.0. Drawn 25 November 2026. Status lines record the checks run for this release.</text>
+</svg>

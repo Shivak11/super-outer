@@ -1,0 +1,221 @@
+{
+  "id": "new-product-setup",
+  "name": "Starting a new product with no code yet",
+  "matches": [
+    "build me an app",
+    "build a new app for",
+    "build a new app that",
+    "build a brand new app",
+    "start a new app",
+    "starting a new app",
+    "app idea",
+    "idea for an app",
+    "build a new product",
+    "start a new product",
+    "starting a new product",
+    "app from scratch",
+    "product from scratch",
+    "saas from scratch",
+    "build a saas",
+    "start a saas",
+    "new saas",
+    "build an mvp",
+    "build the mvp",
+    "build my mvp",
+    "build our mvp",
+    "what tech stack",
+    "which tech stack",
+    "choose a tech stack",
+    "choose the tech stack",
+    "pick a tech stack",
+    "recommend a tech stack",
+    "suggest a tech stack",
+    "estimate a tech stack",
+    "what stack should",
+    "which stack should",
+    "stack should we use",
+    "stack should i use",
+    "build me a website",
+    "build a website for",
+    "want to build an app",
+    "want to make an app",
+    "build an app for my",
+    "build an app for our",
+    "build an app that help",
+    "build an app that let",
+    "build an app that allow",
+    "build an app where user",
+    "build an app where people",
+    "make me an app",
+    "make an app for",
+    "make an app that",
+    "build me a site",
+    "build me a web app",
+    "make me a website",
+    "make a website for",
+    "create a website for",
+    "build a web app for",
+    "greenfield project",
+    "greenfield app",
+    "greenfield product"
+  ],
+  "modules": [
+    "product-ui-ux-motion",
+    "architecture-maintainability",
+    "delivery-release",
+    "security-privacy-abuse",
+    "data-migrations",
+    "reliability-recovery"
+  ],
+  "failureModes": [
+    {
+      "id": "business-owned-accounts",
+      "prompt": "Should the accounts for hosting, the domain and the app stores belong to the business instead of one person's login?",
+      "why": "when the only login belongs to someone who leaves, the business can lose access to its own app, domain or data",
+      "options": [
+        {
+          "label": "Accounts owned by the business",
+          "consequence": "a shared company email and a second admin to set up, and access continues when people leave"
+        },
+        {
+          "label": "One person's login for now",
+          "consequence": "quickest today, and moving apps, domains and billing to the business later takes time and support requests"
+        }
+      ],
+      "recommended": "Accounts owned by the business",
+      "lookFor": [
+        "domain registrar",
+        "accounts register",
+        "account inventory"
+      ],
+      "sequence": "now",
+      "provenBy": "a written list of every outside account showing a business email as owner and at least two people with admin access"
+    },
+    {
+      "id": "secrets-out-of-code",
+      "prompt": "Should passwords and keys for outside services be kept out of the code from the first day?",
+      "why": "a key saved in the code once stays in its history after deletion, and anyone who sees the history can use it",
+      "options": [
+        {
+          "label": "Keep them out from the first commit",
+          "consequence": "a few minutes of setup now, and the code can be shared without replacing keys"
+        },
+        {
+          "label": "Put them in the code for now",
+          "consequence": "faster today, and every key must be replaced before anyone else sees the code"
+        }
+      ],
+      "recommended": "Keep them out from the first commit",
+      "lookFor": [
+        ".env.example",
+        "gitleaks",
+        "trufflehog",
+        "dotenv"
+      ],
+      "sequence": "now",
+      "provenBy": "a secret scan of the whole history, for example with gitleaks, that finds no keys and runs on every push"
+    },
+    {
+      "id": "record-ownership",
+      "prompt": "Will each saved item belong to one person, or to an account that several people can share?",
+      "why": "whose data each record is decides every later query, screen and permission, and changing it after launch means reworking each of them",
+      "options": [
+        {
+          "label": "An account that can hold several people",
+          "consequence": "one more column in each table now, and both single users and teams fit later"
+        },
+        {
+          "label": "The person who created it",
+          "consequence": "simplest now, and adding shared team spaces later means reworking every table and query"
+        }
+      ],
+      "recommended": "An account that can hold several people",
+      "lookFor": [
+        "owner_id",
+        "account_id",
+        "organization_id",
+        "workspace_id",
+        "tenant_id",
+        "user_id"
+      ],
+      "sequence": "now",
+      "provenBy": "a schema check that every table holding customer data has a required owner column, and a test that one account cannot read another account's rows"
+    },
+    {
+      "id": "test-and-live-copies",
+      "prompt": "Should there be a separate test copy of the product, with its own data, before real people use it?",
+      "why": "without one, every test and every half-finished change runs against real customers and their data",
+      "options": [
+        {
+          "label": "Separate test and live copies",
+          "consequence": "two of everything to run and pay for, and tests never use real people's data"
+        },
+        {
+          "label": "One copy for everything",
+          "consequence": "cheaper and simpler, and every test or mistake reaches real customers"
+        }
+      ],
+      "recommended": "Separate test and live copies",
+      "lookFor": [
+        "APP_ENV",
+        ".env.staging",
+        ".env.production",
+        "STAGING_URL",
+        "staging environment"
+      ],
+      "sequence": "decide",
+      "provenBy": "a check that the test copy uses a different database and different keys from the live copy, and that a test sign-up never appears in live data"
+    },
+    {
+      "id": "hosting-choice",
+      "prompt": "Where should the product run once it is public: a managed platform or servers we rent and maintain?",
+      "why": "the hosting choice limits which tools and languages the product can use, so choosing it after building can force a rewrite",
+      "options": [
+        {
+          "label": "A managed platform",
+          "consequence": "less to maintain, and some kinds of long-running work need a separate service"
+        },
+        {
+          "label": "Servers we rent and maintain",
+          "consequence": "full control, and someone must install security updates and monitor them"
+        }
+      ],
+      "recommended": "A managed platform",
+      "lookFor": [
+        "onrender.com",
+        "fly.dev",
+        "primary_region",
+        "FROM node:",
+        "wrangler.toml",
+        "vercel.json"
+      ],
+      "sequence": "decide",
+      "provenBy": "a recorded hosting choice in the repository, and a first deployment of an empty page to that host before features are built"
+    },
+    {
+      "id": "backup-window",
+      "prompt": "If the stored data were lost today, how many hours of recent work would be acceptable to lose?",
+      "why": "it sets how often backups run and what they cost, and a backup nobody has restored may not work when needed",
+      "options": [
+        {
+          "label": "A few minutes, with continuous backups",
+          "consequence": "costs more each month, and almost nothing is lost"
+        },
+        {
+          "label": "Up to a day, with nightly backups",
+          "consequence": "cheaper, and up to a day of everyone's work can disappear"
+        }
+      ],
+      "recommended": "A few minutes, with continuous backups",
+      "lookFor": [
+        "pg_dump",
+        "point-in-time recovery",
+        "point_in_time",
+        "restore drill",
+        "backup schedule"
+      ],
+      "sequence": "decide",
+      "provenBy": "a restore of the latest backup into a scratch database, timed and checked against the chosen window before launch"
+    }
+  ]
+}

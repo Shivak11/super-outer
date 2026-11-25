@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="906" viewBox="0 0 1200 906" role="img" aria-labelledby="title desc"><title id="title">C5 view 4: dynamic view of one request</title><desc id="desc">Eleven numbered steps for the request Add Google sign-in to my app, across the product owner, the host agent, the Super-outer hook and skill, and the repository and CI.</desc>
+<defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#4d6487"/></marker></defs>
+<rect x="0.0" y="0.0" width="1200.0" height="906.0" rx="22" fill="#f5f7fb"/>
+<rect x="0.0" y="0.0" width="1200.0" height="104.0" rx="18" fill="#142643"/>
+<rect x="0.0" y="84.0" width="1200.0" height="20.0" rx="0" fill="#142643"/>
+<text x="32.0" y="38.0" font-size="13" font-weight="800" fill="#ade0fc" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start" letter-spacing="1.2">SUPER-OUTER 6.6.0   /   C5 VIEW 4 OF 5   /   DYNAMIC: ONE REQUEST</text>
+<text x="32.0" y="80.0" font-size="30" font-weight="750" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">What happens after &quot;Add Google sign-in to my app&quot;</text>
+<rect x="20.0" y="128.0" width="260.0" height="52.0" rx="12" fill="#ffffff" stroke="#c7d1df" stroke-width="1.7"/>
+<text x="150.0" y="160.0" font-size="15" font-weight="750" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Product owner</text>
+<line x1="150" y1="180" x2="150" y2="836" stroke="#b7c0cd" stroke-width="1.5" stroke-dasharray="4 5"/>
+<rect x="320.0" y="128.0" width="260.0" height="52.0" rx="12" fill="#eef1f6" stroke="#b7c0cd" stroke-width="1.7"/>
+<text x="450.0" y="160.0" font-size="15" font-weight="750" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Host agent</text>
+<line x1="450" y1="180" x2="450" y2="836" stroke="#b7c0cd" stroke-width="1.5" stroke-dasharray="4 5"/>
+<rect x="620.0" y="128.0" width="260.0" height="52.0" rx="12" fill="#e7efff" stroke="#87a7e9" stroke-width="1.7"/>
+<text x="750.0" y="160.0" font-size="15" font-weight="750" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Super-outer hook and skill</text>
+<line x1="750" y1="180" x2="750" y2="836" stroke="#b7c0cd" stroke-width="1.5" stroke-dasharray="4 5"/>
+<rect x="920.0" y="128.0" width="260.0" height="52.0" rx="12" fill="#eef1f6" stroke="#b7c0cd" stroke-width="1.7"/>
+<text x="1050.0" y="160.0" font-size="15" font-weight="750" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Repository and CI</text>
+<line x1="1050" y1="180" x2="1050" y2="836" stroke="#b7c0cd" stroke-width="1.5" stroke-dasharray="4 5"/>
+<path d="M 156.0 226.0 L 442.0 226.0" fill="none" stroke="#4d6487" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="200.1" y="198.5" width="199.9" height="21.5" rx="6" fill="#f5f7fb"/>
+<text x="300.0" y="214.0" font-size="12.5" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">&quot;Add Google sign-in to my app&quot;</text>
+<circle cx="174.0" cy="226" r="11" fill="#2355af"/>
+<text x="174.0" y="230.0" font-size="11" font-weight="800" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">1</text>
+<path d="M 456.0 282.0 L 742.0 282.0" fill="none" stroke="#4d6487" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="458.9" y="254.5" width="282.1" height="21.5" rx="6" fill="#f5f7fb"/>
+<text x="600.0" y="270.0" font-size="12.5" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">The prompt hook runs before the agent acts</text>
+<circle cx="474.0" cy="282" r="11" fill="#2355af"/>
+<text x="474.0" y="286.0" font-size="11" font-weight="800" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">2</text>
+<path d="M 744.0 338.0 L 458.0 338.0" fill="none" stroke="#4d6487" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="389.8" y="310.5" width="420.5" height="21.5" rx="6" fill="#f5f7fb"/>
+<text x="600.0" y="326.0" font-size="12.5" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Route: CRITICAL, sign-in library, 4 specialists, up to 12 questions</text>
+<circle cx="726.0" cy="338" r="11" fill="#2355af"/>
+<text x="726.0" y="342.0" font-size="11" font-weight="800" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">3</text>
+<path d="M 456.0 394.0 L 1042.0 394.0" fill="none" stroke="#4d6487" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="600.0" y="366.5" width="300.0" height="21.5" rx="6" fill="#f5f7fb"/>
+<text x="750.0" y="382.0" font-size="12.5" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Reads the project&#x27;s rules, code and tests first</text>
+<circle cx="474.0" cy="394" r="11" fill="#2355af"/>
+<text x="474.0" y="398.0" font-size="11" font-weight="800" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">4</text>
+<path d="M 444.0 450.0 L 158.0 450.0" fill="none" stroke="#4d6487" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="59.7" y="422.5" width="480.6" height="21.5" rx="6" fill="#f5f7fb"/>
+<text x="300.0" y="438.0" font-size="12.5" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">One interview in plain English: who signs in, and what happens to old accounts</text>
+<circle cx="426.0" cy="450" r="11" fill="#2355af"/>
+<text x="426.0" y="454.0" font-size="11" font-weight="800" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">5</text>
+<path d="M 156.0 506.0 L 442.0 506.0" fill="none" stroke="#4d6487" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="148.3" y="478.5" width="303.4" height="21.5" rx="6" fill="#f5f7fb"/>
+<text x="300.0" y="494.0" font-size="12.5" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Answers, or accepts the recommended defaults</text>
+<circle cx="174.0" cy="506" r="11" fill="#2355af"/>
+<text x="174.0" y="510.0" font-size="11" font-weight="800" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">6</text>
+<path d="M 456.0 562.0 L 1042.0 562.0" fill="none" stroke="#4d6487" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="584.6" y="534.5" width="330.7" height="21.5" rx="6" fill="#f5f7fb"/>
+<text x="750.0" y="550.0" font-size="12.5" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Builds the change, runs the tests, records the proof</text>
+<circle cx="474.0" cy="562" r="11" fill="#2355af"/>
+<text x="474.0" y="566.0" font-size="11" font-weight="800" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">7</text>
+<path d="M 456.0 618.0 L 742.0 618.0" fill="none" stroke="#4d6487" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="429.8" y="590.5" width="340.5" height="21.5" rx="6" fill="#f5f7fb"/>
+<text x="600.0" y="606.0" font-size="12.5" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Before the production release, the approval gate runs</text>
+<circle cx="474.0" cy="618" r="11" fill="#2355af"/>
+<text x="474.0" y="622.0" font-size="11" font-weight="800" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">8</text>
+<path d="M 444.0 674.0 L 158.0 674.0" fill="none" stroke="#4d6487" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="76.2" y="646.5" width="447.6" height="21.5" rx="6" fill="#f5f7fb"/>
+<text x="300.0" y="662.0" font-size="12.5" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Shows the exact change and asks for APPROVE SUPER-OUTER &lt;token&gt;</text>
+<circle cx="426.0" cy="674" r="11" fill="#2355af"/>
+<text x="426.0" y="678.0" font-size="11" font-weight="800" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">9</text>
+<path d="M 156.0 730.0 L 442.0 730.0" fill="none" stroke="#4d6487" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="158.1" y="702.5" width="283.9" height="21.5" rx="6" fill="#f5f7fb"/>
+<text x="300.0" y="718.0" font-size="12.5" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Types the phrase once (one use, 15 minutes)</text>
+<circle cx="174.0" cy="730" r="11" fill="#2355af"/>
+<text x="174.0" y="734.0" font-size="11" font-weight="800" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">10</text>
+<path d="M 444.0 786.0 L 158.0 786.0" fill="none" stroke="#4d6487" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="96.4" y="758.5" width="407.1" height="21.5" rx="6" fill="#f5f7fb"/>
+<text x="300.0" y="774.0" font-size="12.5" font-weight="600" fill="#122645" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">Reports what was watched working and what nobody has run yet</text>
+<circle cx="426.0" cy="786" r="11" fill="#2355af"/>
+<text x="426.0" y="790.0" font-size="11" font-weight="800" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">11</text>
+<text x="32.0" y="886.0" font-size="12" font-weight="500" fill="#5b6778" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="start">Route checked with routeTask() in src/router.mjs on 25 November 2026, release 6.6.0. Steps 5 to 11 follow skills/super-outer/SKILL.md.</text>
+</svg>

@@ -1,0 +1,171 @@
+{
+  "id": "email-deliverability",
+  "name": "Getting the product's email into inboxes",
+  "matches": [
+    "sending domain",
+    "send from our own domain",
+    "send email from our domain",
+    "dkim",
+    "dmarc",
+    "spf record",
+    "going to spam",
+    "goes to spam",
+    "go to spam",
+    "landing in spam",
+    "land in spam",
+    "end up in spam",
+    "ending up in spam",
+    "marked as spam",
+    "spam folder",
+    "junk folder",
+    "promotions tab",
+    "email deliverability",
+    "deliverability",
+    "bounce handling",
+    "bounced email",
+    "email bounces",
+    "hard bounce",
+    "soft bounce",
+    "spam complaint",
+    "unsubscribe link",
+    "unsubscribe button",
+    "one click unsubscribe",
+    "list unsubscribe",
+    "transactional email",
+    "transactional mail",
+    "email warmup",
+    "warm up the domain"
+  ],
+  "modules": [
+    "compatibility-integrations",
+    "backend-api",
+    "observability-operations",
+    "security-privacy-abuse"
+  ],
+  "failureModes": [
+    {
+      "id": "authenticated-sending-domain",
+      "prompt": "Should product email come from our own domain, with its sender records set up before the first send?",
+      "why": "in February 2024 Gmail and Yahoo began to require that senders authenticate their domain, and unauthenticated mail is often rejected or sent to spam",
+      "options": [
+        {
+          "label": "Our domain, records set up first",
+          "consequence": "a few domain settings now, and inbox providers can confirm the mail is ours"
+        },
+        {
+          "label": "Send from the provider's shared domain",
+          "consequence": "works today, and the mail looks generic and reaches spam more often"
+        }
+      ],
+      "recommended": "Our domain, records set up first",
+      "lookFor": [
+        "dkim",
+        "dmarc",
+        "v=spf1",
+        "_dmarc"
+      ],
+      "sequence": "now",
+      "provenBy": "a test message to Gmail whose headers show SPF, DKIM and DMARC passing for our domain"
+    },
+    {
+      "id": "honour-unsubscribe",
+      "prompt": "Should every marketing email carry a one-click unsubscribe that works immediately?",
+      "why": "bulk senders must offer one-click unsubscribe to Gmail and Yahoo users, and people still mailed after opting out mark it as spam",
+      "options": [
+        {
+          "label": "One-click unsubscribe, honoured at once",
+          "consequence": "a link and a stored preference, and inbox providers keep accepting our mail"
+        },
+        {
+          "label": "Unsubscribe by replying or writing in",
+          "consequence": "nothing to build, and bulk mail to Gmail and Yahoo can be blocked"
+        }
+      ],
+      "recommended": "One-click unsubscribe, honoured at once",
+      "lookFor": [
+        "List-Unsubscribe",
+        "List-Unsubscribe-Post",
+        "unsubscribe_token",
+        "unsubscribed_at"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that unsubscribes through the one-click link and asserts the next marketing send skips that address"
+    },
+    {
+      "id": "no-test-mail-to-customers",
+      "prompt": "Should test copies of the product be unable to email real customers?",
+      "why": "a test run on a copy of real data can email real people, and a sent email cannot be taken back",
+      "options": [
+        {
+          "label": "Send test mail to a safe inbox only",
+          "consequence": "a small setup step, and no customer ever receives a test"
+        },
+        {
+          "label": "Rely on people being careful",
+          "consequence": "nothing to build, and one mistake emails every real customer"
+        }
+      ],
+      "recommended": "Send test mail to a safe inbox only",
+      "lookFor": [
+        "mailtrap",
+        "mailpit",
+        "mailhog",
+        "ethereal.email",
+        "EMAIL_ALLOWLIST",
+        "email_redirect"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that triggers every email from the test copy and asserts each one reaches only the safe inbox"
+    },
+    {
+      "id": "separate-mail-streams",
+      "prompt": "Should receipts and sign-in emails be sent separately from newsletters and promotions?",
+      "why": "inbox providers judge each sender's history, so complaints about promotions can delay receipts and sign-in codes",
+      "options": [
+        {
+          "label": "Separate streams for each kind",
+          "consequence": "a little more setup, and newsletter complaints cannot block sign-in codes"
+        },
+        {
+          "label": "One stream for everything",
+          "consequence": "simpler, and complaints about promotions can stop sign-in codes arriving"
+        }
+      ],
+      "recommended": "Separate streams for each kind",
+      "lookFor": [
+        "MessageStream",
+        "message_stream",
+        "X-PM-Message-Stream",
+        "transactional_stream",
+        "marketing_stream"
+      ],
+      "sequence": "decide",
+      "provenBy": "a check that sign-in and receipt emails are sent through a different stream or subdomain from marketing mail"
+    },
+    {
+      "id": "stop-after-bounce",
+      "prompt": "When an email bounces or is marked as spam, should we stop sending to that address?",
+      "why": "providers measure the rate of bounces and complaints, and a sender who keeps sending to bad addresses can have all its mail blocked",
+      "options": [
+        {
+          "label": "Stop sending to that address",
+          "consequence": "a smaller list, and inbox providers keep accepting our mail"
+        },
+        {
+          "label": "Keep sending",
+          "consequence": "nothing to build, and providers start blocking all our mail"
+        }
+      ],
+      "recommended": "Stop sending to that address",
+      "lookFor": [
+        "suppression_list",
+        "suppressed_at",
+        "bounced_at",
+        "hard_bounce",
+        "bounce_type"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that delivers a bounce and a complaint notice from the provider and asserts the next send skips both addresses"
+    }
+  ]
+}

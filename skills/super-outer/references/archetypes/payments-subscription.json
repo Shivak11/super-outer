@@ -1,0 +1,165 @@
+{
+  "id": "payments-subscription",
+  "name": "Payments and subscriptions",
+  "matches": [
+    "payment",
+    "payments",
+    "pay with",
+    "pay for",
+    "pay by",
+    "pay via",
+    "pay using",
+    "pay through",
+    "pay now",
+    "pay later",
+    "pay online",
+    "pay button",
+    "apple pay",
+    "google pay",
+    "billing",
+    "checkout",
+    "subscribe",
+    "subscription",
+    "purchase",
+    "purchases",
+    "refund",
+    "refunds",
+    "paywall",
+    "paid plan",
+    "free plan",
+    "pro plan",
+    "premium plan",
+    "pricing plan",
+    "subscription plan",
+    "billing plan",
+    "plan upgrade",
+    "plan downgrade",
+    "upgrade their plan",
+    "upgrade your plan",
+    "pricing tier",
+    "pricing model",
+    "plan price",
+    "price change",
+    "price increase",
+    "price decrease",
+    "change the price",
+    "raise the price",
+    "lower the price",
+    "monthly plan",
+    "yearly plan",
+    "annual plan",
+    "coupon",
+    "discount code",
+    "free trial",
+    "day trial",
+    "razorpay",
+    "stripe",
+    "revenuecat",
+    "in-app purchase",
+    "in-app purchases"
+  ],
+  "modules": [
+    "security-privacy-abuse",
+    "backend-api",
+    "reliability-recovery",
+    "product-ui-ux-motion"
+  ],
+  "failureModes": [
+    {
+      "id": "double-charge",
+      "prompt": "If someone taps pay twice, or the network retries, should they be charged once or twice?",
+      "why": "a double charge is the most damaging bug this feature can have",
+      "options": [
+        {
+          "label": "Charge once",
+          "consequence": "needs a stable id per attempt"
+        },
+        {
+          "label": "Charge per request",
+          "consequence": "simplest, and people get charged twice"
+        }
+      ],
+      "recommended": "Charge once",
+      "lookFor": [
+        "idempotenc",
+        "idempotency_key",
+        "transactionId",
+        "dedupe"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that submits the same payment twice and asserts exactly one charge exists"
+    },
+    {
+      "id": "interrupted-purchase",
+      "prompt": "If the app closes between paying and our server hearing about it, what should happen?",
+      "why": "money can move without our records knowing",
+      "options": [
+        {
+          "label": "Reconcile from the provider",
+          "consequence": "always correct, needs a background check"
+        },
+        {
+          "label": "Trust the app to report back",
+          "consequence": "simplest, and paid people can end up locked out"
+        }
+      ],
+      "recommended": "Reconcile from the provider",
+      "lookFor": [
+        "webhook",
+        "reconcil",
+        "verifyPurchase",
+        "restorePurchases"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that drops the confirmation callback and asserts reconciliation still grants the purchase"
+    },
+    {
+      "id": "entitlement-truth",
+      "prompt": "What should decide whether someone has access \u2014 the phone or the server?",
+      "why": "it decides whether access can be faked on a modified device",
+      "options": [
+        {
+          "label": "The server",
+          "consequence": "trustworthy, needs a check before paid features"
+        },
+        {
+          "label": "The phone",
+          "consequence": "fast and offline-friendly, and forgeable"
+        }
+      ],
+      "recommended": "The server",
+      "lookFor": [
+        "entitlement",
+        "subscriptionStatus",
+        "RevenueCat",
+        "verifyReceipt"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that grants access on the server and asserts a modified client cannot grant itself access"
+    },
+    {
+      "id": "failed-renewal",
+      "prompt": "When a renewal fails, should access stop immediately or continue for a grace period?",
+      "why": "cards fail routinely for reasons that are nobody's fault",
+      "options": [
+        {
+          "label": "Grace period",
+          "consequence": "keeps good customers, briefly gives away access"
+        },
+        {
+          "label": "Stop immediately",
+          "consequence": "no leakage, punishes an expired card"
+        }
+      ],
+      "recommended": "Grace period",
+      "lookFor": [
+        "grace",
+        "billingRetry",
+        "pastDue",
+        "renewal"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that fails a renewal and asserts access follows the chosen policy (grace, or immediate stop)"
+    }
+  ]
+}

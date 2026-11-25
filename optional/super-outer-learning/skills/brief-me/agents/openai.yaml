@@ -1,0 +1,6 @@
+interface:
+  display_name: "Brief me"
+  short_description: "Learn the vocabulary needed to brief a new project"
+  default_prompt: "Use $brief-me to help with this task: learn the vocabulary needed to brief a new project."
+policy:
+  allow_implicit_invocation: true

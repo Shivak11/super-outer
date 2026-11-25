@@ -1,0 +1,327 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shivak11/Super-outer/schemas/task-record.schema.json",
+  "title": "Super-outer durable task record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "task_id",
+    "status",
+    "repository",
+    "branch",
+    "base",
+    "mode",
+    "selected_modules",
+    "allowed_actions",
+    "allowed_paths",
+    "allowed_destinations",
+    "plan"
+  ],
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "bootstrap-1",
+        "1.0.0"
+      ]
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "UNASSESSED",
+        "NEEDS_CLARIFICATION",
+        "AWAITING_APPROVAL",
+        "CONFIRMED",
+        "ACTIVE",
+        "VERIFYING",
+        "PROVED",
+        "SKIPPED",
+        "CANCELLED",
+        "BLOCKED",
+        "BUDGET_EXCEEDED",
+        "ROLLED_BACK"
+      ]
+    },
+    "repository": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "base": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "QUICK",
+        "FOCUSED",
+        "FULL",
+        "CRITICAL"
+      ]
+    },
+    "selected_modules": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_actions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_paths": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_destinations": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "plan": {
+      "type": "string"
+    },
+    "approval_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "approved_at": {
+      "type": "string"
+    },
+    "environment": {
+      "type": [
+        "string",
+        "array"
+      ]
+    },
+    "excluded_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "attempt_limit": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "minute_budget": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10080
+    },
+    "attempts": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "$ref": "#/$defs/attempt"
+      }
+    },
+    "verification_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "evidence_binding": {
+      "$ref": "#/$defs/evidence_binding"
+    },
+    "independent_review": {
+      "$ref": "#/$defs/independent_review"
+    },
+    "production_delivery_claim": {
+      "const": true
+    },
+    "completion_contract": {
+      "$ref": "#/$defs/completion_contract"
+    },
+    "completion_evidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "completion_state": {
+      "enum": ["PROVED", "UNPROVEN", "STALE", "FAILED", "NOT_RECORDED"]
+    },
+    "product_intent": {
+      "type": "object",
+      "required": ["path", "version"],
+      "additionalProperties": false,
+      "properties": {
+        "path": { "type": "string", "minLength": 1, "maxLength": 1024 },
+        "version": { "type": "string", "minLength": 1, "maxLength": 64 },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "design_package": {
+      "type": "object",
+      "required": ["required", "reason"],
+      "additionalProperties": false,
+      "properties": {
+        "required": { "type": "boolean" },
+        "reason": { "type": "string", "minLength": 1, "maxLength": 512 },
+        "path": { "type": "string", "minLength": 1, "maxLength": 1024 },
+        "version": { "type": "string", "minLength": 1, "maxLength": 64 },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "completion_contract": {
+      "type": "object",
+      "required": ["schema_version", "claims"],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "const": "1.0.0" },
+        "claims": {
+          "type": "array", "minItems": 1, "maxItems": 32,
+          "items": {
+            "type": "object",
+            "required": ["id", "level", "actor_ref", "client", "environment", "action", "expected_result", "context_file"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string", "minLength": 1, "maxLength": 128 },
+              "level": { "enum": ["source", "ci", "package", "installation", "host-discovery", "runtime", "journey", "intent-conformance", "owner-acceptance", "scheduled", "published", "publication-verified", "production-observed"] },
+              "actor_ref": { "type": "string", "minLength": 1, "maxLength": 128 },
+              "client": { "type": "string", "minLength": 1, "maxLength": 256 },
+              "environment": { "type": "string", "minLength": 1, "maxLength": 256 },
+              "action": { "type": "string", "minLength": 1, "maxLength": 2048 },
+              "expected_result": { "type": "string", "minLength": 1, "maxLength": 2048 },
+              "context_file": { "type": "string", "minLength": 1, "maxLength": 1024 }
+            }
+          }
+        }
+      }
+    },
+    "evidence_binding": {
+      "type": "object",
+      "required": ["source"],
+      "properties": {
+        "source": {
+          "type": "object",
+          "required": ["head", "artifact_sha256", "status", "producer_authenticated", "limitation"],
+          "properties": {
+            "head": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+            "artifact_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+            "verification_record_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+            "status": { "const": "PASS" },
+            "producer_authenticated": { "const": false },
+            "limitation": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "ci": {
+          "type": "object",
+          "required": ["provider", "repository", "workflow", "run_id", "status", "conclusion", "head_sha", "verified_by", "valid"],
+          "properties": {
+            "provider": { "const": "github-actions" },
+            "repository": { "type": "string", "minLength": 1 },
+            "workflow": { "type": "string", "minLength": 1 },
+            "run_id": { "type": "string", "pattern": "^[0-9]+$" },
+            "status": { "const": "completed" },
+            "conclusion": { "const": "success" },
+            "head_sha": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+            "verified_by": { "const": "github-api-live" },
+            "valid": { "const": true }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "independent_review": {
+      "type": "object",
+      "required": ["enforcement", "provided", "review_status", "independent_verdict", "exact_task", "exact_head", "checks", "residual_risks"],
+      "properties": {
+        "enforcement": { "enum": ["ADVISORY", "REQUIRED"] },
+        "provided": { "type": "boolean" },
+        "review_status": { "enum": ["VERIFYING", "PROVED", "BLOCKED", "ROLLED_BACK", "NOT RUN"] },
+        "independent_verdict": { "enum": ["PASS", "FAIL", "UNPROVED", "NOT RUN"] },
+        "exact_task": { "type": "boolean" },
+        "exact_head": { "type": "boolean" },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "scope", "status"],
+            "properties": {
+              "name": { "type": "string" },
+              "scope": { "enum": ["source", "ci", "package", "installation", "host-discovery", "hook-runtime", "journey", "migration"] },
+              "status": { "enum": ["PASS", "FAIL", "NOT RUN", "NOT APPLICABLE"] }
+            },
+            "additionalProperties": false
+          }
+        },
+        "residual_risks": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "attempt": {
+      "type": "object",
+      "required": [
+        "attempt_number",
+        "recorded_at",
+        "elapsed_minutes",
+        "strategy",
+        "change",
+        "evidence",
+        "result"
+      ],
+      "properties": {
+        "attempt_number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "recorded_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "elapsed_minutes": {
+          "type": "number",
+          "minimum": 0
+        },
+        "strategy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "change": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "result": {
+          "enum": [
+            "CONTINUE",
+            "PASS",
+            "FAIL",
+            "BLOCKED"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

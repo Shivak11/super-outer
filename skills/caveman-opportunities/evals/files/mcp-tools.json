@@ -1,0 +1,16 @@
+{
+  "tools": [
+    {
+      "name": "search_orders",
+      "description": "This tool is a very useful and powerful tool that you can use whenever you would like to search through the orders that are stored in the database. It is important to note that you should always try to use this tool when the user asks you about any of their orders, because it will help you to find the information that you need in order to answer their question in a helpful way. The tool accepts a query string and an optional status, which can be one of pending, shipped or delivered, and it will return a list of matching orders. Please keep in mind that the results are limited to a maximum of 50 orders per call.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string" },
+          "status": { "type": "string", "enum": ["pending", "shipped", "delivered"] }
+        },
+        "required": ["query"]
+      }
+    }
+  ]
+}

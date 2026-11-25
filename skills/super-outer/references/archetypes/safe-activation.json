@@ -1,0 +1,185 @@
+{
+  "id": "safe-activation",
+  "name": "Safe activation and parallel rollout",
+  "crossCutting": true,
+  "appliesToShapes": [
+    "new_feature",
+    "major_overhaul",
+    "replacement",
+    "coordinated_cross_system_change"
+  ],
+  "opener": "🚦 New behaviour heading for real people — deploying it and switching it on are two separate decisions.",
+  "explainer": "Both versions can live in the same deployed service. The current version can remain the default while selected people test the revision. A switch can return everyone to the current version without reverting or redeploying.",
+  "matches": [],
+  "modules": [],
+  "failureModes": [
+    {
+      "id": "activation-mode",
+      "sequence": "now",
+      "prompt": "Should the revision replace the current feature in staging, or should both versions run together so only selected people test it first?",
+      "why": "it decides who meets the new behaviour before anyone trusts it",
+      "options": [
+        {
+          "label": "Parallel rollout",
+          "consequence": "both versions are deployed; selected users test the revision while everyone else stays on the current one"
+        },
+        {
+          "label": "Direct replacement",
+          "consequence": "simpler to build, but every staging user meets the revision at once"
+        },
+        {
+          "label": "Separate preview environment",
+          "consequence": "strongest isolation, at the cost of another service to run and maintain"
+        }
+      ],
+      "recommended": "Parallel rollout",
+      "lookFor": ["featureFlag", "rollout", "unleash", "launchdarkly", "flagsmith", "remoteConfig"],
+      "provenBy": "a test proving the current route still runs the existing implementation when the switch is off",
+      "fact": "Knight Capital lost $440 million in 45 minutes because an old code path woke up on one of eight servers. Which version runs where is the whole question."
+    },
+    {
+      "id": "cohort-ownership",
+      "sequence": "now",
+      "prompt": "Who should be able to turn the revision on for themselves?",
+      "why": "it decides whether a curious stranger can switch on half-finished behaviour",
+      "options": [
+        {
+          "label": "A named list of signed-in testers",
+          "consequence": "you control exactly who sees it; the list needs maintaining"
+        },
+        {
+          "label": "Anyone with an internal role",
+          "consequence": "less bookkeeping, and anyone who gains the role gains the feature"
+        },
+        {
+          "label": "A share of all users",
+          "consequence": "good for measuring, but you cannot choose who is included"
+        }
+      ],
+      "recommended": "A named list of signed-in testers",
+      "lookFor": ["allowlist", "allowList", "cohort", "isInternal", "betaUsers", "testerIds"],
+      "provenBy": "a test proving someone outside the list cannot switch the revision on by editing a request",
+      "fact": "If the switch is read from something the phone sends, anyone can send it. Cohorts have to be decided by the server."
+    },
+    {
+      "id": "current-path-fidelity",
+      "sequence": "now",
+      "prompt": "With the switch off, should everything work exactly as it does today?",
+      "why": "cleaning up shared code is how today's behaviour changes by accident",
+      "options": [
+        {
+          "label": "Byte-for-byte the same",
+          "consequence": "safest, and shared cleanup must be proven not to change it"
+        },
+        {
+          "label": "Close enough is fine",
+          "consequence": "quicker to build, and any slip reaches everyone rather than the testers"
+        }
+      ],
+      "recommended": "Byte-for-byte the same",
+      "lookFor": ["snapshot", "golden", "contract test", "regression"],
+      "provenBy": "a regression test proving the switch-off response is unchanged from today's",
+      "fact": "The most common parallel-rollout bug is not in the new path. It is a shared helper that both paths now share."
+    },
+    {
+      "id": "cache-and-data-isolation",
+      "sequence": "now",
+      "prompt": "Should the two versions be allowed to share saved results and stored records?",
+      "why": "mixed results are hard to spot and harder to unpick afterwards",
+      "options": [
+        {
+          "label": "Keep them separate",
+          "consequence": "each version has its own saved copies; slightly more storage"
+        },
+        {
+          "label": "Let them share",
+          "consequence": "cheaper, and one version can serve the other's answers without anyone noticing"
+        }
+      ],
+      "recommended": "Keep them separate",
+      "lookFor": ["cacheKey", "namespace", "versioned", "pipelineVersion", "cache_version"],
+      "provenBy": "a test proving neither version can read or overwrite the other's saved entry",
+      "fact": "A shared cache key is how a switched-off user ends up served the new version's answer."
+    },
+    {
+      "id": "kill-switch",
+      "sequence": "now",
+      "prompt": "If the revision misbehaves, should you be able to switch it off for everyone without a new release?",
+      "why": "it decides whether a bad afternoon needs a code change and a redeploy",
+      "options": [
+        {
+          "label": "Yes, a server-side switch",
+          "consequence": "recovery in seconds; the server must always outrank the app"
+        },
+        {
+          "label": "No, fix and redeploy",
+          "consequence": "one less control to build, and every recovery takes a full release"
+        }
+      ],
+      "recommended": "Yes, a server-side switch",
+      "lookFor": ["killSwitch", "forceOff", "remoteConfig", "disableFeature"],
+      "provenBy": "a test proving the server's off switch beats every cohort and every app-side choice",
+      "fact": "A rollback you can perform in a meeting is worth more than one that needs a deploy pipeline."
+    },
+    {
+      "id": "cross-layer-coordination",
+      "sequence": "decide",
+      "prompt": "If the app and the server disagree about which version is on, what should happen?",
+      "why": "phones update on their own schedule, so the two sides will disagree eventually",
+      "options": [
+        {
+          "label": "Fall back to the current version",
+          "consequence": "nobody sees a broken screen; some testers quietly get the old behaviour"
+        },
+        {
+          "label": "Show a clear message",
+          "consequence": "honest about the mismatch, and interrupts the person"
+        }
+      ],
+      "recommended": "Fall back to the current version",
+      "lookFor": ["minVersion", "capability", "supportedVersion", "featureVersion"],
+      "provenBy": "a test proving an unsupported app-and-server combination degrades without an error screen",
+      "fact": "Old app versions live for months. Every flag that crosses the phone-server line eventually meets one."
+    },
+    {
+      "id": "observability",
+      "sequence": "decide",
+      "prompt": "Should we record which version actually ran for each request?",
+      "why": "without it, a comparison between the two versions cannot be trusted",
+      "options": [
+        {
+          "label": "Record version, cohort and outcome",
+          "consequence": "you can compare honestly; slightly more logging cost"
+        },
+        {
+          "label": "Record errors only",
+          "consequence": "cheaper, and a silent fallback looks like a success"
+        }
+      ],
+      "recommended": "Record version, cohort and outcome",
+      "lookFor": ["analytics", "telemetry", "track(", "logEvent", "metric"],
+      "provenBy": "a test proving the log names the version that actually executed, not the one requested",
+      "fact": "If a request falls back to the old path and the log still says new, every measurement after that is fiction."
+    },
+    {
+      "id": "migration-compatibility",
+      "sequence": "now",
+      "prompt": "Must records written by the revision still be readable by the current version?",
+      "why": "testers and everyone else share one database while both versions run",
+      "options": [
+        {
+          "label": "Yes, always readable",
+          "consequence": "changes must only add, never reshape; safe to switch off at any moment"
+        },
+        {
+          "label": "No, the revision owns its own records",
+          "consequence": "cleaner new design, and switching off strands whatever the testers created"
+        }
+      ],
+      "recommended": "Yes, always readable",
+      "lookFor": ["migration", "nullable", "additive", "backfill", "schema"],
+      "provenBy": "a test proving a record written by the revision is still readable and writable on the current path",
+      "fact": "Turning a feature off is easy. Turning off the data it already wrote is not."
+    }
+  ]
+}

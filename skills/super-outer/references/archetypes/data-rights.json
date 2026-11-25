@@ -1,0 +1,203 @@
+{
+  "id": "data-rights",
+  "name": "People's rights over their own data",
+  "matches": [
+    "delete my account",
+    "delete their account",
+    "delete your account",
+    "deleting my account",
+    "deleting their account",
+    "deleting your account",
+    "account deletion",
+    "deletion request",
+    "data deletion",
+    "delete my data",
+    "delete their data",
+    "delete all their data",
+    "erase my data",
+    "erase their data",
+    "right to be forgotten",
+    "right to erasure",
+    "export my data",
+    "export their data",
+    "export your data",
+    "download my data",
+    "download their data",
+    "download your data",
+    "copy of their data",
+    "copy of my data",
+    "data portability",
+    "gdpr",
+    "dpdp",
+    "data protection act",
+    "data protection law",
+    "privacy request",
+    "data subject request",
+    "subject access request",
+    "dsar",
+    "ccpa",
+    "consent record",
+    "consent log",
+    "withdraw consent",
+    "withdraw their consent"
+  ],
+  "modules": [
+    "security-privacy-abuse",
+    "data-migrations",
+    "backend-api",
+    "compatibility-integrations"
+  ],
+  "failureModes": [
+    {
+      "id": "deletion-reach",
+      "prompt": "When someone deletes their account, must their data also leave backups, analytics and outside services within a stated time?",
+      "why": "copies in backups or outside tools leave a deletion incomplete, and India's DPDP Act and the EU GDPR both give a right to erasure",
+      "options": [
+        {
+          "label": "Everywhere, within a stated window",
+          "consequence": "needs a list of every place data goes, and the promise can be kept"
+        },
+        {
+          "label": "Only from the main database",
+          "consequence": "quick to build, and copies remain in backups and other companies' systems"
+        }
+      ],
+      "recommended": "Everywhere, within a stated window",
+      "lookFor": [
+        "deleteAccount",
+        "delete_account",
+        "account_deletion",
+        "deleteUserData",
+        "purge_user"
+      ],
+      "sequence": "now",
+      "provenBy": "a written list of every place personal data is copied, and a test that deletes an account and asserts each place is cleared or scheduled within the window"
+    },
+    {
+      "id": "shared-items-after-deletion",
+      "prompt": "When someone deletes their account, what should happen to things they shared with other people?",
+      "why": "the answer decides who owns shared items, and that is hard to change once people depend on them",
+      "options": [
+        {
+          "label": "Keep shared items, without their name",
+          "consequence": "others keep what they rely on, and the person's name is removed"
+        },
+        {
+          "label": "Delete everything they made",
+          "consequence": "the cleanest erasure, and other people lose work they depended on"
+        }
+      ],
+      "recommended": "Keep shared items, without their name",
+      "lookFor": [
+        "transferOwnership",
+        "transfer_ownership",
+        "former_member",
+        "deleted_user",
+        "reassign_owner"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that deletes one member of a shared space and asserts the shared items remain without that person's name"
+    },
+    {
+      "id": "consent-history",
+      "prompt": "Should we keep a dated record of what each person agreed to?",
+      "why": "the DPDP Act of 2023 in India and the GDPR in the EU require a business to be able to prove consent was given",
+      "options": [
+        {
+          "label": "Keep a dated record of each agreement",
+          "consequence": "a small table, and we can show exactly what someone agreed to and when"
+        },
+        {
+          "label": "Store only the current setting",
+          "consequence": "simpler, and we cannot prove what someone agreed to last year"
+        }
+      ],
+      "recommended": "Keep a dated record of each agreement",
+      "lookFor": [
+        "consent_log",
+        "consent_records",
+        "consent_version",
+        "terms_accepted_at",
+        "accepted_terms_at",
+        "consented_at"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that changes a person's consent twice and asserts both dated entries and the policy version they agreed to are kept"
+    },
+    {
+      "id": "confirm-identity",
+      "prompt": "Before deleting an account or sending an export, should we confirm it is really the owner asking?",
+      "why": "deletion cannot be undone and an export contains everything, so a request from someone else's unlocked phone does the most damage here",
+      "options": [
+        {
+          "label": "Confirm again before acting",
+          "consequence": "one extra step, and a stolen session cannot erase or copy the account"
+        },
+        {
+          "label": "Act on the signed-in request",
+          "consequence": "smoother, and anyone holding an unlocked phone can delete or export everything"
+        }
+      ],
+      "recommended": "Confirm again before acting",
+      "lookFor": [
+        "reauthenticate",
+        "requires-recent-login",
+        "verifyPassword",
+        "step_up_auth",
+        "confirmIdentity"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that requests deletion and export from a session without fresh confirmation and asserts both are refused"
+    },
+    {
+      "id": "export-scope",
+      "prompt": "Should an export include only what the person created, or also items others shared with them?",
+      "why": "an export that includes other people's words gives their data to someone they did not choose",
+      "options": [
+        {
+          "label": "Only what they created or own",
+          "consequence": "nothing private of anyone else leaves, and shared items are missing from it"
+        },
+        {
+          "label": "Everything they can see",
+          "consequence": "complete for them, and other people's content leaves with it"
+        }
+      ],
+      "recommended": "Only what they created or own",
+      "lookFor": [
+        "exportUserData",
+        "export_user_data",
+        "dataExportRequest",
+        "data_export_request",
+        "downloadMyData"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that exports one member's data from a shared space and asserts no item created by another person is included"
+    },
+    {
+      "id": "deletion-grace-period",
+      "prompt": "After someone asks to delete their account, should there be a short period when they can cancel the request?",
+      "why": "a mistaken tap or a stolen phone can delete years of someone's work, and a short delay lets them undo it",
+      "options": [
+        {
+          "label": "A short grace period, then full deletion",
+          "consequence": "accidental deletions can be reversed, and data stays for that period"
+        },
+        {
+          "label": "Delete immediately",
+          "consequence": "the simplest promise, and a mistaken tap is permanent"
+        }
+      ],
+      "recommended": "A short grace period, then full deletion",
+      "lookFor": [
+        "deletion_scheduled",
+        "scheduled_deletion",
+        "grace_period",
+        "restoreAccount",
+        "cancelDeletion"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that requests deletion, cancels inside the period and asserts the account is intact, then asserts full deletion after the period ends"
+    }
+  ]
+}

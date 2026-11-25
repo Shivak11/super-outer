@@ -1,0 +1,6 @@
+interface:
+  display_name: "Meditate"
+  short_description: "Study how the built thing works and what your decisions changed"
+  default_prompt: "Use $meditate to reflect on this work. Create a concise visual HTML study that opens with a one or two sentence summary and a diagram of how the built thing works, places my corrections and disagreements on the parts they changed, asks prediction questions about where one change would have the largest effect, and gives short principles that each name the part of the diagram they explain. Keep each section within one readable A4 page. Add one final page of vocabulary whose terms label parts of the diagram, following the vocabulary reference; omit it if explicitly declined or no useful new terms emerge. Do not save anything from the study elsewhere without my explicit approval."
+policy:
+  allow_implicit_invocation: true

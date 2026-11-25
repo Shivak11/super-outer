@@ -1,0 +1,172 @@
+{
+  "id": "launch-surfaces",
+  "name": "Public pages and store listings people see before they sign up",
+  "matches": [
+    "landing page",
+    "pricing page",
+    "app store listing",
+    "play store listing",
+    "store listing",
+    "app store screenshot",
+    "store screenshot",
+    "app store description",
+    "play store description",
+    "app store page",
+    "play store page",
+    "marketing site",
+    "marketing website",
+    "marketing page",
+    "public website",
+    "privacy policy page",
+    "add a privacy policy",
+    "write a privacy policy",
+    "write the privacy policy",
+    "draft a privacy policy",
+    "update our privacy policy",
+    "our privacy policy",
+    "terms of service page",
+    "terms of use page",
+    "terms and conditions page",
+    "our terms of service",
+    "add terms of service",
+    "privacy label",
+    "privacy nutrition label",
+    "app privacy details",
+    "data safety form",
+    "data safety section",
+    "waitlist page",
+    "coming soon page",
+    "product hunt"
+  ],
+  "modules": [
+    "product-ui-ux-motion",
+    "frontend-client",
+    "security-privacy-abuse",
+    "delivery-release"
+  ],
+  "failureModes": [
+    {
+      "id": "policies-before-sign-up",
+      "prompt": "Must a privacy policy and terms of use be published before the first person signs up?",
+      "why": "people must be told what is collected before it is collected, and both app stores require a privacy policy link",
+      "options": [
+        {
+          "label": "Published before sign-up opens",
+          "consequence": "some writing before launch, and store review and payment setup can proceed"
+        },
+        {
+          "label": "Add them after launch",
+          "consequence": "a faster launch, and the store can reject the app until they exist"
+        }
+      ],
+      "recommended": "Published before sign-up opens",
+      "lookFor": [
+        "privacy-policy",
+        "privacy_policy",
+        "privacyPolicy",
+        "termsOfService",
+        "terms_of_service",
+        "terms_url"
+      ],
+      "sequence": "now",
+      "provenBy": "a check that the privacy policy and terms pages load from the public site and are linked from the sign-up screen and the store listing"
+    },
+    {
+      "id": "store-privacy-labels",
+      "prompt": "Should the store privacy labels come from a check of what the app actually collects?",
+      "why": "Apple and Google require the labels to include data taken by outside tools inside the app, and a wrong label is a breach of store policy",
+      "options": [
+        {
+          "label": "Check the code and services first",
+          "consequence": "an hour of checking, and the labels match what the app does"
+        },
+        {
+          "label": "Fill them in from memory",
+          "consequence": "quicker, and a wrong label can get the app removed from the store"
+        }
+      ],
+      "recommended": "Check the code and services first",
+      "lookFor": [
+        "NSPrivacyCollectedDataTypes",
+        "PrivacyInfo.xcprivacy",
+        "privacy-manifest",
+        "NSPrivacyTracking"
+      ],
+      "sequence": "decide",
+      "provenBy": "a list of every outside tool in the app with the data each one collects, compared line by line with the submitted labels"
+    },
+    {
+      "id": "only-live-features",
+      "prompt": "Should public pages describe only features that are switched on for everyone today?",
+      "why": "people who sign up for a feature they cannot find ask for refunds or leave, and some will say the page misled them",
+      "options": [
+        {
+          "label": "Only features live for everyone",
+          "consequence": "a shorter list, and every claim on the page can be checked"
+        },
+        {
+          "label": "Upcoming features, clearly labelled",
+          "consequence": "shows what is planned, and each label needs updating when plans change"
+        }
+      ],
+      "recommended": "Only features live for everyone",
+      "lookFor": [
+        "coming soon",
+        "comingSoon",
+        "coming_soon"
+      ],
+      "sequence": "decide",
+      "provenBy": "a review of each feature claimed on the public pages against the feature switches, with every claimed feature on for everyone"
+    },
+    {
+      "id": "prices-from-billing",
+      "prompt": "Should the prices and limits on the pricing page come from the same place billing uses?",
+      "why": "a page that shows a different price or limit from what billing charges leads to refund requests and complaints",
+      "options": [
+        {
+          "label": "One source for both",
+          "consequence": "a price change updates both, and the page cannot show what billing does not do"
+        },
+        {
+          "label": "Write the page by hand",
+          "consequence": "quicker to edit, and the page can show a price billing does not charge"
+        }
+      ],
+      "recommended": "One source for both",
+      "lookFor": [
+        "priceId",
+        "price_id",
+        "lookup_key",
+        "pricing.json",
+        "plans.ts"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that reads each plan's price and limits from billing and asserts the pricing page shows the same values"
+    },
+    {
+      "id": "phone-path-into-product",
+      "prompt": "When someone taps the main button on a phone, where should it take them?",
+      "why": "many visitors open links on phones inside another app's browser, where some sign-in and payment steps do not work",
+      "options": [
+        {
+          "label": "Into the app, or its store page",
+          "consequence": "one tap to the right place, and app links need setting up for both stores"
+        },
+        {
+          "label": "A web sign-up that works on phones",
+          "consequence": "one path for everyone, and people who use the app see a web form first"
+        }
+      ],
+      "recommended": "Into the app, or its store page",
+      "lookFor": [
+        "apple-app-site-association",
+        "assetlinks",
+        "apple-itunes-app",
+        "smart app banner",
+        "branch.io"
+      ],
+      "sequence": "decide",
+      "provenBy": "a recorded run on a real iPhone and a real Android phone, from a link opened inside another app's browser to a finished sign-up"
+    }
+  ]
+}

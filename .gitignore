@@ -1,3 +1,22 @@
-.DS_Store
 node_modules/
-eval-results/
+dist/
+coverage/
+.DS_Store
+*.log
+*.tmp
+*.bak
+.super-outer-state/
+tests/.tmp/
+
+# A live development task record is this checkout's own state. Committed once,
+# it reached every user through the marketplace clone and made each session in
+# this repository open with a stale-branch notice naming a branch that no
+# longer exists. Durable closed records live in git history, not in the tree.
+.engineering/super-outer/task.json
+.engineering/super-outer/current-task.json
+.engineering/super-outer/tasks/
+
+
+# claude plugin eval output (full transcripts)
+evals/results/
+

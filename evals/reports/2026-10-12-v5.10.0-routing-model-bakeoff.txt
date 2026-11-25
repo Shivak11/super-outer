@@ -1,0 +1,12 @@
+typesafe/jev-1.13
+  design line right on held-out H/H2/H3: 118/120 (calls failed: 0)
+  new work, model alone: caught 18/20, wrongly flagged 0/20; with words: caught 19/20, flagged 1/20
+  calls answered 160/160, median 510 ms, p95 595 ms, mean input tokens 2444
+microsoft/microsoft-decision-1
+  design line right on held-out H/H2/H3: 108/120 (calls failed: 0)
+  new work, model alone: caught 15/20, wrongly flagged 0/20; with words: caught 16/20, flagged 1/20
+  calls answered 160/160, median 671 ms, p95 797 ms, mean input tokens 2084
+openai/gpt-6-luna-decisions
+  design line right on held-out H/H2/H3: 117/120 (calls failed: 1)
+  new work, model alone: caught 12/20, wrongly flagged 0/20; with words: caught 14/20, flagged 1/20
+  calls answered 159/160, median 350 ms, p95 427 ms, mean input tokens 5141

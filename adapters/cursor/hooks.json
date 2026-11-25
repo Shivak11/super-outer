@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeSubmitPrompt": [
+      {
+        "command": "node ./hooks/super-outer-bridge.mjs beforeSubmitPrompt",
+        "timeout": 10
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": "node ./hooks/super-outer-bridge.mjs preToolUse",
+        "timeout": 5
+      }
+    ],
+    "afterAgentResponse": [
+      {
+        "command": "node ./hooks/super-outer-bridge.mjs afterAgentResponse",
+        "timeout": 5
+      }
+    ],
+    "stop": [
+      {
+        "command": "node ./hooks/super-outer-bridge.mjs stop",
+        "timeout": 15,
+        "loop_limit": 5
+      }
+    ]
+  }
+}

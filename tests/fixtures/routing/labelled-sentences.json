@@ -1,0 +1,5275 @@
+{
+ "note": "Synthetic labelled requests from the 7 October 2026 Jev study (sets A to F, library sets, H, H2), the 5.7.0 verifier's probes (V1, V2), ten rollout requests (R), the GhostWriter-class requests that informed the 5.8.0 plan (G) and the set frozen before the 5.8.0 live run (H3).",
+ "sentences": [
+  {
+   "text": "Build a new writing editor",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Create an admin panel",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Add a dashboard that shows weekly recordings",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the settings screen",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the onboarding flow",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new inbox for support messages",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Overhaul the checkout page",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Make a new settings page",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Design a new home screen",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a landing page",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Revamp the dashboard",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Replace the old editor with a new one",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a settings view",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Let's do a redesign of the home page",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Rebuild the home page in React",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "I want a page where users can see their past recordings",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Can you put together a profile screen for users?",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Make a screen where students can see their scores",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build me an app that lets students record mock interviews",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a website for my bakery",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Create a mobile app for recording voice notes",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Add a form for users to submit feedback",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a modal for confirming deletes",
+   "sets": [
+    "A"
+   ]
+  },
+  {
+   "text": "Add a sidebar with links to every project",
+   "sets": [
+    "A"
+   ]
+  },
+  {
+   "text": "Build a signup form",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Create a login page",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build the onboarding",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the UI",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the app",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the homepage",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new homepage",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Create a landing site for the course",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Design the checkout",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Make the editor look like Google Docs",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a writing editor where selecting a passage shows its sources",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Create a dashboards area for admins",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new reports dashboard and an API for it",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Add a settings screen and a backend endpoint to save preferences",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build an admin panel to manage users",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Create a page",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "I need a screen for uploading recordings",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a kanban board for tasks",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a calendar for booking sessions",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a chat interface for the tutor",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "Create a profile page for each student",
+   "sets": [
+    "A"
+   ],
+   "design": true
+  },
+  {
+   "text": "rebuild the bundle",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "Rebuild the bundle",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "fix lint and rebuild",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "add padding to the dashboard",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rename the helper",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the search index",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the docker image",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild and rerun the tests",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the project",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "please rebuild",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the app",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the dist folder",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "npm run build and rebuild the bundle",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the page after the data loads",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the docs page",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the static page",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the screen reader labels",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "make the dashboard rebuild its view when filters change",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the view when the filter changes",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "re-render the dashboard",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "add padding to the settings screen",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a border to the editor panel",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "add margin on the dashboard cards",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "change the button colour on the dashboard",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "fix the alignment in the editor",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "bump the font size on the inbox",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a tooltip to the dashboard",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a loading spinner to the page",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a dark mode toggle to the settings page",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a column to the dashboard table",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a filter to the inbox",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a new button to the dashboard",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a new tab to the settings panel",
+   "sets": [
+    "B"
+   ]
+  },
+  {
+   "text": "update the copy on the landing page",
+   "sets": [
+    "B",
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "fix the typo on the pricing page",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "build the app and run the tests",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "run the build and fix the errors",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rename the dashboard component",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "move the editor into its own file",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "extract the panel into a component",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "format the code",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "update the readme",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "clean up the dashboard code",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "refactor the dashboard",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "refactor the editor to use hooks",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild node_modules",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the lockfile",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the cache",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "the build is broken, rebuild it",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "Can you rebuild the frontend bundle?",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "rebuild the css",
+   "sets": [
+    "B"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build a new admin dashboard without any UI changes",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build a new admin dashboard with no UI changes",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build a new admin dashboard, but don't change the UI",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build a new reports page, backend only",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build the new reports page API only, no frontend work",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Redesign the dashboard without changing the UI",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Redesign the dashboard data layer without touching the UI",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Rebuild the dashboard backend; the screen stays the same",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add a dashboard endpoint without UI changes",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Create a new editor service with no UI",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build a new inbox API, no visual changes",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build a new inbox without any visual changes",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Rework the settings page backend without any client-visible change",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Replace the editor's storage layer; no UI work",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Overhaul the onboarding flow logic but leave the screens unchanged",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build a headless dashboard API",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add a dashboard that shows weekly recordings. No client-visible changes.",
+   "sets": [
+    "C"
+   ],
+   "design": false
+  },
+  {
+   "text": "retire this feature flag",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "sunset the feature flag for dark mode",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "discontinue this feature flag",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "retire this feature toggle",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "add the new crate to the workspace members",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "list the workspace members in Cargo.toml",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "add the package to the pnpm shared workspace",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "open the shared workspace in VS Code",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "track event listeners that leak memory",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "we need to track event loop lag",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "limit uploads to 10 per user per day",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "rate limit to 100 requests per user per day",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "cap exports at 5 per user per week",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "instrument the app with OpenTelemetry traces",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "build an app for the simulator",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "build an app for testing on the simulator",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "build an app for release",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "build an app that we can run in CI",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "build an app bundle for the store",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "the landing page test is flaky",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "fix the pricing page layout on mobile",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "fix the bug on the admin page",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "the admin dashboard test is flaky",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "fix the crash on the help screen",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "the launch page flickers on startup",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "fix the launch page splash animation",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "handle the deletion request in the queue worker",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "add a data deletion job for old logs",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "add the gdpr link in the footer",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "bump the dkim library",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "remove the app from the store tests",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "the transactional email test is failing",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "fix the unsubscribe link styling",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "add an spf record lookup to the dns tool",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "our privacy policy link is broken",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "fix the changelog page build",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "update the product changelog",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "the store listing endpoint returns 500",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "the moderation queue worker is stuck",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "fix the spam folder detection test",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "roles and permissions test fixture is broken",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "the member roles enum is missing a value",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "shut down my app server",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "shutting down my app gracefully on SIGTERM",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "close down our app connections on exit",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "wind down our app workers before deploy",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "shut down our app process when tests finish",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "handle shutting down our app in the signal handler",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "remove the app from the app store connect build list",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "the user impersonation test fails",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "add a back office link",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "build a saas from scratch for practice",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "greenfield refactor of the parser",
+   "sets": [
+    "D"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "product-analytics": false,
+    "admin-support-tools": false,
+    "data-rights": false,
+    "launch-surfaces": false,
+    "help-and-release-notes": false,
+    "email-deliverability": false,
+    "teams-and-roles": false,
+    "retirement": false
+   }
+  },
+  {
+   "text": "Build a new onboarding screen and add tests for it",
+   "sets": [
+    "E1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Add a dashboard that shows weekly recordings and update the docs",
+   "sets": [
+    "E1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Create a new settings page and rename the old one",
+   "sets": [
+    "E1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new editor and write tests for it",
+   "sets": [
+    "E1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new inbox and fix the typo in the header",
+   "sets": [
+    "E1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Add a new checkout page, then update the readme",
+   "sets": [
+    "E1"
+   ],
+   "design": true
+  },
+  {
+   "text": "update the docs to describe the redesign",
+   "sets": [
+    "E2"
+   ],
+   "design": false
+  },
+  {
+   "text": "fix the typo in the redesign notes",
+   "sets": [
+    "E2"
+   ],
+   "design": false
+  },
+  {
+   "text": "fix the typo in the overhaul section of the readme",
+   "sets": [
+    "E2"
+   ],
+   "design": false
+  },
+  {
+   "text": "update the changelog for the move from webpack to vite",
+   "sets": [
+    "E2"
+   ],
+   "design": false
+  },
+  {
+   "text": "rename the config keys after we migrate from v1",
+   "sets": [
+    "E2"
+   ],
+   "design": false
+  },
+  {
+   "text": "fix the formatting in the full redesign doc",
+   "sets": [
+    "E2"
+   ],
+   "design": false
+  },
+  {
+   "text": "rename the rework branch",
+   "sets": [
+    "E2"
+   ],
+   "design": false
+  },
+  {
+   "text": "add tests for the revamp of the parser",
+   "sets": [
+    "E2"
+   ],
+   "design": false
+  },
+  {
+   "text": "update the readme to mention the switch from npm to pnpm",
+   "sets": [
+    "E2"
+   ],
+   "design": false
+  },
+  {
+   "text": "write tests for the complete rewrite of the parser",
+   "sets": [
+    "E2"
+   ],
+   "design": false
+  },
+  {
+   "text": "comment out the upload retry",
+   "sets": [
+    "E3"
+   ],
+   "design": false
+  },
+  {
+   "text": "format the upload helper",
+   "sets": [
+    "E3"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a comment to the upload retry logic",
+   "sets": [
+    "E3"
+   ],
+   "design": false
+  },
+  {
+   "text": "reformat the recording upload screen code",
+   "sets": [
+    "E3"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a Django view for the export endpoint",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "create a view in postgres for the leaderboard",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a new Flask view that returns JSON",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "build a Grafana dashboard for API latency",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a Datadog dashboard for the queue",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a panel to the Grafana dashboard for error rates",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "implement the inbox pattern for the outbox worker",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "set up a new code editor config",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a new view model for the recordings list",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "create a new SwiftUI view for the settings",
+   "sets": [
+    "E4"
+   ],
+   "design": true
+  },
+  {
+   "text": "add a dashboard endpoint that returns weekly totals",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "build a dashboard API",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "build the docs panel plugin",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a new tool to the MCP server",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "build a CLI tool to export recordings",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a tool definition for search",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a new linting tool",
+   "sets": [
+    "E4"
+   ],
+   "design": false
+  },
+  {
+   "text": "Redesign the onboarding screens",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build the settings pages",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build new dashboards for each team",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the editors",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Rebuild the admin panels",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the home screen",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the homescreen",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new web page",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new webpage",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the signup page",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the sign-up page",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the signup-page",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new sign in screen",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the paywall",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the navbar",
+   "sets": [
+    "F"
+   ],
+   "design": true
+  },
+  {
+   "text": "I want to build an app that helps tutors schedule classes",
+   "sets": [
+    "L+:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": true
+   }
+  },
+  {
+   "text": "Build me an app for tracking my running club's races",
+   "sets": [
+    "L+:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": true
+   }
+  },
+  {
+   "text": "Help me choose a tech stack for a new booking product",
+   "sets": [
+    "L+:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": true
+   }
+  },
+  {
+   "text": "Start a new app for a bakery that takes online orders",
+   "sets": [
+    "L+:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": true
+   }
+  },
+  {
+   "text": "Build an MVP of a habit tracker",
+   "sets": [
+    "L+:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": true
+   }
+  },
+  {
+   "text": "I have an idea for an app that matches tutors with students",
+   "sets": [
+    "L+:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": true
+   }
+  },
+  {
+   "text": "Build a SaaS from scratch for small clinics",
+   "sets": [
+    "L+:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": true
+   }
+  },
+  {
+   "text": "build the app and run it on the simulator",
+   "sets": [
+    "L-:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": false
+   }
+  },
+  {
+   "text": "start a new branch for the fix",
+   "sets": [
+    "L-:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": false
+   }
+  },
+  {
+   "text": "create a new app password for gmail",
+   "sets": [
+    "L-:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": false
+   }
+  },
+  {
+   "text": "what stack trace did it print",
+   "sets": [
+    "L-:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": false
+   }
+  },
+  {
+   "text": "write the helper again from scratch",
+   "sets": [
+    "L-:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": false
+   }
+  },
+  {
+   "text": "the app crashed on start",
+   "sets": [
+    "L-:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": false
+   }
+  },
+  {
+   "text": "build a new app version for TestFlight",
+   "sets": [
+    "L-:new-product-setup"
+   ],
+   "archetypes": {
+    "new-product-setup": false
+   }
+  },
+  {
+   "text": "Add product analytics so we can see which features people use",
+   "sets": [
+    "L+:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": true
+   }
+  },
+  {
+   "text": "Set up PostHog events for sign up and the first recording",
+   "sets": [
+    "L+:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": true
+   }
+  },
+  {
+   "text": "Track how many people finish onboarding each week",
+   "sets": [
+    "L+:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": true
+   }
+  },
+  {
+   "text": "Create a tracking plan for the new checkout",
+   "sets": [
+    "L+:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": true
+   }
+  },
+  {
+   "text": "Build a signup funnel so we can see where people stop",
+   "sets": [
+    "L+:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": true
+   }
+  },
+  {
+   "text": "Show daily active users and weekly active users on a chart",
+   "sets": [
+    "L+:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": true
+   }
+  },
+  {
+   "text": "track down the bug in the upload helper",
+   "sets": [
+    "L-:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": false
+   }
+  },
+  {
+   "text": "keep track of the open pull requests",
+   "sets": [
+    "L-:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": false
+   }
+  },
+  {
+   "text": "fix the spacing on the analytics page",
+   "sets": [
+    "L-:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": false
+   }
+  },
+  {
+   "text": "check posthog for the crash",
+   "sets": [
+    "L-:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": false
+   }
+  },
+  {
+   "text": "the amplitude of the waveform is too low",
+   "sets": [
+    "L-:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": false
+   }
+  },
+  {
+   "text": "set up a remote tracking branch",
+   "sets": [
+    "L-:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": false
+   }
+  },
+  {
+   "text": "log into posthog and read the dashboard",
+   "sets": [
+    "L-:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": false
+   }
+  },
+  {
+   "text": "measure how many tokens the prompt uses",
+   "sets": [
+    "L-:product-analytics"
+   ],
+   "archetypes": {
+    "product-analytics": false
+   }
+  },
+  {
+   "text": "Build an admin panel to look up customers and reset their limits",
+   "sets": [
+    "L+:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": true
+   }
+  },
+  {
+   "text": "Add an admin dashboard for the support team",
+   "sets": [
+    "L+:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": true
+   }
+  },
+  {
+   "text": "Let support staff view as a customer to see what went wrong",
+   "sets": [
+    "L+:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": true
+   }
+  },
+  {
+   "text": "Build a back office for approving refunds",
+   "sets": [
+    "L+:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": true
+   }
+  },
+  {
+   "text": "Add a moderation queue for reported posts",
+   "sets": [
+    "L+:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": true
+   }
+  },
+  {
+   "text": "Let staff impersonate a user to reproduce a bug",
+   "sets": [
+    "L+:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": true
+   }
+  },
+  {
+   "text": "the admin role in this repo cannot push",
+   "sets": [
+    "L-:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": false
+   }
+  },
+  {
+   "text": "open the supabase dashboard",
+   "sets": [
+    "L-:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": false
+   }
+  },
+  {
+   "text": "log in as a test user and check the empty state",
+   "sets": [
+    "L-:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": false
+   }
+  },
+  {
+   "text": "ask the workspace admin to approve the connector",
+   "sets": [
+    "L-:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": false
+   }
+  },
+  {
+   "text": "the mcp client supports tool filtering",
+   "sets": [
+    "L-:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": false
+   }
+  },
+  {
+   "text": "support dark mode in the settings screen",
+   "sets": [
+    "L-:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": false
+   }
+  },
+  {
+   "text": "this is an internal tool, so keep it simple",
+   "sets": [
+    "L-:admin-support-tools"
+   ],
+   "archetypes": {
+    "admin-support-tools": false
+   }
+  },
+  {
+   "text": "Let people delete their account from settings",
+   "sets": [
+    "L+:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": true
+   }
+  },
+  {
+   "text": "Add an export my data button to the profile screen",
+   "sets": [
+    "L+:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": true
+   }
+  },
+  {
+   "text": "Handle account deletion requests",
+   "sets": [
+    "L+:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": true
+   }
+  },
+  {
+   "text": "Make the app GDPR compliant",
+   "sets": [
+    "L+:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": true
+   }
+  },
+  {
+   "text": "Let users download their data as a zip file",
+   "sets": [
+    "L+:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": true
+   }
+  },
+  {
+   "text": "We need to comply with the DPDP Act for users in India",
+   "sets": [
+    "L+:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": true
+   }
+  },
+  {
+   "text": "delete the test account I made",
+   "sets": [
+    "L-:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": false
+   }
+  },
+  {
+   "text": "export the chart as png",
+   "sets": [
+    "L-:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": false
+   }
+  },
+  {
+   "text": "delete the old branches from remote",
+   "sets": [
+    "L-:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": false
+   }
+  },
+  {
+   "text": "download the data from the dashboard",
+   "sets": [
+    "L-:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": false
+   }
+  },
+  {
+   "text": "the delete request returns 404",
+   "sets": [
+    "L-:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": false
+   }
+  },
+  {
+   "text": "export the slides to pdf",
+   "sets": [
+    "L-:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": false
+   }
+  },
+  {
+   "text": "remove the data attribute from the div",
+   "sets": [
+    "L-:data-rights"
+   ],
+   "archetypes": {
+    "data-rights": false
+   }
+  },
+  {
+   "text": "Build a landing page with a waitlist",
+   "sets": [
+    "L+:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": true
+   }
+  },
+  {
+   "text": "Create a pricing page that shows the three plans",
+   "sets": [
+    "L+:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": true
+   }
+  },
+  {
+   "text": "Write the App Store listing and screenshots",
+   "sets": [
+    "L+:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": true
+   }
+  },
+  {
+   "text": "Add a privacy policy page and a terms of service page to the website",
+   "sets": [
+    "L+:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": true
+   }
+  },
+  {
+   "text": "Fill in the privacy nutrition labels for the iOS release",
+   "sets": [
+    "L+:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": true
+   }
+  },
+  {
+   "text": "Get ready for Product Hunt with a coming soon page",
+   "sets": [
+    "L+:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": true
+   }
+  },
+  {
+   "text": "launch the simulator",
+   "sets": [
+    "L-:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": false
+   }
+  },
+  {
+   "text": "launch a parallel agent to review the diff",
+   "sets": [
+    "L-:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": false
+   }
+  },
+  {
+   "text": "read the vendor's privacy policy before we sign up",
+   "sets": [
+    "L-:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": false
+   }
+  },
+  {
+   "text": "update the app store connect api key",
+   "sets": [
+    "L-:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": false
+   }
+  },
+  {
+   "text": "in terms of service quality the new host is better",
+   "sets": [
+    "L-:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": false
+   }
+  },
+  {
+   "text": "in terms of use cases, this covers most of them",
+   "sets": [
+    "L-:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": false
+   }
+  },
+  {
+   "text": "check the store for updates",
+   "sets": [
+    "L-:launch-surfaces"
+   ],
+   "archetypes": {
+    "launch-surfaces": false
+   }
+  },
+  {
+   "text": "Build a help centre with articles for common questions",
+   "sets": [
+    "L+:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": true
+   }
+  },
+  {
+   "text": "Add a what's new screen after each update",
+   "sets": [
+    "L+:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": true
+   }
+  },
+  {
+   "text": "Write release notes for users about the new editor",
+   "sets": [
+    "L+:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": true
+   }
+  },
+  {
+   "text": "Add in-app help on the recording screen",
+   "sets": [
+    "L+:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": true
+   }
+  },
+  {
+   "text": "Create a public changelog page on the website",
+   "sets": [
+    "L+:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": true
+   }
+  },
+  {
+   "text": "Add an FAQ page for new users",
+   "sets": [
+    "L+:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": true
+   }
+  },
+  {
+   "text": "update the changelog",
+   "sets": [
+    "L-:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": false
+   }
+  },
+  {
+   "text": "write the release notes for the next version",
+   "sets": [
+    "L-:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": false
+   }
+  },
+  {
+   "text": "open the plugin help page",
+   "sets": [
+    "L-:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": false
+   }
+  },
+  {
+   "text": "print the help text for the cli",
+   "sets": [
+    "L-:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": false
+   }
+  },
+  {
+   "text": "what's new in react 19",
+   "sets": [
+    "L-:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": false
+   }
+  },
+  {
+   "text": "check the user guide for the bitwarden cli",
+   "sets": [
+    "L-:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": false
+   }
+  },
+  {
+   "text": "think about how to guide new users through setup",
+   "sets": [
+    "L-:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": false
+   }
+  },
+  {
+   "text": "decide what new screens onboarding needs",
+   "sets": [
+    "L-:help-and-release-notes"
+   ],
+   "archetypes": {
+    "help-and-release-notes": false
+   }
+  },
+  {
+   "text": "Our emails are going to spam, fix it",
+   "sets": [
+    "L+:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": true
+   }
+  },
+  {
+   "text": "Set up DKIM and DMARC for our sending domain",
+   "sets": [
+    "L+:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": true
+   }
+  },
+  {
+   "text": "Add an unsubscribe link to every marketing email",
+   "sets": [
+    "L+:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": true
+   }
+  },
+  {
+   "text": "Handle bounced emails from the email provider",
+   "sets": [
+    "L+:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": true
+   }
+  },
+  {
+   "text": "Separate transactional email from the newsletter",
+   "sets": [
+    "L+:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": true
+   }
+  },
+  {
+   "text": "Password reset emails end up in spam",
+   "sets": [
+    "L+:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": true
+   }
+  },
+  {
+   "text": "resend the PR link",
+   "sets": [
+    "L-:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": false
+   }
+  },
+  {
+   "text": "the bounce animation on the button is too strong",
+   "sets": [
+    "L-:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": false
+   }
+  },
+  {
+   "text": "unsubscribe from the store listener in the effect",
+   "sets": [
+    "L-:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": false
+   }
+  },
+  {
+   "text": "test email validation on the sign up form",
+   "sets": [
+    "L-:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": false
+   }
+  },
+  {
+   "text": "send me an email when the build finishes",
+   "sets": [
+    "L-:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": false
+   }
+  },
+  {
+   "text": "the domain model needs a new field",
+   "sets": [
+    "L-:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": false
+   }
+  },
+  {
+   "text": "stop sending me so many notifications",
+   "sets": [
+    "L-:email-deliverability"
+   ],
+   "archetypes": {
+    "email-deliverability": false
+   }
+  },
+  {
+   "text": "Let users invite teammates to their workspace",
+   "sets": [
+    "L+:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": true
+   }
+  },
+  {
+   "text": "Add roles and permissions for owners, admins and members",
+   "sets": [
+    "L+:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": true
+   }
+  },
+  {
+   "text": "Build team workspaces so companies can share recordings",
+   "sets": [
+    "L+:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": true
+   }
+  },
+  {
+   "text": "Make the app multi-tenant for schools",
+   "sets": [
+    "L+:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": true
+   }
+  },
+  {
+   "text": "Let an owner transfer ownership of the workspace",
+   "sets": [
+    "L+:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": true
+   }
+  },
+  {
+   "text": "Add seat based billing for teams",
+   "sets": [
+    "L+:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": true
+   }
+  },
+  {
+   "text": "invite Rohan to the GitHub repo",
+   "sets": [
+    "L-:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": false
+   }
+  },
+  {
+   "text": "send me the meeting invite link",
+   "sets": [
+    "L-:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": false
+   }
+  },
+  {
+   "text": "accept the Slack workspace invite",
+   "sets": [
+    "L-:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": false
+   }
+  },
+  {
+   "text": "we are a small team",
+   "sets": [
+    "L-:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": false
+   }
+  },
+  {
+   "text": "use multiple agent teams if needed",
+   "sets": [
+    "L-:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": false
+   }
+  },
+  {
+   "text": "put this in the user role of the prompt",
+   "sets": [
+    "L-:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": false
+   }
+  },
+  {
+   "text": "transfer ownership of the repo to the organisation",
+   "sets": [
+    "L-:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": false
+   }
+  },
+  {
+   "text": "remove a member from the union type",
+   "sets": [
+    "L-:teams-and-roles"
+   ],
+   "archetypes": {
+    "teams-and-roles": false
+   }
+  },
+  {
+   "text": "We are going to sunset the feature next month",
+   "sets": [
+    "L+:retirement"
+   ],
+   "archetypes": {
+    "retirement": true
+   }
+  },
+  {
+   "text": "Shut down our app at the end of the year",
+   "sets": [
+    "L+:retirement"
+   ],
+   "archetypes": {
+    "retirement": true
+   }
+  },
+  {
+   "text": "Retire this feature and tell people in advance",
+   "sets": [
+    "L+:retirement"
+   ],
+   "archetypes": {
+    "retirement": true
+   }
+  },
+  {
+   "text": "Remove the app from the App Store and the Play Store",
+   "sets": [
+    "L+:retirement"
+   ],
+   "archetypes": {
+    "retirement": true
+   }
+  },
+  {
+   "text": "Plan for shutting down our product in March",
+   "sets": [
+    "L+:retirement"
+   ],
+   "archetypes": {
+    "retirement": true
+   }
+  },
+  {
+   "text": "Discontinue our app and refund annual subscribers",
+   "sets": [
+    "L+:retirement"
+   ],
+   "archetypes": {
+    "retirement": true
+   }
+  },
+  {
+   "text": "shut down the dev server",
+   "sets": [
+    "L-:retirement"
+   ],
+   "archetypes": {
+    "retirement": false
+   }
+  },
+  {
+   "text": "the app shut down when I tapped record",
+   "sets": [
+    "L-:retirement"
+   ],
+   "archetypes": {
+    "retirement": false
+   }
+  },
+  {
+   "text": "sunset colours on the hero gradient",
+   "sets": [
+    "L-:retirement"
+   ],
+   "archetypes": {
+    "retirement": false
+   }
+  },
+  {
+   "text": "remove the app from the simulator",
+   "sets": [
+    "L-:retirement"
+   ],
+   "archetypes": {
+    "retirement": false
+   }
+  },
+  {
+   "text": "download the app from the store",
+   "sets": [
+    "L-:retirement"
+   ],
+   "archetypes": {
+    "retirement": false
+   }
+  },
+  {
+   "text": "retire the old feature flag",
+   "sets": [
+    "L-:retirement"
+   ],
+   "archetypes": {
+    "retirement": false
+   }
+  },
+  {
+   "text": "deprecate the app router config",
+   "sets": [
+    "L-:retirement"
+   ],
+   "archetypes": {
+    "retirement": false
+   }
+  },
+  {
+   "text": "the case describes how they shut down the business unit",
+   "sets": [
+    "L-:retirement"
+   ],
+   "archetypes": {
+    "retirement": false
+   }
+  },
+  {
+   "text": "can we have a page where teachers see all their students' recordings",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "make one screen for the weekly report, students should see it on sunday",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "the home screen is boring, redo it properly",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "I need an onboarding for new users, 3 steps max",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "add a profile section where people can edit their photo and bio",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "build a leaderboard page for the cohort",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "create an app for my coaching institute where students upload answers",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "we need a proper settings area, right now everything is in one long list",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "rework the recording screen so the record button is the main thing",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "give the dashboard a fresh look, it's too cluttered",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "build a page to compare two recordings side by side",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "make a website for the workshop with registration",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "replace the old player screen with a new one that shows the transcript",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "design a feed of recent recordings for the home tab",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "set up a simple landing page to collect emails",
+   "sets": [
+    "H"
+   ],
+   "design": true
+  },
+  {
+   "text": "the recording screen crashes on android 14, fix it",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "move the save button 8px to the left",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "change the primary colour to teal everywhere",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "add an index on recordings.user_id",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "write a cron job that emails the weekly report",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "build a script to backfill transcripts",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "make the leaderboard query faster",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "add retry to the upload worker",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "set up github actions to run tests on every PR",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "bump react native to 0.76",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "the dashboard shows the wrong count, fix the query",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "add sentry to the backend",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "create a supabase function that returns the leaderboard",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "rename RecordingCard to RecordingTile",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "add unit tests for the scoring module",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "deploy the new version to production",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "build the ios app and upload it to testflight",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "add an admin endpoint to reset a user's quota, no ui needed",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "redesign the database schema for recordings",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "rewrite the upload service in go",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "make the api return 404 instead of 500 for missing recordings",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a log line when the upload fails",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "translate the onboarding strings to hindi",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a feature flag for the new player",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "make a new branch for the redesign work",
+   "sets": [
+    "H"
+   ],
+   "design": false
+  },
+  {
+   "text": "students should be able to see their progress over the month on a nice page",
+   "sets": [
+    "H2"
+   ],
+   "design": true
+  },
+  {
+   "text": "build a page where admins can approve new teachers",
+   "sets": [
+    "H2"
+   ],
+   "design": true,
+   "archetypes": {
+    "admin-support-tools": true
+   }
+  },
+  {
+   "text": "let's make the recording flow feel calmer, it's too busy right now",
+   "sets": [
+    "H2"
+   ],
+   "design": true
+  },
+  {
+   "text": "I want a screen that shows today's streak and a big record button",
+   "sets": [
+    "H2"
+   ],
+   "design": true
+  },
+  {
+   "text": "create a small web app for my friends to split bills",
+   "sets": [
+    "H2"
+   ],
+   "design": true,
+   "archetypes": {
+    "new-product-setup": true
+   }
+  },
+  {
+   "text": "can you redo the pricing page so the yearly plan stands out",
+   "sets": [
+    "H2"
+   ],
+   "design": true,
+   "archetypes": {
+    "launch-surfaces": true
+   }
+  },
+  {
+   "text": "add a tab where users can browse past interview questions",
+   "sets": [
+    "H2"
+   ],
+   "design": true
+  },
+  {
+   "text": "make a share card screen so people can post their score",
+   "sets": [
+    "H2"
+   ],
+   "design": true
+  },
+  {
+   "text": "turn the settings into separate pages for account, notifications and privacy",
+   "sets": [
+    "H2"
+   ],
+   "design": true
+  },
+  {
+   "text": "design the empty state screen for first-time users",
+   "sets": [
+    "H2"
+   ],
+   "design": true
+  },
+  {
+   "text": "replace the current login screen with a phone number login screen",
+   "sets": [
+    "H2"
+   ],
+   "design": true,
+   "archetypes": {
+    "authentication": true
+   }
+  },
+  {
+   "text": "build an inbox where coaches can reply to student questions",
+   "sets": [
+    "H2"
+   ],
+   "design": true
+  },
+  {
+   "text": "rebuild the onboarding from scratch with fewer steps",
+   "sets": [
+    "H2"
+   ],
+   "design": true
+  },
+  {
+   "text": "a new page to manage subscriptions, users should be able to cancel there",
+   "sets": [
+    "H2"
+   ],
+   "design": true,
+   "archetypes": {
+    "payments-subscription": true
+   }
+  },
+  {
+   "text": "build me a website for my photography business",
+   "sets": [
+    "H2"
+   ],
+   "design": true,
+   "archetypes": {
+    "new-product-setup": true
+   }
+  },
+  {
+   "text": "the share card has the wrong font size on ios",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a 'copied' toast when the link is copied",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "increase the record button size by 10%",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "add pagination to the recordings api",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "store the streak count in the users table",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "send a push notification at 8pm if they haven't recorded",
+   "sets": [
+    "H2"
+   ],
+   "design": false,
+   "archetypes": {
+    "notifications-messaging": true
+   }
+  },
+  {
+   "text": "make the streak calculation use IST instead of UTC",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "add rate limiting to the login endpoint",
+   "sets": [
+    "H2"
+   ],
+   "design": false,
+   "archetypes": {
+    "authentication": true
+   }
+  },
+  {
+   "text": "write a migration to add a timezone column",
+   "sets": [
+    "H2"
+   ],
+   "design": false,
+   "archetypes": {
+    "data-migration": true
+   }
+  },
+  {
+   "text": "set up a staging environment on vercel",
+   "sets": [
+    "H2"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "launch-surfaces": false
+   }
+  },
+  {
+   "text": "upgrade expo to sdk 54",
+   "sets": [
+    "H2"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false
+   }
+  },
+  {
+   "text": "the build fails on android, fix gradle",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "add a playwright test for the onboarding flow",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "document the scoring algorithm in the readme",
+   "sets": [
+    "H2"
+   ],
+   "design": false,
+   "archetypes": {
+    "help-and-release-notes": false
+   }
+  },
+  {
+   "text": "rename the streaks table to daily_streaks",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "log the openai latency for every transcript call",
+   "sets": [
+    "H2"
+   ],
+   "design": false,
+   "archetypes": {
+    "product-analytics": false
+   }
+  },
+  {
+   "text": "create a grafana panel for upload failures",
+   "sets": [
+    "H2"
+   ],
+   "design": false,
+   "archetypes": {
+    "admin-support-tools": false,
+    "product-analytics": false
+   }
+  },
+  {
+   "text": "build a cli to export all recordings for a user",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "move the auth helpers into their own module",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "the onboarding test flakes on CI, fix it",
+   "sets": [
+    "H2"
+   ],
+   "design": false,
+   "archetypes": {
+    "new-product-setup": false,
+    "help-and-release-notes": false
+   }
+  },
+  {
+   "text": "redesign the caching layer so transcripts load faster",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "add an internal api for the admin team to fetch user stats",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "run the build and deploy to production",
+   "sets": [
+    "H2"
+   ],
+   "design": false,
+   "archetypes": {
+    "retirement": false,
+    "new-product-setup": false
+   }
+  },
+  {
+   "text": "regenerate the supabase types",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "fix the typo in the onboarding screen title",
+   "sets": [
+    "H2"
+   ],
+   "design": false
+  },
+  {
+   "text": "I'd like a screen where parents can see their child's attendance",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Can we have a page that lists every recording I made this month?",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Redesign the checkout so it fits on one phone screen",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Create a settings page and add unit tests for it",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Add a weekly summary screen; also update the README",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new reports dashboard for teachers, and fix the typo in the footer",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "We need a landing page for the new course",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Replace the old sign-up form with a two-step flow",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a calendar view where tutors can see their week",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Design a new home screen for the app",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Revamp the profile page",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Put together a simple dashboard for the sales team",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new chat inbox for customer messages and add integration tests",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Ship a new onboarding experience for first-time users",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Introduce a new search page with filters",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build me a website to sell my paintings",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "I want an app where my students can submit homework",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Swap the carousel for a simple grid on the home page",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Customers keep asking for an order history screen, can we do that?",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "My students should be able to see their marks on their phone",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Let teachers create quizzes from a new page in the app",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Fix the typo on the home page and build a new contact page",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Rename the old page to Legacy and create a brand new pricing page",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Update the docs, then redesign the settings screen",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Clean up the lint warnings and add a new stats dashboard for coaches",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Write unit tests for the editor, and then add a sources panel next to it",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Please add a new onboarding flow plus a regression test",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Rebuild the signup page so it works on small phones",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Implement the inbox page for support agents",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a portal where clients can download their invoices",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build the admin console for support staff",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Make a tool for teachers to grade answers faster",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Launch a waitlist page before the product is ready",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Move from Stripe Checkout to our own payment page",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Turn the long settings form into a step-by-step wizard",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "We should probably have some kind of page where people can see what changed",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Add a modal that asks people to rate the app after their fifth recording",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new leaderboard that students see after each quiz",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Give support a screen to look up a customer and resend their receipt",
+   "sets": [
+    "V1"
+   ],
+   "design": true
+  },
+  {
+   "text": "Fix the alignment of the save button on the settings screen",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add a test for the settings screen",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Rename the profile screen to account screen",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build the iOS app and upload it to TestFlight",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add an endpoint that returns the leaderboard as JSON",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add a new API endpoint that serves the content feed",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Create a Django view that exports CSV",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add a Metabase dashboard for weekly revenue",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Rebuild the Tailwind styles",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Why does the dashboard take ten seconds to load?",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Update the copy on the pricing page",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Don't touch the UI, just add a new endpoint for exports",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build a new notifications service, with no screens",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Create the database views for the reports page",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Please don't redesign anything, just fix the crash on the profile screen",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "No new screens, just make the existing upload faster",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Instead of a new page, put the stats in a tooltip",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Without changing any screens, add an endpoint that returns streaks",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Keep the UI exactly as it is and overhaul the sync logic",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build a new export service and leave the UI alone",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add a new endpoint for the mobile app; the UI is unchanged",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build a new reports API, no UI",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build a new reports API with zero UI changes",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Redesign the database schema for recordings",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Rework the API so the mobile app loads faster",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add tests for the new pricing page",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add a new GitHub Actions pipeline for the e2e tests",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Create a new Grafana panel for queue depth",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build the editor extension for VS Code",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add a new Prisma model and a REST endpoint for comments",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Rebuild the docs site",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Fix the launch screen so it doesn't flash white",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add a screen reader label to the record button",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Implement pagination in the recordings API",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "The checkout page is broken on Safari, please fix it",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add a new endpoint to copy a recording into another folder",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add retry logic to the upload screen",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Investigate why the new editor is slow on long documents",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "The new dashboard crashes when there is no data",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Can you review the new pricing page before I ship it?",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add analytics events to the existing onboarding screens",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Translate the app into Hindi",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Remove the old onboarding screens",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Add a CHANGELOG entry for the new editor",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Bump the version and publish the new dashboard to staging",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "invite the bot to the Slack channel",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "remove the unused roles from the IAM policy",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "set up the dev environment on my new laptop",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "export the logs to a file so I can grep them",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "the email from GitHub went to spam",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "write the help text for the CLI flags",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "launch the dev server on port 3000",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "shut down the staging database for the weekend",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "give the deploy key write access to the repo",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "delete the node_modules folder and reinstall",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "add me as an owner on the npm package",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "set up a new Python virtual environment",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "turn off the cron job for the night",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "send the invoice email to the accountant",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "make the README's getting started section clearer",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "measure how long the test suite takes",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "who has admin access to the Vercel project?",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "archive the old Jira tickets",
+   "sets": [
+    "V1"
+   ],
+   "design": false
+  },
+  {
+   "text": "Let workspace owners remove a member and reassign their recordings",
+   "sets": [
+    "V1"
+   ]
+  },
+  {
+   "text": "Add a button that lets people download everything we store about them",
+   "sets": [
+    "V1"
+   ]
+  },
+  {
+   "text": "Our password reset emails are landing in Gmail's promotions tab",
+   "sets": [
+    "V1"
+   ]
+  },
+  {
+   "text": "Write a what's-new note inside the app for the editor release",
+   "sets": [
+    "V1"
+   ]
+  },
+  {
+   "text": "We are closing the product next quarter; tell users and let them export first",
+   "sets": [
+    "V1"
+   ]
+  },
+  {
+   "text": "Count how many people record a second time within a week",
+   "sets": [
+    "V1"
+   ]
+  },
+  {
+   "text": "Make an App Store page with screenshots for launch",
+   "sets": [
+    "V1"
+   ]
+  },
+  {
+   "text": "Start a brand new project for a recipe-sharing app",
+   "sets": [
+    "V1"
+   ]
+  },
+  {
+   "text": "Build a search and filter page and add tests for it",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Create a sign in and sign up screen and write tests",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a profile and settings page, plus unit tests",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new screen where users can rename their recordings",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Add a typo-tolerant search page for the course catalogue",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Add tests for the uploader, and a new history screen",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Rename the tabs and replace the old editor with a block editor",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Rebuild the projects page so it shows recent activity first",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Rebuild the app's settings screen",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Rebuild the mobile app's home screen",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Rebuild the assets page where designers upload their files",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Add a Grafana alert and build a new customer dashboard",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a new customer dashboard like the one in Grafana",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build a dashboard for customers that looks like Mixpanel's",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Add a PostHog-style analytics dashboard for our customers",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "I'd like a new page where tutors can see their payouts",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "We'd love a dashboard for coaches",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Could we get a screen that lists all the overdue homework?",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Rebuild the onboarding screens and the signup flow",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Rebuild the dashboard UI in Svelte",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Build the admin views for moderators",
+   "sets": [
+    "V2"
+   ],
+   "design": true
+  },
+  {
+   "text": "Rebuild the onboarding screens when the user changes language",
+   "sets": [
+    "V2"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build the export API; UI changes are out of scope",
+   "sets": [
+    "V2"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build a new dashboard, but not the UI yet, just the data layer",
+   "sets": [
+    "V2"
+   ],
+   "design": false
+  },
+  {
+   "text": "Write tests and docs for the new settings page",
+   "sets": [
+    "V2"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build the export API. Don't change the UI.",
+   "sets": [
+    "V2"
+   ],
+   "design": false
+  },
+  {
+   "text": "Build the export API (no UI work)",
+   "sets": [
+    "V2"
+   ],
+   "design": false
+  },
+  {
+   "text": "Roll out the new onboarding flow to beta users",
+   "sets": [
+    "R"
+   ]
+  },
+  {
+   "text": "Release the new settings screen to staging",
+   "sets": [
+    "R"
+   ]
+  },
+  {
+   "text": "Test the new upload screen with internal testers first",
+   "sets": [
+    "R"
+   ]
+  },
+  {
+   "text": "Ship the new checkout page behind a flag",
+   "sets": [
+    "R"
+   ]
+  },
+  {
+   "text": "Turn on the new recording flow for 10 percent of users",
+   "sets": [
+    "R"
+   ]
+  },
+  {
+   "text": "Launch the new pricing page next week",
+   "sets": [
+    "R"
+   ]
+  },
+  {
+   "text": "Enable the new editor for internal testers",
+   "sets": [
+    "R"
+   ]
+  },
+  {
+   "text": "Put the new home screen in front of beta users",
+   "sets": [
+    "R"
+   ]
+  },
+  {
+   "text": "Gradually release the new feed to everyone",
+   "sets": [
+    "R"
+   ]
+  },
+  {
+   "text": "The new search flow should go to staging first",
+   "sets": [
+    "R"
+   ]
+  },
+  {
+   "text": "build a ChatGPT extension that helps me write LinkedIn posts",
+   "sets": [
+    "G"
+   ],
+   "design": true
+  },
+  {
+   "text": "make a ghostwriter plugin for chatgpt",
+   "sets": [
+    "G"
+   ],
+   "design": true
+  },
+  {
+   "text": "create a mac app for journaling",
+   "sets": [
+    "G"
+   ],
+   "design": true
+  },
+  {
+   "text": "build a chrome extension that rewrites my emails",
+   "sets": [
+    "G"
+   ],
+   "design": true
+  },
+  {
+   "text": "I want a macOS menu bar app that records voice notes",
+   "sets": [
+    "G"
+   ],
+   "design": true
+  },
+  {
+   "text": "build a chrome extension so students can highlight any line on an artcle and send it to their rehearsal notes",
+   "sets": [
+    "H3"
+   ],
+   "design": true
+  },
+  {
+   "text": "the safari extension is just one ugly popup rn and nobody gets what to do, redo the whole thing",
+   "sets": [
+    "H3"
+   ],
+   "design": true
+  },
+  {
+   "text": "chrome extension for teachers - when they open a students google doc, side panel shows that students last 5 recordings",
+   "sets": [
+    "H3"
+   ],
+   "design": true
+  },
+  {
+   "text": "i want a chatgpt app where students paste their syllabus and get a week by week plan they can tick off",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "domains": {
+    "mcp-ai-connectors": true,
+    "scheduled-jobs": false
+   }
+  },
+  {
+   "text": "claude app for my writing students, they drop in a draft and get a panel of their overused words to click thru",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "domains": {
+    "mcp-ai-connectors": true,
+    "ai-coding-plugins": false
+   }
+  },
+  {
+   "text": "make rehearsal work inside chatgpt - student asks about their last 3 recordings and sees a card with the clips and a play button",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "domains": {
+    "mcp-ai-connectors": true
+   }
+  },
+  {
+   "text": "small mac menu bar app that shows how many days in a row ive written, click it and a blank page opens",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "domains": {
+    "habit-loops": true
+   }
+  },
+  {
+   "text": "windows app for the exam centre staff to start and stop each students recording from one screen",
+   "sets": [
+    "H3"
+   ],
+   "design": true
+  },
+  {
+   "text": "mac app for the teleprompter pls, script on the left, speed slider, big start button",
+   "sets": [
+    "H3"
+   ],
+   "design": true
+  },
+  {
+   "text": "planner inside claude for the mba batch, their deadlines on a board they can drag around without leaving the chat",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "domains": {
+    "mcp-ai-connectors": true,
+    "ai-coding-plugins": false
+   }
+  },
+  {
+   "text": "home feels too crowded, make a calmer version and show it only to my 20 testers first",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "archetypes": {
+    "safe-activation": true
+   }
+  },
+  {
+   "text": "coaches need somewhere to see whos gone quiet this week and since when",
+   "sets": [
+    "H3"
+   ],
+   "design": true
+  },
+  {
+   "text": "landing page for the gita course - 3 week outline, who its for, and a join the waitlist box",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "archetypes": {
+    "launch-surfaces": true
+   }
+  },
+  {
+   "text": "admin page where i can search any student by phone and see their recordings, plan and last login",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "archetypes": {
+    "admin-support-tools": true,
+    "payments-subscription": false,
+    "authentication": false
+   }
+  },
+  {
+   "text": "pricing screen with monthly vs yearly and a 7 day trial, razorpay for india",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "archetypes": {
+    "payments-subscription": true
+   }
+  },
+  {
+   "text": "teachers keep asking for one place to set up there class, add students from a sheet, and choose which other teachers can see the recordings",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "archetypes": {
+    "teams-and-roles": true
+   }
+  },
+  {
+   "text": "the weekly look back is so boring for students, rethink it around their own most repeated topics and total minutes talked",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "domains": {
+    "habit-loops": true
+   }
+  },
+  {
+   "text": "students cant tell which day their batch records, add a timetable page they can check",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "domains": {
+    "scheduled-jobs": false
+   }
+  },
+  {
+   "text": "posting tool needs a way for me to see the weeks linkedin posts day by day and drag them around",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "domains": {
+    "scheduled-jobs": true
+   }
+  },
+  {
+   "text": "after a recording ends, students should get a new step where claude plays back the main things they said, in their own words",
+   "sets": [
+    "H3"
+   ],
+   "design": true,
+   "archetypes": {
+    "llm-feature": true
+   },
+   "domains": {
+    "mcp-ai-connectors": false
+   }
+  },
+  {
+   "text": "claude code hook that runs ruff on every python file i touch",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "domains": {
+    "ai-coding-plugins": true,
+    "mcp-ai-connectors": false
+   }
+  },
+  {
+   "text": "make a claude code skill that checks every new screen against our design tokens before i commit",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "domains": {
+    "ai-coding-plugins": true,
+    "mcp-ai-connectors": false
+   }
+  },
+  {
+   "text": "/ship command for claude code - run tests, bump version, tag the release, push",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "archetypes": {
+    "help-and-release-notes": false
+   },
+   "domains": {
+    "ai-coding-plugins": true
+   }
+  },
+  {
+   "text": "hook up an mcp server so claude code can query our supabase while i debug, read only",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "domains": {
+    "mcp-ai-connectors": true
+   }
+  },
+  {
+   "text": "wrap the gradebook api as a chatgpt connector so teachers can ask for marks in chat, just the tools, plain text answers are fine",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "domains": {
+    "mcp-ai-connectors": true
+   }
+  },
+  {
+   "text": "eslint plugin that flags any hardcoded hex colour in the components folder",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "domains": {
+    "ai-coding-plugins": false
+   }
+  },
+  {
+   "text": "chrome extension zip is over the web store limit, trim the bundle",
+   "sets": [
+    "H3"
+   ],
+   "design": false
+  },
+  {
+   "text": "nudge the safari extension popup up a bit, bottom gets cut off on the 13 inch macbook",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "domains": {
+    "habit-loops": false
+   }
+  },
+  {
+   "text": "people keep saying the mac app logs them out every time they close the lid and reopen it, pls fix",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "archetypes": {
+    "authentication": true
+   }
+  },
+  {
+   "text": "theres a thin white streak across the top of the home screen on iphone 15",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "domains": {
+    "habit-loops": false
+   }
+  },
+  {
+   "text": "send students a push at 8pm if they havent recorded anything that day",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "archetypes": {
+    "notifications-messaging": true
+   },
+   "domains": {
+    "scheduled-jobs": true,
+    "habit-loops": true
+   }
+  },
+  {
+   "text": "linkedin posting worker fires at 9 utc, move it to 9:15 ist and skip sundays",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "domains": {
+    "scheduled-jobs": true
+   }
+  },
+  {
+   "text": "teacher site tab says anaytics, fix the typo",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "archetypes": {
+    "product-analytics": false
+   }
+  },
+  {
+   "text": "push teacher site live",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "archetypes": {
+    "notifications-messaging": false
+   }
+  },
+  {
+   "text": "write tests for the upload retry when the network drops halfway",
+   "sets": [
+    "H3"
+   ],
+   "design": false
+  },
+  {
+   "text": "the post endpoint the app uses for recording uploads throws 500 on files over 50mb",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "archetypes": {
+    "mobile-capture-upload": true
+   },
+   "domains": {
+    "scheduled-jobs": false
+   }
+  },
+  {
+   "text": "launch the ios build in the simulator, want to check the new streak animation",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "archetypes": {
+    "launch-surfaces": false
+   },
+   "domains": {
+    "habit-loops": false
+   }
+  },
+  {
+   "text": "add a manage subscription link in settings, it can just open the play store page",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "archetypes": {
+    "payments-subscription": true
+   }
+  },
+  {
+   "text": "grafana dashboard for upload failure metrics and queue lag so i catch spikes early",
+   "sets": [
+    "H3"
+   ],
+   "design": false,
+   "archetypes": {
+    "product-analytics": false
+   }
+  },
+  {
+   "text": "split the 900 line recording screen file into smaller components, nothing should look different",
+   "sets": [
+    "H3"
+   ],
+   "design": false
+  }
+ ]
+}

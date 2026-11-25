@@ -1,0 +1,16 @@
+{
+  "name": "super-outer-learning",
+  "version": "6.6.0",
+  "description": "Optional Super-outer skills: Brief me explains the words a new field uses before you build, and Meditate writes a visual study of how the thing you built works and what your decisions changed",
+  "author": {
+    "name": "Dr. Shiva Kakkar",
+    "url": "https://www.shivakakkar.com/"
+  },
+  "homepage": "https://www.shivakakkar.com/",
+  "repository": "https://github.com/Shivak11/Super-outer",
+  "keywords": [
+    "vocabulary",
+    "reflection",
+    "learning"
+  ]
+}

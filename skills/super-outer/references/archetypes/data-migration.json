@@ -1,0 +1,126 @@
+{
+  "id": "data-migration",
+  "name": "Changing information already stored",
+  "matches": [
+    "backfill",
+    "data migration",
+    "database migration",
+    "db migration",
+    "schema migration",
+    "migration script",
+    "run a migration",
+    "run migration",
+    "write a migration",
+    "add a migration",
+    "new migration",
+    "apply the migration",
+    "apply migration",
+    "migrate data",
+    "migrate the data",
+    "migrate the database",
+    "migrate user",
+    "migrate existing",
+    "migrate record",
+    "migrate account",
+    "database schema",
+    "db schema",
+    "schema change",
+    "table schema",
+    "database column",
+    "db column",
+    "drop column",
+    "drop a column",
+    "column type",
+    "nullable column",
+    "database change",
+    "stored data",
+    "existing records",
+    "data model"
+  ],
+  "modules": [
+    "data-migrations",
+    "backend-api",
+    "reliability-recovery",
+    "delivery-release"
+  ],
+  "failureModes": [
+    {
+      "id": "reversibility",
+      "prompt": "If this change turns out wrong, can we put the information back exactly as it was?",
+      "why": "it decides whether a mistake costs an hour or is permanent",
+      "options": [
+        { "label": "Keep the old shape until proven", "consequence": "slower and fully recoverable" },
+        { "label": "Change in place", "consequence": "faster, and a mistake cannot be undone" }
+      ],
+      "recommended": "Keep the old shape until proven",
+      "lookFor": ["rollback", "down()", "reversible", "migration", "backup"],
+      "sequence": "now",
+      "provenBy": "a test that runs the change and the reversal, then asserts the information matches the original"
+    },
+    {
+      "id": "partial-state",
+      "prompt": "While the change runs, is it acceptable that some people see updated information and others see the old?",
+      "why": "a long change is never instant, so somebody is always mid-way",
+      "options": [
+        { "label": "Both versions must read correctly", "consequence": "more work, nobody sees a broken screen" },
+        { "label": "Brief inconsistency is fine", "consequence": "simpler, some people see odd data for a while" }
+      ],
+      "recommended": "Both versions must read correctly",
+      "lookFor": ["dual read", "dualRead", "feature flag", "backwards compatible", "shadow"],
+      "sequence": "now",
+      "provenBy": "a test that reads through both the old and the new shape while the change is half applied"
+    },
+    {
+      "id": "information-loss",
+      "prompt": "Can any information be shortened, dropped, or merged away by this change?",
+      "why": "a narrowed or combined field silently destroys what does not fit",
+      "options": [
+        { "label": "Nothing may be lost", "consequence": "needs a check before and after, and a copy kept" },
+        { "label": "Known losses are acceptable", "consequence": "faster, and the lost part never comes back" }
+      ],
+      "recommended": "Nothing may be lost",
+      "lookFor": ["truncate", "varchar", "coalesce", "DROP COLUMN", "NOT NULL"],
+      "sequence": "now",
+      "provenBy": "a count and checksum of the affected records taken before and after the change"
+    },
+    {
+      "id": "ownership",
+      "prompt": "Does every affected record clearly belong to somebody after this change?",
+      "why": "whose data this is decides every later query, screen, and permission",
+      "options": [
+        { "label": "Ownership is explicit on every record", "consequence": "more columns now, no retrofit later" },
+        { "label": "Infer it from related tables", "consequence": "simpler now, expensive and risky to correct" }
+      ],
+      "recommended": "Ownership is explicit on every record",
+      "lookFor": ["user_id", "owner", "tenant", "account_id", "row level security"],
+      "sequence": "now",
+      "provenBy": "a query asserting no affected record has an empty or unresolved owner"
+    },
+    {
+      "id": "interruption",
+      "prompt": "If the change stops halfway, should it resume or start again from the beginning?",
+      "why": "a long backfill will be interrupted at least once",
+      "options": [
+        { "label": "Resume from where it stopped", "consequence": "needs progress tracking, safe to retry" },
+        { "label": "Start again", "consequence": "simpler, and repeats work that may double-apply" }
+      ],
+      "recommended": "Resume from where it stopped",
+      "lookFor": ["cursor", "checkpoint", "batch", "resume", "offset"],
+      "sequence": "decide",
+      "provenBy": "a test that kills the process mid-run and asserts a rerun completes without duplicating work"
+    },
+    {
+      "id": "older-app-versions",
+      "prompt": "Will app versions people have not updated still work after this change?",
+      "why": "phones update on their own schedule, and old versions keep sending the old shape",
+      "options": [
+        { "label": "Old versions keep working", "consequence": "the old shape is accepted for a period" },
+        { "label": "Require the new version", "consequence": "simpler, and people on old builds are stuck" }
+      ],
+      "recommended": "Old versions keep working",
+      "lookFor": ["minimum version", "deprecated", "api version", "compat", "legacy"],
+      "sequence": "decide",
+      "provenBy": "a request in the previous shape answered correctly after the change is applied"
+    }
+  ]
+}

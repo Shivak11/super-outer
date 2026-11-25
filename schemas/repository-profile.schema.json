@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shivak11/Super-outer/schemas/repository-profile.schema.json",
+  "title": "Super-outer repository profile",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "repository",
+    "sections"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "repository": {
+      "type": "string",
+      "minLength": 1
+    },
+    "extends": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sections": {
+      "type": "object",
+      "required": [
+        "product",
+        "ui",
+        "frontend",
+        "backend",
+        "data",
+        "security",
+        "scale",
+        "operations",
+        "delivery"
+      ],
+      "properties": {
+        "product": { "$ref": "#/$defs/section" },
+        "ui": { "$ref": "#/$defs/section" },
+        "frontend": { "$ref": "#/$defs/section" },
+        "backend": { "$ref": "#/$defs/section" },
+        "data": { "$ref": "#/$defs/section" },
+        "security": { "$ref": "#/$defs/section" },
+        "scale": { "$ref": "#/$defs/section" },
+        "operations": { "$ref": "#/$defs/section" },
+        "delivery": { "$ref": "#/$defs/section" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "section": {
+      "type": "object",
+      "required": [
+        "status",
+        "authority",
+        "sources"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "EXPLICIT",
+            "OBSERVED",
+            "UNKNOWN"
+          ]
+        },
+        "authority": {
+          "enum": [
+            "binding",
+            "company-contract",
+            "repository-contract",
+            "official-platform",
+            "evidence-backed-practice",
+            "local-precedent",
+            "external-style-gap-fill",
+            "unknown"
+          ]
+        },
+        "summary": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256",
+        "last_checked"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "last_checked": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "frozen": "2026-10-12",
+  "purpose": "Held-out set for v5.10: does a request start new work that needs the product brief and story walk? new_work true = a new product, a new feature or overhaul, or a new kind of system. false = a fix, a small adjustment, maintenance or an operational task. Written and committed before any model saw it.",
+  "rule_under_test": "Jev adds the brief line when depth.choice is FULL or CRITICAL with confidence >= 0.5, small_adjustment < 0.5 and code_only < 0.5. Jev may only add the line, never remove one the words give.",
+  "sentences": [
+    {
+      "text": "Build a chat app with realtime messaging for 50k users",
+      "new_work": true
+    },
+    {
+      "text": "Add memory to my agent so it remembers what each user told it last week",
+      "new_work": true
+    },
+    {
+      "text": "I want my tutoring bot to remember each student's weak topics across sessions",
+      "new_work": true
+    },
+    {
+      "text": "Build a leaderboard that updates instantly as players score",
+      "new_work": true
+    },
+    {
+      "text": "Make a multiplayer drawing game for classrooms",
+      "new_work": true
+    },
+    {
+      "text": "Create a booking system for my salon with reminders",
+      "new_work": true
+    },
+    {
+      "text": "Build a traffic simulation for our city planning class",
+      "new_work": true
+    },
+    {
+      "text": "Add a recommendations section that learns what each reader likes",
+      "new_work": true
+    },
+    {
+      "text": "We need a way for teachers to grade 300 recordings a day",
+      "new_work": true
+    },
+    {
+      "text": "Turn our evaluation scripts into a harness that runs every night against each model",
+      "new_work": true
+    },
+    {
+      "text": "Add live location tracking for delivery riders",
+      "new_work": true
+    },
+    {
+      "text": "Let users upload videos and share them with their batch",
+      "new_work": true
+    },
+    {
+      "text": "Start a marketplace where home cooks sell tiffins to office workers",
+      "new_work": true
+    },
+    {
+      "text": "Add an AI assistant that answers questions from our help articles",
+      "new_work": true
+    },
+    {
+      "text": "Build an internal dashboard for the sales team to track leads",
+      "new_work": true
+    },
+    {
+      "text": "Redesign the onboarding so new users record their first answer in under a minute",
+      "new_work": true
+    },
+    {
+      "text": "Add team workspaces so a coach can manage 40 students",
+      "new_work": true
+    },
+    {
+      "text": "Build a long-running agent that watches our competitors' pricing every day",
+      "new_work": true
+    },
+    {
+      "text": "Add a feed where students see each other's best answers",
+      "new_work": true
+    },
+    {
+      "text": "Create a WhatsApp bot that sends each learner a daily question",
+      "new_work": true
+    },
+    {
+      "text": "Fix the crash when the upload fails on a slow network",
+      "new_work": false
+    },
+    {
+      "text": "The chat bubble colour is wrong",
+      "new_work": false
+    },
+    {
+      "text": "Change the button text from Submit to Save",
+      "new_work": false
+    },
+    {
+      "text": "Rename the helper in the upload module",
+      "new_work": false
+    },
+    {
+      "text": "Add tests for the payment webhook handler",
+      "new_work": false
+    },
+    {
+      "text": "Update the README with the new setup steps",
+      "new_work": false
+    },
+    {
+      "text": "The leaderboard shows yesterday's scores until I refresh",
+      "new_work": false
+    },
+    {
+      "text": "Make the settings page load faster",
+      "new_work": false
+    },
+    {
+      "text": "Bump the React Native version to the latest patch",
+      "new_work": false
+    },
+    {
+      "text": "Fix the typo in the onboarding email",
+      "new_work": false
+    },
+    {
+      "text": "Move the API keys into environment variables",
+      "new_work": false
+    },
+    {
+      "text": "The agent forgets the user's name halfway through a conversation",
+      "new_work": false
+    },
+    {
+      "text": "Increase the font size on the recording screen",
+      "new_work": false
+    },
+    {
+      "text": "Delete the unused analytics events",
+      "new_work": false
+    },
+    {
+      "text": "Sort the orders list by newest first",
+      "new_work": false
+    },
+    {
+      "text": "The multiplayer lobby sometimes shows the wrong player count",
+      "new_work": false
+    },
+    {
+      "text": "Fix the date format on invoices to show DD/MM/YYYY",
+      "new_work": false
+    },
+    {
+      "text": "Speed up the build on CI",
+      "new_work": false
+    },
+    {
+      "text": "Add a loading spinner to the submit button",
+      "new_work": false
+    },
+    {
+      "text": "Retry the email send if the provider times out",
+      "new_work": false
+    }
+  ]
+}

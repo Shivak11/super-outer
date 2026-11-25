@@ -1,60 +1,82 @@
-# Super-Outer architecture
+# How Super-outer is organised
 
-![The builder and the installed skill both give input to Claude Code or Codex. The agent reads the project, chooses a level of care, checks scope and host permission, and reports its evidence. A separate loop handles synthetic evaluation.](architecture.svg)
+Super-outer has one conversation layer and several internal evidence layers.
 
-*Read down the map for a builder’s session. The strip at the bottom belongs to a maintainer evaluating synthetic responses.* [Open the full-size architecture diagram](architecture.svg)
+## The conversation layer
 
-## Follow the connections
+One router speaks to the owner. It receives the task, learns the repository's own
+rules, decides how much review is warranted, gathers specialist findings, and
+translates them into:
 
-| Layer | Input | Output | Boundary |
-|---|---|---|---|
-| Installation | A user runs the Vercel skills CLI | A local skill with `SKILL.md` and optional references | No hook or background process is included. GitHub and the package registry are part of the user's chosen installer path. |
-| Agent host | A creator’s request, accessible repository and loaded skill | Decisions, permitted tool calls and their results | Claude Code or Codex controls actual permissions. The skill cannot grant access. |
-| Review lanes | Repository evidence, affected users and reversibility | A direct fix, a bounded workflow plan or a wider approval decision | Stop at plan-only scope, an unresolved high-impact decision or a host refusal. |
-| Delivery | A requested, permitted change | Test outputs and a short explanation of what is still unverified | A local smoke test is not deployment proof. |
-| Evaluation | Synthetic case and model response | Structural checks and a human rubric | Run separately. No background collection of real prompts. |
+- the intended outcome;
+- the user or business consequence;
+- the recommendation;
+- any genuine choice for the owner;
+- what is proved and what remains open.
 
-For the registration form, the owner supplies the goal and the agent finds the relevant form and tests. A plan-only request ends with a recommendation. If implementation is requested, the agent checks that the work fits the confirmed scope and that the host permits the tools. A denial stops that action. An allowed local change leads to a check the owner can repeat. The evidence comes back to the owner, who can accept the change, ask for another check or request an undo.
+Specialists never interview the owner directly.
 
-The separate evaluation path begins with a [synthetic case](../evals/cases.json). The [grader](../evals/check.mjs) compares a supplied response with six structural expectations and prints the case’s human rubric. A maintainer reads the response before deciding whether to revise the instructions. A later revision reaches a user through installation.
+## The internal layers
 
-## Follow the draft decision
+The router selects among twelve peer engineering dimensions. Selection happens
+from evidence about impact, uncertainty, novelty, reversibility, affected
+boundaries, and missing information. File order or module order does not create
+priority.
 
-The [registration-form diagram](draft-decision.svg) follows one choice inside the Local example. One visitor gets a browser-only draft. When the device is shared, the owner chooses what may be retained. If expiry is chosen, the check moves from an immediate reload to a return after the agreed period. Passwords stay out of the draft on both paths.
+Warn-first enforcement does not change specialist selection or make delivery
+more important than another dimension. It is a separate consequence check
+after the router has gathered the relevant evidence.
 
-Its sources are [Example A in the skill](../skills/super-outer/SKILL.md) and the [shared-device journey](../skills/super-outer/references/journey-walkthrough.md). If those rules change, update the SVG, its [PNG copy](draft-decision.png), the [README](../README.md) and the [offline walkthrough](walkthrough.html) together.
+Each selected specialist loads only the relevant smaller playbooks. All use the
+same result contract, but the content differs by domain. UI/UX may contain more
+interpretive product decisions; security and data contain more non-negotiable
+conditions; backend, scale, and reliability often contain measured trade-offs.
 
-## Editable diagram
+Repository profiles point to local sources and record their content hashes.
+Changed sources are reread. Unchanged sources can be reused. A repeated pattern
+in code remains an observation; it never silently becomes company policy.
+Source and inheritance paths are checked after symbolic links are resolved.
+Status, authority, summary, and sources move together during inheritance, so an
+observed repository exception cannot wear an explicit company-policy label.
 
-```mermaid
-flowchart TD
-  accTitle: Super-Outer session and evaluation paths
-  accDescr: The user's brief and installed guidance reach the coding host. Project evidence determines the review lane. Owner scope and host permission determine whether the agent acts. Checks go back to the owner. Synthetic responses are graded separately for maintainer review.
-  C["Non-technical creator: describe what you want to build"]
-  I["User runs npx skills add"] --> S["Local SKILL.md + reference files"]
-  S --> H["Claude Code or Codex loads guidance"]
-  C --> H
-  H --> R["Read repository rules, relevant code and tests"]
-  R --> Q{"How wide is the impact?"}
-  Q -->|Tiny| T["Fix and check the specific issue"]
-  Q -->|Local| L["Walk the journey and choose a reversible default"]
-  Q -->|Wide| W["Name risks, recovery and the decision that needs approval"]
-  T --> B{"Implementation requested and authorised?"}
-  L --> B
-  W --> B
-  B -->|No| P["Return a plan, recommendation or approval request"]
-  B -->|Yes| A{"Host permits the action?"}
-  A -->|Denied| D["Stop the action; explain what cannot be verified"]
-  A -->|Allowed| X["Make the scoped change and run observable checks"]
-  X --> G["Report what changed, evidence and unverified items"]
-  G --> C
+## Enforcement and proof
 
-  subgraph E["Separate synthetic evaluation"]
-    F["Fixture"] --> M["Fresh agent response"]
-    M --> J["Structural checks + human rubric"]
-    J --> U["Maintainer edits and reviews the skill"]
-  end
-  U -. "A future release, when installed by the user" .-> S
-```
+Ordinary material work does not require a Super-outer approval phrase.
+Brainstorming, evidence gathering, reversible code changes, tests, builds, and
+routine repository delivery keep moving. A short-lived, task-bound approval is
+reserved for the rare extremely critical action. Repository gates independently
+calculate the real branch, base, changed files, deleted files, worktree,
+current version, CI version, and release version.
 
-*The editable map follows the same two paths described in [Follow the connections](#follow-the-connections).*
+A mismatch between the recorded and active branch normally produces an
+advisory warning. Read-only work, local checks, builds, reversible code changes,
+routine CI recovery, and unfamiliar non-critical tools continue. The warning
+tells the owner what was expected, what was found, why
+it matters for this action, and whether work may continue. The host uses a
+single orange `⚠️ Worth a look` line. Without colour, the same emoji and words
+remain.
+
+The enforcement layer escalates to a rare red `🛑 Stopping here` line only for an
+extremely critical action: production or private-data harm; identity,
+permissions, secrets, payments, privacy, or security changes; destructive or
+privileged production infrastructure; consequential external actions; production
+delivery; or anything that defeats recovery, rollback, audit, or repository
+protection. Without colour, the same emoji and words remain.
+
+Unknown is not treated as proof of danger. When the hook cannot classify a
+tool or shell command and finds no concrete extreme consequence, it quietly
+lets the work continue.
+
+Independent review remains a separate proof signal. Its concern or absence is
+advisory for QUICK, FOCUSED, and FULL and must be disclosed. It may block only
+an extremely critical action or a CRITICAL production-proof claim. This keeps
+ordinary work moving without turning a warning into evidence.
+
+Delivery then keeps each proof layer separate. The internal records are
+versioned JSON so Claude Code and Codex adapters can produce equivalent
+decisions even though the hosts install plugins differently.
+
+Claude reviewer roles use the plugin's native agent records. Codex receives the
+same canonical contracts as native `.codex/agents` TOML files. Installation
+copies those roles into the isolated Codex configuration without replacing
+unrelated or unmanaged roles.

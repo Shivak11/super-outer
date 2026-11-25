@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1460" width="1440" height="1460" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Super-outer: how the parts connect</title>
+<desc id="desc">The owner types to Claude Code, Codex or Cursor. Super-outer's prompt hook routes the typed words, the router skill reads the project's rules, loads only the specialists the route names and turns their findings into plain decisions, and the command layer keeps records in the owner's project and runs the tool check against public registries. Jev, an optional routing model reached through OpenRouter, is off until the owner adds a key.</desc>
+<metadata id="diagram-facts">{"version":"6.6.0","hosts":["Claude Code","Codex","Cursor"],"hookEvents":["UserPromptSubmit","SessionStart","PreToolUse","Stop"],"cursorEvents":["beforeSubmitPrompt","preToolUse","stop"],"cursorSessionStart":false,"moduleCount":12,"reviewAgentCount":6,"shippedSkills":["draw-system-diagram","jev-opportunities","caveman-opportunities","edge-cases"],"optionalParts":["brief-me","meditate"],"jevHost":"openrouter.ai","jevCharacters":1500,"jevWithoutKey":"no_key","registries":["npm","PyPI","skills.sh","the MCP Registry","GitHub","unpkg"],"records":[".engineering/super-outer/current-task.json",".engineering/super-outer/ledger.json",".engineering/super-outer/tool-check.json",".engineering/super-outer/proof-obligations.json"],"installCommands":["npm run setup","npm run install:cursor"],"ciCommand":"npm run verify","example":{"request":"Add Google sign-in to my app","depth":"CRITICAL","questions":12,"specialists":["backend-api","delivery-release","frontend-client","security-privacy-abuse"]},"otherPath":{"request":"Fix the typo on the pricing page","depth":"SMALL_SAFE"}}</metadata>
+<defs>
+<marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1971C2"/></marker>
+<marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8590C"/></marker>
+<marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0B8A5F"/></marker>
+<marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6741D9"/></marker>
+<marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0C8599"/></marker>
+<marker id="a-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#868E96"/></marker>
+<marker id="a-indigo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4263EB"/></marker>
+</defs>
+<rect width="1440" height="1460" fill="#FFFFFF"/>
+<text x="40" y="62" font-size="42" font-weight="800" fill="#13294B">Super-outer</text>
+<text x="40" y="100" font-size="20" fill="#344054">How the parts connect in version 6.6.0, as built on 18 November 2026</text>
+<rect x="1060" y="26" width="350" height="78" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<rect x="1078" y="40" width="42" height="20" rx="5" fill="#FFFFFF" stroke="#334155" stroke-width="2"/>
+<text x="1132" y="56" font-size="17" fill="#1F2937">Live</text>
+<rect x="1078" y="72" width="42" height="20" rx="5" fill="#FFFFFF" stroke="#334155" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="1132" y="88" font-size="17" fill="#1F2937">Built and switched off, or planned</text>
+<rect x="30" y="140" width="220" height="580" rx="16" fill="#E7F5FF" stroke="#1971C2" stroke-width="2.5"/>
+<text x="50" y="174" font-size="25" font-weight="800" fill="#1864AB">Owner</text>
+<path d="M50 190h170a10 10 0 0 1 10 10v58a10 10 0 0 1-10 10H96l-20 16v-16H60a10 10 0 0 1-10-10v-58a10 10 0 0 1 10-10z" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="64" y="222" font-size="17" fill="#1F2937">“Add Google</text>
+<text x="64" y="246" font-size="17" fill="#1F2937">sign-in to my app”</text>
+<rect x="50" y="300" width="180" height="220" rx="10" fill="#FFFFFF" stroke="#1971C2" stroke-width="2"/>
+<text x="64" y="330" font-size="21" font-weight="700" fill="#1864AB">Coding agent</text>
+<text x="64" y="356" font-size="16" fill="#344054">Claude Code,</text>
+<text x="64" y="378" font-size="16" fill="#344054">Codex or Cursor.</text>
+<rect x="370" y="140" width="640" height="720" rx="16" fill="#FFF4E6" stroke="#E8590C" stroke-width="2.5"/>
+<text x="390" y="174" font-size="25" font-weight="800" fill="#D9480F">Super-outer, on the owner's computer</text>
+<rect x="390" y="192" width="270" height="150" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="404" y="222" font-size="21" font-weight="700" fill="#D9480F">Router skill</text>
+<text x="404" y="248" font-size="16" fill="#344054">The only part that talks to</text>
+<text x="404" y="270" font-size="16" fill="#344054">the owner. Reads the</text>
+<text x="404" y="292" font-size="16" fill="#344054">project's own rules first.</text>
+<rect x="390" y="392" width="270" height="190" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="404" y="422" font-size="21" font-weight="700" fill="#D9480F">Prompt hook</text>
+<text x="404" y="448" font-size="16" fill="#344054">Runs on each typed prompt,</text>
+<text x="404" y="470" font-size="16" fill="#344054">at session start, on tool</text>
+<text x="404" y="492" font-size="16" fill="#344054">calls and at each turn end.</text>
+<rect x="390" y="632" width="270" height="130" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="404" y="662" font-size="21" font-weight="700" fill="#D9480F">Cursor bridge</text>
+<text x="404" y="688" font-size="16" fill="#344054">Runs the same hook in</text>
+<text x="404" y="710" font-size="16" fill="#344054">Cursor, which has no</text>
+<text x="404" y="732" font-size="16" fill="#344054">session-start event.</text>
+<rect x="740" y="192" width="250" height="150" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="754" y="222" font-size="21" font-weight="700" fill="#D9480F">12 specialists</text>
+<text x="754" y="248" font-size="16" fill="#344054">Security, data, frontend</text>
+<text x="754" y="270" font-size="16" fill="#344054">and nine more. They give</text>
+<text x="754" y="292" font-size="16" fill="#344054">findings, never questions.</text>
+<rect x="740" y="382" width="250" height="110" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="754" y="412" font-size="21" font-weight="700" fill="#D9480F">6 review agents</text>
+<text x="754" y="438" font-size="16" fill="#344054">Check finished work apart</text>
+<text x="754" y="460" font-size="16" fill="#344054">from the agent that built it.</text>
+<rect x="740" y="600" width="250" height="110" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="754" y="630" font-size="21" font-weight="700" fill="#D9480F">Tool check</text>
+<text x="754" y="656" font-size="16" fill="#344054">Looks up the project's</text>
+<text x="754" y="678" font-size="16" fill="#344054">packages, skills and servers.</text>
+<rect x="740" y="740" width="250" height="100" rx="10" fill="#FFFFFF" stroke="#E8590C" stroke-width="2"/>
+<text x="754" y="770" font-size="21" font-weight="700" fill="#D9480F">Command layer</text>
+<text x="754" y="796" font-size="16" fill="#344054">The super-outer command</text>
+<text x="754" y="818" font-size="16" fill="#344054">that keeps the records.</text>
+<rect x="1050" y="140" width="360" height="252" rx="16" fill="#FFF4E6" stroke="#E8590C" stroke-width="2.5"/>
+<text x="1070" y="174" font-size="25" font-weight="800" fill="#D9480F">Skills that ship with it</text>
+<text x="1070" y="206" font-size="17" font-weight="700" fill="#1F2937">Draw system diagram</text>
+<text x="1070" y="227" font-size="16" fill="#344054">Draws diagrams like this one.</text>
+<text x="1070" y="255" font-size="17" font-weight="700" fill="#1F2937">Jev opportunities</text>
+<text x="1070" y="276" font-size="16" fill="#344054">Finds model calls with fixed answers.</text>
+<text x="1070" y="304" font-size="17" font-weight="700" fill="#1F2937">Caveman opportunities</text>
+<text x="1070" y="325" font-size="16" fill="#344054">Finds text that only machines read.</text>
+<text x="1070" y="353" font-size="17" font-weight="700" fill="#1F2937">Edge cases</text>
+<text x="1070" y="374" font-size="16" fill="#344054">Ranks the common ways a change breaks.</text>
+<rect x="1050" y="410" width="360" height="450" rx="16" fill="#EBFBEE" stroke="#0B8A5F" stroke-width="2.5"/>
+<text x="1070" y="444" font-size="25" font-weight="800" fill="#087F5B">Outside services</text>
+<rect x="1070" y="462" width="320" height="150" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1084" y="492" font-size="21" font-weight="700" fill="#087F5B">Jev, through OpenRouter</text>
+<text x="1084" y="518" font-size="16" fill="#344054">Reads up to 1,500 characters</text>
+<text x="1084" y="540" font-size="16" fill="#344054">of the typed request. Off</text>
+<text x="1084" y="562" font-size="16" fill="#344054">until the owner adds a key.</text>
+<rect x="1190" y="630" width="200" height="160" rx="10" fill="#FFFFFF" stroke="#0B8A5F" stroke-width="2"/>
+<text x="1204" y="660" font-size="21" font-weight="700" fill="#087F5B">Public registries</text>
+<text x="1204" y="686" font-size="16" fill="#344054">npm, PyPI, skills.sh,</text>
+<text x="1204" y="708" font-size="16" fill="#344054">the MCP Registry,</text>
+<text x="1204" y="730" font-size="16" fill="#344054">GitHub and unpkg.</text>
+<rect x="30" y="900" width="420" height="240" rx="16" fill="#E3FAFC" stroke="#0C8599" stroke-width="2.5"/>
+<text x="50" y="934" font-size="25" font-weight="800" fill="#0B7285">Install and checks</text>
+<text x="50" y="966" font-size="17" font-weight="700" fill="#1F2937">npm run setup</text>
+<text x="50" y="988" font-size="16" fill="#344054">Installs it in Claude Code and Codex.</text>
+<text x="50" y="1022" font-size="17" font-weight="700" fill="#1F2937">npm run install:cursor</text>
+<text x="50" y="1044" font-size="16" fill="#344054">Installs Cursor's own copy.</text>
+<text x="50" y="1078" font-size="17" font-weight="700" fill="#1F2937">CI runs npm run verify</text>
+<text x="50" y="1100" font-size="16" fill="#344054">on every push and pull request.</text>
+<rect x="510" y="900" width="280" height="240" rx="16" fill="#FFF4E6" stroke="#E8590C" stroke-width="2.5"/>
+<text x="530" y="934" font-size="25" font-weight="800" fill="#D9480F">Optional part</text>
+<text x="530" y="966" font-size="17" font-weight="700" fill="#1F2937">Brief me and Meditate</text>
+<text x="530" y="988" font-size="16" fill="#344054">Learning skills for Claude</text>
+<text x="530" y="1010" font-size="16" fill="#344054">Code and Codex.</text>
+<text x="530" y="1122" font-size="16" fill="#1F2937">Chosen at install.</text>
+<rect x="830" y="900" width="580" height="240" rx="16" fill="#F3F0FF" stroke="#6741D9" stroke-width="2.5"/>
+<text x="850" y="934" font-size="25" font-weight="800" fill="#5F3DC4">Records in the owner's project</text>
+<text x="850" y="958" font-size="16" fill="#344054">Kept in .engineering/super-outer/</text>
+<path d="M850 990c0-8 18-14 40-14s40 6 40 14v40c0 8-18 14-40 14s-40-6-40-14z" fill="#FFFFFF" stroke="#6741D9" stroke-width="2.5"/>
+<path d="M850 990c0 8 18 14 40 14s40-6 40-14" fill="none" stroke="#6741D9" stroke-width="2.5"/>
+<text x="890" y="1030" font-size="16" font-weight="800" fill="#5F3DC4" text-anchor="middle">Task</text>
+<text x="944" y="1000" font-size="16" fill="#344054">current-task.json: the</text>
+<text x="944" y="1022" font-size="16" fill="#344054">task and its scope.</text>
+<path d="M1130 990c0-8 18-14 40-14s40 6 40 14v40c0 8-18 14-40 14s-40-6-40-14z" fill="#FFFFFF" stroke="#6741D9" stroke-width="2.5"/>
+<path d="M1130 990c0 8 18 14 40 14s40-6 40-14" fill="none" stroke="#6741D9" stroke-width="2.5"/>
+<text x="1170" y="1030" font-size="16" font-weight="800" fill="#5F3DC4" text-anchor="middle">Ledger</text>
+<text x="1224" y="1000" font-size="16" fill="#344054">ledger.json: choices</text>
+<text x="1224" y="1022" font-size="16" fill="#344054">put off until later.</text>
+<path d="M850 1072c0-8 18-14 40-14s40 6 40 14v40c0 8-18 14-40 14s-40-6-40-14z" fill="#FFFFFF" stroke="#6741D9" stroke-width="2.5"/>
+<path d="M850 1072c0 8 18 14 40 14s40-6 40-14" fill="none" stroke="#6741D9" stroke-width="2.5"/>
+<text x="890" y="1112" font-size="16" font-weight="800" fill="#5F3DC4" text-anchor="middle">Tools</text>
+<text x="944" y="1082" font-size="16" fill="#344054">tool-check.json: the</text>
+<text x="944" y="1104" font-size="16" fill="#344054">owner's answers.</text>
+<path d="M1130 1072c0-8 18-14 40-14s40 6 40 14v40c0 8-18 14-40 14s-40-6-40-14z" fill="#FFFFFF" stroke="#6741D9" stroke-width="2.5"/>
+<path d="M1130 1072c0 8 18 14 40 14s40-6 40-14" fill="none" stroke="#6741D9" stroke-width="2.5"/>
+<text x="1170" y="1112" font-size="16" font-weight="800" fill="#5F3DC4" text-anchor="middle">Proof</text>
+<text x="1224" y="1082" font-size="16" fill="#344054">proof-obligations.json:</text>
+<text x="1224" y="1104" font-size="16" fill="#344054">what is still unproved.</text>
+<path d="M230 450H386" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+<text x="310" y="442" font-size="14" font-weight="700" fill="#1971C2" text-anchor="middle">typed prompt</text>
+<path d="M390 330H234" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="310" y="322" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">decisions</text>
+<path d="M190 520V692H386" fill="none" stroke="#1971C2" stroke-width="3" marker-end="url(#a-blue)"/>
+<text x="310" y="684" font-size="14" font-weight="700" fill="#1971C2" text-anchor="middle">Cursor</text>
+<path d="M450 392V346" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="462" y="374" font-size="14" font-weight="700" fill="#E8590C">route</text>
+<path d="M450 632V586" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="462" y="614" font-size="14" font-weight="700" fill="#E8590C">passes on</text>
+<path d="M660 240H736" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="700" y="232" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">loads</text>
+<path d="M740 300H664" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="703" y="292" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">findings</text>
+<path d="M660 524H1066" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="865" y="516" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">typed request</text>
+<path d="M1070 572H664" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="865" y="564" font-size="14" font-weight="700" fill="#0B8A5F" text-anchor="middle">its reading</text>
+<path d="M865 740V714" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="877" y="732" font-size="14" font-weight="700" fill="#E8590C">runs</text>
+<path d="M990 650H1186" fill="none" stroke="#E8590C" stroke-width="3" marker-end="url(#a-orange)"/>
+<text x="1120" y="642" font-size="14" font-weight="700" fill="#E8590C" text-anchor="middle">public names</text>
+<path d="M1190 692H994" fill="none" stroke="#0B8A5F" stroke-width="3" marker-end="url(#a-green)"/>
+<text x="1120" y="684" font-size="14" font-weight="700" fill="#0B8A5F" text-anchor="middle">versions, skills</text>
+<path d="M865 840V896" fill="none" stroke="#E8590C" stroke-width="3" marker-start="url(#a-orange)" marker-end="url(#a-orange)"/>
+<text x="877" y="886" font-size="14" font-weight="700" fill="#E8590C">reads and writes</text>
+<path d="M140 900V524" fill="none" stroke="#0C8599" stroke-width="3" marker-end="url(#a-teal)"/>
+<text x="152" y="886" font-size="14" font-weight="700" fill="#0C8599">installs</text>
+<path d="M450 1010H506" fill="none" stroke="#0C8599" stroke-width="3" marker-end="url(#a-teal)"/>
+<text x="480" y="1002" font-size="14" font-weight="700" fill="#0C8599" text-anchor="middle">adds</text>
+<rect x="30" y="1180" width="1380" height="250" rx="16" fill="#EDF2FF" stroke="#4263EB" stroke-width="2.5"/>
+<text x="50" y="1214" font-size="21" font-weight="800" fill="#364FC7">A typical request, start to finish</text>
+<text x="50" y="1248" font-size="17" fill="#1F2937">1. The owner types “Add Google sign-in to my app”. The prompt hook passes on only those typed words.</text>
+<text x="50" y="1276" font-size="17" fill="#1F2937">2. Routing reads it as sign-in work: CRITICAL, up to 12 questions, and the security, backend, frontend and release specialists.</text>
+<text x="50" y="1304" font-size="17" fill="#1F2937">3. The router reads the project's own rules first, then each of those four specialists returns its findings.</text>
+<text x="50" y="1332" font-size="17" fill="#1F2937">4. The owner sees plain decisions, each with one recommendation, and answers them.</text>
+<text x="50" y="1360" font-size="17" fill="#1F2937">5. The task record and the list of unproved checks are saved. Going live in production waits for one approval phrase.</text>
+<text x="50" y="1400" font-size="17" fill="#1F2937">A request such as “Fix the typo on the pricing page” routes as SMALL_SAFE, and Super-outer stays quiet.</text>
+</svg>

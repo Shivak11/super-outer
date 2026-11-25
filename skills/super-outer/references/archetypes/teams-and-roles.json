@@ -1,0 +1,202 @@
+{
+  "id": "teams-and-roles",
+  "name": "Teams, invitations and who can do what",
+  "matches": [
+    "invite teammates",
+    "invite a teammate",
+    "invite team members",
+    "invite a team member",
+    "invite their team",
+    "invite your team",
+    "invite colleagues",
+    "invite coworkers",
+    "invite people to the workspace",
+    "invite to the workspace",
+    "invite to the team",
+    "team invites",
+    "team invitation",
+    "team workspace",
+    "multi tenant",
+    "multi tenancy",
+    "multitenant",
+    "tenant isolation",
+    "roles and permissions",
+    "role based access",
+    "member roles",
+    "seat based billing",
+    "per seat billing",
+    "transfer ownership of the team",
+    "transfer ownership of the workspace",
+    "remove a member from the team",
+    "remove a member from the workspace",
+    "remove a teammate",
+    "member management",
+    "manage workspace members",
+    "manage team members"
+  ],
+  "modules": [
+    "security-privacy-abuse",
+    "backend-api",
+    "data-migrations",
+    "frontend-client"
+  ],
+  "failureModes": [
+    {
+      "id": "organisation-boundary",
+      "prompt": "Should the database itself refuse to show one organisation's data to another, even when the app code has a mistake?",
+      "why": "a query written without the organisation check shows one company's private data to another, and a database rule blocks that",
+      "options": [
+        {
+          "label": "Enforced in the database as well",
+          "consequence": "more setup, and one missed check in the code cannot expose another company"
+        },
+        {
+          "label": "Checked in the app code only",
+          "consequence": "simpler, and one missed check shows a company's data to strangers"
+        }
+      ],
+      "recommended": "Enforced in the database as well",
+      "lookFor": [
+        "row level security",
+        "organization_id",
+        "organisation_id",
+        "tenant_id",
+        "workspace_id"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that signs in as a member of one organisation and asserts every list and lookup returns nothing from another organisation, with the app check removed"
+    },
+    {
+      "id": "removal-takes-effect",
+      "prompt": "When someone is removed from a team, should they lose access immediately, including on devices where they are signed in?",
+      "why": "removal often follows someone leaving the company, which is when continued access causes the most harm",
+      "options": [
+        {
+          "label": "Immediately, on every device",
+          "consequence": "needs a membership check on each request, and a removed person sees nothing more"
+        },
+        {
+          "label": "When their session expires",
+          "consequence": "simpler, and a removed person keeps access for hours or days"
+        }
+      ],
+      "recommended": "Immediately, on every device",
+      "lookFor": [
+        "revokeSession",
+        "revoke_session",
+        "removeMember",
+        "remove_member",
+        "revokeAccess"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that removes a member while they are signed in on another device and asserts their next request is refused"
+    },
+    {
+      "id": "role-change-history",
+      "prompt": "Should every change to someone's role be recorded with who made it and when?",
+      "why": "without a history nobody can tell who gave a person admin rights, and the history cannot be rebuilt later",
+      "options": [
+        {
+          "label": "Record every role change",
+          "consequence": "a small history table, and disputes about access can be settled"
+        },
+        {
+          "label": "Keep only the current role",
+          "consequence": "simpler, and nobody can tell who granted admin rights"
+        }
+      ],
+      "recommended": "Record every role change",
+      "lookFor": [
+        "role_changes",
+        "role_history",
+        "audit_log",
+        "auditLog",
+        "member_events"
+      ],
+      "sequence": "now",
+      "provenBy": "a test that changes a member's role and asserts a record of the old role, the new role, who changed it and when"
+    },
+    {
+      "id": "single-use-invitations",
+      "prompt": "Should an invitation work only once, and only for the email address it was sent to?",
+      "why": "a forwarded or posted invitation link can otherwise let a stranger join the team and see its data",
+      "options": [
+        {
+          "label": "Once, for the invited address only",
+          "consequence": "a forwarded link is useless to anyone else"
+        },
+        {
+          "label": "Anyone with the link can join",
+          "consequence": "easier to share, and a posted link lets people outside the team join"
+        }
+      ],
+      "recommended": "Once, for the invited address only",
+      "lookFor": [
+        "invite_token",
+        "inviteToken",
+        "invitation_token",
+        "invited_email"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that accepts an invitation, asserts a second use is refused, and asserts a different signed-in address cannot accept it"
+    },
+    {
+      "id": "owner-handover",
+      "prompt": "If the owner of a team leaves, how should someone else take over?",
+      "why": "a team whose only owner has left is unable to change billing, roles or settings without our help",
+      "options": [
+        {
+          "label": "The owner hands over before leaving",
+          "consequence": "a short feature to build, and teams are never left without an owner"
+        },
+        {
+          "label": "Our support staff reassign it",
+          "consequence": "nothing to build, and every handover needs one of our staff"
+        },
+        {
+          "label": "Require a second owner",
+          "consequence": "no team is ever without an owner, and small teams must name two"
+        }
+      ],
+      "recommended": "The owner hands over before leaving",
+      "lookFor": [
+        "transferOwnership",
+        "transfer_ownership",
+        "changeOwner",
+        "change_owner",
+        "owner_transfer"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that hands a team to another member and asserts the new owner can change billing and roles while the old owner cannot"
+    },
+    {
+      "id": "billed-seats-match",
+      "prompt": "If the price depends on team size, should the bill change automatically when members join or leave?",
+      "why": "a bill that does not match the team size either overcharges customers or gives away seats for free",
+      "options": [
+        {
+          "label": "Change the bill automatically",
+          "consequence": "needs a link to billing, and charges always match the team"
+        },
+        {
+          "label": "Adjust bills by hand",
+          "consequence": "nothing to build, and bills differ from the real team size until someone fixes them"
+        },
+        {
+          "label": "Price does not depend on team size",
+          "consequence": "nothing to keep matched, and large teams pay the same as small ones"
+        }
+      ],
+      "recommended": "Change the bill automatically",
+      "lookFor": [
+        "seat_count",
+        "seatCount",
+        "per_seat",
+        "seats_billed",
+        "updateSeats"
+      ],
+      "sequence": "decide",
+      "provenBy": "a test that adds and removes a member and asserts the billed seat count matches the member count after each change"
+    }
+  ]
+}
