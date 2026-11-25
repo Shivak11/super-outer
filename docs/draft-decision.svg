@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="666" viewBox="0 0 1440 666" data-diagram="pipeline" role="img" aria-labelledby="title desc" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="title">Who sits down next?</title>
+  <desc id="desc">The agent reads the registration form request in context. For a single visitor it can recommend a browser-only draft and check that a reload restores name and email but leaves the password empty. On a shared computer the owner chooses how long a draft may remain. If the owner chooses expiry, check the form again after that period.</desc>
+  <metadata id="diagram-facts">{"example":"registration form","careLevel":"Local","draftLocation":"browser","restoredFields":["name","email"],"excludedField":"password","sharedDeviceDecision":"expiry"}</metadata>
+  <defs>
+    <marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1d529d"/></marker>
+    <marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#176647"/></marker>
+  </defs>
+  <rect width="1440" height="666" fill="#FFFFFF"/>
+  <text x="40" y="75" font-size="52" font-weight="800" fill="#1c253e">Who sits down next?</text>
+  <text x="42" y="118" font-size="27" fill="#414d64">One registration form. The device changes the decision and the check.</text>
+
+  <rect x="30" y="155" width="1380" height="482" rx="22" fill="#faf8f3" stroke="#d4d1c9" stroke-width="2"/>
+  <rect x="50" y="298" width="308" height="197" rx="16" fill="#ffffff" stroke="#176647" stroke-width="3"/>
+  <text x="74" y="341" font-size="28" font-weight="700" fill="#122b29">Read the form</text>
+  <text x="74" y="376" font-size="20" font-weight="700" fill="#176647">Coding agent</text>
+  <text x="74" y="423" font-size="23" fill="#293a43">A visitor wants their</text>
+  <text x="74" y="455" font-size="23" fill="#293a43">draft back after reload.</text>
+
+  <rect x="520" y="183" width="320" height="188" rx="16" fill="#ddf5e6" stroke="#176647" stroke-width="3"/>
+  <text x="544" y="225" font-size="28" font-weight="700" fill="#122b29">Keep a local draft</text>
+  <text x="544" y="260" font-size="20" font-weight="700" fill="#176647">Coding agent</text>
+  <text x="544" y="307" font-size="23" fill="#293a43">Save name and email</text>
+  <text x="544" y="339" font-size="23" fill="#293a43">only in this browser.</text>
+
+  <rect x="520" y="422" width="320" height="188" rx="16" fill="#e3eeff" stroke="#1d529d" stroke-width="3"/>
+  <text x="544" y="464" font-size="27" font-weight="700" fill="#1c253e">Decide when to forget</text>
+  <text x="544" y="499" font-size="20" font-weight="700" fill="#1d529d">You, the builder</text>
+  <text x="544" y="546" font-size="23" fill="#293a43">The agent recommends</text>
+  <text x="544" y="578" font-size="23" fill="#293a43">a short expiry.</text>
+
+  <rect x="1006" y="183" width="380" height="188" rx="16" fill="#eeebff" stroke="#56429a" stroke-width="3"/>
+  <text x="1030" y="225" font-size="28" font-weight="700" fill="#33265f">Reload the form</text>
+  <text x="1030" y="260" font-size="20" font-weight="700" fill="#56429a">Expected in the demo</text>
+  <text x="1030" y="307" font-size="23" fill="#293a43">Name and email return.</text>
+  <text x="1030" y="339" font-size="23" fill="#293a43">Password stays empty.</text>
+
+  <rect x="1006" y="422" width="380" height="188" rx="16" fill="#eeebff" stroke="#56429a" stroke-width="3"/>
+  <text x="1030" y="464" font-size="28" font-weight="700" fill="#33265f">Return after expiry</text>
+  <text x="1030" y="499" font-size="20" font-weight="700" fill="#56429a">Expected on the shared device</text>
+  <text x="1030" y="546" font-size="23" fill="#293a43">The next visitor opens</text>
+  <text x="1030" y="578" font-size="23" fill="#293a43">an empty form.</text>
+
+  <path d="M358 374H383V277H520" fill="none" stroke="#176647" stroke-width="3" marker-end="url(#green)"/>
+  <text x="451" y="263" text-anchor="middle" font-size="16" font-weight="700" fill="#176647">one visitor</text>
+  <path d="M358 419H383V516H520" fill="none" stroke="#176647" stroke-width="3" marker-end="url(#green)"/>
+  <text x="451" y="502" text-anchor="middle" font-size="16" font-weight="700" fill="#176647">shared device</text>
+  <path d="M840 277H1006" fill="none" stroke="#176647" stroke-width="3" marker-end="url(#green)"/>
+  <text x="923" y="263" text-anchor="middle" font-size="16" font-weight="700" fill="#176647">draft rules</text>
+  <path d="M840 516H1006" fill="none" stroke="#1d529d" stroke-width="3" marker-end="url(#blue)"/>
+  <text x="923" y="502" text-anchor="middle" font-size="16" font-weight="700" fill="#1d529d">if expiry chosen</text>
+</svg>

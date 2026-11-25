@@ -1,89 +1,80 @@
 # Super-Outer
 
-Super-Outer is for non-technical people who want to code creatively. Start with an idea in your own words. The skill helps Claude Code or Codex turn it into a change you can understand, steer and check without learning the names of all the things under the bonnet.
+Super-Outer is an MIT-licensed starter skill for non-technical people who want to build creatively with Claude Code or Codex. Tell your agent what someone should be able to do. It reads your project, recommends a change, and gives you something you can try for yourself.
 
-This is the public, skill-only starter edition. It adds an engineering workflow, not another model or service.
+## Try it on one form
 
-## Your first minute
+**1. In your terminal**, from the project where you want to use the skill, run the Vercel skills installer. It requires [Node.js](https://nodejs.org/) 22.20 or later.
 
-1. Install it (one command, below).
-2. Open your coding agent in a project.
-3. Ask for a change and mention the skill, for example: `Use super-outer. Make the registration form keep a draft if the page reloads.`
-4. Expect the agent to read your repository's rules first, pick a level of care, make a recommendation, and finish with what changed, what it checked, and what it did not check.
-
-## What this installs
-
-One skill folder named `super-outer`, containing `SKILL.md` and two optional references. The eval runner in this repository is not installed with the skill.
-
-It does not install hooks, background processes, telemetry, or credentials. The skill itself initiates no outbound calls, although the coding agent still uses its normal model service and any tools you permit. Installing it is done by the Vercel `skills` tool, which you run yourself.
-
-```
+```sh
 npx skills add Shivak11/super-outer --skill super-outer
 ```
 
-## Your agent still controls the tools
+**2. In Claude Code or Codex**, open that project and paste this request.
 
-Instructions are not enforcement. This skill cannot stop an agent from misbehaving, cannot grant permissions, and never overrides your host's permission prompts. If you deny an action, the skill tells the agent to adjust, not to find a way around it. Your protection against bad actions is your host's permission settings and your own review, not this file.
+> Use super-outer. In my local demo, keep my name and email in the registration form if I reload. Start with a plan only.
 
-## Architecture
+**3. Read the reply.** Look for the form the agent found, which fields it would save, and what you would see after reloading. At this point you should still have your original files. When the plan fits, say **“Make that change in the local demo and run the checks.”**
 
-![Architecture showing the creative brief, change sizing, material review, host permissions, verification and separate eval loop](docs/architecture.svg)
+**[Open the visual walkthrough](docs/walkthrough.html)** · On GitHub, choose **Download raw file**, then open `walkthrough.html` in your browser. The whole guide works offline in that one file.
 
-[Detailed walkthrough and diagram source](docs/architecture.md)
+If the installer fails or your agent cannot find the skill, check that you chose the host and project you are using. With a copy of this repository open, you can also ask the agent to read [the skill instructions](skills/super-outer/SKILL.md) and walk through the example there. If it cannot read your form, ask it to identify what it could see and which parts of its plan are assumptions.
 
-## How it works in practice
+## Who sits down next?
 
-When invoked (by naming the skill in your request, or when your agent host decides the description matches; exact invocation syntax differs by host, so check your host's skill documentation), the agent follows this flow:
+On your own computer, a draft saves retyping. On a shared one, the same feature could put your email in front of the next visitor.
 
-1. Reads repository rules and evidence first.
-2. Sizes the change by blast radius: tiny, local, or wide.
-3. Sketches user journeys only when behavior visible to people changes materially.
-4. Asks you a question only for a real user, policy, or trade-off decision with no safe reversible default.
-5. Always gives a recommendation, with reason and cost.
-6. Names observable checks and what is not covered.
-7. Reports honestly, without implying unverified outcomes.
+![Decision map. A personal demo can use a browser-only draft. A shared computer adds a decision for the owner about expiry and a check after the chosen period.](docs/draft-decision.png)
 
-| Blast radius | Example | What you should see |
-|---|---|---|
-| Tiny | Fix a typo in a button label | A quick fix and a two-line report. No plan, no questions. |
-| Local | Save a form draft after reload | Short plan, short journey, tests for visible behavior. |
-| Wide | Change how personal data is stored or deleted | A plan, risks, rollback idea, and a request for your confirmation before changes. |
+*Follow the upper path for the original demo. Take the lower path when someone else will use the same browser.* [Full-size diagram](docs/draft-decision.svg)
 
-## Example 1: registration form that saves a draft (local demo)
+- **One visitor.** The agent can choose a reversible default. Keep name and email in this browser, leave passwords out of the draft, and clear it after a successful submission.
+- **Shared computer.** You decide how long someone’s details may remain. The agent should ask one question and give a pick. A short expiry preserves a brief interruption and costs a little implementation work. Someone else could still sit down before it expires. If visitors switch seats immediately, consider skipping saved drafts on that machine. Ask for a check of the option you choose.
 
-You say: `Use super-outer. In my local demo, the registration form should keep what I typed if I reload the page.`
+## How much care does the change need?
 
-A good response looks like this in spirit:
+The agent looks at your project rules, then the nearby code and tests, then what it can safely observe. It sizes the work by who could be affected if it goes wrong and how hard it would be to undo. All three levels can apply to the same form.
 
-- Level: Local. Reversible, contained to the demo, but it stores typed input in the browser.
-- Journey: type name and email, reload, fields are still there; submit, draft is cleared; if browser storage is blocked, the form still works.
-- Defaults chosen without bothering you: browser-only storage, never save password fields, clear on submit.
-- A question only if it matters: will this demo run on shared computers? Recommendation: let drafts expire, because the next person could see someone's entry.
-- Checks: fill, reload, values return; submit, reload, fields empty; password field stays empty after reload; blocked storage does not break submit.
-- Not covered unless tested: other browsers, mobile, a real server.
+| Level | Your request | What to look for |
+| --- | --- | --- |
+| **Tiny** | “The button says Submt. Fix the spelling.” | Correct the label, look for the same typo elsewhere, run the cheapest relevant check. A few lines of feedback suffice. |
+| **Local** | “Remember my draft in this demo.” | A short plan for one screen. Walk through typing, reloading, submitting and recovering from trouble. Check what the visitor sees. |
+| **Wide** | “Change how we delete everyone’s saved registration details.” | A plan naming the people and data affected, what could go wrong, and how recovery would work. The agent asks you to confirm the scope before acting. |
 
-## Example 2: a tiny change
+If the agent has missed who else uses the form, say **“Treat this as wide. Show me who is affected and how we could back out.”**
 
-You say: `Use super-outer. The button says Submt, fix it.`
+## What would count as evidence?
 
-Expected: the agent fixes the label, checks for the same typo elsewhere, runs a cheap check if one exists, and reports in a few lines. No design committee.
+Use a made-up name and email in the local demo. These are the expected results to compare with what your agent actually observes.
 
-## Evals and limits
+| Try this | Look for this |
+| --- | --- |
+| Enter a name, email and dummy password. Reload with browser autofill off. | The name and email return. The password field is empty. Ask the agent to check the saved draft also omits the password. |
+| Make a demo submission fail. Reload and retry. | The ordinary fields survive the failed attempt so you can correct the entry. |
+| Complete a successful submission. Reopen or reload the form. | The next registration starts empty. |
+| Have the agent simulate blocked browser storage. Fill in the form and submit. | You can still complete the form. Reloading need not bring the draft back. |
+| If you chose expiry, leave an unfinished draft and return after the agreed time. | The next visitor sees empty fields. |
 
-Run `node evals/check.mjs --self-test` to check the fixtures and grader without a model or network. The [eval guide](docs/evals.md) shows how to grade a synthetic model response and run a fair comparison. See the [initial evaluation receipt](docs/evaluation-receipt.md) for exact checks, partial passes and limits. The local self-test checks the harness, not the quality of every model.
+A useful handoff names the changed file, the action tried, the result seen and what remains untested. If all you get is “tests passed,” ask **“Which fields came back after reload? Which stayed empty? Show me the result.”** If a check failed or could not run, keep that outcome open. A local browser result leaves other devices, accessibility, the real server and release status open until someone checks them.
 
-Limits:
+## Who has permission?
 
-- It is advice to a model. Behavior varies by model, host, and prompt, and it can be ignored or misapplied.
-- It cannot verify claims for you. Ask to see test output when something matters.
-- It does not replace code review, backups, or your host's permission settings.
-- Blast radius judgments are heuristics; the agent can misjudge. You can say `treat this as wide`.
-- It contains no security tooling and no exploit material.
+**You set the scope.** “Plan only” ends with advice. To stop work, say **“Pause here. Show me what you changed.”** If you want to back out, review the edits, then ask the agent to undo only its form change and rerun the original check. Keep unrelated work intact.
 
-## Contributing
+**The skill guides the agent.** The installer adds [SKILL.md](skills/super-outer/SKILL.md) and two short references covering [user journeys](skills/super-outer/references/journey-walkthrough.md) and [evidence](skills/super-outer/references/evidence-and-release.md). The skill consists of text. It has no hooks, credentials, background service, telemetry or permission controls. The host still uses its usual model service and permitted tools.
 
-Issues and pull requests that sharpen wording, add generic examples, or improve eval cases are welcome. Please keep the skill free of hooks, credentials, telemetry, and outbound calls.
+**Claude Code or Codex controls tool access.** If the host asks to use a tool, review the action there. If you deny it, the agent should stop that action, respect the denial and say which check it could not make. Skill guidance depends on the model following it. Your host settings, review and backups still matter. [See how the parts connect](docs/architecture.md)
 
-## License
+## What has been evaluated?
 
-[MIT](LICENSE).
+From a copy of this repository with Node.js available, run the grader’s offline self-test. The grader is separate from the installed skill.
+
+```sh
+node evals/check.mjs --self-test
+```
+
+Expected output: `Self-test passed for 6 fixtures, including negative controls. No model called.`
+
+The initial tools-disabled Claude Code spot checks passed 6 of 6 structural checks for draft reload, 5 of 6 for the typo and 5 of 6 for a denied read. Both partial results misplaced an evidence-limit tag. Codex CLI did not start in that evaluation, so it has no model result. These results describe three responses. They leave everyday reliability and the effect of adding the skill unmeasured. [Initial evaluation receipt](docs/evaluation-receipt.md) · [Run the cases and review the responses](docs/evals.md)
+
+Contributions that improve the wording, examples or synthetic cases are welcome. [MIT license](LICENSE)
